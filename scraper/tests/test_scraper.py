@@ -274,6 +274,16 @@ class PolicyHttp(FakeHttp):
             "https://pubs.acs.org/ancham-img.jpg": (url, png_bytes(300, 400, (10, 60, 120)), "image/jpeg"),
             # OA status discovered only through OpenAlex
             "https://api.openalex.org/works/doi:10.1038/s41467-026-00001-x": (url, json.dumps({"open_access": {"is_oa": True, "oa_status": "gold"}, "best_oa_location": {"license": "cc-by"}, "primary_location": {"source": {"id": "https://openalex.org/S9", "issn_l": "2041-1723"}}}), "application/json"),
+            # OA page without og:image but with figures in the HTML (Light: Advanced Manufacturing style)
+            "https://doi.org/10.37188/lam.2026.999": ("https://www.light-am.com/article/doi/10.37188/lam.2026.999", '<html><body><img src="/img/logo.png"><div class="figure"><img class="figure_img" src="/files/LAM-1.jpg"></div></body></html>', "text/html"),
+            "https://www.light-am.com/files/LAM-1.jpg": (url, png_bytes(800, 500), "image/jpeg"),
+            # paywalled Springer paper: landscape figure on the article page; cover on the journal homepage is a 92-px og:image
+            "https://doi.org/10.1007/s10439-026-99999-x": ("https://link.springer.com/article/10.1007/s10439-026-99999-x", '<meta property="og:image" content="https://media.springernature.com/lw685/springer-static/image/art/fig1.png">', "text/html"),
+            "https://media.springernature.com/lw685/springer-static/image/art/fig1.png": (url, png_bytes(685, 400), "image/png"),
+            "https://api.openalex.org/works/doi:10.1007/s10439-026-99999-x": (url, json.dumps({"open_access": {"is_oa": False, "oa_status": "closed"}, "primary_location": {"source": {"id": "https://openalex.org/S77", "issn_l": "0090-6964"}}}), "application/json"),
+            "https://api.openalex.org/sources/S77": (url, json.dumps({"homepage_url": "https://link.springer.com/journal/10439"}), "application/json"),
+            "https://link.springer.com/journal/10439": (url, '<meta property="og:image" content="https://media.springernature.com/w92/springer-static/cover/journal/10439.jpg">', "text/html"),
+            "https://media.springernature.com/w316/springer-static/cover/journal/10439.jpg": (url, png_bytes(316, 420, (90, 20, 20)), "image/jpeg"),
             # paywalled paper with no cover anywhere
             "https://doi.org/10.9999/nocover": ("https://example.org/nocover", "<html></html>", "text/html"),
         }
@@ -322,6 +332,33 @@ def test_mode_all_uses_figure_even_for_paywalled(tmp_path):
     cfg["figures"]["mode"] = "all"
     f = vs.FigureFetcher(PolicyHttp(cfg), cfg, tmp_path)
     assert f.fetch(paywalled_acs(), "acs3")["kind"] == "figure"
+
+
+def test_open_access_page_without_og_image_uses_first_figure(tmp_path):
+    f = vs.FigureFetcher(PolicyHttp(CFG), CFG, tmp_path)
+    rec = {"source": "crossref", "title": "Diamond SERS", "doi": "10.37188/lam.2026.999", "url": "https://doi.org/10.37188/lam.2026.999", "journal": "Light: Advanced Manufacturing", "oa": True, "license": "CC BY 4.0"}
+    fig = f.fetch(rec, "lam")
+    assert fig["kind"] == "figure" and (tmp_path / "figs/lam.jpg").exists()
+
+
+def test_springer_paywalled_gets_upgraded_homepage_cover_not_figure(tmp_path):
+    f = vs.FigureFetcher(PolicyHttp(CFG), CFG, tmp_path)
+    rec = vs.enrich_oa(f.http, {"source": "crossref", "title": "Bone SRS", "doi": "10.1007/s10439-026-99999-x", "url": "https://doi.org/10.1007/s10439-026-99999-x", "journal": "Annals of Biomedical Engineering", "oa": False})
+    fig = f.fetch(rec, "abme")
+    assert fig["kind"] == "cover" and not (tmp_path / "figs/abme.jpg").exists()
+    assert vs.upgrade_image_url("https://media.springernature.com/w92/springer-static/cover/journal/10439.jpg").endswith("/w316/springer-static/cover/journal/10439.jpg")
+
+
+def test_refresh_finds_missing_doi_by_title(repo, monkeypatch):
+    monkeypatch.setattr(vs, "Http", PolicyHttp)
+    issue = {"id": "2026-11-02", "number": 1, "date": "2026-11-02", "window": ["a", "b"], "removed": [], "articles": [
+        {"id": "jrs", "title": "Tip-enhanced Raman spectroscopy of graphene edges", "doi": None, "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555", "journal": "Journal of Raman Spectroscopy", "oa": False, "license": "", "fig": None}]}
+    p = repo / "data/issues/2026-11-02.json"
+    p.write_text(json.dumps(issue))
+    vs.main(["--root", str(repo), "--issue-date", "2026-11-02", "--refresh-figures"])
+    art = json.loads(p.read_text())["articles"][0]
+    assert art["doi"] == "10.1002/jrs.70999" and art["url"] == "https://doi.org/10.1002/jrs.70999"
+    assert art["fig"]["kind"] == "cover"     # Wiley article page exposes a cover image
 
 
 def test_refresh_figures_for_existing_issue(repo, monkeypatch):

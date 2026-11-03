@@ -403,6 +403,18 @@ def parse_arxiv(xml_text: str, since: str, until: str) -> list[dict]:
     return out
 
 
+def crossref_find_doi(http: Http, title: str) -> str | None:
+    """DOI for an exact title match on Crossref (used when an article was added without a DOI)."""
+    r = http.get("https://api.crossref.org/works", params={"query.bibliographic": title, "rows": 5, "select": "DOI,title"})
+    if not r:
+        return None
+    want = title_key(title)
+    for it in r.json().get("message", {}).get("items", []):
+        if title_key((it.get("title") or [""])[0]) == want:
+            return norm_doi(it.get("DOI"))
+    return None
+
+
 def lookup_doi(http: Http, doi: str) -> dict | None:
     """Fetch one paper by DOI (for data/inbox.txt submissions): Europe PMC first, Crossref second."""
     r = http.get("https://www.ebi.ac.uk/europepmc/webservices/rest/search", params={"query": f'DOI:"{doi}"', "format": "json", "resultType": "core"})
@@ -459,6 +471,54 @@ def extract_preview_image(page_html: str, base_url: str) -> str | None:
         if c and not c.startswith("data:"):
             return urljoin(base_url, c)
     return None
+
+
+def upgrade_image_url(url: str) -> str:
+    """Ask image CDNs for a larger rendition (e.g. Springer Nature serves 92-px covers in og:image)."""
+    if "media.springernature.com" in url:
+        url = re.sub(r"/(w|lw|m|full)\d*/", "/w316/", url, count=1)
+    return url
+
+
+def _img_src(tag, base_url: str) -> str | None:
+    for attr in ("data-src", "data-lazy-src", "data-original", "src"):
+        v = tag.get(attr)
+        if v and not v.startswith("data:"):
+            return urljoin(base_url, v.strip())
+    return None
+
+
+def extract_first_figure(page_html: str, base_url: str) -> str | None:
+    """First article figure on a page (for open-access pages that publish no og:image)."""
+    soup = BeautifulSoup(page_html, "html.parser")
+    selectors = ["figure img", "img.figure_img", "div.figure img", "div[class*=fig] img", "img[class*=fig]", "img[src*=fig]", "img[data-src*=fig]"]
+    for sel in selectors:
+        for tag in soup.select(sel):
+            src = _img_src(tag, base_url)
+            if src and not re.search(r"logo|icon|sprite|orcid|badge|cover", src, re.I):
+                return src
+    return None
+
+
+def extract_cover_candidates(page_html: str, base_url: str) -> list[str]:
+    """Possible journal-cover images on a journal homepage: og:image first, then <img> marked as a cover."""
+    out = []
+    og = extract_preview_image(page_html, base_url)
+    if og:
+        out.append(og)
+    soup = BeautifulSoup(page_html, "html.parser")
+    for tag in soup.find_all("img"):
+        hay = " ".join([tag.get("src") or "", tag.get("data-src") or "", " ".join(tag.get("class") or []), tag.get("alt") or ""])
+        if re.search(r"cover", hay, re.I):
+            src = _img_src(tag, base_url)
+            if src:
+                out.append(src)
+    seen, uniq = set(), []
+    for u in (upgrade_image_url(u) for u in out):
+        if u not in seen:
+            seen.add(u)
+            uniq.append(u)
+    return uniq
 
 
 def looks_like_cover(url: str) -> bool:
@@ -560,7 +620,7 @@ class FigureFetcher:
         except (FileNotFoundError, json.JSONDecodeError):
             self.cover_cache = {}
         self.manual_covers = {k.lower(): v for k, v in (self.cfg.get("journal_covers") or {}).items()}
-        self._pages: dict[str, tuple[str | None, str]] = {}
+        self._pages: dict[str, tuple[str | None, str, str, str]] = {}
 
     # -- helpers
     def _get_image(self, url: str | None) -> Image.Image | None:
@@ -574,17 +634,21 @@ class FigureFetcher:
             return None
         return load_image(r.content, self.cfg)
 
-    def _preview(self, url: str | None) -> tuple[str | None, str]:
-        """(preview image URL, host) of a landing page, fetched once per run."""
+    def _page(self, url: str | None) -> tuple[str | None, str, str, str]:
+        """(preview image URL, host, html, final URL) of a page, fetched once per run."""
         if not url:
-            return None, ""
+            return None, "", "", ""
         if url not in self._pages:
             page = self.http.get(url, check_robots=True)
             if page is not None and "html" in page.headers.get("Content-Type", "html"):
-                self._pages[url] = (extract_preview_image(page.text, page.url), urlparse(page.url).netloc.replace("www.", ""))
+                self._pages[url] = (extract_preview_image(page.text, page.url), urlparse(page.url).netloc.replace("www.", ""), page.text, page.url)
             else:
-                self._pages[url] = (None, urlparse(url).netloc.replace("www.", ""))
+                self._pages[url] = (None, urlparse(url).netloc.replace("www.", ""), "", url)
         return self._pages[url]
+
+    def _preview(self, url: str | None) -> tuple[str | None, str]:
+        img, host, _, _ = self._page(url)
+        return img, host
 
     def journal_key(self, rec: dict) -> str:
         return (rec.get("journal") or rec.get("issn") or "").strip().lower()
@@ -599,7 +663,7 @@ class FigureFetcher:
         return dict(entry)
 
     def _homepage_cover(self, rec: dict) -> Image.Image | None:
-        """Journal homepage (found via OpenAlex) -> its preview image, accepted only if it looks like a cover."""
+        """Journal homepage (found via OpenAlex) -> an image there that looks like the cover."""
         src = rec.get("_openalex_source")
         if not src and rec.get("issn"):
             src = f"issn:{rec['issn']}"
@@ -607,10 +671,13 @@ class FigureFetcher:
             return None
         r = self.http.get(f"https://api.openalex.org/sources/{src}")
         home = r.json().get("homepage_url") if r else None
-        img_url, _ = self._preview(home)
-        im = self._get_image(img_url)
-        if im is not None and (is_portrait(im) or looks_like_cover(img_url or "")):
-            return im
+        _, _, html_text, final = self._page(home)
+        if not html_text:
+            return None
+        for cand in extract_cover_candidates(html_text, final)[:4]:
+            im = self._get_image(cand)
+            if im is not None and (is_portrait(im) or looks_like_cover(cand)):
+                return im
         return None
 
     # -- public
@@ -633,14 +700,18 @@ class FigureFetcher:
             return None
         mode = self.cfg.get("figures", {}).get("mode", "oa_figure_else_cover")
         want_figure = mode == "all" or bool(rec.get("oa"))
-        img_url, host = self._preview(rec.get("url"))
-        if want_figure and img_url and not looks_like_cover(img_url):
-            im = self._get_image(img_url)
+        img_url, host, html_text, final = self._page(rec.get("url"))
+        if want_figure:
+            fig_url = img_url if (img_url and not looks_like_cover(img_url)) else None
+            im = self._get_image(fig_url)
+            if im is None and html_text:
+                fig_url = extract_first_figure(html_text, final)
+                im = self._get_image(fig_url)
             if im is not None:
                 write_thumbnail(im, self.root / f"figs/{art_id}.jpg", self.cfg)
                 lic = rec.get("license") or ("Open access" if rec.get("oa") else "© the publisher")
                 return {"src": f"figs/{art_id}.jpg", "kind": "figure", "credit": f"{lic} · via {host}"}
-        return self.cover_for(rec, img_url)
+        return self.cover_for(rec, upgrade_image_url(img_url) if img_url else None)
 
     def save_cache(self):
         self.cover_cache_path.parent.mkdir(parents=True, exist_ok=True)
@@ -735,6 +806,11 @@ def refresh_figures(args, cfg: dict, root: Path, issue_date: dt.date) -> int:
     for art in issue["articles"]:
         if art.get("fig") and not args.force:
             continue
+        if not art.get("doi"):
+            found = crossref_find_doi(http, art["title"])
+            if found:
+                art["doi"], art["url"] = found, f"https://doi.org/{found}"
+                log.info("DOI found by title: %s", found)
         rec = {"doi": art.get("doi"), "url": art.get("url"), "journal": art.get("journal", ""), "oa": art.get("oa", False),
                "license": art.get("license", ""), "source": art.get("source"), "issn": art.get("issn")}
         if not args.no_openalex:
