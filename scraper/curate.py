@@ -14,6 +14,8 @@ selections.json
       "picks":   [{"id": "<article id>", "why": "One or two sentences on what is new."}, ...],
       "feature": {"id": "<article id>", "why": "..."}      (optional; may be one of the picks)
       "unpick":  ["<article id>", ...]                       (optional)
+      "remove":  ["<article id>", ...]                       (optional: routine / off-topic papers; they move to
+                                                              the issue's "removed" list and are never re-added)
       "reviewed_all": true                                   (mark every listed candidate as reviewed)
     }
 
@@ -95,6 +97,12 @@ def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15) -> d
     if missing:
         raise SystemExit(f"unknown article id(s): {missing}")
 
+    rm = set(sel.get("remove", [])) - {x["id"] for x in sel.get("picks", [])} - ({sel["feature"]["id"]} if sel.get("feature") else set())
+    rm = {r for r in rm if r in by_id and not by_id[r].get("feature")}
+    if rm:
+        iss["articles"] = [a for a in iss["articles"] if a["id"] not in rm]
+        iss["removed"] = sorted(set(iss.get("removed", [])) | rm)
+        by_id = {a["id"]: a for a in iss["articles"]}
     if sel.get("reviewed_all"):
         for a in iss["articles"]:
             a["reviewed"] = True
@@ -128,7 +136,7 @@ def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15) -> d
             dropped.append(a["id"])
     sort_articles(iss["articles"])
     iss["curated"] = today
-    return {"picks": sum(1 for a in iss["articles"] if a.get("pick")), "dropped": dropped,
+    return {"picks": sum(1 for a in iss["articles"] if a.get("pick")), "dropped": dropped, "removed": len(rm),
             "feature": next((a["id"] for a in iss["articles"] if a.get("feature")), None)}
 
 

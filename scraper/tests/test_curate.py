@@ -40,3 +40,12 @@ def test_feature_can_change_and_unknown_id_rejected():
         assert False
     except SystemExit:
         pass
+
+
+def test_remove_moves_to_removed_list_but_never_the_feature():
+    iss = issue()
+    curate.apply_selections(iss, {"feature": {"id": "a1"}}, "2026-11-10")
+    res = curate.apply_selections(iss, {"remove": ["a4", "a5", "a1", "zz"]}, "2026-11-11")
+    ids = {a["id"] for a in iss["articles"]}
+    assert res["removed"] == 2 and "a4" not in ids and "a1" in ids
+    assert set(iss["removed"]) == {"a4", "a5"}

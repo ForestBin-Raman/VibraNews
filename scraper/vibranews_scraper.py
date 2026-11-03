@@ -78,6 +78,8 @@ def load_config(path: Path) -> dict:
     cfg["_cats"] = cats
     comp = lambda xs: [re.compile(p, re.I) for p in (xs or [])]
     cfg["_exclude_title"] = comp(cfg.get("exclude_title"))
+    ra = cfg.get("routine_application") or {}
+    cfg["_routine_domain"], cfg["_routine_method"] = comp(ra.get("domain")), comp(ra.get("method"))
     soft = cfg.get("soft_exclude") or {}
     cfg["_soft"], cfg["_soft_unless"] = comp(soft.get("patterns")), comp(soft.get("unless_title"))
     cfg["_topics"] = [{"name": t.get("name", ""), "title": comp(t.get("title")), "abstract": comp(t.get("abstract")),
@@ -221,6 +223,8 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     journal = (rec.get("journal") or "").lower()
     if rec.get("_type") in ("dataset", "paratext", "other", "erratum", "retraction") or any(x == journal or journal.startswith(x) for x in cfg.get("_excl_sources", [])):
         return False
+    if is_routine_application(title, cfg):    # e.g. "NIR spectroscopy for grading tea", "SERS detection of pesticide in fruit"
+        return False
     if is_core_journal(rec, cfg):              # core vibrational-spectroscopy journals: everything
         return True
     text = f"{title} {abstract}"
@@ -240,6 +244,11 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     if hits >= 2:
         return True
     return any(topic_match(rec, t) for t in cfg.get("_topics", []))
+
+
+def is_routine_application(title: str, cfg: dict) -> bool:
+    d, m = cfg.get("_routine_domain"), cfg.get("_routine_method")
+    return bool(d and m and any(p.search(title) for p in d) and any(p.search(title) for p in m))
 
 
 def topic_match(rec: dict, topic: dict) -> bool:

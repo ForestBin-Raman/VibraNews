@@ -202,21 +202,30 @@ exclude:
   - '(?s)^(?!.*spectromet).*photodetector'   # SWIR/IR detector devices (spectrometer papers are kept)
   - 'prefrontal|cerebral oxygenation'    # fNIRS-type studies
   - 'near-?infrared (fluorescence|imaging-guided|photothermal therapy)'
-  # "Raman" / "Brillouin" in a non-spectroscopic sense (lasers, atom optics, telecom, plasma, magnetism)
-  - 'raman (lasers?|conversion|amplification|frequency comb|soliton)'
-  - 'raman[- ]induced (self-)?frequency'
-  - 'raman (gain|scattering) suppression|raman suppression'
+  # "Raman" / "Brillouin" in an engineering or non-vibrational sense (atom optics, telecom, lidar, sensing
+  # systems, spin relaxation). Physics of Raman/Brillouin lasers, SBS photonics and plasma Raman is KEPT.
   - 'stimulated raman adiabatic|\bSTIRAP\b'
   - 'atom (optics|interferomet)|cold atoms?\b'
   - 'raman lidar|\blidar\b'
   - 'distributed temperature sens'
   - '\borbach\b|single-molecule magnets?|magnetic relaxation'
-  - 'backward raman amplif|laser[- ]plasma|magneti[sz]ed plasma|plasma waves?'
-  - 'quantum frequency conversion|quantum state transfer|privacy amplification|superadiabatic'
+  - 'quantum state transfer|privacy amplification|superadiabatic'
   - 'microwave photonic|optical vector analy|angle of arrival'
-  - 'kerr (soliton|comb)'
   - '(fib(er|re)|erbium-doped) (lasers?|amplifiers?)|optical (networks?|communications?)'
-  - 'forward[- ]stimulated brillouin|brillouin (dynamic grating|lasing)'
+
+# Routine applications: the TITLE names an everyday analyte / product / matrix AND a standard technique
+# (NIR, FTIR, SERS, hyperspectral, Raman + chemometrics). Methods papers, physics and clinical studies are unaffected.
+routine_application:
+  domain:
+    - 'foods?\b|fruits?|\btea\b|honey|\bfish|seafood|meat|beef|pork|chicken|milk|dairy|cheese|wine|baijiu|liquor|beer|vinegar'
+    - '(olive|edible|vegetable|cooking|walnut) oils?|\brice\b|wheat|\bcorn\b|maize|soybean|\bseeds?\b(?!-mediated)|cereal|flour'
+    - 'tobacco|cigar|herbal|medicinal (plant|material)|ginseng|gastrodia|citrus|orange|mandarin|grapes?\b|apples?\b|potato|sugar|coffee|cocoa|chocolate|spice|\bfeed\b'
+    - 'agricultur|crops?\b|orchard|plant disease|huanglongbing|soils?\b|manure|pesticide|(pesticide|drug|antibiotic|veterinary) residues?|residues? in|mycotoxin|aflatoxin|malachite green|methylene blue|rhodamine|\bdyes?\b|melamine'
+    - 'adulterat|authenticat|geographical origin|freshness|quality (assessment|evaluation|grading)|grade identification|moisture content|variety identification'
+    - '\bwood\b|timber|leather|textile|asphalt|\bcoals?\b|crude oil|\bcement\b|\bconcrete\b|river water|wastewater|drinking water|fishpond|cosmetic'
+  method:
+    - 'near[- ]?infrared|\bNIRS?\b|vis[- ]?NIR|\bSWIR\b|short-?wave infrared|FT-?IR|\bATR\b|mid-?infrared spectroscop|infrared spectroscop'
+    - 'hyperspectral|multispectral|\bSERS\b|surface[- ]enhanced raman|raman|chemometric|machine learning|deep learning|neural network'
 
 # Title-only exclusions: routine characterisation, natural-product/extract profiling, off-topic hits
 exclude_title:

@@ -62,7 +62,8 @@ OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（
 
 **去杂（`config.yaml`）**
 - 期刊质量：只收主流出版社（ACS、RSC、Elsevier、Springer Nature、Wiley、Optica、AIP、APS、IOP、IEEE、SPIE、T&F、SAGE、MDPI、Frontiers 等，见 `venues.trusted_doi_prefixes`）和 arXiv / bioRxiv / medRxiv / ChemRxiv；Research Square、Preprints.org、CyberLeninka、会议合集等直接排除；其他期刊在 OpenAlex 的 h-index ≥ 40 才收（结果缓存在 `data/venues.json`）。核心期刊和 inbox 投稿不受影响。
-- 非光谱含义：Raman 激光/放大器、STIRAP、原子光学、Raman 激光雷达、分布式测温、Orbach 弛豫、等离子体、微波光子 SBS 等（`exclude`）。
+- 非振动含义的工程应用：STIRAP/原子光学、Raman 激光雷达、分布式测温、Orbach 弛豫、通信放大器、微波光子 SBS 等（`exclude`）。偏物理的 Raman/Brillouin 激光、SBS 光子学、等离子体 Raman 等保留。
+- 常规应用：标题同时出现日常检测对象（食品、农产品、土壤、农残、染料、木材、水样等）和常规手段（NIR、FTIR、SERS、高光谱、Raman+机器学习）的论文不收（`routine_application`）。每日定时任务里我还会再人工删掉其余常规应用论文。
 - 标题排除：顺势疗法、植物提取物成分分析、“合成与表征”、教育类等（`exclude_title`）。
 - NIR/SWIR 的非光谱用途：组织血氧、量子点/光电探测器件等，除非标题里写明振动光谱技术（`soft_exclude`）。
 

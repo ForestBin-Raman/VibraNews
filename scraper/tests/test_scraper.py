@@ -511,7 +511,7 @@ def test_extra_topics_photoacoustic_spectral_imaging_spectrometers():
     yes = [
         ("Quartz-enhanced photoacoustic sensor for ppb-level methane", ""),
         ("Trace gas detection", "We demonstrate light-induced thermoelastic spectroscopy with a custom tuning fork."),
-        ("Hyperspectral imaging of beef freshness with deep learning", ""),
+        ("Hyperspectral imaging of tumour margins with deep learning", ""),
         ("Snapshot hyperspectral microscopy for live cells", ""),
         ("A metasurface spectrometer with 0.1 nm resolution", ""),
         ("Reconstructive spectrometer based on disordered photonic chip", "Uses a photodetector array."),
@@ -536,7 +536,6 @@ def test_extra_topics_photoacoustic_spectral_imaging_spectrometers():
 def test_clutter_filters_and_venues(tmp_path):
     cfg = vs.load_config(Path(__file__).resolve().parent.parent / "config.yaml")
     drop = ["Optimization of multistate stimulated Raman adiabatic passage by pulse shaping",
-            "100 W second-order Stokes output from a picosecond diamond Raman laser",
             "Phytochemical Characterization, GC-MS Profiling and FTIR Analysis of Leaf Extracts",
             "Spectroscopic fingerprinting of homoeopathic triturations by FTIR",
             "Size-Focused Growth of Short-Wave Infrared InAs Quantum Dots",
@@ -569,3 +568,15 @@ def test_clutter_filters_and_venues(tmp_path):
     assert v.ok({"doi": "10.9999/z", "journal": "Good Society Journal", "issns": ["1234-5678"]}) and H.calls == n  # cached
     v.save()
     assert json.loads((tmp_path / "data" / "venues.json").read_text())["issn:1234-5678"] == 55
+
+
+def test_routine_applications_dropped_physics_kept():
+    cfg = vs.load_config(Path(__file__).resolve().parent.parent / "config.yaml")
+    for t in ["Rapid detection of nitrofurazone residues in honey and fish using a SERS sensor",
+              "Near-infrared spectroscopy for grade identification of baijiu base liquor",
+              "Hyperspectral imaging of beef freshness"]:
+        assert not vs.is_relevant({"title": t, "abstract": ""}, cfg), t
+    for t in ["100 W second-order Stokes output from a picosecond diamond Raman laser",
+              "Plasma-based backward Raman amplification of femtosecond lasers",
+              "Raman mapping of grain boundaries in graphene"]:
+        assert vs.is_relevant({"title": t, "abstract": ""}, cfg), t
