@@ -15,6 +15,7 @@ http:
 # Search sources (all free, no API key needed)
 sources:
   europepmc: true          # PubMed / PMC / preprints, with abstracts and affiliations
+  openalex: true           # every journal (Crossref + more), with abstracts and institutions
   crossref: true           # physics & chemistry journals not in PubMed (JRS early view, Opt. Express, ...)
   arxiv: true              # physics.optics, physics.chem-ph, physics.bio-ph preprints
   max_results_per_query: 400
@@ -63,6 +64,39 @@ include:
   - 'inelastic neutron scattering'
   - 'nuclear resonance vibrational'
 
+# Technique names specific enough that ONE mention in the abstract is enough
+strong_include:
+  - 'stimulated raman'
+  - 'coherent anti-?stokes'
+  - '\bCARS (microscop|imaging|spectroscop)'
+  - '\bSRS (microscop|imaging|spectroscop)'
+  - 'coherent raman'
+  - '\bSERS\b'
+  - 'surface[- ]enhanced raman'
+  - 'tip[- ]enhanced raman'
+  - '\bTERS\b'
+  - 'raman (spectroscop|microscop|imaging|spectra|mapping)'
+  - 'brillouin (microscop|spectroscop|imaging|light scattering)'
+  - 'optical photothermal infrared'
+  - '\bO-?PTIR\b'
+  - 'mid-?infrared photothermal'
+  - '\bAFM-?IR\b'
+  - 'raman optical activity'
+  - 'vibrational circular dichroism'
+  - 'femtosecond stimulated raman'
+  - 'two-dimensional infrared'
+  - 'sum[- ]frequency generation (vibrational )?spectroscop'
+  - 'vibrational (spectroscop|imaging|microscop)'
+  - 'FT-?IR (spectroscop|imaging|microscop)'
+
+# Core vibrational-spectroscopy journals: EVERY paper they publish is included (no keyword filter)
+core_journals:
+  issn: ['0377-0486', '1097-4555', '0924-2031', '1873-3697', '0967-0335', '1751-6552']
+  titles: ['journal of raman spectroscopy', 'vibrational spectroscopy', 'journal of near infrared spectroscopy']
+
+# Papers first published longer ago than this are ignored (re-indexed old papers, late corrections)
+max_age_days: 180
+
 # Drop a paper if its title or abstract matches any of these
 exclude:
   - 'functional near-?infrared'          # fNIRS brain haemodynamics
@@ -101,6 +135,26 @@ europepmc_terms:
   - '"raman optical activity"'
   - '"vibrational circular dichroism"'
   - '"photoacoustic spectroscopy"'
+
+# OpenAlex title+abstract searches (each paginated in full for the look-back window)
+openalex_terms:
+  - raman
+  - surface enhanced raman
+  - stimulated raman
+  - coherent anti-stokes raman
+  - brillouin microscopy
+  - brillouin scattering
+  - infrared spectroscopy
+  - FTIR
+  - photothermal infrared
+  - terahertz spectroscopy
+  - sum frequency generation spectroscopy
+  - two-dimensional infrared
+  - vibrational spectroscopy
+  - vibrational circular dichroism
+  - raman optical activity
+# OpenAlex is searched by publication date, so it looks back further to catch late-indexed papers
+openalex_lookback_days: 30
 
 # Crossref query strings (Crossref search is fuzzy; results are then filtered by `include`)
 crossref_queries:
@@ -193,7 +247,8 @@ categories:
   Miscellaneous:
     Reviews: ['^review', '\breview of\b', 'a review', 'perspective', 'tutorial']
 
-# Daily mode: how many days back each daily run looks (overlap catches late indexing; duplicates are skipped)
+# Daily mode: how many days back each daily run looks. Europe PMC is searched by the date the record
+# entered the database (CREATION_DATE), Crossref by DOI registration date, so late-indexed papers are caught.
 daily_lookback_days: 3
 
 # How long the trimmed abstract shown on the site may be (characters)

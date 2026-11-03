@@ -48,6 +48,26 @@ OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（
 
 抓取遵守 `robots.txt`，每个站点请求间隔 1 秒。
 
+## 抓取范围与防漏
+
+不按期刊名单抓，而是按关键词检索四个数据源，任何期刊发表的相关论文都会进来：
+
+| 数据源 | 覆盖 | 时间窗口（每日模式） |
+|---|---|---|
+| Europe PMC | PubMed、PMC、bioRxiv 等预印本；标题、摘要、关键词 | 过去 3 天**入库**的记录（晚入库的论文也能抓到） |
+| OpenAlex | 几乎所有期刊；带摘要和作者机构 | 过去 30 天发表的论文（重复自动跳过） |
+| Crossref | 所有注册 DOI 的期刊 | 过去 3 天注册的 DOI |
+| arXiv | physics.optics / chem-ph / bio-ph 等 | 过去 3 天提交 |
+
+防漏规则：
+- 各数据源的记录先按 DOI 合并、再判断相关性，没有摘要的记录会借用其它来源的摘要
+- 标题命中关键词即收录；SERS、SRS、CARS、布里渊显微、O-PTIR、ROA/VCD 等专门技术名在摘要里出现一次即收录；泛泛的 "Raman" 需要标题命中或摘要出现两次（避免 "XRD、Raman、XPS 表征" 这类材料论文刷屏）
+- 核心期刊 **Journal of Raman Spectroscopy、Vibrational Spectroscopy、Journal of Near Infrared Spectroscopy** 的每一篇都收录，不看关键词（`core_journals`）
+- 已在任何一期出现过、或被删除过的论文不会重复
+- 发表超过 180 天的旧论文忽略（重新索引的旧文、迟到的勘误）
+- 每次运行的各数据源数量、去重后数量、相关数量、新增数量记录在 `data/stats.json`
+- 发现漏掉的论文：把 DOI 写进 `data/inbox.txt`，第二天就会收录
+
 ## 调整抓取范围
 
 全部在 `scraper/config.yaml`：

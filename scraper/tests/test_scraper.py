@@ -56,6 +56,34 @@ CROSSREF_DUP = {  # same DOI as the Europe PMC record, should merge away
     "license": [{"URL": "https://creativecommons.org/licenses/by/4.0/"}],
 }
 
+def oa_work(doi, title, abstract, journal="Light: Science & Applications", date="2026-11-05", insts=("Zhejiang University",)):
+    words = abstract.split()
+    return {"id": "https://openalex.org/W" + doi[-4:], "doi": "https://doi.org/" + doi, "display_name": title, "publication_date": date, "type": "article",
+            "authorships": [{"author": {"display_name": "Li Wei"}, "institutions": [{"display_name": i} for i in insts]}],
+            "primary_location": {"source": {"display_name": journal, "issn_l": "2047-7538", "issn": ["2047-7538"], "type": "journal", "id": "https://openalex.org/S1"}},
+            "open_access": {"oa_status": "gold"}, "best_oa_location": {"license": "cc-by"},
+            "abstract_inverted_index": {w: [i] for i, w in enumerate(words)} if abstract else None}
+
+
+OPENALEX_RESULTS = [
+    # SRS paper whose title never says "Raman": must be kept (strong term once in abstract)
+    oa_work("10.1038/s41377-026-00001-a", "Label-free metabolic imaging of lipid turnover in neurons",
+            "We use stimulated Raman scattering microscopy with deuterium labels to follow lipid synthesis."),
+    # the Crossref TERS record has no abstract; OpenAlex supplies one for the same DOI
+    oa_work("10.1002/jrs.70999", "Tip-enhanced Raman spectroscopy of graphene edges", "TERS maps of graphene edges.", journal="Journal of Raman Spectroscopy"),
+    # materials paper that only lists Raman as one characterisation tool: must be dropped
+    oa_work("10.1016/j.mat.2026.0001", "High-entropy oxide cathodes for sodium batteries",
+            "Samples were characterised by XRD, Raman and XPS; capacity retention reached 92%."),
+    # old paper re-indexed: must be dropped by the age guard
+    oa_work("10.1000/old.raman.1", "Raman spectroscopy of ancient pigments", "Raman spectra of pigments.", date="2025-01-10"),
+]
+
+CORE_JRS_ITEM = {  # core journal: kept although the title has no keyword
+    "DOI": "10.1002/JRS.71001", "title": ["Phase transitions in p-toluamide polycrystals under high pressure"],
+    "author": [{"given": "Ana", "family": "Costa"}], "container-title": ["Journal of Raman Spectroscopy"], "ISSN": ["0377-0486", "1097-4555"],
+    "created": {"date-parts": [[2026, 11, 5]]}, "license": [],
+}
+
 ARXIV_XML = """<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
   <entry>
@@ -113,6 +141,12 @@ class FakeHttp:
             if (params or {}).get("cursorMark") == "*":
                 return FakeResp(url, json.dumps({"nextCursorMark": "AAA", "resultList": {"result": [EPMC_RESULT, EPMC_NOISE]}}), "application/json")
             return FakeResp(url, json.dumps({"nextCursorMark": "AAA", "resultList": {"result": []}}), "application/json")
+        if url == "https://api.openalex.org/works":
+            if "cursor" in (params or {}) and params["cursor"] != "*":
+                return FakeResp(url, json.dumps({"meta": {"next_cursor": None}, "results": []}), "application/json")
+            return FakeResp(url, json.dumps({"meta": {"next_cursor": "NEXT"}, "results": OPENALEX_RESULTS}), "application/json")
+        if "api.crossref.org/works" in url and "issn:" in (params or {}).get("filter", ""):
+            return FakeResp(url, json.dumps({"message": {"items": [CORE_JRS_ITEM]}}), "application/json")
         if "api.crossref.org/works/" in url:   # single-DOI lookup (inbox)
             item = dict(CROSSREF_ITEM, DOI="10.1364/OE.999999", title=["Inbox paper: Raman fibre probe"])
             return FakeResp(url, json.dumps({"message": item}), "application/json")
@@ -425,3 +459,32 @@ def test_daily_mode_adds_to_this_weeks_issue_and_never_repeats_across_issues(rep
     assert not (repo / "data/issues/2026-11-16.json").exists()      # no empty issue published
     idx = json.loads((repo / "data/issues/index.json").read_text())
     assert [i["id"] for i in idx["issues"]] == ["2026-11-09"]
+
+
+# ----------------------------------------------------------------- recall safeguards
+
+def test_recall_safeguards_end_to_end(repo):
+    assert vs.main(["--root", str(repo), "--daily", "--today", "2026-11-11", "--no-figures"]) == 0
+    arts = json.loads((repo / "data/issues/2026-11-09.json").read_text())["articles"]
+    titles = {a["title"]: a for a in arts}
+    srs = titles.get("Label-free metabolic imaging of lipid turnover in neurons")
+    assert srs is not None and "SRS / CARS" in srs["categories"]
+    assert srs["institutions"] == ["Zhejiang University"]                     # institutions straight from OpenAlex
+    assert "Phase transitions in p-toluamide polycrystals under high pressure" in titles   # core journal
+    assert "High-entropy oxide cathodes for sodium batteries" not in titles   # Raman only as a side tool
+    assert "Raman spectroscopy of ancient pigments" not in titles             # older than max_age_days
+    ters = titles["Tip-enhanced Raman spectroscopy of graphene edges"]
+    assert "TERS maps" in ters["summary"]                                     # abstract borrowed from OpenAlex
+    # Europe PMC was searched by entry date in daily mode
+    q = next(c[1]["query"] for c in FakeHttp.calls if "europepmc" in c[0] and c[1] and "query" in c[1] and not c[1]["query"].startswith("DOI"))
+    assert "CREATION_DATE:[2026-11-08 TO 2026-11-11]" in q and "KW:" in q
+    # OpenAlex looked back 30 days
+    oa = next(c[1]["filter"] for c in FakeHttp.calls if c[0] == "https://api.openalex.org/works")
+    assert "from_publication_date:2026-10-12" in oa
+    stats = json.loads((repo / "data/stats.json").read_text())[-1]
+    assert stats["sources"]["openalex"] == 4 * len(CFG["openalex_terms"]) and stats["added"] == len(arts)
+
+
+def test_strong_term_once_is_enough_but_generic_raman_needs_two():
+    assert vs.is_relevant({"title": "Metabolic imaging", "abstract": "Imaged by SERS nanotags."}, CFG)
+    assert not vs.is_relevant({"title": "Battery cathodes", "abstract": "Characterised by XRD, Raman and XPS."}, CFG)

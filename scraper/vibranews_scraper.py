@@ -64,6 +64,10 @@ def load_config(path: Path) -> dict:
         cfg = yaml.safe_load(f)
     cfg["_include"] = [re.compile(p, re.I) for p in cfg.get("include", [])]
     cfg["_exclude"] = [re.compile(p, re.I) for p in cfg.get("exclude", [])]
+    cfg["_strong"] = [re.compile(p, re.I) for p in cfg.get("strong_include", [])]
+    cj = cfg.get("core_journals") or {}
+    cfg["_core_issn"] = {x.lower() for x in cj.get("issn", [])}
+    cfg["_core_titles"] = {x.lower() for x in cj.get("titles", [])}
     cats = []
     for group, entries in (cfg.get("categories") or {}).items():
         for name, pats in entries.items():
@@ -169,14 +173,26 @@ def norm_doi(d: str | None) -> str | None:
 
 # --------------------------------------------------------------------------- relevance / classification
 
+def is_core_journal(rec: dict, cfg: dict) -> bool:
+    j = (rec.get("journal") or "").strip().lower()
+    issns = {str(x).lower() for x in (rec.get("issns") or []) + [rec.get("issn")] if x}
+    return j in cfg.get("_core_titles", set()) or bool(issns & cfg.get("_core_issn", set()))
+
+
 def is_relevant(rec: dict, cfg: dict) -> bool:
     title, abstract = rec.get("title", ""), rec.get("abstract", "")
     if SKIP_TITLE.search(title):
         return False
+    if rec.get("_force"):                      # submitted through data/inbox.txt
+        return True
+    if is_core_journal(rec, cfg):              # core vibrational-spectroscopy journals: everything
+        return True
     text = f"{title} {abstract}"
     if any(p.search(text) for p in cfg["_exclude"]):
         return False
     if any(p.search(title) for p in cfg["_include"]):
+        return True
+    if any(p.search(abstract) for p in cfg.get("_strong", [])):
         return True
     hits = sum(len(p.findall(abstract)) for p in cfg["_include"])
     return hits >= 2
@@ -237,9 +253,10 @@ def institutions_from(affiliations: list[str], limit: int = 3) -> list[str]:
 
 # --------------------------------------------------------------------------- sources
 
-def europepmc_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
-    terms = " OR ".join(f"TITLE_ABS:{t}" if not t.startswith('"') else f"TITLE_ABS:{t}" for t in cfg.get("europepmc_terms", ["raman"]))
-    query = f"({terms}) AND FIRST_PDATE:[{since} TO {until}]"
+def europepmc_search(http: Http, cfg: dict, since: str, until: str, date_field: str = "FIRST_PDATE") -> list[dict]:
+    """date_field: FIRST_PDATE (publication) or CREATION_DATE (entered Europe PMC; catches late-indexed papers)."""
+    terms = " OR ".join([f"TITLE_ABS:{t}" for t in cfg.get("europepmc_terms", ["raman"])] + [f"KW:{t}" for t in cfg.get("europepmc_terms", ["raman"])])
+    query = f"({terms}) AND {date_field}:[{since} TO {until}]"
     url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
     cursor, out, cap = "*", [], cfg["sources"].get("max_results_per_query", 400) * 3
     while len(out) < cap:
@@ -295,6 +312,91 @@ def parse_europepmc(res: dict) -> dict:
     }
 
 
+def openalex_abstract(inv: dict | None) -> str:
+    if not inv:
+        return ""
+    pos = []
+    for word, idxs in inv.items():
+        for i in idxs:
+            pos.append((i, word))
+    return " ".join(w for _, w in sorted(pos))
+
+
+def parse_openalex(w: dict) -> dict:
+    authors, insts = [], []
+    for a in w.get("authorships") or []:
+        name = (a.get("author") or {}).get("display_name")
+        if name:
+            authors.append(name)
+        for inst in a.get("institutions") or []:
+            n = inst.get("display_name")
+            if n and n not in insts:
+                insts.append(n)
+    loc = w.get("primary_location") or {}
+    src = loc.get("source") or {}
+    oa = w.get("open_access") or {}
+    lic = ((w.get("best_oa_location") or {}).get("license") or loc.get("license") or "").lower()
+    is_oa = oa.get("oa_status") in ("gold", "diamond", "hybrid") and lic.startswith("cc")
+    m = re.match(r"cc-([a-z\-]+)", lic)
+    doi = norm_doi(w.get("doi"))
+    return {
+        "source": "openalex",
+        "title": clean_text(w.get("display_name") or w.get("title")).rstrip("."),
+        "authors": authors,
+        "affiliations": [],
+        "institutions_direct": insts,
+        "journal": src.get("display_name") or "",
+        "issn": src.get("issn_l"),
+        "issns": src.get("issn") or [],
+        "doi": doi,
+        "url": f"https://doi.org/{doi}" if doi else (loc.get("landing_page_url") or ""),
+        "date": w.get("publication_date") or "",
+        "abstract": clean_text(openalex_abstract(w.get("abstract_inverted_index"))),
+        "oa": bool(is_oa),
+        "license": ("CC " + m.group(1).upper()) if (is_oa and m) else "",
+        "is_review": w.get("type") == "review",
+        "is_preprint": w.get("type") == "preprint" or src.get("type") == "repository",
+        "_openalex_source": (src.get("id") or "").rsplit("/", 1)[-1],
+    }
+
+
+def openalex_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
+    out = []
+    cap = cfg["sources"].get("max_results_per_query", 400) * 10
+    select = "id,doi,display_name,publication_date,authorships,primary_location,open_access,best_oa_location,abstract_inverted_index,type"
+    for term in cfg.get("openalex_terms", []):
+        cursor, n = "*", 0
+        while cursor and n < cap:
+            r = http.get("https://api.openalex.org/works", params={
+                "filter": f"title_and_abstract.search:{term},from_publication_date:{since},to_publication_date:{until}",
+                "per-page": 200, "cursor": cursor, "select": select})
+            if not r:
+                break
+            data = r.json()
+            results = data.get("results") or []
+            out += [parse_openalex(w) for w in results]
+            n += len(results)
+            cursor = (data.get("meta") or {}).get("next_cursor")
+            if not results:
+                break
+    log.info("OpenAlex: %d records", len(out))
+    return out
+
+
+def crossref_core_journals(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
+    """Every article that core journals registered in the window (no keyword filter)."""
+    out = []
+    for issn in (cfg.get("core_journals") or {}).get("issn", []):
+        r = http.get("https://api.crossref.org/works", params={
+            "filter": f"issn:{issn},from-created-date:{since},until-created-date:{until},type:journal-article",
+            "rows": 1000,
+            "select": "DOI,title,author,container-title,ISSN,created,issued,published-online,published-print,abstract,license,type,subject"})
+        if r:
+            out += [parse_crossref(it) for it in r.json().get("message", {}).get("items", [])]
+    log.info("Crossref core journals: %d records", len(out))
+    return out
+
+
 def crossref_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
     out = []
     rows = min(cfg["sources"].get("max_results_per_query", 400), 1000)
@@ -346,6 +448,7 @@ def parse_crossref(it: dict) -> dict:
         "affiliations": affs,
         "journal": (it.get("container-title") or [""])[0],
         "issn": (it.get("ISSN") or [None])[0],
+        "issns": it.get("ISSN") or [],
         "doi": doi,
         "url": f"https://doi.org/{doi}" if doi else "",
         "date": _cr_date(it),
@@ -433,7 +536,7 @@ def lookup_doi(http: Http, doi: str) -> dict | None:
 
 def merge_records(records: list[dict]) -> list[dict]:
     """Deduplicate by DOI, then by normalised title. Europe PMC wins; Crossref fills gaps."""
-    rank = {"europepmc": 0, "crossref": 1, "arxiv": 2, "inbox": -1}
+    rank = {"europepmc": 0, "openalex": 1, "crossref": 2, "arxiv": 3, "inbox": -1}
     records = sorted(records, key=lambda r: rank.get(r["source"], 9))
     by_doi: dict[str, dict] = {}
     by_title: dict[str, dict] = {}
@@ -444,10 +547,12 @@ def merge_records(records: list[dict]) -> list[dict]:
         k_doi, k_t = r.get("doi"), title_key(r["title"])
         hit = (by_doi.get(k_doi) if k_doi else None) or by_title.get(k_t)
         if hit:
-            for f in ("abstract", "affiliations", "journal", "issn", "license", "date"):
+            for f in ("abstract", "affiliations", "institutions_direct", "journal", "issn", "license", "date", "_openalex_source"):
                 if not hit.get(f) and r.get(f):
                     hit[f] = r[f]
+            hit["issns"] = list(dict.fromkeys((hit.get("issns") or []) + (r.get("issns") or [])))
             hit["oa"] = hit.get("oa") or r.get("oa")
+            hit["_force"] = hit.get("_force") or r.get("_force")
             continue
         out.append(r)
         if k_doi:
@@ -742,7 +847,7 @@ def to_article(rec: dict, cfg: dict) -> dict:
         "date": rec.get("date", "")[:10],
         "title": rec["title"],
         "authors": ", ".join(rec.get("authors", [])[:20]) + (" et al." if len(rec.get("authors", [])) > 20 else ""),
-        "institutions": institutions_from(rec.get("affiliations", [])),
+        "institutions": (rec.get("institutions_direct") or [])[:3] or institutions_from(rec.get("affiliations", [])),
         "journal": rec.get("journal", ""),
         "doi": rec.get("doi"),
         "url": rec.get("url") or (f"https://doi.org/{rec['doi']}" if rec.get("doi") else ""),
@@ -866,24 +971,38 @@ def run(args) -> int:
 
     http = Http(cfg)
     records: list[dict] = []
-    if cfg["sources"].get("europepmc"):
-        records += europepmc_search(http, cfg, s, u)
-    if cfg["sources"].get("crossref"):
-        records += crossref_search(http, cfg, s, u)
-    if cfg["sources"].get("arxiv"):
-        records += arxiv_search(http, cfg, s, u)
+    stats = {"date": dt.datetime.now(SGT).strftime("%Y-%m-%d %H:%M"), "issue": issue_date.isoformat(), "window": [s, u], "sources": {}}
 
-    relevant = [r for r in records if is_relevant(r, cfg)]
+    def add(name, recs):
+        stats["sources"][name] = len(recs)
+        records.extend(recs)
+
+    if cfg["sources"].get("europepmc"):
+        add("europepmc", europepmc_search(http, cfg, s, u, "CREATION_DATE" if args.daily else "FIRST_PDATE"))
+    if cfg["sources"].get("openalex"):
+        oa_since = (until - dt.timedelta(days=cfg.get("openalex_lookback_days", 30))).isoformat() if args.daily else s
+        add("openalex", openalex_search(http, cfg, oa_since, u))
+    if cfg["sources"].get("crossref"):
+        add("crossref", crossref_search(http, cfg, s, u))
+        add("crossref_core_journals", crossref_core_journals(http, cfg, s, u))
+    if cfg["sources"].get("arxiv"):
+        add("arxiv", arxiv_search(http, cfg, s, u))
+
     inbox = read_inbox(root)
     done_inbox = []
     for d in inbox:
         rec = lookup_doi(http, d)
         if rec:
-            rec["source"] = "inbox"
-            relevant.append(rec)
+            rec["source"], rec["_force"] = "inbox", True
+            records.append(rec)
             done_inbox.append(d)
-    merged = merge_records(relevant)
-    log.info("%d relevant papers after de-duplication (%d raw)", len(merged), len(records))
+
+    # merge first (so a record without abstract borrows one from another source), then filter
+    pool = merge_records(records)
+    oldest = (until - dt.timedelta(days=cfg.get("max_age_days", 180))).isoformat()
+    merged = [r for r in pool if is_relevant(r, cfg) and (r.get("_force") or not r.get("date") or r["date"][:10] >= oldest)]
+    stats.update({"raw": len(records), "unique": len(pool), "relevant": len(merged)})
+    log.info("%d relevant of %d unique papers (%d raw records)", len(merged), len(pool), len(records))
 
     issue_path = root / "data" / "issues" / f"{issue_date.isoformat()}.json"
     idx = load_json(root / "data" / "issues" / "index.json", {"issues": []})
@@ -920,6 +1039,12 @@ def run(args) -> int:
         added += 1
     issue["articles"].sort(key=lambda a: (a.get("feature", False), a.get("pick", False), a.get("date", "")), reverse=True)
     log.info("Added %d new articles (issue now has %d)", added, len(issue["articles"]))
+    stats["added"] = added
+    if not args.dry_run:
+        sp = root / "data" / "stats.json"
+        hist = load_json(sp, [])
+        hist = (hist + [stats])[-120:]
+        sp.write_text(json.dumps(hist, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
     if args.dry_run:
         json.dump(issue, sys.stdout, indent=2, ensure_ascii=False)
