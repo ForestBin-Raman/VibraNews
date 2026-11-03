@@ -1,0 +1,126 @@
+# VibSpec News — scraper configuration
+# Edit this file to change what the weekly crawl looks for.
+
+site:
+  name: VibSpec News
+  url: https://YOUR-GITHUB-USERNAME.github.io/vibspecnews/   # used in the bot User-Agent; update after first deploy
+
+# Polite crawling
+http:
+  user_agent: "VibSpecNewsBot/1.0 (+{site_url}; weekly literature digest)"
+  timeout_s: 20
+  delay_s: 1.0            # pause between requests to the same host
+  respect_robots_txt: true
+
+# Search sources (all free, no API key needed)
+sources:
+  europepmc: true          # PubMed / PMC / preprints, with abstracts and affiliations
+  crossref: true           # physics & chemistry journals not in PubMed (JRS early view, Opt. Express, ...)
+  arxiv: true              # physics.optics, physics.chem-ph, physics.bio-ph preprints
+  max_results_per_query: 400
+
+# A paper is kept if its TITLE matches any include pattern,
+# or its ABSTRACT matches one at least twice. Patterns are case-insensitive regular expressions.
+include:
+  - '\braman\b'
+  - '\bSERS\b'
+  - '\bTERS\b'
+  - 'surface[- ]enhanced raman'
+  - 'tip[- ]enhanced raman'
+  - 'stimulated raman'
+  - 'coherent anti-?stokes'
+  - '\bCARS\b'
+  - '\bCSRS\b'
+  - 'coherent raman'
+  - 'vibrational (spectroscop|imaging|microscop)'
+  - '\bFT-?IR\b'
+  - 'infrared spectroscop'
+  - 'mid-?infrared (photothermal|imaging|spectroscop)'
+  - '\bO-?PTIR\b'
+  - 'optical photothermal infrared'
+  - '\bAFM-?IR\b'
+  - 'near-?infrared spectroscop'
+  - '\bATR\b.*infrared'
+  - 'hyper-?raman'
+  - 'brillouin'            # often co-reported with Raman; remove if unwanted
+
+# Drop a paper if its title or abstract matches any of these
+exclude:
+  - 'functional near-?infrared'          # fNIRS brain haemodynamics
+  - '\bfNIRS\b'
+  - 'raman amplifier'                    # telecom fibre amplifiers
+  - 'raman (fiber|fibre) laser'
+  - 'near-?infrared (fluorescence|imaging-guided|photothermal therapy)'
+
+# Europe PMC search terms (combined with OR, searched in title + abstract)
+europepmc_terms:
+  - raman
+  - '"surface-enhanced raman"'
+  - '"stimulated raman"'
+  - '"coherent anti-stokes"'
+  - '"coherent raman"'
+  - '"infrared spectroscopy"'
+  - FTIR
+  - '"mid-infrared photothermal"'
+  - '"optical photothermal infrared"'
+  - '"vibrational spectroscopy"'
+  - '"vibrational imaging"'
+
+# Crossref query strings (Crossref search is fuzzy; results are then filtered by `include`)
+crossref_queries:
+  - raman spectroscopy
+  - stimulated raman scattering
+  - coherent anti-stokes raman
+  - surface-enhanced raman
+  - tip-enhanced raman
+  - infrared spectroscopy
+  - mid-infrared photothermal
+  - vibrational spectroscopy
+  - FTIR
+
+arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, cond-mat.mtrl-sci, q-bio.QM]
+
+# Thumbnails, OCT News style: the article page's own preview image (og:image / twitter:image,
+# usually Fig. 1 or the graphical abstract); if none, the journal cover; if none, the site draws a glyph.
+figures:
+  mode: all                # all | open_access_only
+  max_width: 400
+  max_height: 280
+  min_side_px: 120         # smaller images are treated as logos and ignored
+  reject_url_patterns: ['logo', 'favicon', 'default', 'placeholder', 'sprite', 'icon', 'blank']
+
+# Journal covers, used when an article page offers no preview image.
+# Key = journal title as Crossref/Europe PMC reports it (case-insensitive) or its ISSN.
+# Value = an image URL you are allowed to use. Leave empty to let the crawler try the journal homepage's og:image.
+journal_covers: {}
+#  "Journal of Raman Spectroscopy": https://.../jrs-cover.jpg
+
+# Category rules. A category is added when any of its patterns matches title or abstract.
+# Group names must match the site's groups: Applications, Business News, Technology, Miscellaneous.
+categories:
+  Technology:
+    Spontaneous Raman: ['\braman (spectroscop|spectr|microscop|imaging|mapping)', 'confocal raman', 'raman microspectroscop']
+    SRS / CARS: ['stimulated raman', 'coherent anti-?stokes', '\bCARS\b', '\bSRS\b', 'coherent raman', '\bCSRS\b', 'raman histolog']
+    SERS / TERS: ['\bSERS\b', '\bTERS\b', 'surface[- ]enhanced raman', 'tip[- ]enhanced raman', 'plasmonic substrate']
+    IR / NIR: ['\bFT-?IR\b', 'infrared spectroscop', '\bNIR\b', 'near-?infrared', '\bATR\b']
+    Photothermal IR: ['photothermal', '\bO-?PTIR\b', '\bMIP\b', '\bAFM-?IR\b']
+    Data Analysis & AI: ['machine learning', 'deep learning', 'neural network', 'chemometric', '\bPCA\b', 'random forest', 'transformer', 'denois', 'preprocessing']
+    General Technology: ['instrument', 'spectrometer', 'laser source', 'detector', 'optical design', 'phase[- ]matching', 'fiber probe', 'fibre probe']
+  Applications:
+    Art & Heritage: ['heritage', 'pigment', 'painting', 'archaeolog', 'manuscript']
+    Bacteriology: ['bacteri', 'pathogen', 'microb', 'antibiotic']
+    Cell Biology: ['live cell', 'living cell', 'single[- ]cell', 'lipid droplet', 'organelle', 'metabolism']
+    Dermatology: ['skin', 'derma', 'melanoma']
+    Environmental: ['microplastic', 'nanoplastic', 'environment', 'pollut', 'water quality']
+    Food & Agriculture: ['food', 'agricultur', 'crop', 'leaf', 'fruit', 'meat', 'milk', 'pesticide']
+    Forensics: ['forensic', 'explosive', 'nerve agent', 'counterfeit', 'drug of abuse']
+    Materials: ['perovskite', 'graphene', 'polymer', 'catalys', 'battery', 'semiconductor', 'thin film', '2D material']
+    Nephrology: ['kidney', 'renal', 'urine']
+    Neurology: ['brain', 'neur', 'glioma', 'myelin', 'alzheimer', 'parkinson']
+    Oncology: ['cancer', 'tumou?r', 'oncolog', 'carcinoma', 'metasta']
+    Pharmaceutics: ['pharma', 'drug formulation', 'bioprocess', 'tablet', 'active pharmaceutical']
+  Miscellaneous:
+    Reviews: ['^review', '\breview of\b', 'a review', 'perspective', 'tutorial']
+
+# How long the trimmed abstract shown on the site may be (characters)
+summary_max_chars: 700

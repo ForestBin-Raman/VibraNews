@@ -1,0 +1,32 @@
+{
+  "meetings": [
+    {
+      "start": "2026-11-04",
+      "end": "2026-11-05",
+      "title": "RamanFest 2026",
+      "where": "Paris",
+      "url": "https://www.nanowerk.com/eventpage.php?id=6387"
+    },
+    {
+      "start": "2026-11-16",
+      "end": "2026-11-18",
+      "title": "Eastern Analytical Symposium 2026",
+      "where": "Plainsboro, NJ",
+      "url": "https://www.spectroscopyonline.com/view/eas-2026-to-mark-65th-anniversary-with-program-focused-on-ai-and-data-integrity"
+    },
+    {
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "title": "SPIE Photonics West / BiOS 2027",
+      "where": "San Francisco",
+      "url": "https://spie.org/conferences-and-exhibitions/photonics-west/exhibitions/bios-expo"
+    },
+    {
+      "start": "2027-02-27",
+      "end": "2027-03-03",
+      "title": "Pittcon 2027",
+      "where": "San Diego",
+      "url": "https://pittcon.org"
+    }
+  ]
+}

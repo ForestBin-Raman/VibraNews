@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VibSpecNews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a community paper portal in the OCT News tradition (logo band, menu bar, one article column with figure thumbnails, widget rail), restyled with its own identity: petrol-ink band, laser-line (532→785 nm) section rules, molecule logo. Single light theme by choice. */
+:root{
+  --bg:#ffffff;
+  --ink:#16242b;
+  --muted:#5d6a72;
+  --band:#123c46;       /* menu band */
+  --tint:#eef5f5;       /* soft panels */
+  --title:#0d5c75;      /* article titles (petrol) */
+  --inst:#b4572b;       /* institutions (sienna) */
+  --app:#0a7f74;        /* Applications - teal */
+  --tech:#b03a6e;       /* Technology - raspberry */
+  --biz:#9a6700;        /* Business News - ochre */
+  --misc:#4b55a0;       /* Miscellaneous - indigo */
+  --author:#566873;
+  --l532:#18a35a; --l785:#c2263f;
+  --font:"Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-logo:"Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--font)}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--app);outline-offset:2px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px;color:inherit}
+.logo:hover{text-decoration:none}
+.logo svg{width:70px;height:70px;flex:none}
+.logo .name{font:700 52px/0.92 var(--font-logo);letter-spacing:.005em;color:var(--ink)}
+.logo .name span{color:var(--app)}
+.logo .sub{display:block;font:600 14px/1.2 var(--font);color:var(--muted);margin-top:6px;letter-spacing:.14em;text-transform:uppercase}
+.banner{width:400px;max-width:100%;height:78px;border-radius:6px;background:var(--band);position:relative;overflow:hidden}
+.banner canvas{position:absolute;inset:0;width:100%;height:100%}
+.banner .bt{position:absolute;right:12px;top:8px;font:500 13px var(--font);color:#e6f3f2}
+.banner .bs{position:absolute;right:12px;bottom:7px;font:400 11px var(--font);color:#9cc3c4}
+@media (max-width:620px){.logo svg{width:52px;height:52px}.logo .name{font-size:40px}.logo .sub{font-size:11px}.banner{height:62px}.banner .bt{font-size:11.5px}}
+
+/* Menu */
+.menu{background:var(--band);border-bottom:3px solid transparent;border-image:linear-gradient(90deg,var(--l532),#e3c03a 50%,var(--l785)) 1}
+.menu .wrap{display:flex;align-items:center;justify-content:center;min-height:46px}
+.menu ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center}
+.menu a{display:block;padding:12px 14px;font-weight:500;color:#e8f2f2}
+.menu a:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.burger{display:none;background:rgba(255,255,255,.12);border:0;border-radius:4px;width:40px;height:34px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:#fff;margin:3px auto}
+@media (max-width:760px){
+  .burger{display:block;margin:6px 0}
+  .menu .wrap{flex-direction:column}
+  .menu ul{display:none;flex-direction:column;width:100%;text-align:center;padding-bottom:6px}
+  .menu.open ul{display:flex}
+}
+
+/* Layout */
+.body{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:36px;padding-top:34px;padding-bottom:48px}
+@media (max-width:900px){.body{grid-template-columns:1fr}}
+.sec-h{font:700 24px/1.2 var(--font);margin:0 0 14px;padding-bottom:7px;position:relative}
+.sec-h::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:linear-gradient(90deg,var(--l532) 0,var(--l532) 70px,#d9e2e4 70px)}
+.pager{font-size:14px;color:var(--muted);margin:-4px 0 14px}
+.pager a{color:var(--title)}
+
+/* Articles */
+.art{margin:0 0 28px}
+.art h3{font:500 19px/1.22 var(--font);margin:0 0 5px;color:var(--title)}
+.oa{display:inline-block;font:700 10.5px/1 var(--font);letter-spacing:.04em;color:#fff;background:var(--app);border-radius:3px;padding:3px 5px;margin-left:6px;vertical-align:3px}
+.meta{font-size:14px;line-height:1.45}
+.meta em{color:#333}
+.c-app{color:var(--app)} .c-tech{color:var(--tech)} .c-biz{color:var(--biz)} .c-misc{color:var(--misc)}
+.meta button{font:inherit;background:none;border:0;padding:0;cursor:pointer}
+.meta button:hover{text-decoration:underline}
+.inst{color:var(--inst)}
+.authors{font-size:14px;color:var(--author);line-height:1.45}
+.abs{margin-top:10px;font-size:14.5px;line-height:1.62;color:#2b363c}
+.abs::after{content:"";display:block;clear:both}
+figure.fig{float:left;width:132px;margin:4px 16px 6px 0}
+figure.fig .frame{width:132px;height:92px;border:1px solid #d5dfe1;border-radius:4px;background:#f7fafa;overflow:hidden;display:flex;align-items:center;justify-content:center}
+figure.fig img{max-width:100%;max-height:100%;display:block}
+figure.fig canvas{width:132px;height:92px;display:block}
+figure.fig figcaption{font-size:11px;line-height:1.3;color:#7a878e;margin-top:3px}
+.src{font-size:13px;color:#7a878e;margin-top:4px}
+.src a{color:var(--title)}
+.why{font-size:14px;color:#2b363c;margin-top:6px;background:var(--tint);border-left:3px solid var(--app);padding:6px 10px}
+.empty{color:var(--muted);padding:10px 0 30px}
+
+/* Sidebar */
+aside{font-size:14px}
+.search{display:flex;margin-bottom:24px;border:1px solid #c9d6d8;border-radius:5px;overflow:hidden}
+.search input{flex:1;min-width:0;border:0;background:#fff;padding:8px 10px;font:inherit;color:var(--ink)}
+.search button{border:0;background:var(--band);color:#fff;font:500 14px var(--font);padding:0 14px;cursor:pointer}
+.w-h{font:700 17px/1.2 var(--font);margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid #d9e2e4;letter-spacing:.01em}
+.cats p{margin:0 0 4px;line-height:1.6}
+.cats b{font-weight:700}
+.cats button{font:inherit;background:none;border:0;padding:0;cursor:pointer}
+.cats button:hover,.cats button[aria-pressed="true"]{text-decoration:underline}
+.cats button[aria-pressed="true"]{font-weight:700}
+.subscribe{margin:28px 0 26px;background:var(--tint);border-radius:6px;padding:14px}
+.subscribe .row{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;padding:8px 0}
+.subscribe .row + .row{border-top:1px solid #d6e3e4}
+.subscribe .row b{display:block;color:var(--ink)}
+.subscribe .row span{color:var(--muted);font-size:13px}
+.ad{border:1px dashed #b9c8ca;border-radius:5px;color:#8a979d;font-size:12.5px;text-align:center;padding:16px 8px;margin:0 0 28px}
+ol.list{margin:0 0 28px;padding-left:22px}
+ol.list li{margin-bottom:5px;color:var(--muted)}
+ol.list a{color:var(--title)}
+ul.orgs{list-style:none;margin:0 0 28px;padding:0}
+ul.orgs li{margin-bottom:3px;color:var(--muted)}
+ul.orgs button{font:inherit;color:var(--inst);background:none;border:0;padding:0;cursor:pointer;text-align:left}
+ul.orgs button:hover{text-decoration:underline}
+.confs{list-style:none;margin:0 0 28px;padding:0}
+.confs li{margin-bottom:7px}
+.confs a{color:var(--title);font-weight:500}
+.confs span{color:var(--muted)}
+.confs a[aria-current]{font-weight:700}
+.box{background:var(--tint);border-radius:6px;padding:12px 14px;margin-bottom:28px}
+.box p{margin:0 0 8px}
+.btn{font:500 14px var(--font);background:var(--band);color:#fff;border:0;border-radius:4px;padding:7px 12px;cursor:pointer}
+.ok{font-size:12.5px;color:var(--app);margin-left:6px}
+
+footer{border-top:1px solid #d9e2e4;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:14px;padding-bottom:28px}
+</style>
+</head>
+<body>
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="#top" id="top" aria-label="VibSpec News home">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a5966"/><stop offset="1" stop-color="#0d2d35"/></linearGradient></defs>
+        <rect x="3" y="3" width="94" height="94" rx="22" fill="url(#lg)"/>
+        <path d="M12 78 H30 L34 70 L38 82 L43 50 L47 86 L52 62 L56 74 L61 40 L65 78 H88" fill="none" stroke="#5fd3a6" stroke-width="2.2" stroke-linejoin="round" opacity=".55"/>
+        <g stroke="#e9f5f3" stroke-width="3" fill="none" stroke-linecap="round">
+          <path d="M33 38 q3 -5 6 0 t6 0 t6 0 t6 0"/>
+          <path d="M57 38 l9 -12"/>
+        </g>
+        <circle cx="27" cy="38" r="8.5" fill="#f2c14e"/>
+        <circle cx="62" cy="38" r="7" fill="#e9f5f3"/>
+        <circle cx="70" cy="22" r="5.5" fill="#ef6a6a"/>
+      </svg>
+      <span><span class="name">VibSpec <span>News</span></span><span class="sub">Vibrational Spectroscopy News</span></span>
+    </a>
+    <div class="banner" aria-hidden="true"><canvas id="spec"></canvas><span class="bt">Raman · IR · SRS / CARS · SERS</span><span class="bs">Raman shift / cm⁻¹</span></div>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Main">
+  <div class="wrap">
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-list"><span></span><span></span><span></span></button>
+    <ul id="menu-list">
+      <li><a href="#top" data-reset>Home</a></li>
+      <li><a href="#featured">Editor's Picks</a></li>
+      <li><a href="#recent">Latest Papers</a></li>
+      <li><a href="#conferences">Meetings</a></li>
+      <li><a href="#jobs">Positions</a></li>
+      <li><a href="#archive-h">Archive</a></li>
+      <li><a href="#submit">Submit a Paper</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap body">
+  <div>
+    <section id="featured">
+      <h2 class="sec-h" id="featTitle">Editor's Picks</h2>
+      <div id="featList"></div>
+    </section>
+    <section id="recent">
+      <h2 class="sec-h" id="recTitle">Latest Papers</h2>
+      <div class="pager" id="pager"></div>
+      <div id="recList"></div>
+    </section>
+  </div>
+
+  <aside>
+    <form class="search" id="searchForm" role="search">
+      <label for="q" style="position:absolute;left:-9999px">Search papers</label>
+      <input id="q" type="search" placeholder="Title, author, institution">
+      <button type="submit">Search</button>
+    </form>
+
+    <h3 class="w-h">Topics</h3>
+    <div class="cats" id="cats"></div>
+
+    <div class="subscribe">
+      <a class="row" href="#subscribe-note" id="subscribe-note">
+        <svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true"><rect x="4" y="12" width="44" height="30" rx="5" fill="#fff" stroke="#123c46" stroke-width="2.4"/><path d="M6 15 L26 30 L46 15" fill="none" stroke="#123c46" stroke-width="2.4"/><path d="M12 38 h6 l2 -4 l3 6 l3 -10 l3 8 l2 -3 h9" fill="none" stroke="#18a35a" stroke-width="2"/></svg>
+        <span><b>Monday Digest</b><span>The week's papers by email. Sign-up opens at public launch.</span></span>
+      </a>
+      <a class="row" href="#submit">
+        <svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3" fill="#fff" stroke="#123c46" stroke-width="2.4"/><path d="M16 16 h16 M16 22 h16 M16 28 h10" stroke="#9fb3b7" stroke-width="2"/><circle cx="38" cy="38" r="10" fill="#c2263f"/><path d="M38 33 v10 M33 38 h10" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span><b>Share Your Paper</b><span>Send new articles, theses and positions to the editor.</span></span>
+      </a>
+    </div>
+
+    <div class="ad">Sponsor space</div>
+
+    <h3 class="w-h">This Week's Papers</h3>
+    <ol class="list" id="weekList"></ol>
+
+    <h3 class="w-h">Labs &amp; Institutions</h3>
+    <ul class="orgs" id="orgs"></ul>
+
+    <h3 class="w-h" id="conferences">Meetings</h3>
+    <ul class="confs" id="confs"></ul>
+
+    <h3 class="w-h" id="jobs">Positions</h3>
+    <div class="box"><p>No open listings this week. Postdoc, PhD and industry positions are posted free; use Submit a Paper below.</p></div>
+
+    <h3 class="w-h" id="archive-h">Archive</h3>
+    <ul class="confs" id="archive"></ul>
+
+    <h3 class="w-h" id="submit">Submit a Paper</h3>
+    <div class="box">
+      <p>Send journal articles (including in-press), preprints, theses, positions and Feature Of The Week proposals. Please include Fig. 1 or a representative figure and its licence.</p>
+      <button class="btn" id="copyTpl" type="button">Copy submission template</button><span class="ok" id="copied" hidden>Copied</span>
+      <p style="margin:8px 0 0;color:#7a878e;font-size:12.5px">Editor address will be listed at launch.</p>
+    </div>
+  </aside>
+</main>
+
+<footer><div class="wrap"><span>VibSpec News · new issue every Monday · thumbnails are each article's own preview image or the journal cover, with credit; titles link to the original articles</span><a href="#top">Back to top</a></div></footer>
+
+<script>
+const GROUPS = [
+  {name:"Applications", cls:"c-app", cats:["Art & Heritage","Bacteriology","Cell Biology","Dermatology","Environmental","Food & Agriculture","Forensics","Materials","Nephrology","Neurology","Oncology","Pharmaceutics","Other Applications"]},
+  {name:"Business News", cls:"c-biz", cats:["Acquisition","Clinical Trials","Funding","Other News","Partnership","Patents"]},
+  {name:"Technology", cls:"c-tech", cats:["Spontaneous Raman","SRS / CARS","SERS / TERS","IR / NIR","Photothermal IR","Data Analysis & AI","General Technology"]},
+  {name:"Miscellaneous", cls:"c-misc", cats:["Jobs & Studentships","Reviews","Student Theses","Textbooks"]}
+];
+const CLS = {}; GROUPS.forEach(g=>g.cats.forEach(c=>CLS[c]=g.cls));
+
+let ARTS = [], CONFS = [], ISSUES = [], ISSUE = null;
+
+/* Map an issue-file article (see scraper) onto the fields the renderer uses */
+function fromIssue(x, issue){
+  const {y,m,d} = P(issue.date);
+  const prefix = x.feature ? `Feature of the Week ${m}/${d}/${String(y).slice(2)}: ` : "";
+  return {id:x.id, d:x.date, t:prefix + x.title, cats:x.categories||[], inst:x.institutions||[], au:x.authors||"",
+    j:x.journal||"", doi:x.doi||"", link:x.url || (x.doi ? "https://doi.org/"+x.doi : "#"), oa:!!x.oa, license:x.license||"",
+    abs:x.summary||"", why:x.why||"", glyph:x.glyph||"raman", featured:!!(x.feature||x.pick), feature:!!x.feature, fig:x.fig||null};
+}
+
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const esc = s => String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const P = iso => { const [y,m,d]=iso.split("-").map(Number); return {y,m,d}; };
+const longDate = iso => { const {y,m,d}=P(iso); return `${MONTHS[m-1]} ${d}, ${y}`; };
+
+let filter=null, query="";
+const visible = a => (!filter || (filter.type==="cat" ? a.cats.includes(filter.value) : a.inst.includes(filter.value))) &&
+  (!query || (a.t+" "+a.au+" "+a.j+" "+a.abs+" "+a.inst.join(" ")+" "+a.cats.join(" ")).toLowerCase().includes(query));
+
+function figHTML(a){
+  if(a.fig && a.fig.src){
+    const cap = a.fig.kind==="cover" ? "Journal cover" : `Fig. · ${a.fig.credit||""}`;
+    return `<figure class="fig"><a class="frame" href="${esc(a.link)}"><img src="${esc(a.fig.src)}" alt="${esc(a.fig.kind==="cover"?("Cover of "+a.j):("Representative figure from "+a.t))}" loading="lazy"></a><figcaption>${esc(cap)}</figcaption></figure>`;
+  }
+  return `<figure class="fig"><div class="frame"><canvas class="thumb" data-glyph="${a.glyph}" aria-hidden="true"></canvas></div></figure>`;
+}
+function artHTML(a){
+  return `<article class="art" id="${a.id}">
+    <h3><a href="${esc(a.link)}">${esc(a.t)}</a>${a.oa?'<span class="oa" title="Open access">OA</span>':""}</h3>
+    <div class="meta"><em>${longDate(a.d)}</em> | ${a.cats.map(c=>`<button type="button" class="${CLS[c]}" data-cat="${esc(c)}">${esc(c)}</button>`).join(", ")}${a.inst.length?" | "+a.inst.map(i=>`<button type="button" class="inst" data-inst="${esc(i)}">${esc(i)}</button>`).join(", "):""}</div>
+    ${a.au?`<div class="authors">${esc(a.au)}</div>`:""}
+    <div class="abs">${figHTML(a)}${esc(a.abs)}
+      ${a.why?`<div class="why"><b>Why it matters:</b> ${esc(a.why)}</div>`:""}
+      <div class="src">${esc(a.j)}${a.doi?` · <a href="${esc(a.link)}">doi:${esc(a.doi)}</a>`:` · <a href="${esc(a.link)}">journal page</a>`}</div>
+    </div>
+  </article>`;
+}
+
+function render(){
+  const feat = ARTS.filter(a=>a.featured && visible(a));
+  const rec = ARTS.filter(a=>!a.featured && visible(a)).sort((x,y)=>y.d.localeCompare(x.d));
+  const filtering = filter || query;
+  document.getElementById("featured").hidden = filtering ? !feat.length : false;
+  document.getElementById("featList").innerHTML = feat.map(artHTML).join("");
+  document.getElementById("recTitle").textContent = filter ? `${filter.type==="cat"?"Topic":"Institution"}: ${filter.value}` : (query ? "Search Results" : "Latest Papers");
+  const total = ARTS.filter(a=>!a.featured).length;
+  document.getElementById("pager").innerHTML = filtering
+    ? `${rec.length+feat.length} matching paper${rec.length+feat.length===1?"":"s"} // <a href="#top" id="clearF">Show all papers</a>`
+    : `Issue No. ${ISSUE.number} · ${longDate(ISSUE.date)} · papers from ${shortRange(ISSUE.window[0], ISSUE.window[1])} · ${total} papers`;
+  const cf=document.getElementById("clearF"); if(cf) cf.onclick=e=>{ filter=null; query=""; document.getElementById("q").value=""; render(); };
+  document.getElementById("recList").innerHTML = rec.length ? rec.map(artHTML).join("") : (feat.length?"":`<p class="empty">No papers match. Try another topic or search term.</p>`);
+  renderCats(); drawThumbs();
+}
+
+function renderCats(){
+  const used = new Set(ARTS.flatMap(a=>a.cats));
+  document.getElementById("cats").innerHTML = GROUPS.map(g=>`<p><b>${g.name}:</b> ${g.cats.map((c,k)=>
+    `<span style="white-space:nowrap"><button type="button" class="${g.cls}" data-cat="${esc(c)}" aria-pressed="${!!(filter&&filter.type==="cat"&&filter.value===c)}"${used.has(c)?"":' title="No articles yet"'}>${esc(c)}</button>${k<g.cats.length-1?",":""}</span>`).join(" ")}</p>`).join("");
+}
+
+function renderRail(){
+  document.getElementById("weekList").innerHTML = [...ARTS].sort((x,y)=>(y.featured?1:0)-(x.featured?1:0)||y.d.localeCompare(x.d))
+    .map(a=>`<li><a href="#${a.id}">${esc(a.t.replace(/^Feature of the Week [^:]+:\s*/,""))}</a></li>`).join("");
+  const m={}; ARTS.forEach(a=>a.inst.forEach(i=>m[i]=(m[i]||0)+1));
+  document.getElementById("orgs").innerHTML = Object.entries(m).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]))
+    .map(([i,n])=>`<li><button type="button" data-inst="${esc(i)}">${esc(i)}</button> · ${n} paper${n>1?"s":""}</li>`).join("");
+  const today=new Date(); today.setHours(0,0,0,0);
+  document.getElementById("confs").innerHTML = CONFS.map(c=>{
+    const a=P(c.s), b=P(c.e); const M=x=>MONTHS[x-1].slice(0,3);
+    const range = a.m===b.m ? `${M(a.m)} ${a.d}–${b.d}, ${a.y}` : `${M(a.m)} ${a.d} – ${M(b.m)} ${b.d}, ${b.y}`;
+    const days=Math.round((new Date(a.y,a.m-1,a.d)-today)/86400000);
+    const soon = days>=0&&days<=14?` · in ${days} day${days===1?"":"s"}`:"";
+    return `<li><a href="${esc(c.u)}">${esc(c.t)}</a><br><span>${range} · ${esc(c.w)}${soon}</span></li>`;
+  }).join("");
+}
+
+/* Fallback when no licensed figure is available: a technique glyph */
+function drawThumbs(){
+  document.querySelectorAll("canvas.thumb").forEach(cv=>{
+    const dpr=window.devicePixelRatio||1, W=132, H=92; cv.width=W*dpr; cv.height=H*dpr;
+    const g=cv.getContext("2d"); g.setTransform(dpr,0,0,dpr,0,0);
+    const kind=cv.dataset.glyph;
+    const col={raman:"#0d5c75",srs:"#b03a6e",csrs:"#b03a6e",sers:"#b4572b",ir:"#0a7f74",nir:"#0a7f74",mip:"#c2263f"}[kind]||"#0d5c75";
+    const label={raman:"Raman",srs:"SRS",csrs:"CSRS",sers:"SERS",ir:"IR",nir:"NIR",mip:"MIP"}[kind];
+    g.fillStyle="#f7fafa"; g.fillRect(0,0,W,H);
+    g.strokeStyle="#e2eaeb"; g.lineWidth=1; for(let y=18;y<H;y+=14){g.beginPath();g.moveTo(4,y+.5);g.lineTo(W-4,y+.5);g.stroke();}
+    const peaks = kind==="sers"?[[.25,.9,.015],[.42,.5,.02],[.6,.8,.015],[.78,.35,.02]]
+      : (kind==="ir"||kind==="nir"||kind==="mip") ? [[.2,.5,.05],[.45,.85,.04],[.7,.6,.06],[.85,.3,.03]]
+      : kind==="srs"||kind==="csrs" ? [[.55,.6,.03],[.68,1,.035],[.78,.45,.02]]
+      : [[.18,.3,.01],[.3,.85,.008],[.48,.6,.02],[.6,.55,.025],[.82,.9,.03]];
+    const absorb = kind==="ir"||kind==="nir";
+    g.beginPath();
+    for(let px=4;px<=W-4;px++){
+      const x=(px-4)/(W-8); let v=0; for(const [c,a,w] of peaks) v+=a*w*w/((x-c)**2+w*w);
+      const y = absorb ? 22 + v*44 : H-12 - v*56;
+      px===4?g.moveTo(px,y):g.lineTo(px,y);
+    }
+    g.strokeStyle=col; g.lineWidth=1.6; g.stroke();
+    g.font="700 11px Roboto, Arial, sans-serif"; g.fillStyle=col; g.textAlign="left"; g.fillText(label,7,14);
+  });
+}
+
+/* Banner spectrum */
+function drawBanner(){
+  const cv=document.getElementById("spec"), r=cv.getBoundingClientRect(); if(!r.width) return;
+  const dpr=window.devicePixelRatio||1; cv.width=r.width*dpr; cv.height=r.height*dpr;
+  const g=cv.getContext("2d"); g.setTransform(dpr,0,0,dpr,0,0);
+  const W=r.width, H=r.height, x0=400, x1=3200;
+  const bands=[[621,.18,6],[785,.32,8],[1003,.95,4],[1127,.22,9],[1250,.38,22],[1302,.42,14],[1340,.35,10],[1445,.72,15],[1585,.2,9],[1660,.66,18],[2850,.7,16],[2885,.6,14],[2930,1.0,22],[2970,.45,12]];
+  const f=w=>{let y=.06; for(const [c,a,h] of bands) y+=a*h*h/((w-c)**2+h*h); return y;};
+  const frac = W<500 ? 0.36 : 0.46; const X=w=>8+(w-x0)/(x1-x0)*(W*frac-8), Y=v=>H-12-(v/1.1)*(H-26);
+  g.beginPath(); for(let w=x0;w<=x1;w+=2){ const x=X(w), y=Y(f(w)); w===x0?g.moveTo(x,y):g.lineTo(x,y);}
+  const gr=g.createLinearGradient(0,0,W*frac,0); gr.addColorStop(0,"#5fd3a6"); gr.addColorStop(1,"#f2c14e"); g.strokeStyle=gr; g.lineWidth=1.6; g.stroke();
+  g.lineTo(X(x1),H-12); g.lineTo(X(x0),H-12); g.closePath(); g.fillStyle="rgba(95,211,166,.12)"; g.fill();
+  g.fillStyle="#9cc3c4"; g.font="9px Roboto, Arial"; g.textAlign="center";
+  for(const t of [1000,2000,3000]) g.fillText(t, X(t), H-2);
+}
+
+document.addEventListener("click", e=>{
+  const c=e.target.closest("[data-cat]"), i=e.target.closest("[data-inst]"), r=e.target.closest("[data-reset]");
+  if(c){ const v=c.dataset.cat; filter=(filter&&filter.type==="cat"&&filter.value===v)?null:{type:"cat",value:v}; render(); document.getElementById("featured").scrollIntoView(); }
+  else if(i){ const v=i.dataset.inst; filter=(filter&&filter.type==="inst"&&filter.value===v)?null:{type:"inst",value:v}; render(); document.getElementById("featured").scrollIntoView(); }
+  else if(r){ filter=null; query=""; document.getElementById("q").value=""; render(); }
+  if(e.target.closest(".menu ul a")) closeMenu();
+});
+document.getElementById("searchForm").addEventListener("submit", e=>{ e.preventDefault(); query=document.getElementById("q").value.trim().toLowerCase(); filter=null; render(); document.getElementById("featured").scrollIntoView(); });
+document.getElementById("q").addEventListener("input", e=>{ if(!e.target.value){ query=""; render(); } });
+const menu=document.getElementById("menu"), burger=document.getElementById("burger");
+function closeMenu(){ menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
+burger.addEventListener("click", ()=>{ const o=menu.classList.toggle("open"); burger.setAttribute("aria-expanded", String(o)); });
+document.getElementById("copyTpl").addEventListener("click", async ()=>{
+  const tpl="VibSpec News — Submit a Paper\nType (journal article / in-press / preprint / patent / thesis / job / Feature Of The Week):\nTitle:\nAuthors:\nInstitutions:\nJournal & DOI:\nAbstract or summary:\nFig. 1 / representative figure (attach) and its licence (e.g. CC BY 4.0):\nCategories (e.g. SRS / CARS, SERS / TERS, IR / NIR, Oncology):\nContact:\n";
+  const ok=document.getElementById("copied");
+  try{ await navigator.clipboard.writeText(tpl); ok.textContent="Copied"; }catch(err){ ok.textContent="Copy was blocked by the browser"; }
+  ok.hidden=false; setTimeout(()=>ok.hidden=true,2000);
+});
+
+function shortRange(a,b){ const A=P(a), B=P(b), M=x=>MONTHS[x-1].slice(0,3); return A.m===B.m ? `${M(A.m)} ${A.d}–${B.d}` : `${M(A.m)} ${A.d} – ${M(B.m)} ${B.d}`; }
+
+function renderArchive(){
+  document.getElementById("archive").innerHTML = ISSUES.map(i=>
+    `<li><a href="#issue-${i.id}"${ISSUE&&i.id===ISSUE.id?' aria-current="page"':''}>No. ${i.number} · ${longDate(i.date)}</a> <span>· ${i.count} papers</span></li>`).join("");
+}
+
+async function loadIssue(id){
+  const meta = ISSUES.find(i=>i.id===id) || ISSUES[0];
+  if(!meta) throw new Error("no issues");
+  const r = await fetch(`data/issues/${meta.id}.json`, {cache:"no-cache"});
+  if(!r.ok) throw new Error(`issue ${meta.id}: HTTP ${r.status}`);
+  ISSUE = await r.json();
+  ARTS = ISSUE.articles.map(x=>fromIssue(x, ISSUE));
+  filter=null; query=""; document.getElementById("q").value="";
+  render(); renderRail(); renderArchive();
+}
+
+async function init(){
+  drawBanner();
+  try{
+    const [ri, rm] = await Promise.all([fetch("data/issues/index.json",{cache:"no-cache"}), fetch("data/meetings.json",{cache:"no-cache"})]);
+    ISSUES = (await ri.json()).issues || [];
+    CONFS = rm.ok ? ((await rm.json()).meetings||[]).map(m=>({s:m.start,e:m.end,t:m.title,w:m.where,u:m.url})) : [];
+    const want = (location.hash.match(/^#issue-(\d{4}-\d{2}-\d{2})$/)||[])[1];
+    await loadIssue(want);
+  }catch(err){
+    document.getElementById("recList").innerHTML = `<p class="empty">Could not load the issue data (${esc(err.message)}). If you opened this file directly, serve the folder over HTTP, e.g. <code>python -m http.server</code>.</p>`;
+  }
+}
+addEventListener("hashchange", ()=>{ const m=location.hash.match(/^#issue-(\d{4}-\d{2}-\d{2})$/); if(m && (!ISSUE || m[1]!==ISSUE.id)) loadIssue(m[1]); });
+init();
+addEventListener("resize", drawBanner);
+document.fonts && document.fonts.ready.then(()=>{ drawBanner(); if(ARTS.length) drawThumbs(); });
+</script>
+</body>
+</html>

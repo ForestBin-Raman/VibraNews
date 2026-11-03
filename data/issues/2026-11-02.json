@@ -1,0 +1,354 @@
+{
+  "id": "2026-11-02",
+  "number": 1,
+  "date": "2026-11-02",
+  "window": [
+    "2026-10-16",
+    "2026-11-01"
+  ],
+  "articles": [
+    {
+      "id": "10-1038-s41566-026-01995-z-65de98",
+      "date": "2026-10-19",
+      "title": "Intrinsic backward emission of coherent Raman photons from homogeneous media",
+      "authors": "Jitendra Nath Acharyya, G. Benni, A. Sentenac, H. Rigneault, Sandro Heuke",
+      "institutions": [
+        "Institut Fresnel, Aix Marseille University"
+      ],
+      "journal": "Nature Photonics",
+      "doi": "10.1038/s41566-026-01995-z",
+      "url": "https://doi.org/10.1038/s41566-026-01995-z",
+      "oa": true,
+      "license": "Open access",
+      "categories": [
+        "SRS / CARS",
+        "General Technology"
+      ],
+      "glyph": "srs",
+      "summary": "In four-wave mixing the driving wavevectors set the output direction, so coherent Raman light can be sent backwards without any structure in the sample. The authors show that coherent Stokes Raman scattering (CSRS) phase-matches efficiently into the backward collection cone of a high-NA objective, and identify an azimuthally polarized Stokes annulus with a circularly polarized pump as the best geometry. With a ~790 nm pump and 1,030 nm Stokes, backward CSRS near 1,470 nm was detected on an InGaAs APD, giving about 7×10⁹ backward photons/s from sunflower oil. They imaged avocado, human fatty liver, sheep brain myelin and PMMA edges at ~330 nm lateral and 0.92 µm axial resolution. Backward flux is ~20× below forward CARS, narrowing to ~5× after detector efficiency.",
+      "why": "A refocusable coherent Raman signal that does not rely on sample scattering opens same-side detection for thick tissue, opaque substrates and fibre-based probes.",
+      "pick": false,
+      "feature": true,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-1038-s41467-026-78699-z-17769b",
+      "date": "2026-10-30",
+      "title": "Video-rate volumetric chemical imaging via mid-infrared photothermal optical diffraction tomography",
+      "authors": "Masato Fukushima, Keiichiro Toda, Yusei Sugawara, Shotaro Kawano, Takuro Ideguchi",
+      "institutions": [
+        "The University of Tokyo",
+        "RIKEN"
+      ],
+      "journal": "Nature Communications 17, 11075",
+      "doi": "10.1038/s41467-026-78699-z",
+      "url": "https://doi.org/10.1038/s41467-026-78699-z",
+      "oa": true,
+      "license": "Open access",
+      "categories": [
+        "Photothermal IR",
+        "Cell Biology"
+      ],
+      "glyph": "mip",
+      "summary": "Volumetric mid-infrared photothermal (MIP) imaging has been limited by a trade-off between speed and signal-to-noise. Pairing a high-power nanosecond mid-IR source with rapid angular scanning in optical diffraction tomography, the authors reach 19.2 volumes per second, roughly 400 times faster than earlier MIP tomography, with SNR above 70 and no temporal averaging. They track lipid droplets in 3D inside living cells and find heterogeneous, anomalous diffusion from full volumetric trajectories. Sweeping the mid-IR wavenumber gives hyperspectral volumes over a 300 cm⁻¹ window in about one second.",
+      "why": "",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "near-infrared-spectroscopy-with-data-analysis-model-for-rapi-9c5fee",
+      "date": "2026-10-30",
+      "title": "Near-infrared spectroscopy with data analysis model for rapid identification of Huanglongbing in Gannan navel orange",
+      "authors": "",
+      "institutions": [],
+      "journal": "Spectroscopy",
+      "doi": null,
+      "url": "https://www.spectroscopyonline.com/view/near-infrared-spectroscopy-with-data-analysis-model-for-rapid-identification-of-huanglongbing-in-gannan-navel-orange",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "IR / NIR",
+        "Food & Agriculture",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "FT-NIR spectra (Antaris II) were collected from navel orange leaves in four classes: mild Huanglongbing, severe Huanglongbing, nutrient deficiency and healthy. After PCA, a back-propagation neural network reached an overall accuracy of 98.75%, outperforming LDA, KNN and SVM classifiers on the same data.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-1186-s41512-026-00226-x-de031f",
+      "date": "2026-10-30",
+      "title": "Raman spectroscopy as a diagnostic tool for glioma: protocol for a systematic review",
+      "authors": "C. O. Vrancianu, M. Necula, E. Milea, N. Siminea, R.-E. Cristian, A. Stoica, M. C. Chifiriuc, B. Oancea, A. Paun, I. Petre, M. Paun",
+      "institutions": [],
+      "journal": "Diagnostic and Prognostic Research 10, 9",
+      "doi": "10.1186/s41512-026-00226-x",
+      "url": "https://doi.org/10.1186/s41512-026-00226-x",
+      "oa": true,
+      "license": "Open access",
+      "categories": [
+        "Neurology",
+        "Oncology",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Protocol for a systematic review of whether Raman spectroscopy can reliably detect glioma micro-infiltration, particularly intraoperatively, in adult patients. Diagnostic-accuracy studies will be appraised with QUADAS-2 and pooled by meta-analysis if enough comparable data exist.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-1186-s12911-026-03922-2-db0f68",
+      "date": "2026-10-29",
+      "title": "Improving thyroid cancer diagnosis through stacked explainable machine learning integrating ultrasound and Raman cytological features",
+      "authors": "M. Di Gioacchino, A. Palermo, D. Diacono, R. Tommasi, N. Amoroso, L. Bellantuono, P. Crucitti, M. La Rocca, F. Longo, N. Marrocco, A. Monaco, A. M. Naciu, E. Pantaleo, R. Bellotti, A. Crescenzi, A. Sodo",
+      "institutions": [],
+      "journal": "BMC Medical Informatics and Decision Making",
+      "doi": "10.1186/s12911-026-03922-2",
+      "url": "https://doi.org/10.1186/s12911-026-03922-2",
+      "oa": true,
+      "license": "Open access",
+      "categories": [
+        "Oncology",
+        "Spontaneous Raman",
+        "Data Analysis & AI"
+      ],
+      "glyph": "raman",
+      "summary": "In 203 surgically treated patients from one centre, ultrasound features (logistic regression) and Raman spectra of fine-needle aspirates (Extra Trees) were combined in a stacked ensemble with a logistic-regression meta-learner. All preprocessing, stacking and threshold choice stayed inside training folds of a 20× repeated stratified five-fold cross-validation. Mean out-of-fold AUC was 0.856 (95% CI 0.796–0.909); in 93 indeterminate TIR3A/TIR3B nodules it was 0.859. The authors call for prospective multicentre validation.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-1007-s44462-026-00073-5-1800f0",
+      "date": "2026-10-29",
+      "title": "SERS-active nanostructures for food microorganisms and toxins biosensing: compositional tailoring, structural regulation, and signal amplification",
+      "authors": "Z. Qu, E. Yang, M. Zeb, J. Zhu, Y. Kim, J. M. G. Simão, W. Ma",
+      "institutions": [],
+      "journal": "Agricultural Products Processing and Storage 2, 37",
+      "doi": "10.1007/s44462-026-00073-5",
+      "url": "https://doi.org/10.1007/s44462-026-00073-5",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS",
+        "Food & Agriculture",
+        "Reviews"
+      ],
+      "glyph": "sers",
+      "summary": "Reviews how substrate composition, nanostructure design and amplification strategies, together with machine learning, improve SERS biosensors for foodborne bacteria and microbial toxins. Some assays reach detection limits of a few cells per millilitre. Open problems include complex food matrices, the absence of standard spectral libraries and limited interpretability of AI models.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-1007-s40472-026-00531-w-559c71",
+      "date": "2026-10-21",
+      "title": "From spectra to clinical insight: Raman spectroscopy in kidney transplant monitoring and donor assessment",
+      "authors": "E. Peveri, A. Asthana, L. N. Byers, R. Senger, S. Issa, J. Robertson, D. M. Dehoff, G. Orlando",
+      "institutions": [],
+      "journal": "Current Transplantation Reports 13, 34",
+      "doi": "10.1007/s40472-026-00531-w",
+      "url": "https://doi.org/10.1007/s40472-026-00531-w",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Nephrology",
+        "Spontaneous Raman",
+        "SERS / TERS",
+        "Reviews"
+      ],
+      "glyph": "raman",
+      "summary": "Reviews human, animal and laboratory work using Raman and SERS in kidney transplantation. Reported studies distinguish transplant states, estimate kidney-function measures and separate activated from resting T cells. The authors position the methods as possible non-invasive adjuncts, not yet established clinical tests.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "evolution-of-pigments-in-artificially-aged-polyethylene-plas-554137",
+      "date": "2026-10-21",
+      "title": "Evolution of pigments in artificially aged polyethylene plastics: a Raman study",
+      "authors": "Lucie Dewyspelaere, Lénaïk Belec, Isabelle Martin, Véronique Madigou, Olivia Gérigny, Alexandre Merlen",
+      "institutions": [],
+      "journal": "Journal of Raman Spectroscopy",
+      "doi": null,
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "oa": true,
+      "license": "Open access",
+      "categories": [
+        "Materials",
+        "Environmental",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Organic and inorganic pigments in polyethylene were followed by Raman spectroscopy during UVA ageing, with resonance enhancement helping to track pigment changes. The approach applies to both pigment classes and bears on reading the history of plastic debris.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "scanning-tip-and-confocal-raman-characterization-of-gold-nan-e08765",
+      "date": "2026-10-21",
+      "title": "Scanning-tip and confocal Raman characterization of gold nanoparticles as plasmonic structures for molecular sensing",
+      "authors": "Zhi Gao, Alexei V. Sokolov",
+      "institutions": [],
+      "journal": "Journal of Raman Spectroscopy",
+      "doi": null,
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS",
+        "General Technology"
+      ],
+      "glyph": "sers",
+      "summary": "Compares scanning-tip and confocal Raman measurements of the same gold nanoparticle structures to characterise their plasmonic enhancement for molecular sensing.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-37188-lam-2026-115-04549f",
+      "date": "2026-10-20",
+      "title": "Reusable plasmonic Au and Ag diamond films for robust SERS sensing",
+      "authors": "Kieran N. Twaddle, Massimiliano L. A. Ramsay, Richard B. Jackman",
+      "institutions": [
+        "University College London"
+      ],
+      "journal": "Light: Advanced Manufacturing 7, 113",
+      "doi": "10.37188/lam.2026.115",
+      "url": "https://doi.org/10.37188/lam.2026.115",
+      "oa": true,
+      "license": "Open access",
+      "categories": [
+        "SERS / TERS",
+        "Materials"
+      ],
+      "glyph": "sers",
+      "summary": "Ag or Au films were dewetted into nanoparticles by H₂-plasma annealing, overgrown with diamond by microwave plasma CVD and thinned by reactive ion etching. The best substrate (27.1 nm Au particles under 31.3 nm of diamond) gave an enhancement factor of 6.9×10³ for rhodamine 6G and detected it down to 10⁻⁵ M. The 612 cm⁻¹ band was unchanged within error after sonication, gold etchant, 400 °C annealing and 100 abrasion cycles, so the substrates can be reused.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "balancing-prediction-performance-and-spectral-interpretabili-769981",
+      "date": "2026-10-19",
+      "title": "Balancing prediction performance and spectral interpretability: multimetric guided design of Raman spectrum preprocessing pipelines to transfer single compound models to bioprocess data",
+      "authors": "Gianmarco Luchetti Sfondalmondo, Marieke E. Klijn",
+      "institutions": [],
+      "journal": "Journal of Raman Spectroscopy",
+      "doi": null,
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Data Analysis & AI",
+        "Spontaneous Raman",
+        "Pharmaceutics"
+      ],
+      "glyph": "raman",
+      "summary": "Uses several performance and interpretability metrics together to choose Raman preprocessing pipelines when models built on single compounds are transferred to bioprocess spectra.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "the-infrared-and-raman-spectra-of-the-jahn-teller-distorted--229084",
+      "date": "2026-10-18",
+      "title": "The infrared and Raman spectra of the Jahn–Teller-distorted KCrF₃ perovskite",
+      "authors": "Tarek Larbi, Khaled E. El-Kelany, Michel Rérat, Roberto Dovesi",
+      "institutions": [],
+      "journal": "Journal of Raman Spectroscopy",
+      "doi": null,
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "IR / NIR",
+        "Spontaneous Raman"
+      ],
+      "glyph": "ir",
+      "summary": "Computes and assigns the IR and Raman spectra of KCrF₃, a perovskite with cooperative Jahn–Teller distortion.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "quantitative-analysis-of-furfural-in-transformer-oil-based-o-cd3ae6",
+      "date": "2026-10-18",
+      "title": "Quantitative analysis of furfural in transformer oil based on multilevel FTIR–Raman spectral fusion",
+      "authors": "Yang Zhao, Gehua Huang, Huadan Zheng, Yaohong Zhao, Canqin Li, Furong Huang",
+      "institutions": [],
+      "journal": "Journal of Raman Spectroscopy",
+      "doi": null,
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Data Analysis & AI",
+        "IR / NIR",
+        "Spontaneous Raman"
+      ],
+      "glyph": "ir",
+      "summary": "Fuses FTIR and Raman data at several levels to quantify furfural, a marker of insulation-paper ageing, in transformer oil.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    },
+    {
+      "id": "10-1007-s10439-026-04433-x-3a2a8c",
+      "date": "2026-10-16",
+      "title": "Bone quality heterogeneity in mixed femoral metastases revealed by stimulated Raman scattering spectromicroscopy",
+      "authors": "Azin Mirzajavadkhan, Christian Chum Him Lai, Margarete K. Akens, Cari M. Whyne, Chenxi Qian",
+      "institutions": [
+        "University of Toronto",
+        "Sunnybrook Research Institute"
+      ],
+      "journal": "Annals of Biomedical Engineering",
+      "doi": "10.1007/s10439-026-04433-x",
+      "url": "https://doi.org/10.1007/s10439-026-04433-x",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "SRS / CARS"
+      ],
+      "glyph": "srs",
+      "summary": "Mixed femoral metastases were induced in athymic rats with ACE-1 prostate cancer cells and imaged label-free by SRS: amide I, amide III, proline and phenylalanine on decalcified sections, phosphate on undecalcified ones. Tumour-associated osteoblastic bone was collagen-rich but under-mineralised (higher amide and proline, lower phosphate and phenylalanine). Bone distant from the tumour also showed raised proline and lower phenylalanine, suggesting effects beyond the lesion.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "editor"
+    }
+  ],
+  "removed": []
+}
