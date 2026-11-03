@@ -65,6 +65,7 @@ def load_config(path: Path) -> dict:
     cfg["_include"] = [re.compile(p, re.I) for p in cfg.get("include", [])]
     cfg["_exclude"] = [re.compile(p, re.I) for p in cfg.get("exclude", [])]
     cfg["_strong"] = [re.compile(p, re.I) for p in cfg.get("strong_include", [])]
+    cfg["_title_only"] = [re.compile(p, re.I) for p in cfg.get("title_only", [])]
     cfg["_charlist"] = re.compile(cfg["characterisation_list"], re.I) if cfg.get("characterisation_list") else None
     cfg["_excl_sources"] = [x.lower() for x in cfg.get("exclude_sources", [])]
     cj = cfg.get("core_journals") or {}
@@ -205,6 +206,8 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     if any(p.search(title) for p in cfg["_include"]):
         return True
     body = cfg["_charlist"].sub(" ", abstract) if cfg.get("_charlist") else abstract
+    for p in cfg.get("_title_only", []):
+        body = p.sub(" ", body)
     if any(p.search(body) for p in cfg.get("_strong", [])):
         return True
     hits = sum(len(p.findall(body)) for p in cfg["_include"])

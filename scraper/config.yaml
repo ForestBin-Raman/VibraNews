@@ -98,6 +98,18 @@ strong_include:
   - 'raman (microscopy|imaging|mapping)'
   - 'hyperspectral raman'
 
+# Generic infrared terms count only in the TITLE: in abstracts they are mostly routine
+# characterisation ("FTIR confirmed the functional groups") rather than IR spectroscopy research
+title_only:
+  - '\bFT-?IR\b'
+  - 'infrared spectroscop'
+  - '\bATR\b'
+  - 'near-?infrared spectroscop'
+  - '\bNIR\b'
+  - '\bNIRS\b'
+  - 'infrared (absorption|spectr)'
+  - '\bIR (spectr|absorption|band)'
+
 # Mentions inside characterisation lists ("XRD, FTIR, Raman and XPS") are not counted
 characterisation_list: '(?:\b(?:XRD|XPS|SEM|TEM|HRTEM|EDS|EDX|BET|TGA|DSC|UV-?vis(?:ible)?|NMR|FT-?IR|Raman|PL|AFM|ICP(?:-[A-Z]+)?|EPR|XAS|XANES|DLS|zeta)\b(?:\s*(?:spectroscopy|spectra|analysis|analyses|measurements?))?\s*(?:,|/|;|\band\b|\bor\b)\s*){2,}(?:\band\s+)?\b(?:XRD|XPS|SEM|TEM|HRTEM|EDS|EDX|BET|TGA|DSC|UV-?vis(?:ible)?|NMR|FT-?IR|Raman|PL|AFM|ICP(?:-[A-Z]+)?|EPR|XAS|XANES|DLS|zeta)\b'
 
