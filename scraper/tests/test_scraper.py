@@ -523,6 +523,7 @@ def test_extra_topics_photoacoustic_spectral_imaging_spectrometers():
         ("A compact mass spectrometer for breath analysis", ""),
         ("Photoacoustic tomography of tumour vasculature", ""),
         ("High-gain SWIR photodetector arrays", ""),
+        ("Deep learning grading of tea leaves", "Hyperspectral imaging data were acquired from 400 samples."),
     ]
     for t, a in yes:
         assert vs.is_relevant({"title": t, "abstract": a}, cfg), t

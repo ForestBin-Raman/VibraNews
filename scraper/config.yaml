@@ -146,9 +146,8 @@ extra_topics:
       - 'snapshot (hyper)?spectral'
       - 'spectral (camera|imager)'
       - 'compressive spectral'
-    abstract:
-      - 'hyper-?spectral (imag|microscop|camera)'
-      - 'snapshot (hyper)?spectral imag'
+    abstract:                             # hyperspectral counts only in the title
+      - 'snapshot spectral imag'
       - 'computational spectral imag'
     exclude:                              # satellite / airborne remote sensing
       - 'remote sensing'
