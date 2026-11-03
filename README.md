@@ -13,7 +13,7 @@
 1. **新建仓库**：在 GitHub 新建公开仓库，例如 `vibranews`，把本目录全部内容推上去（默认分支 `main`）。
 2. **打开 Pages**：仓库 *Settings → Pages → Build and deployment → Source* 选 **GitHub Actions**。
 3. **允许工作流写入和开 PR**：*Settings → Actions → General → Workflow permissions* 选 **Read and write permissions**，并勾选 **Allow GitHub Actions to create and approve pull requests**。
-4. **填网址**：把 `scraper/config.yaml` 里的 `site.url` 改成你的 Pages 地址（如 `https://你的用户名.github.io/vibranews/`）。它只用于抓取时的 User-Agent，表明来源。
+4. **填网址**：把 `scraper/config.yaml` 里的 `site.url` 改成你的 Pages 地址（本站为 `https://forestbin-raman.github.io/VibraNews/`）。它只用于抓取时的 User-Agent，表明来源。
 5. **第一次发布**：推送到 `main` 会自动运行 *Deploy site to GitHub Pages*，几分钟后网站上线，显示第 1 期。
 6. **手动试跑抓取**：*Actions → Weekly issue (draft for review) → Run workflow*，留空即按本周一出刊；也可以填日期补抓。
 

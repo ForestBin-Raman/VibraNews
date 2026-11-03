@@ -3,7 +3,7 @@
 
 site:
   name: VibraNews
-  url: https://YOUR-GITHUB-USERNAME.github.io/vibranews/   # used in the bot User-Agent; update after first deploy
+  url: https://forestbin-raman.github.io/VibraNews/   # used in the bot User-Agent
 
 # Polite crawling
 http:
