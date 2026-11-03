@@ -203,5 +203,115 @@
     "src": "covers/journal-of-pharmacognosy-and-phytochemistry.jpg",
     "kind": "cover",
     "credit": "Journal cover · Journal of Pharmacognosy and Phytochemistry"
+  },
+  "nature photonics": {
+    "src": "covers/nature-photonics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nature Photonics"
+  },
+  "physics and chemistry of minerals": {
+    "src": "covers/physics-and-chemistry-of-minerals.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Physics and Chemistry of Minerals"
+  },
+  "theranostics": {
+    "src": "covers/theranostics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Theranostics"
+  },
+  "measurement science and technology": {
+    "src": "covers/measurement-science-and-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Measurement Science and Technology"
+  },
+  "journal of cardiovascular translational research": {
+    "src": "covers/journal-of-cardiovascular-translational-research.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Cardiovascular Translational Research"
+  },
+  "world journal of microbiology and biotechnology": {
+    "src": "covers/world-journal-of-microbiology-and-biotechnology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · World Journal of Microbiology and Biotechnology"
+  },
+  "journal of sol-gel science and technology": {
+    "src": "covers/journal-of-sol-gel-science-and-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Sol-Gel Science and Technology"
+  },
+  "microchimica acta": {
+    "src": "covers/microchimica-acta.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Microchimica Acta"
+  },
+  "nature physics": {
+    "src": "covers/nature-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nature Physics"
+  },
+  "siberian journal of life sciences and agriculture": {
+    "src": "covers/siberian-journal-of-life-sciences-and-agriculture.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Siberian Journal of Life Sciences and Agriculture"
+  },
+  "european journal of mineralogy": {
+    "src": "covers/european-journal-of-mineralogy.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · European Journal of Mineralogy"
+  },
+  "urolithiasis": {
+    "src": "covers/urolithiasis.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Urolithiasis"
+  },
+  "journal of physics b atomic molecular and optical physics": {
+    "src": "covers/journal-of-physics-b-atomic-molecular-and-optical-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Physics B Atomic Molecular and Optical Physics"
+  },
+  "applied physics b": {
+    "src": "covers/applied-physics-b.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Applied Physics B"
+  },
+  "topics in catalysis": {
+    "src": "covers/topics-in-catalysis.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Topics in Catalysis"
+  },
+  "journal of the indian society of remote sensing": {
+    "src": "covers/journal-of-the-indian-society-of-remote-sensing.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of the Indian Society of Remote Sensing"
+  },
+  "journal of earth system science": {
+    "src": "covers/journal-of-earth-system-science.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Earth System Science"
+  },
+  "progress in artificial intelligence": {
+    "src": "covers/progress-in-artificial-intelligence.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Progress in Artificial Intelligence"
+  },
+  "applied microbiology and biotechnology": {
+    "src": "covers/applied-microbiology-and-biotechnology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Applied Microbiology and Biotechnology"
+  },
+  "science china information sciences": {
+    "src": "covers/science-china-information-sciences.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Science China Information Sciences"
+  },
+  "annales geophysicae": {
+    "src": "covers/annales-geophysicae.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Annales Geophysicae"
+  },
+  "suranaree journal of science and technology": {
+    "src": "covers/suranaree-journal-of-science-and-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Suranaree Journal of Science and Technology"
   }
 }
