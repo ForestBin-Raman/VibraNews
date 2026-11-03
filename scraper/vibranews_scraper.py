@@ -65,6 +65,8 @@ def load_config(path: Path) -> dict:
     cfg["_include"] = [re.compile(p, re.I) for p in cfg.get("include", [])]
     cfg["_exclude"] = [re.compile(p, re.I) for p in cfg.get("exclude", [])]
     cfg["_strong"] = [re.compile(p, re.I) for p in cfg.get("strong_include", [])]
+    cfg["_charlist"] = re.compile(cfg["characterisation_list"], re.I) if cfg.get("characterisation_list") else None
+    cfg["_excl_sources"] = [x.lower() for x in cfg.get("exclude_sources", [])]
     cj = cfg.get("core_journals") or {}
     cfg["_core_issn"] = {x.lower() for x in cj.get("issn", [])}
     cfg["_core_titles"] = {x.lower() for x in cj.get("titles", [])}
@@ -192,6 +194,9 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
         return False
     if rec.get("_force"):                      # submitted through data/inbox.txt
         return True
+    journal = (rec.get("journal") or "").lower()
+    if rec.get("_type") in ("dataset", "paratext", "other", "erratum", "retraction") or any(x == journal or journal.startswith(x) for x in cfg.get("_excl_sources", [])):
+        return False
     if is_core_journal(rec, cfg):              # core vibrational-spectroscopy journals: everything
         return True
     text = f"{title} {abstract}"
@@ -199,9 +204,10 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
         return False
     if any(p.search(title) for p in cfg["_include"]):
         return True
-    if any(p.search(abstract) for p in cfg.get("_strong", [])):
+    body = cfg["_charlist"].sub(" ", abstract) if cfg.get("_charlist") else abstract
+    if any(p.search(body) for p in cfg.get("_strong", [])):
         return True
-    hits = sum(len(p.findall(abstract)) for p in cfg["_include"])
+    hits = sum(len(p.findall(body)) for p in cfg["_include"])
     return hits >= 2
 
 
@@ -364,6 +370,7 @@ def parse_openalex(w: dict) -> dict:
         "is_review": w.get("type") == "review",
         "is_preprint": w.get("type") == "preprint" or src.get("type") == "repository",
         "_openalex_source": (src.get("id") or "").rsplit("/", 1)[-1],
+        "_type": w.get("type"),
     }
 
 
@@ -375,7 +382,7 @@ def openalex_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]
         cursor, n = "*", 0
         while cursor and n < cap:
             r = http.get("https://api.openalex.org/works", params={
-                "filter": f"title_and_abstract.search:{term},from_publication_date:{since},to_publication_date:{until}",
+                "filter": f"title_and_abstract.search:{term},from_publication_date:{since},to_publication_date:{until},type:article|review|preprint|letter",
                 "per-page": 200, "cursor": cursor, "select": select})
             if not r:
                 break

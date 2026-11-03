@@ -37,7 +37,10 @@ include:
   - '\bCARS\b'
   - '\bCSRS\b'
   - 'coherent raman'
-  - 'vibrational (spectroscop|imaging|microscop)'
+  - 'vibrational (spectroscop|imaging|microscop|analysis|signature|mode|spectr)'
+  - 'short-?wave infrared'
+  - '\bSWIR\b'
+  - '\bNIRS\b'
   - '\bFT-?IR\b'
   - 'infrared spectroscop'
   - 'mid-?infrared (photothermal|imaging|spectroscop)'
@@ -45,6 +48,8 @@ include:
   - 'optical photothermal infrared'
   - '\bAFM-?IR\b'
   - 'near-?infrared spectroscop'
+  - '\bIR (spectr|biotyper|imaging|microscop|absorption|band)'
+  - 'infrared (imaging|microscop|absorption|spectr|biotyper)'
   - '\bATR\b.*infrared'
   - 'hyper-?raman'
   - 'brillouin (microscop|spectr|scattering|imaging|light scattering|shift|map|frequenc)'
@@ -79,7 +84,6 @@ strong_include:
   - 'surface[- ]enhanced raman'
   - 'tip[- ]enhanced raman'
   - '\bTERS\b'
-  - 'raman (spectroscop|microscop|imaging|spectra|mapping)'
   - 'brillouin (microscop|spectroscop|imaging|light scattering)'
   - 'optical photothermal infrared'
   - '\bO-?PTIR\b'
@@ -90,8 +94,15 @@ strong_include:
   - 'femtosecond stimulated raman'
   - 'two-dimensional infrared'
   - 'sum[- ]frequency generation (vibrational )?spectroscop'
-  - 'vibrational (spectroscop|imaging|microscop)'
-  - 'FT-?IR (spectroscop|imaging|microscop)'
+  - 'raman[- ]activated cell sorting'
+  - 'raman (microscopy|imaging|mapping)'
+  - 'hyperspectral raman'
+
+# Mentions inside characterisation lists ("XRD, FTIR, Raman and XPS") are not counted
+characterisation_list: '(?:\b(?:XRD|XPS|SEM|TEM|HRTEM|EDS|EDX|BET|TGA|DSC|UV-?vis(?:ible)?|NMR|FT-?IR|Raman|PL|AFM|ICP(?:-[A-Z]+)?|EPR|XAS|XANES|DLS|zeta)\b(?:\s*(?:spectroscopy|spectra|analysis|analyses|measurements?))?\s*(?:,|/|;|\band\b|\bor\b)\s*){2,}(?:\band\s+)?\b(?:XRD|XPS|SEM|TEM|HRTEM|EDS|EDX|BET|TGA|DSC|UV-?vis(?:ible)?|NMR|FT-?IR|Raman|PL|AFM|ICP(?:-[A-Z]+)?|EPR|XAS|XANES|DLS|zeta)\b'
+
+# Records from data repositories are not articles
+exclude_sources: ['zenodo', 'figshare', 'mendeley data', 'dryad', 'harvard dataverse', 'pangaea']
 
 # Core vibrational-spectroscopy journals: EVERY paper they publish is included (no keyword filter)
 core_journals:
