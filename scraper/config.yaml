@@ -38,8 +38,8 @@ include:
   - '\bCSRS\b'
   - 'coherent raman'
   - 'vibrational (spectroscop|imaging|microscop|analysis|signature|mode|spectr)'
-  - 'short-?wave infrared'
-  - '\bSWIR\b'
+  - 'short-?wave infrared (spectroscop|hyperspectral|imaging)'
+  - '\bSWIR (spectroscop|hyperspectral)'
   - '\bNIRS\b'
   - '\bFT-?IR\b'
   - 'infrared spectroscop'
@@ -136,6 +136,10 @@ exclude:
   - 'brillouin (fiber|fibre) laser'
   - 'stimulated brillouin scattering (laser|in (optical )?fib)'
   - 'terahertz (communication|antenna|wireless|6G)'
+  - 'spectral energy distribution'       # astronomy
+  - '\b(AGN|galax(y|ies)|exoplanet|protoplanetary|interstellar medium)\b'
+  - 'photodetector'                      # SWIR/IR detector devices
+  - 'prefrontal|cerebral oxygenation'    # fNIRS-type studies
   - 'near-?infrared (fluorescence|imaging-guided|photothermal therapy)'
 
 # Europe PMC search terms (combined with OR, searched in title + abstract)
