@@ -580,3 +580,11 @@ def test_routine_applications_dropped_physics_kept():
               "Plasma-based backward Raman amplification of femtosecond lasers",
               "Raman mapping of grain boundaries in graphene"]:
         assert vs.is_relevant({"title": t, "abstract": ""}, cfg), t
+
+
+def test_photothermal_microspectroscopy_is_relevant():
+    cfg = vs.load_config(Path(__file__).resolve().parent.parent / "config.yaml")
+    rec = {"title": "Supercontinuum-driven broadband Fourier-transform photothermal microspectroscopy",
+           "abstract": "Photothermal microspectroscopy provides a route to localized vibrational measurements."}
+    assert vs.is_relevant(rec, cfg)
+    assert vs.is_relevant({"title": "Broadband sensing", "abstract": rec["abstract"]}, cfg)

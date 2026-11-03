@@ -592,6 +592,11 @@ def lookup_doi(http: Http, doi: str) -> dict | None:
         res = r.json().get("resultList", {}).get("result", [])
         if res:
             return parse_europepmc(res[0])
+    m = re.match(r"10\.48550/arxiv\.(.+)$", doi, re.I)
+    if m:                                       # arXiv DOIs are registered with DataCite, not Crossref
+        r = http.get("http://export.arxiv.org/api/query", params={"id_list": m.group(1), "max_results": 1})
+        recs = parse_arxiv(r.text, "0000-00-00", "9999-99-99") if r else []
+        return recs[0] if recs else None
     r = http.get(f"https://api.crossref.org/works/{doi}")
     if r:
         return parse_crossref(r.json().get("message", {}))

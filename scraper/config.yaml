@@ -69,6 +69,10 @@ include:
   - '\bVCD\b'
   - '\bROA\b'
   - 'photoacoustic (infrared|IR|spectroscop)'
+  - 'photothermal (micro)?spectroscop'
+  - 'fourier[- ]transform photothermal'
+  - 'vibrational (measurement|contrast|absorption|fingerprint|band|transition|overtone|dynamics|response|state)'
+  - '(overtone|combination) (band|absorption|spectr)'
   - 'vibrational (EELS|electron energy loss)'
   - 'inelastic neutron scattering'
   - 'nuclear resonance vibrational'
@@ -97,6 +101,9 @@ strong_include:
   - 'raman[- ]activated cell sorting'
   - 'raman (microscopy|imaging|mapping)'
   - 'hyperspectral raman'
+  - 'photothermal (micro)?spectroscop'
+  - 'fourier[- ]transform photothermal'
+  - 'localized vibrational'
 
 # Generic infrared terms count only in the TITLE: in abstracts they are mostly routine
 # characterisation ("FTIR confirmed the functional groups") rather than IR spectroscopy research
@@ -362,6 +369,9 @@ europepmc_terms:
   - '"raman optical activity"'
   - '"vibrational circular dichroism"'
   - '"photoacoustic spectroscopy"'
+  - '"photothermal spectroscopy"'
+  - '"photothermal microspectroscopy"'
+  - '"photothermal microscopy"'
   - '"quartz-enhanced photoacoustic"'
   - '"light-induced thermoelastic"'
   - '"hyperspectral imaging"'
@@ -392,6 +402,8 @@ openalex_terms:
   - vibrational circular dichroism
   - raman optical activity
   - photoacoustic spectroscopy
+  - photothermal spectroscopy
+  - photothermal microscopy
   - quartz-enhanced photoacoustic
   - hyperspectral imaging
   - multispectral imaging
@@ -422,6 +434,8 @@ crossref_queries:
   - raman optical activity
   - vibrational circular dichroism
   - photoacoustic spectroscopy
+  - photothermal spectroscopy
+  - photothermal microscopy
   - quartz-enhanced photoacoustic
   - hyperspectral imaging
   - spectral imaging
@@ -445,6 +459,10 @@ arxiv_terms:
   - '"hyperspectral imaging"'
   - '"spectral imaging"'
   - spectrometer
+  - photothermal
+  - vibrational
+  - '"coherent anti-Stokes"'
+  - phonon
 
 arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, cond-mat.mtrl-sci, q-bio.QM]
 

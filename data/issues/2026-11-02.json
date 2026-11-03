@@ -40,35 +40,6 @@
       "tier": "notable"
     },
     {
-      "id": "10-1063-5-0339935-51c75c",
-      "date": "2026-11-02",
-      "title": "Microfluidic Brillouin platform for frequency-resolved mechanics of complex fluids",
-      "authors": "Chingis Kharmyssov, Vsevolod Cheburkanov, Mykyta Kizilov, Brian Sanders, Evren Oktem, Ankit Kumar, Abhishek Jain, Vladislav V. Yakovlev",
-      "institutions": [
-        "Texas A&M University",
-        "Texas A&M Health Science Center"
-      ],
-      "journal": "Applied Physics Letters",
-      "doi": "10.1063/5.0339935",
-      "url": "https://doi.org/10.1063/5.0339935",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Materials",
-        "Brillouin"
-      ],
-      "glyph": "brillouin",
-      "summary": "We introduce an integrated microfluidic platform that combines pressure-flow rheology with depth-resolved Brillouin microspectroscopy to investigate complex fluids in extensive frequency ranges. Apparent viscosity is measured via calibrated pressure-flow in a rectangular polydimethylsiloxane microchannel, while GHz-frequency Brillouin spectroscopy probes longitudinal mechanics under identical steady-flow conditions. Using semi-dilute methylcellulose solutions in a cell-culture medium as a model, we reveal mild shear-thinning behavior, whereas the Brillouin frequency shift and linewidth values remain constant throughout the flow rate range, mainly influenced by polymer concentration. …",
-      "why": "Couples pressure-flow rheology with depth-resolved Brillouin microspectroscopy on one microfluidic chip, linking low-frequency viscosity and GHz longitudinal mechanics under identical flow.",
-      "pick": true,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true,
-      "pick_date": "2026-11-03",
-      "tier": "notable"
-    },
-    {
       "id": "10-48550-arxiv-2611-00561-50ecf9",
       "date": "2026-10-31",
       "title": "Ultra-broadband quantum infrared spectroscopy extending to 20 µm",
@@ -93,6 +64,40 @@
       "reviewed": true,
       "pick_date": "2026-11-03",
       "tier": "notable"
+    },
+    {
+      "id": "10-1038-s41467-026-78699-z-17769b",
+      "date": "2026-10-30",
+      "title": "Video-rate volumetric chemical imaging via mid-infrared photothermal optical diffraction tomography",
+      "authors": "Masato Fukushima, Keiichiro Toda, Yusei Sugawara, Shotaro Kawano, Takuro Ideguchi",
+      "institutions": [
+        "The University of Tokyo",
+        "RIKEN"
+      ],
+      "journal": "Nature Communications 17, 11075",
+      "doi": "10.1038/s41467-026-78699-z",
+      "url": "https://doi.org/10.1038/s41467-026-78699-z",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Photothermal IR",
+        "Spectral Imaging",
+        "Cell Biology"
+      ],
+      "glyph": "mip",
+      "summary": "Volumetric mid-infrared photothermal (MIP) imaging has been limited by a trade-off between speed and signal-to-noise. Pairing a high-power nanosecond mid-IR source with rapid angular scanning in optical diffraction tomography, the authors reach 19.2 volumes per second, roughly 400 times faster than earlier MIP tomography, with SNR above 70 and no temporal averaging. They track lipid droplets in 3D inside living cells and find heterogeneous, anomalous diffusion from full volumetric trajectories. Sweeping the mid-IR wavenumber gives hyperspectral volumes over a 300 cm⁻¹ window in about one second.",
+      "why": "About 400× faster than earlier mid-infrared photothermal tomography: 19 chemical volumes per second without averaging, enough to follow lipid droplets moving in 3D inside living cells.",
+      "pick": true,
+      "feature": false,
+      "fig": {
+        "src": "figs/10-1038-s41467-026-78699-z-17769b.jpg",
+        "kind": "figure",
+        "credit": "CC BY · via nature.com"
+      },
+      "source": "editor",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-03"
     },
     {
       "id": "10-1093-noajnl-vdag267-cd27cc",
@@ -240,6 +245,32 @@
       "reviewed": true,
       "pick_date": "2026-11-03",
       "tier": "notable"
+    },
+    {
+      "id": "10-48550-arxiv-2610-32718",
+      "date": "2026-10-23",
+      "title": "Supercontinuum-driven broadband Fourier-transform photothermal microspectroscopy",
+      "authors": "Senyu Wang et al., Takuro Ideguchi",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arXiv.2610.32718",
+      "url": "https://arxiv.org/abs/2610.32718",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Photothermal IR",
+        "Spectrometer Design"
+      ],
+      "glyph": "mip",
+      "summary": "Photothermal microspectroscopy reads out local vibrational absorption through the heat it deposits, sensed by a separate optical probe, but broadband spectra are slow when the excitation laser has to be tuned step by step. The authors drive the measurement with a supercontinuum and record the photothermal signal through a rapid-scan interferometer, so the whole spectrum is obtained at once by Fourier transform. In the 1.65–2.35 µm window they record broadband photothermal spectra of aqueous samples at about one spectrum per second, and a dark-field detection scheme extends this to a single 6 µm polystyrene bead in water.",
+      "why": "Replaces step-by-step laser tuning with a supercontinuum and Fourier-transform readout, giving broadband photothermal vibrational spectra in about a second, including from a single microparticle in water.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv",
+      "tier": "notable",
+      "pick_date": "2026-11-03",
+      "reviewed": true
     },
     {
       "id": "10-1364-ol-616403-efebc2",
@@ -422,36 +453,32 @@
       "tier": "notable"
     },
     {
-      "id": "10-1038-s41467-026-78699-z-17769b",
-      "date": "2026-10-30",
-      "title": "Video-rate volumetric chemical imaging via mid-infrared photothermal optical diffraction tomography",
-      "authors": "Masato Fukushima, Keiichiro Toda, Yusei Sugawara, Shotaro Kawano, Takuro Ideguchi",
+      "id": "10-1063-5-0339935-51c75c",
+      "date": "2026-11-02",
+      "title": "Microfluidic Brillouin platform for frequency-resolved mechanics of complex fluids",
+      "authors": "Chingis Kharmyssov, Vsevolod Cheburkanov, Mykyta Kizilov, Brian Sanders, Evren Oktem, Ankit Kumar, Abhishek Jain, Vladislav V. Yakovlev",
       "institutions": [
-        "The University of Tokyo",
-        "RIKEN"
+        "Texas A&M University",
+        "Texas A&M Health Science Center"
       ],
-      "journal": "Nature Communications 17, 11075",
-      "doi": "10.1038/s41467-026-78699-z",
-      "url": "https://doi.org/10.1038/s41467-026-78699-z",
-      "oa": true,
-      "license": "CC BY",
+      "journal": "Applied Physics Letters",
+      "doi": "10.1063/5.0339935",
+      "url": "https://doi.org/10.1063/5.0339935",
+      "oa": false,
+      "license": "",
       "categories": [
-        "Photothermal IR",
-        "Spectral Imaging",
-        "Cell Biology"
+        "Materials",
+        "Brillouin"
       ],
-      "glyph": "mip",
-      "summary": "Volumetric mid-infrared photothermal (MIP) imaging has been limited by a trade-off between speed and signal-to-noise. Pairing a high-power nanosecond mid-IR source with rapid angular scanning in optical diffraction tomography, the authors reach 19.2 volumes per second, roughly 400 times faster than earlier MIP tomography, with SNR above 70 and no temporal averaging. They track lipid droplets in 3D inside living cells and find heterogeneous, anomalous diffusion from full volumetric trajectories. Sweeping the mid-IR wavenumber gives hyperspectral volumes over a 300 cm⁻¹ window in about one second.",
-      "why": "About 400× faster than earlier mid-infrared photothermal tomography: 19 chemical volumes per second without averaging, enough to follow lipid droplets moving in 3D inside living cells.",
-      "pick": true,
+      "glyph": "brillouin",
+      "summary": "We introduce an integrated microfluidic platform that combines pressure-flow rheology with depth-resolved Brillouin microspectroscopy to investigate complex fluids in extensive frequency ranges. Apparent viscosity is measured via calibrated pressure-flow in a rectangular polydimethylsiloxane microchannel, while GHz-frequency Brillouin spectroscopy probes longitudinal mechanics under identical steady-flow conditions. Using semi-dilute methylcellulose solutions in a cell-culture medium as a model, we reveal mild shear-thinning behavior, whereas the Brillouin frequency shift and linewidth values remain constant throughout the flow rate range, mainly influenced by polymer concentration. …",
+      "why": "Couples pressure-flow rheology with depth-resolved Brillouin microspectroscopy on one microfluidic chip, linking low-frequency viscosity and GHz longitudinal mechanics under identical flow.",
+      "pick": false,
       "feature": false,
-      "fig": {
-        "src": "figs/10-1038-s41467-026-78699-z-17769b.jpg",
-        "kind": "figure",
-        "credit": "CC BY · via nature.com"
-      },
-      "source": "editor",
+      "fig": null,
+      "source": "crossref",
       "reviewed": true,
+      "pick_date": "2026-11-03",
       "tier": "notable"
     },
     {
