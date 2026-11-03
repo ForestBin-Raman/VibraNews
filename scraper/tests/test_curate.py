@@ -1,0 +1,42 @@
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import curate  # noqa: E402
+
+
+def issue(n=20):
+    return {"id": "2026-11-09", "number": 2, "articles": [{"id": f"a{i}", "title": f"T{i}", "date": f"2026-11-{(i % 9) + 1:02d}"} for i in range(n)]}
+
+
+def test_picks_feature_and_reviewed():
+    iss = issue()
+    res = curate.apply_selections(iss, {"picks": [{"id": "a1", "why": "new SRS modality"}, {"id": "a2", "why": "x"}],
+                                        "feature": {"id": "a3", "why": "best"}, "reviewed_all": True}, "2026-11-10")
+    by = {a["id"]: a for a in iss["articles"]}
+    assert res["picks"] == 3 and res["feature"] == "a3"
+    assert by["a3"]["feature"] and by["a3"]["pick"] and by["a1"]["why"] == "new SRS modality"
+    assert all(a["reviewed"] for a in iss["articles"])
+    assert iss["articles"][0]["id"] == "a3"          # feature sorts first
+
+
+def test_cap_drops_oldest_but_never_feature():
+    iss = issue()
+    curate.apply_selections(iss, {"picks": [{"id": f"a{i}"} for i in range(10)], "feature": {"id": "a0"}}, "2026-11-10")
+    res = curate.apply_selections(iss, {"picks": [{"id": f"a{i}"} for i in range(10, 17)]}, "2026-11-11")
+    by = {a["id"]: a for a in iss["articles"]}
+    assert res["picks"] == 15 and len(res["dropped"]) == 2
+    assert by["a0"]["feature"] and by["a0"]["pick"]                 # feature kept although oldest
+    assert all(by[f"a{i}"]["pick"] for i in range(10, 17))           # new ones kept
+    assert set(res["dropped"]) <= {f"a{i}" for i in range(1, 10)}
+
+
+def test_feature_can_change_and_unknown_id_rejected():
+    iss = issue()
+    curate.apply_selections(iss, {"feature": {"id": "a1"}}, "2026-11-10")
+    curate.apply_selections(iss, {"feature": {"id": "a2"}}, "2026-11-11")
+    assert [a["id"] for a in iss["articles"] if a.get("feature")] == ["a2"]
+    try:
+        curate.apply_selections(iss, {"picks": [{"id": "nope"}]}, "2026-11-11")
+        assert False
+    except SystemExit:
+        pass

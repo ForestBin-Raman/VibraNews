@@ -94,6 +94,9 @@ figure.fig figcaption{font-size:11px;line-height:1.3;color:#7a878e;margin-top:3p
 .src a{color:var(--title)}
 .why{font-size:14px;color:#2b363c;margin-top:6px;background:var(--tint);border-left:3px solid var(--app);padding:6px 10px}
 .empty{color:var(--muted);padding:10px 0 30px}
+.more{display:block;margin:6px auto 30px}
+.art.fotw{border-left:4px solid var(--l785);padding-left:12px}
+.fotw-tag{display:inline-block;font:600 12px var(--font);letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--l785);border-radius:3px;padding:2px 7px;margin-bottom:5px}
 
 /* Sidebar */
 aside{font-size:14px}
@@ -160,7 +163,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-list"><span></span><span></span><span></span></button>
     <ul id="menu-list">
       <li><a href="#top" data-reset>Home</a></li>
-      <li><a href="#featured">Editor's Picks</a></li>
+      <li><a href="#featured">Feature Articles</a></li>
       <li><a href="#recent">Latest Papers</a></li>
       <li><a href="#conferences">Meetings</a></li>
       <li><a href="#jobs">Positions</a></li>
@@ -173,7 +176,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <main class="wrap body">
   <div>
     <section id="featured">
-      <h2 class="sec-h" id="featTitle">Editor's Picks</h2>
+      <h2 class="sec-h" id="featTitle">Feature Articles</h2>
+      <p class="pager" id="featNote">Technical and application innovations chosen by the editor this week.</p>
       <div id="featList"></div>
     </section>
     <section id="recent">
@@ -206,7 +210,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
     <div class="ad">Sponsor space</div>
 
-    <h3 class="w-h">This Week's Papers</h3>
+    <h3 class="w-h">This Week's Features</h3>
     <ol class="list" id="weekList"></ol>
 
     <h3 class="w-h">Labs &amp; Institutions</h3>
@@ -252,12 +256,13 @@ function fromIssue(x, issue){
     abs:x.summary||"", why:x.why||"", glyph:x.glyph||"raman", featured:!!(x.feature||x.pick), feature:!!x.feature, fig:x.fig||null};
 }
 
+const PAGE=40;
 const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
 const esc = s => String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const P = iso => { const [y,m,d]=iso.split("-").map(Number); return {y,m,d}; };
 const longDate = iso => { const {y,m,d}=P(iso); return `${MONTHS[m-1]} ${d}, ${y}`; };
 
-let filter=null, query="";
+let filter=null, query="", shown=PAGE;
 const visible = a => (!filter || (filter.type==="cat" ? a.cats.includes(filter.value) : a.inst.includes(filter.value))) &&
   (!query || (a.t+" "+a.au+" "+a.j+" "+a.abs+" "+a.inst.join(" ")+" "+a.cats.join(" ")).toLowerCase().includes(query));
 
@@ -269,7 +274,7 @@ function figHTML(a){
   return `<figure class="fig"><div class="frame"><canvas class="thumb" data-glyph="${a.glyph}" aria-hidden="true"></canvas></div></figure>`;
 }
 function artHTML(a){
-  return `<article class="art" id="${a.id}">
+  return `<article class="art${a.feature?" fotw":""}" id="${a.id}">
     <h3><a href="${esc(a.link)}">${esc(a.t)}</a>${a.oa?'<span class="oa" title="Open access">OA</span>':""}</h3>
     <div class="meta"><em>${longDate(a.d)}</em> | ${a.cats.map(c=>`<button type="button" class="${CLS[c]}" data-cat="${esc(c)}">${esc(c)}</button>`).join(", ")}${a.inst.length?" | "+a.inst.map(i=>`<button type="button" class="inst" data-inst="${esc(i)}">${esc(i)}</button>`).join(", "):""}</div>
     ${a.au?`<div class="authors">${esc(a.au)}</div>`:""}
@@ -281,7 +286,7 @@ function artHTML(a){
 }
 
 function render(){
-  const feat = ARTS.filter(a=>a.featured && visible(a));
+  const feat = ARTS.filter(a=>a.featured && visible(a)).sort((x,y)=>(y.feature?1:0)-(x.feature?1:0)||y.d.localeCompare(x.d));
   const rec = ARTS.filter(a=>!a.featured && visible(a)).sort((x,y)=>y.d.localeCompare(x.d));
   const filtering = filter || query;
   document.getElementById("featured").hidden = !feat.length;
@@ -294,7 +299,10 @@ function render(){
         ? `Issue No. ${ISSUE.number} · week of ${longDate(ISSUE.date)} · updated daily, last ${longDate(ISSUE.updated)} · ${total} papers`
         : `Issue No. ${ISSUE.number} · ${longDate(ISSUE.date)} · papers from ${shortRange(ISSUE.window[0], ISSUE.window[1])} · ${total} papers`);
   const cf=document.getElementById("clearF"); if(cf) cf.onclick=e=>{ filter=null; query=""; document.getElementById("q").value=""; render(); };
-  document.getElementById("recList").innerHTML = rec.length ? rec.map(artHTML).join("") : (feat.length?"":`<p class="empty">No papers match. Try another topic or search term.</p>`);
+  document.getElementById("recList").innerHTML = rec.length
+    ? rec.slice(0,shown).map(artHTML).join("") + (rec.length>shown ? `<button class="btn more" id="more" type="button">Show more papers (${rec.length-shown} more)</button>` : "")
+    : (feat.length?"":`<p class="empty">No papers match. Try another topic or search term.</p>`);
+  const mb=document.getElementById("more"); if(mb) mb.onclick=()=>{ shown+=PAGE; render(); };
   renderCats(); drawThumbs();
 }
 
@@ -305,10 +313,11 @@ function renderCats(){
 }
 
 function renderRail(){
-  document.getElementById("weekList").innerHTML = [...ARTS].sort((x,y)=>(y.featured?1:0)-(x.featured?1:0)||y.d.localeCompare(x.d))
+  const fl = ARTS.filter(a=>a.featured).sort((x,y)=>(y.feature?1:0)-(x.feature?1:0)||y.d.localeCompare(x.d));
+  document.getElementById("weekList").innerHTML = (fl.length?fl:[...ARTS].sort((x,y)=>y.d.localeCompare(x.d)).slice(0,15))
     .map(a=>`<li><a href="#${a.id}">${esc(a.t.replace(/^Feature of the Week [^:]+:\s*/,""))}</a></li>`).join("");
   const m={}; ARTS.forEach(a=>a.inst.forEach(i=>m[i]=(m[i]||0)+1));
-  document.getElementById("orgs").innerHTML = Object.entries(m).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]))
+  document.getElementById("orgs").innerHTML = Object.entries(m).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).slice(0,25)
     .map(([i,n])=>`<li><button type="button" data-inst="${esc(i)}">${esc(i)}</button> · ${n} paper${n>1?"s":""}</li>`).join("");
   const today=new Date(); today.setHours(0,0,0,0);
   document.getElementById("confs").innerHTML = CONFS.map(c=>{
@@ -377,12 +386,12 @@ function drawBanner(){
 
 document.addEventListener("click", e=>{
   const c=e.target.closest("[data-cat]"), i=e.target.closest("[data-inst]"), r=e.target.closest("[data-reset]");
-  if(c){ const v=c.dataset.cat; filter=(filter&&filter.type==="cat"&&filter.value===v)?null:{type:"cat",value:v}; render(); document.getElementById("featured").scrollIntoView(); }
-  else if(i){ const v=i.dataset.inst; filter=(filter&&filter.type==="inst"&&filter.value===v)?null:{type:"inst",value:v}; render(); document.getElementById("featured").scrollIntoView(); }
-  else if(r){ filter=null; query=""; document.getElementById("q").value=""; render(); }
+  if(c){ const v=c.dataset.cat; filter=(filter&&filter.type==="cat"&&filter.value===v)?null:{type:"cat",value:v}; shown=PAGE; render(); document.getElementById("featured").scrollIntoView(); }
+  else if(i){ const v=i.dataset.inst; filter=(filter&&filter.type==="inst"&&filter.value===v)?null:{type:"inst",value:v}; shown=PAGE; render(); document.getElementById("featured").scrollIntoView(); }
+  else if(r){ filter=null; query=""; shown=PAGE; document.getElementById("q").value=""; render(); }
   if(e.target.closest(".menu ul a")) closeMenu();
 });
-document.getElementById("searchForm").addEventListener("submit", e=>{ e.preventDefault(); query=document.getElementById("q").value.trim().toLowerCase(); filter=null; render(); document.getElementById("featured").scrollIntoView(); });
+document.getElementById("searchForm").addEventListener("submit", e=>{ e.preventDefault(); query=document.getElementById("q").value.trim().toLowerCase(); filter=null; shown=PAGE; render(); document.getElementById("featured").scrollIntoView(); });
 document.getElementById("q").addEventListener("input", e=>{ if(!e.target.value){ query=""; render(); } });
 const menu=document.getElementById("menu"), burger=document.getElementById("burger");
 function closeMenu(){ menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
