@@ -42,7 +42,26 @@ include:
   - 'near-?infrared spectroscop'
   - '\bATR\b.*infrared'
   - 'hyper-?raman'
-  - 'brillouin'            # often co-reported with Raman; remove if unwanted
+  - 'brillouin (microscop|spectr|scattering|imaging|light scattering|shift|map|frequenc)'
+  - 'stimulated brillouin (microscop|imaging|spectroscop)'
+  - 'terahertz (spectroscop|vibration|time-domain)'
+  - '\bTHz[- ](spectroscop|vibration|raman)'
+  - 'low-?(frequency|wavenumber) raman'
+  - 'sum[- ]frequency generation (vibrational )?spectroscop'
+  - '\bSFG\b.*vibration'
+  - '2D[- ]IR'
+  - 'two-dimensional infrared'
+  - 'femtosecond stimulated raman'
+  - '\bFSRS\b'
+  - 'impulsive stimulated raman'
+  - 'raman optical activity'
+  - 'vibrational circular dichroism'
+  - '\bVCD\b'
+  - '\bROA\b'
+  - 'photoacoustic (infrared|IR|spectroscop)'
+  - 'vibrational (EELS|electron energy loss)'
+  - 'inelastic neutron scattering'
+  - 'nuclear resonance vibrational'
 
 # Drop a paper if its title or abstract matches any of these
 exclude:
@@ -50,6 +69,12 @@ exclude:
   - '\bfNIRS\b'
   - 'raman amplifier'                    # telecom fibre amplifiers
   - 'raman (fiber|fibre) laser'
+  - 'brillouin zone'                     # band-structure term, not spectroscopy
+  - 'brillouin optical time'             # distributed fibre sensing (BOTDA/BOTDR)
+  - '\bBOTD[AR]\b'
+  - 'brillouin (fiber|fibre) laser'
+  - 'stimulated brillouin scattering (laser|in (optical )?fib)'
+  - 'terahertz (communication|antenna|wireless|6G)'
   - 'near-?infrared (fluorescence|imaging-guided|photothermal therapy)'
 
 # Europe PMC search terms (combined with OR, searched in title + abstract)
@@ -65,6 +90,17 @@ europepmc_terms:
   - '"optical photothermal infrared"'
   - '"vibrational spectroscopy"'
   - '"vibrational imaging"'
+  - '"brillouin microscopy"'
+  - '"brillouin spectroscopy"'
+  - '"brillouin scattering"'
+  - '"terahertz spectroscopy"'
+  - '"low-frequency raman"'
+  - '"sum frequency generation"'
+  - '"two-dimensional infrared"'
+  - '"femtosecond stimulated raman"'
+  - '"raman optical activity"'
+  - '"vibrational circular dichroism"'
+  - '"photoacoustic spectroscopy"'
 
 # Crossref query strings (Crossref search is fuzzy; results are then filtered by `include`)
 crossref_queries:
@@ -77,6 +113,28 @@ crossref_queries:
   - mid-infrared photothermal
   - vibrational spectroscopy
   - FTIR
+  - brillouin microscopy
+  - brillouin light scattering
+  - terahertz spectroscopy
+  - sum frequency generation spectroscopy
+  - two-dimensional infrared spectroscopy
+  - femtosecond stimulated raman
+  - raman optical activity
+  - vibrational circular dichroism
+
+# arXiv abstract search terms
+arxiv_terms:
+  - raman
+  - '"stimulated raman"'
+  - '"infrared spectroscopy"'
+  - '"vibrational spectroscopy"'
+  - '"mid-infrared photothermal"'
+  - SERS
+  - '"brillouin microscopy"'
+  - '"brillouin spectroscopy"'
+  - '"terahertz spectroscopy"'
+  - '"sum frequency generation"'
+  - '"two-dimensional infrared"'
 
 arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, cond-mat.mtrl-sci, q-bio.QM]
 
@@ -99,16 +157,22 @@ journal_covers: {}
 # Group names must match the site's groups: Applications, Business News, Technology, Miscellaneous.
 categories:
   Technology:
-    Spontaneous Raman: ['\braman (spectroscop|spectr|microscop|imaging|mapping)', 'confocal raman', 'raman microspectroscop']
+    Spontaneous Raman: ['\braman (spectroscop|spectr|microscop|imaging|mapping)', 'confocal raman', 'raman microspectroscop', 'hyper-?raman']
     SRS / CARS: ['stimulated raman', 'coherent anti-?stokes', '\bCARS\b', '\bSRS\b', 'coherent raman', '\bCSRS\b', 'raman histolog']
     SERS / TERS: ['\bSERS\b', '\bTERS\b', 'surface[- ]enhanced raman', 'tip[- ]enhanced raman', 'plasmonic substrate']
+    Brillouin: ['brillouin']
     IR / NIR: ['\bFT-?IR\b', 'infrared spectroscop', '\bNIR\b', 'near-?infrared', '\bATR\b']
-    Photothermal IR: ['photothermal', '\bO-?PTIR\b', '\bMIP\b', '\bAFM-?IR\b']
+    Photothermal IR: ['photothermal', '\bO-?PTIR\b', '\bMIP\b', '\bAFM-?IR\b', 'photoacoustic']
+    THz & Low-Frequency: ['terahertz', '\bTHz\b', 'low-?(frequency|wavenumber) raman', 'phonon mode']
+    Ultrafast & SFG: ['sum[- ]frequency', '\bSFG\b', '2D[- ]IR', 'two-dimensional infrared', 'femtosecond stimulated raman', '\bFSRS\b', 'impulsive stimulated raman', 'pump[- ]probe', 'ultrafast vibrational']
+    Chiral (ROA / VCD): ['raman optical activity', 'vibrational circular dichroism', '\bROA\b', '\bVCD\b']
+    Other Vibrational: ['vibrational (EELS|electron energy loss)', 'inelastic neutron', 'nuclear resonance vibrational', '\bIETS\b']
     Data Analysis & AI: ['machine learning', 'deep learning', 'neural network', 'chemometric', '\bPCA\b', 'random forest', 'transformer', 'denois', 'preprocessing']
     General Technology: ['instrument', 'spectrometer', 'laser source', 'detector', 'optical design', 'phase[- ]matching', 'fiber probe', 'fibre probe']
   Applications:
     Art & Heritage: ['heritage', 'pigment', 'painting', 'archaeolog', 'manuscript']
     Bacteriology: ['bacteri', 'pathogen', 'microb', 'antibiotic']
+    Biomechanics: ['stiffness', 'elastic modul', 'viscoelastic', 'mechanical propert', 'biomechanic']
     Cell Biology: ['live cell', 'living cell', 'single[- ]cell', 'lipid droplet', 'organelle', 'metabolism']
     Dermatology: ['skin', 'derma', 'melanoma']
     Environmental: ['microplastic', 'nanoplastic', 'environment', 'pollut', 'water quality']

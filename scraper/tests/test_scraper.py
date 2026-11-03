@@ -268,3 +268,28 @@ def test_open_access_only_mode_skips_paywalled_figures(repo, monkeypatch):
     assert f.fetch(paywalled, "x") is None          # no manual cover configured -> glyph
     oa = vs.parse_europepmc(EPMC_RESULT)
     assert f.fetch(oa, "y")["kind"] == "figure"
+
+
+# ----------------------------------------------------------------- broader vibrational techniques
+
+@pytest.mark.parametrize("title,abstract,keep,cat,glyph", [
+    ("Brillouin microscopy maps nuclear stiffness in living cells", "Brillouin light scattering reports the longitudinal modulus.", True, "Brillouin", "brillouin"),
+    ("Stimulated Brillouin microscopy of tissue mechanics", "", True, "Brillouin", "brillouin"),
+    ("Phonon dispersion across the Brillouin zone of a kagome metal", "We compute band structures.", False, None, None),
+    ("Brillouin optical time-domain analysis for pipeline monitoring", "BOTDA sensing.", False, None, None),
+    ("Terahertz communication links for 6G", "terahertz spectroscopy of channels", False, None, None),
+    ("Terahertz spectroscopy of collective vibrations in amino-acid crystals", "", True, "THz & Low-Frequency", "thz"),
+    ("Low-frequency Raman spectroscopy of pharmaceutical polymorphs", "", True, "THz & Low-Frequency", None),
+    ("Sum-frequency generation vibrational spectroscopy of water at lipid interfaces", "", True, "Ultrafast & SFG", "sfg"),
+    ("Two-dimensional infrared spectroscopy reveals amyloid structure", "", True, "Ultrafast & SFG", "sfg"),
+    ("Raman optical activity of glycoproteins", "", True, "Chiral (ROA / VCD)", "chiral"),
+    ("Vibrational circular dichroism determines absolute configuration of natural products", "", True, "Chiral (ROA / VCD)", "chiral"),
+])
+def test_other_vibrational_techniques(title, abstract, keep, cat, glyph):
+    rec = {"title": title, "abstract": abstract}
+    assert vs.is_relevant(rec, CFG) is keep
+    if keep:
+        cats = vs.categorize(rec, CFG)
+        assert cat in cats
+        if glyph:
+            assert vs.glyph_for(cats) == glyph

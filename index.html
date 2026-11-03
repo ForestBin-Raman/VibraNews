@@ -45,7 +45,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .logo .sub{display:block;font:600 14px/1.2 var(--font);color:var(--muted);margin-top:6px;letter-spacing:.14em;text-transform:uppercase}
 .banner{width:400px;max-width:100%;height:78px;border-radius:6px;background:var(--band);position:relative;overflow:hidden}
 .banner canvas{position:absolute;inset:0;width:100%;height:100%}
-.banner .bt{position:absolute;right:12px;top:8px;font:500 13px var(--font);color:#e6f3f2}
+.banner .bt{position:absolute;right:12px;top:8px;max-width:56%;text-align:right;line-height:1.3;font:500 13px var(--font);color:#e6f3f2}
 .banner .bs{position:absolute;right:12px;bottom:7px;font:400 11px var(--font);color:#9cc3c4}
 @media (max-width:620px){.logo svg{width:52px;height:52px}.logo .name{font-size:40px}.logo .sub{font-size:11px}.banner{height:62px}.banner .bt{font-size:11.5px}}
 
@@ -151,7 +151,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
       </svg>
       <span><span class="name">Vibra<span>News</span></span><span class="sub">Vibrational Spectroscopy News</span></span>
     </a>
-    <div class="banner" aria-hidden="true"><canvas id="spec"></canvas><span class="bt">Raman · IR · SRS / CARS · SERS</span><span class="bs">Raman shift / cm⁻¹</span></div>
+    <div class="banner" aria-hidden="true"><canvas id="spec"></canvas><span class="bt">Raman · Brillouin · IR · THz</span><span class="bs">SRS/CARS · SERS · SFG · ROA/VCD</span></div>
   </div>
 </header>
 
@@ -234,9 +234,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 
 <script>
 const GROUPS = [
-  {name:"Applications", cls:"c-app", cats:["Art & Heritage","Bacteriology","Cell Biology","Dermatology","Environmental","Food & Agriculture","Forensics","Materials","Nephrology","Neurology","Oncology","Pharmaceutics","Other Applications"]},
+  {name:"Applications", cls:"c-app", cats:["Art & Heritage","Bacteriology","Biomechanics","Cell Biology","Dermatology","Environmental","Food & Agriculture","Forensics","Materials","Nephrology","Neurology","Oncology","Pharmaceutics","Other Applications"]},
   {name:"Business News", cls:"c-biz", cats:["Acquisition","Clinical Trials","Funding","Other News","Partnership","Patents"]},
-  {name:"Technology", cls:"c-tech", cats:["Spontaneous Raman","SRS / CARS","SERS / TERS","IR / NIR","Photothermal IR","Data Analysis & AI","General Technology"]},
+  {name:"Technology", cls:"c-tech", cats:["Spontaneous Raman","SRS / CARS","SERS / TERS","Brillouin","IR / NIR","Photothermal IR","THz & Low-Frequency","Ultrafast & SFG","Chiral (ROA / VCD)","Other Vibrational","Data Analysis & AI","General Technology"]},
   {name:"Miscellaneous", cls:"c-misc", cats:["Jobs & Studentships","Reviews","Student Theses","Textbooks"]}
 ];
 const CLS = {}; GROUPS.forEach(g=>g.cats.forEach(c=>CLS[c]=g.cls));
@@ -324,15 +324,28 @@ function drawThumbs(){
     const dpr=window.devicePixelRatio||1, W=132, H=92; cv.width=W*dpr; cv.height=H*dpr;
     const g=cv.getContext("2d"); g.setTransform(dpr,0,0,dpr,0,0);
     const kind=cv.dataset.glyph;
-    const col={raman:"#0d5c75",srs:"#b03a6e",csrs:"#b03a6e",sers:"#b4572b",ir:"#0a7f74",nir:"#0a7f74",mip:"#c2263f"}[kind]||"#0d5c75";
-    const label={raman:"Raman",srs:"SRS",csrs:"CSRS",sers:"SERS",ir:"IR",nir:"NIR",mip:"MIP"}[kind];
+    const col={raman:"#0d5c75",srs:"#b03a6e",csrs:"#b03a6e",sers:"#b4572b",ir:"#0a7f74",nir:"#0a7f74",mip:"#c2263f",brillouin:"#4b55a0",thz:"#9a6700",sfg:"#7a3fa8",chiral:"#2f7d4f"}[kind]||"#0d5c75";
+    const label={raman:"Raman",srs:"SRS",csrs:"CSRS",sers:"SERS",ir:"IR",nir:"NIR",mip:"MIP",brillouin:"Brillouin",thz:"THz",sfg:"SFG / 2D-IR",chiral:"ROA / VCD"}[kind];
     g.fillStyle="#f7fafa"; g.fillRect(0,0,W,H);
     g.strokeStyle="#e2eaeb"; g.lineWidth=1; for(let y=18;y<H;y+=14){g.beginPath();g.moveTo(4,y+.5);g.lineTo(W-4,y+.5);g.stroke();}
     const peaks = kind==="sers"?[[.25,.9,.015],[.42,.5,.02],[.6,.8,.015],[.78,.35,.02]]
       : (kind==="ir"||kind==="nir"||kind==="mip") ? [[.2,.5,.05],[.45,.85,.04],[.7,.6,.06],[.85,.3,.03]]
       : kind==="srs"||kind==="csrs" ? [[.55,.6,.03],[.68,1,.035],[.78,.45,.02]]
+      : kind==="brillouin" ? [[.5,1,.012],[.28,.32,.02],[.72,.32,.02]]
+      : kind==="thz" ? [[.15,.5,.06],[.35,.8,.07],[.6,.55,.06],[.85,.35,.05]]
+      : kind==="sfg" ? [[.35,.9,.05],[.62,.55,.04]]
       : [[.18,.3,.01],[.3,.85,.008],[.48,.6,.02],[.6,.55,.025],[.82,.9,.03]];
-    const absorb = kind==="ir"||kind==="nir";
+    const absorb = kind==="ir"||kind==="nir"||kind==="thz";
+    if(kind==="chiral"){ /* bisignate ROA/VCD-style trace */
+      g.beginPath();
+      for(let px=4;px<=W-4;px++){ const x=(px-4)/(W-8); let v=0;
+        for(const [c,a,w] of [[.3,1,.03],[.55,-.8,.03],[.75,.6,.025]]) v+= a*(-(x-c)/w)*Math.exp(-((x-c)**2)/(2*w*w));
+        const y=H/2 - v*22; px===4?g.moveTo(px,y):g.lineTo(px,y); }
+      g.strokeStyle=col; g.lineWidth=1.6; g.stroke();
+      g.strokeStyle="#cfdadc"; g.beginPath(); g.moveTo(4,H/2+.5); g.lineTo(W-4,H/2+.5); g.stroke();
+      g.font="700 11px Roboto, Arial, sans-serif"; g.fillStyle=col; g.textAlign="left"; g.fillText(label,7,14);
+      return;
+    }
     g.beginPath();
     for(let px=4;px<=W-4;px++){
       const x=(px-4)/(W-8); let v=0; for(const [c,a,w] of peaks) v+=a*w*w/((x-c)**2+w*w);

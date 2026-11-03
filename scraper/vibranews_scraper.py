@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """VibraNews weekly scraper.
 
-Finds new vibrational-spectroscopy papers (Raman, SRS/CARS, SERS/TERS, IR/NIR,
-photothermal IR) published in a date window, and writes one issue file:
+Finds new vibrational-spectroscopy papers (Raman, SRS/CARS, SERS/TERS, Brillouin,
+IR/NIR, photothermal IR, THz, SFG/2D-IR, ROA/VCD) published in a date window, and writes one issue file:
 
     data/issues/<issue-date>.json      the issue (articles, categories, figures)
     data/issues/index.json             list of all issues, newest first
@@ -198,14 +198,11 @@ def categorize(rec: dict, cfg: dict, limit: int = 5) -> list[str]:
 
 
 def glyph_for(cats: list[str]) -> str:
-    if "SRS / CARS" in cats:
-        return "srs"
-    if "Photothermal IR" in cats:
-        return "mip"
-    if "SERS / TERS" in cats:
-        return "sers"
-    if "IR / NIR" in cats:
-        return "ir"
+    order = [("SRS / CARS", "srs"), ("Brillouin", "brillouin"), ("Photothermal IR", "mip"), ("SERS / TERS", "sers"),
+             ("THz & Low-Frequency", "thz"), ("Ultrafast & SFG", "sfg"), ("Chiral (ROA / VCD)", "chiral"), ("IR / NIR", "ir")]
+    for cat, glyph in order:
+        if cat in cats:
+            return glyph
     return "raman"
 
 
@@ -359,7 +356,7 @@ def parse_crossref(it: dict) -> dict:
 
 def arxiv_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
     cats = " OR ".join(f"cat:{c}" for c in cfg.get("arxiv_categories", []))
-    terms = 'abs:raman OR abs:"stimulated raman" OR abs:"infrared spectroscopy" OR abs:"vibrational spectroscopy" OR abs:"mid-infrared photothermal" OR abs:SERS'
+    terms = " OR ".join(f"abs:{t}" for t in cfg.get("arxiv_terms", ["raman"]))
     q = f"({cats}) AND ({terms})"
     r = http.get("http://export.arxiv.org/api/query", params={"search_query": q, "sortBy": "submittedDate", "sortOrder": "descending", "max_results": cfg["sources"].get("max_results_per_query", 400)})
     if not r:

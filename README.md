@@ -1,6 +1,6 @@
 # VibraNews
 
-振动光谱（Raman、SRS/CARS、SERS/TERS、IR/NIR、光热红外）社区周报网站，参照 OCT News 的形式：每周一自动抓取上一周发表的新论文，生成一期草稿，编辑审核后合并，网站自动更新。
+振动光谱（Raman、SRS/CARS、SERS/TERS、布里渊、IR/NIR、光热/光声红外、太赫兹与低波数、SFG/2D-IR/FSRS、ROA/VCD 等）社区周报网站，参照 OCT News 的形式：每周一自动抓取上一周发表的新论文，生成一期草稿，编辑审核后合并，网站自动更新。
 
 - 网站：纯静态页面（`index.html`），托管在 GitHub Pages，读取 `data/issues/*.json`
 - 抓取：`scraper/vibranews_scraper.py`，数据源为 Europe PMC、Crossref、arXiv（免费接口，不需要 API key）
