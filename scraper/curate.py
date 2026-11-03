@@ -15,6 +15,9 @@ selections.json
       "feature": {"id": "<article id>", "why": "..."}      (optional; may be one of the picks)
       "unpick":  ["<article id>", ...]                       (optional)
       "notable": ["<article id>", ...]                       (optional: shown in "Selected Papers"; picks are always notable)
+      "add":     [{"title":…, "doi":…, "url":…, "journal":…, "date":"YYYY-MM-DD", "authors":[…], "abstract":…}, ...]
+                                                             (optional: papers found by hand, e.g. technique papers the
+                                                              crawler missed; added to the issue, reviewed, notable)
       "remove":  ["<article id>", ...]                       (optional: routine / off-topic papers; they move to
                                                               the issue's "removed" list and are never re-added)
       "reviewed_all": true                                   (mark every listed candidate as reviewed)
@@ -91,7 +94,35 @@ def cmd_candidates(args):
             print(f"  {s}")
 
 
-def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15) -> dict:
+def add_articles(iss: dict, items: list[dict], cfg: dict | None) -> list[str]:
+    """Add hand-found papers. Returns the ids added (existing DOIs/ids are skipped)."""
+    import vibranews_scraper as vs
+    cfg = cfg or vs.load_config(Path(__file__).resolve().parent / "config.yaml")
+    have_ids = {a["id"] for a in iss["articles"]}
+    have_doi = {(a.get("doi") or "").lower() for a in iss["articles"] if a.get("doi")}
+    added = []
+    for it in items:
+        authors = it.get("authors") or []
+        if isinstance(authors, str):
+            authors = [x.strip() for x in authors.split(",") if x.strip()]
+        rec = {"title": vs.clean_text(it["title"]), "doi": vs.norm_doi(it.get("doi")), "url": it.get("url", ""),
+               "journal": it.get("journal", ""), "date": it.get("date", ""), "authors": authors,
+               "abstract": it.get("abstract", ""), "institutions_direct": it.get("institutions") or [],
+               "oa": bool(it.get("oa", True)), "source": "editor"}
+        art = vs.to_article(rec, cfg)
+        if art["id"] in have_ids or (art["doi"] and art["doi"] in have_doi):
+            continue
+        art.update(tier="notable", reviewed=True)
+        if it.get("why"):
+            art["why"] = it["why"]
+        iss["articles"].append(art)
+        iss["removed"] = [r for r in iss.get("removed", []) if r != art["id"]]
+        have_ids.add(art["id"]); added.append(art["id"])
+    return added
+
+
+def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15, cfg: dict | None = None) -> dict:
+    added = add_articles(iss, sel["add"], cfg) if sel.get("add") else []
     by_id = {a["id"]: a for a in iss["articles"]}
     missing = [x["id"] for x in sel.get("picks", []) if x["id"] not in by_id]
     if sel.get("feature") and sel["feature"]["id"] not in by_id:
@@ -142,7 +173,7 @@ def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15) -> d
             dropped.append(a["id"])
     sort_articles(iss["articles"])
     iss["curated"] = today
-    return {"picks": sum(1 for a in iss["articles"] if a.get("pick")), "dropped": dropped, "removed": len(rm),
+    return {"added": added, "picks": sum(1 for a in iss["articles"] if a.get("pick")), "dropped": dropped, "removed": len(rm),
             "feature": next((a["id"] for a in iss["articles"] if a.get("feature")), None)}
 
 

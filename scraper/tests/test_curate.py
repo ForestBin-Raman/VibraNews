@@ -56,3 +56,16 @@ def test_notable_tier():
     curate.apply_selections(iss, {"notable": ["a2", "a3"], "picks": [{"id": "a4"}]}, "2026-11-10")
     by = {a["id"]: a for a in iss["articles"]}
     assert by["a2"]["tier"] == by["a4"]["tier"] == "notable" and "tier" not in by["a5"]
+
+
+def test_add_hand_found_paper():
+    iss = issue()
+    item = {"title": "Supercontinuum-driven broadband Fourier-transform photothermal microspectroscopy",
+            "doi": "10.48550/arXiv.2610.32718", "url": "https://arxiv.org/abs/2610.32718", "journal": "arXiv (preprint)",
+            "date": "2026-10-23", "authors": "Senyu Wang, Takuro Ideguchi", "abstract": "We develop a photothermal microspectroscopy platform."}
+    res = curate.apply_selections(iss, {"add": [item], "picks": [{"id": "a1"}]}, "2026-11-10")
+    assert len(res["added"]) == 1
+    art = [a for a in iss["articles"] if a["id"] == res["added"][0]][0]
+    assert art["tier"] == "notable" and art["reviewed"] and art["doi"] == "10.48550/arxiv.2610.32718"
+    res2 = curate.apply_selections(iss, {"add": [item]}, "2026-11-10")
+    assert res2["added"] == []
