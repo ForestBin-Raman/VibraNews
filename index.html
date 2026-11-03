@@ -240,7 +240,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 const GROUPS = [
   {name:"Applications", cls:"c-app", cats:["Art & Heritage","Bacteriology","Biomechanics","Cell Biology","Dermatology","Environmental","Food & Agriculture","Forensics","Materials","Nephrology","Neurology","Oncology","Pharmaceutics","Other Applications"]},
   {name:"Business News", cls:"c-biz", cats:["Acquisition","Clinical Trials","Funding","Other News","Partnership","Patents"]},
-  {name:"Technology", cls:"c-tech", cats:["Spontaneous Raman","SRS / CARS","SERS / TERS","Brillouin","IR / NIR","Photothermal IR","THz & Low-Frequency","Ultrafast & SFG","Chiral (ROA / VCD)","Other Vibrational","Data Analysis & AI","General Technology"]},
+  {name:"Technology", cls:"c-tech", cats:["Spontaneous Raman","SRS / CARS","SERS / TERS","Brillouin","IR / NIR","Photothermal IR","Photoacoustic","Spectral Imaging","Spectrometer Design","THz & Low-Frequency","Ultrafast & SFG","Chiral (ROA / VCD)","Other Vibrational","Data Analysis & AI","General Technology"]},
   {name:"Miscellaneous", cls:"c-misc", cats:["Jobs & Studentships","Reviews","Student Theses","Textbooks"]}
 ];
 const CLS = {}; GROUPS.forEach(g=>g.cats.forEach(c=>CLS[c]=g.cls));
@@ -335,8 +335,8 @@ function drawThumbs(){
     const dpr=window.devicePixelRatio||1, W=132, H=92; cv.width=W*dpr; cv.height=H*dpr;
     const g=cv.getContext("2d"); g.setTransform(dpr,0,0,dpr,0,0);
     const kind=cv.dataset.glyph;
-    const col={raman:"#0d5c75",srs:"#b03a6e",csrs:"#b03a6e",sers:"#b4572b",ir:"#0a7f74",nir:"#0a7f74",mip:"#c2263f",brillouin:"#4b55a0",thz:"#9a6700",sfg:"#7a3fa8",chiral:"#2f7d4f"}[kind]||"#0d5c75";
-    const label={raman:"Raman",srs:"SRS",csrs:"CSRS",sers:"SERS",ir:"IR",nir:"NIR",mip:"MIP",brillouin:"Brillouin",thz:"THz",sfg:"SFG / 2D-IR",chiral:"ROA / VCD"}[kind];
+    const col={raman:"#0d5c75",srs:"#b03a6e",csrs:"#b03a6e",sers:"#b4572b",ir:"#0a7f74",nir:"#0a7f74",mip:"#c2263f",brillouin:"#4b55a0",thz:"#9a6700",sfg:"#7a3fa8",chiral:"#2f7d4f",pas:"#c2263f",hsi:"#18a35a",spec:"#4b55a0"}[kind]||"#0d5c75";
+    const label={raman:"Raman",srs:"SRS",csrs:"CSRS",sers:"SERS",ir:"IR",nir:"NIR",mip:"MIP",brillouin:"Brillouin",thz:"THz",sfg:"SFG / 2D-IR",chiral:"ROA / VCD",pas:"Photoacoustic",hsi:"Spectral imaging",spec:"Spectrometer"}[kind];
     g.fillStyle="#f7fafa"; g.fillRect(0,0,W,H);
     g.strokeStyle="#e2eaeb"; g.lineWidth=1; for(let y=18;y<H;y+=14){g.beginPath();g.moveTo(4,y+.5);g.lineTo(W-4,y+.5);g.stroke();}
     const peaks = kind==="sers"?[[.25,.9,.015],[.42,.5,.02],[.6,.8,.015],[.78,.35,.02]]
@@ -347,6 +347,22 @@ function drawThumbs(){
       : kind==="sfg" ? [[.35,.9,.05],[.62,.55,.04]]
       : [[.18,.3,.01],[.3,.85,.008],[.48,.6,.02],[.6,.55,.025],[.82,.9,.03]];
     const absorb = kind==="ir"||kind==="nir"||kind==="thz";
+    if(kind==="hsi"){ /* stacked spectral cube */
+      for(let k=0;k<4;k++){ g.fillStyle=["#cdeee0","#9fdcc3","#5fc59c","#18a35a"][k]; g.fillRect(26+k*9,26-k*5,54,40); g.strokeStyle="#fff"; g.strokeRect(26+k*9+.5,26-k*5+.5,54,40); }
+      g.font="700 11px Roboto, Arial, sans-serif"; g.fillStyle=col; g.textAlign="left"; g.fillText(label,7,14); return;
+    }
+    if(kind==="pas"){ /* acoustic wave packet */
+      g.beginPath(); for(let px=4;px<=W-4;px++){ const x=(px-4)/(W-8); const y=H/2+8 - 26*Math.exp(-((x-.5)**2)/.02)*Math.sin(x*60); px===4?g.moveTo(px,y):g.lineTo(px,y);} 
+      g.strokeStyle=col; g.lineWidth=1.6; g.stroke();
+      g.font="700 11px Roboto, Arial, sans-serif"; g.fillStyle=col; g.textAlign="left"; g.fillText(label,7,14); return;
+    }
+    if(kind==="spec"){ /* grating dispersing light into a rainbow */
+      const cols=["#7a3fa8","#4b55a0","#0a7f74","#18a35a","#e3b505","#e07a1f","#c2263f"];
+      g.strokeStyle="#9aa7ab"; g.lineWidth=1.4; g.beginPath(); g.moveTo(8,H/2+6); g.lineTo(52,H/2+6); g.stroke();
+      g.fillStyle="#5a6a70"; g.fillRect(52,H/2-14,4,40);
+      cols.forEach((c,k)=>{ g.strokeStyle=c; g.beginPath(); g.moveTo(56,H/2+6); g.lineTo(W-8,24+k*9); g.stroke(); });
+      g.font="700 11px Roboto, Arial, sans-serif"; g.fillStyle=col; g.textAlign="left"; g.fillText(label,7,14); return;
+    }
     if(kind==="chiral"){ /* bisignate ROA/VCD-style trace */
       g.beginPath();
       for(let px=4;px<=W-4;px++){ const x=(px-4)/(W-8); let v=0;

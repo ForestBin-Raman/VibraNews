@@ -504,3 +504,29 @@ def test_blocked_publisher_is_skipped_after_two_403s(tmp_path):
         assert f.fetch(rec, f"e{i}") is None
     landing = [c for c in FakeHttp.calls if c[0].startswith("https://doi.org/10.1016/")]
     assert len(landing) == 2          # after two 403s the prefix is skipped
+
+
+def test_extra_topics_photoacoustic_spectral_imaging_spectrometers():
+    cfg = vs.load_config(Path(__file__).resolve().parent.parent / "config.yaml")
+    yes = [
+        ("Quartz-enhanced photoacoustic sensor for ppb-level methane", ""),
+        ("Trace gas detection", "We demonstrate light-induced thermoelastic spectroscopy with a custom tuning fork."),
+        ("Hyperspectral imaging of beef freshness with deep learning", ""),
+        ("Snapshot hyperspectral microscopy for live cells", ""),
+        ("A metasurface spectrometer with 0.1 nm resolution", ""),
+        ("Reconstructive spectrometer based on disordered photonic chip", "Uses a photodetector array."),
+        ("Light at the edge", "We realise a computational spectrometer using a single photodetector."),
+    ]
+    no = [
+        ("Hyperspectral remote sensing of crop nitrogen from UAV imagery", ""),
+        ("Landsat-based multispectral imaging of land cover change", ""),
+        ("A compact mass spectrometer for breath analysis", ""),
+        ("Photoacoustic tomography of tumour vasculature", ""),
+        ("High-gain SWIR photodetector arrays", ""),
+    ]
+    for t, a in yes:
+        assert vs.is_relevant({"title": t, "abstract": a}, cfg), t
+    for t, a in no:
+        assert not vs.is_relevant({"title": t, "abstract": a}, cfg), t
+    cats = vs.categorize({"title": "Quartz-enhanced photoacoustic spectroscopy of CO2", "abstract": ""}, cfg)
+    assert "Photoacoustic" in cats

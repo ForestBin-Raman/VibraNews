@@ -423,6 +423,7 @@
       "license": "CC BY",
       "categories": [
         "Photothermal IR",
+        "Spectral Imaging",
         "Cell Biology"
       ],
       "glyph": "mip",
@@ -542,9 +543,9 @@
       "oa": false,
       "license": "",
       "categories": [
-        "Photothermal IR"
+        "Photoacoustic"
       ],
-      "glyph": "mip",
+      "glyph": "pas",
       "summary": "",
       "why": "",
       "pick": false,
@@ -3926,10 +3927,11 @@
       "license": "",
       "categories": [
         "Pharmaceutics",
+        "Spectral Imaging",
         "IR / NIR",
         "Data Analysis & AI"
       ],
-      "glyph": "ir",
+      "glyph": "hsi",
       "summary": "Rapid, spatially resolved quantification of active ingredients after penetration into hair fibers is critical for the optimization of cosmetic and pharmaceutical formulations. However, the structural heterogeneity of the hair shaft presents a challenge to precise localization. Herein, we present a hierarchical quantitative analysis framework integrating focal-plane-array Fourier-transform infrared (FPA-FTIR) imaging with chemometric and machine-learning methods. Spectral clustering partitions hair cross-sections into cuticle, cortex, and medulla, and complete-section classifier transfer assessment evaluates clustering-derived pseudo-labels. …",
       "why": "",
       "pick": false,
@@ -3986,7 +3988,6 @@
         "Bacteriology",
         "Environmental",
         "Spontaneous Raman",
-        "Photothermal IR",
         "Reviews"
       ],
       "glyph": "mip",
@@ -4648,9 +4649,10 @@
       "categories": [
         "Environmental",
         "Food & Agriculture",
+        "Spectral Imaging",
         "IR / NIR"
       ],
-      "glyph": "ir",
+      "glyph": "hsi",
       "summary": "A method for determining the moisture content of sand based on hyperspectral imaging in the near-infrared (NIR) spectral range is presented. The proposed approach provides a non-contact means of estimating material moisture content and has the potential for future application in large-scale moisture monitoring systems. A model describing the relationship between the moisture content of sand and the spectral signal recorded by a hyperspectral camera was developed. The derivation of the model equations and the justification of the adopted assumptions are presented. …",
       "why": "",
       "pick": false,
@@ -4911,6 +4913,7 @@
       "license": "CC BY 4.0",
       "categories": [
         "Neurology",
+        "Spectral Imaging",
         "SRS / CARS",
         "IR / NIR"
       ],
@@ -4941,9 +4944,10 @@
       "categories": [
         "Art & Heritage",
         "Food & Agriculture",
+        "Spectral Imaging",
         "IR / NIR"
       ],
-      "glyph": "ir",
+      "glyph": "hsi",
       "summary": "Purpose Capturing rapid changes in water status is key to optimizing deficit irrigation in Mediterranean orchards, but thermal remote sensing is constrained by the availability of high-spatial-resolution data. This study assesses the ability of visible, near-infrared, and shortwave infrared (VNIR/SWIR) indices to detect short-term water stress in peach orchards. Methods An experiment was conducted in two commercial orchards in south-eastern Spain, where mild water stress was induced by withholding irrigation for four days. High-resolution hyperspectral and thermal imagery were acquired concurrently with stem water potential measurements (ψ stem ). …",
       "why": "",
       "pick": false,
@@ -6056,6 +6060,7 @@
       "oa": true,
       "license": "CC BY",
       "categories": [
+        "Spectral Imaging",
         "SRS / CARS",
         "IR / NIR"
       ],
@@ -6593,6 +6598,7 @@
       "oa": true,
       "license": "CC BY",
       "categories": [
+        "Spectral Imaging",
         "SRS / CARS",
         "Reviews"
       ],
@@ -6709,8 +6715,7 @@
       "categories": [
         "Bacteriology",
         "Environmental",
-        "SERS / TERS",
-        "Photothermal IR"
+        "SERS / TERS"
       ],
       "glyph": "mip",
       "summary": "This study developed an active, highly efficient physical antibacterial strategy that exploits chiral nanomaterials to effectively recognize and interact with the chiral microenvironment of bacterial membranes. Chiral gold nanohedgehogs (L/D-Au NH) are designed and fabricated with a unique morphology that facilitates \"stereospecific matching\" to bacterial membranes. Experimental results demonstrate that D-Au NH exhibit a remarkable 43.7% improvement in mechanical antibacterial activity compared to their L-Au NH counterparts. …",
@@ -6880,6 +6885,7 @@
       "license": "",
       "categories": [
         "Food & Agriculture",
+        "Spectral Imaging",
         "SRS / CARS"
       ],
       "glyph": "srs",
@@ -8501,8 +8507,7 @@
       "license": "CC BY",
       "categories": [
         "Materials",
-        "SERS / TERS",
-        "Photothermal IR"
+        "SERS / TERS"
       ],
       "glyph": "mip",
       "summary": "Protein biomarkers play an indispensable role in the early diagnosis, prognosis assessment, therapeutic monitoring, and treatment evaluation of diseases. Optical biosensors have emerged as promising alternatives for protein detection due to their label-free, real-time, and highly sensitive characteristics. Molecularly imprinted polymers (MIPs), known as “plastic antibodies,” can provide chemically stable, low-cost, and tailorable recognition elements through the formation of target-complementary cavities in polymer matrices, making them highly attractive for integration with optical sensing platforms. …",
@@ -9951,9 +9956,10 @@
       "oa": false,
       "license": "",
       "categories": [
+        "Spectral Imaging",
         "Spontaneous Raman"
       ],
-      "glyph": "raman",
+      "glyph": "hsi",
       "summary": "This study develops a non-destructive analytical framework based on Raman spectroscopy for spatial chemical imaging and quantitative assessment of dentin demineralization. Human dentin samples treated with gradient EDTA and natural caries samples were examined. SEM−EDS was used to analyze surface morphology and elemental (Ca, P) contents. Single-point Raman spectra and Raman mapping datasets were then collected. Raman spectroscopy captured coordinated changes in mineral-related bands, collagen-associated bands, and mineral-to-matrix ratios, while MCR-ALS unmixed Raman mapping data into spatially resolved mineral-rich and organic/mixed components. …",
       "why": "",
       "pick": false,
@@ -12108,9 +12114,10 @@
       "license": "CC BY",
       "categories": [
         "Environmental",
+        "Spectral Imaging",
         "General Technology"
       ],
-      "glyph": "raman",
+      "glyph": "hsi",
       "summary": "This study evaluated whether data from the space‑borne Environmental Mapping and Analysis Programme Hyperspectral Imager (EnMAP HSI) can derive continuum-removed absorption features comparable to those from an Analytical Spectral Device (ASD) field spectroscopy for characterizing grass canopy nitrogen (N), acid detergent fibre (ADF), and acid detergent lignin (ADL) in senescent sour and sweet veld types. The results showed that the two sensors exhibited similar and well-known absorption wavelengths of senescent foliar biochemical concentrations occurring within the R550–742, R1685–1749, and R2238–2370 regions, using the continuum-removed spectra. …",
       "why": "",
       "pick": false,
@@ -12135,10 +12142,11 @@
       "oa": false,
       "license": "",
       "categories": [
+        "Spectrometer Design",
         "IR / NIR",
         "General Technology"
       ],
-      "glyph": "ir",
+      "glyph": "spec",
       "summary": "The Mg I 12.32 µm line is a powerful diagnostic for solar magnetic fields owing to its strong Zeeman sensitivity and well-resolved triplet structure. The Accurate Infrared Magnetic field Measurements of the Sun (AIMS) facility observes this line with an imaging Fourier transform infrared spectrometer (FTIR), which records interferograms simultaneously from 128 detector elements and enables spatially resolved solar spectral reconstruction. This spatially resolved observing capability provides spectral information at different detector positions, but also introduces detector-element-dependent and spectral-dependent non-uniformities that can affect spectral consistency. …",
       "why": "",
       "pick": false,
@@ -12187,9 +12195,9 @@
       "oa": true,
       "license": "CC BY 4.0",
       "categories": [
-        "Photothermal IR"
+        "Photoacoustic"
       ],
-      "glyph": "mip",
+      "glyph": "pas",
       "summary": "Human exhaled breath contains volatile organic compounds and inorganic gases that reflect metabolic activity and may provide information about disease. Breath sampling is non-invasive, repeatable, and well suited to longitudinal monitoring, making it attractive for disease screening and physiological assessment. Photoacoustic spectroscopy combines high sensitivity with compact, low-volume gas cells and has therefore become an important technique for breath-gas measurement. Its performance in practical breath analysis, however, is influenced not only by optical and acoustic sensitivity but also by breath sampling, humidity, gas exchange, tubing delay, and molecular adsorption. …",
       "why": "",
       "pick": false,
@@ -13073,7 +13081,6 @@
       "categories": [
         "Environmental",
         "SERS / TERS",
-        "Photothermal IR",
         "Reviews"
       ],
       "glyph": "mip",
@@ -14158,10 +14165,11 @@
       "license": "",
       "categories": [
         "Environmental",
+        "Spectral Imaging",
         "IR / NIR",
         "Data Analysis & AI"
       ],
-      "glyph": "ir",
+      "glyph": "hsi",
       "summary": "Cocoa and chocolate quality are strongly influenced by the different processing stages involved throughout production, since physicochemical and sensory changes occurring during these steps directly affect the characteristics of the final product. Conventional quality control methods commonly used to monitor these changes are often labor-intensive, destructive, time-consuming, and dependent on chemical reagents, limiting their applicability for rapid industrial monitoring. In this context, rapid and non-destructive analytical technologies have emerged as promising alternatives for quality assessment and process monitoring in the cocoa and chocolate industry. …",
       "why": "",
       "pick": false,

@@ -76,6 +76,9 @@ def load_config(path: Path) -> dict:
         for name, pats in entries.items():
             cats.append((group, name, [re.compile(p, re.I) for p in pats]))
     cfg["_cats"] = cats
+    comp = lambda xs: [re.compile(p, re.I) for p in (xs or [])]
+    cfg["_topics"] = [{"name": t.get("name", ""), "title": comp(t.get("title")), "abstract": comp(t.get("abstract")),
+                       "exclude": comp(t.get("exclude"))} for t in (cfg.get("extra_topics") or [])]
     return cfg
 
 
@@ -228,7 +231,19 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     if any(p.search(body) for p in cfg.get("_strong", [])):
         return True
     hits = sum(len(p.findall(body)) for p in cfg["_include"])
-    return hits >= 2
+    if hits >= 2:
+        return True
+    return any(topic_match(rec, t) for t in cfg.get("_topics", []))
+
+
+def topic_match(rec: dict, topic: dict) -> bool:
+    """Extra topics beyond vibrational spectroscopy (photoacoustic spectroscopy, spectral imaging,
+    spectrometer design): a title match, or one abstract mention of a specific term, unless a
+    topic-specific exclusion (e.g. satellite remote sensing for spectral imaging) applies."""
+    title, abstract = rec.get("title", ""), rec.get("abstract", "")
+    if not (any(p.search(title) for p in topic["title"]) or any(p.search(abstract) for p in topic["abstract"])):
+        return False
+    return not any(p.search(f"{title} {abstract}") for p in topic["exclude"])
 
 
 def categorize(rec: dict, cfg: dict, limit: int = 5) -> list[str]:
@@ -251,7 +266,8 @@ def categorize(rec: dict, cfg: dict, limit: int = 5) -> list[str]:
 
 def glyph_for(cats: list[str]) -> str:
     order = [("SRS / CARS", "srs"), ("Brillouin", "brillouin"), ("Photothermal IR", "mip"), ("SERS / TERS", "sers"),
-             ("THz & Low-Frequency", "thz"), ("Ultrafast & SFG", "sfg"), ("Chiral (ROA / VCD)", "chiral"), ("IR / NIR", "ir")]
+             ("THz & Low-Frequency", "thz"), ("Ultrafast & SFG", "sfg"), ("Chiral (ROA / VCD)", "chiral"), ("Photoacoustic", "pas"),
+             ("Spectral Imaging", "hsi"), ("Spectrometer Design", "spec"), ("IR / NIR", "ir")]
     for cat, glyph in order:
         if cat in cats:
             return glyph

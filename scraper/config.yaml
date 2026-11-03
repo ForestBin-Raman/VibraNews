@@ -116,6 +116,68 @@ characterisation_list: '(?:\b(?:XRD|XPS|SEM|TEM|HRTEM|EDS|EDX|BET|TGA|DSC|UV-?vi
 # Records from data repositories are not articles
 exclude_sources: ['zenodo', 'figshare', 'mendeley data', 'dryad', 'harvard dataverse', 'pangaea']
 
+# Further topics beyond vibrational spectroscopy. A paper is included when its TITLE matches a `title`
+# pattern, or its ABSTRACT mentions one `abstract` term once, unless one of the topic's `exclude` patterns applies.
+extra_topics:
+  - name: Photoacoustic spectroscopy
+    title:
+      - 'photo-?acoustic (spectroscop|spectr|gas|trace|sens|detect|cell|analy)'
+      - 'opto-?acoustic spectroscop'
+      - 'quartz[- ]enhanced photo-?acoustic'
+      - '\bQEPAS\b'
+      - 'light-induced thermo-?elastic'
+      - '\bLITES\b'
+      - '(spectroscopic|multispectral|mid-?infrared|vibrational) (photo|opto)-?acoustic'
+      - 'photo-?acoustic (imaging|microscop)\w* of (lipid|chemical|molecul)'
+    abstract:
+      - 'photo-?acoustic spectroscop'
+      - 'quartz[- ]enhanced photo-?acoustic'
+      - '\bQEPAS\b'
+      - 'light-induced thermo-?elastic spectroscop'
+      - 'mid-?infrared photo-?acoustic'
+      - 'vibrational photo-?acoustic'
+  - name: Spectral imaging
+    title:
+      - 'hyper-?spectral'
+      - 'multi-?spectral (imag|camera|microscop)'
+      - '\bspectral imag'
+      - 'chemical imaging'
+      - 'imaging spectromet'
+      - 'snapshot (hyper)?spectral'
+      - 'spectral (camera|imager)'
+      - 'compressive spectral'
+    abstract:
+      - 'hyper-?spectral (imag|microscop|camera)'
+      - 'snapshot (hyper)?spectral imag'
+      - 'computational spectral imag'
+    exclude:                              # satellite / airborne remote sensing
+      - 'remote sensing'
+      - 'satellite'
+      - 'land[- ]cover'
+      - '\bUAV\b'
+      - 'unmanned aerial'
+      - 'airborne'
+      - 'drone'
+      - 'Sentinel-?2'
+      - 'Landsat'
+      - '\bEnMAP\b'
+      - '\bPRISMA\b'
+  - name: Spectrometer design
+    title:
+      - '\b(computational|miniaturi[sz]ed|micro|compact|on-?chip|chip-?scale|integrated|reconstructive|single[- ](detector|pixel)|snapshot|metasurface|dispersive|grating|Fourier[- ]transform|handheld|smartphone|broadband|ultra-?compact|photonic|wavemeter|speckle|planar) spectromet'
+      - 'spectrometer (design|on[- ]a[- ]chip|chip)'
+      - 'reconstructive spectr'
+      - 'spectral reconstruction'
+      - 'spectrometers?\b.*\b(design|architecture|resolution of|bandwidth)'
+    abstract:
+      - 'computational spectromet'
+      - 'reconstructive spectromet'
+      - 'miniaturi[sz]ed spectromet'
+      - 'on-?chip spectromet'
+      - 'chip-?scale spectromet'
+      - 'metasurface spectromet'
+    exclude: ['mass spectromet', '\bNMR\b', 'gamma[- ]ray', 'x-ray spectromet', 'neutron', '\bMS/MS\b', 'LC-MS', 'GC-MS']
+
 # Core vibrational-spectroscopy journals: EVERY paper they publish is included (no keyword filter)
 core_journals:
   issn: ['0377-0486', '1097-4555', '0924-2031', '1873-3697', '0967-0335', '1751-6552']
@@ -138,7 +200,7 @@ exclude:
   - 'terahertz (communication|antenna|wireless|6G)'
   - 'spectral energy distribution'       # astronomy
   - '\b(AGN|galax(y|ies)|exoplanet|protoplanetary|interstellar medium)\b'
-  - 'photodetector'                      # SWIR/IR detector devices
+  - '(?s)^(?!.*spectromet).*photodetector'   # SWIR/IR detector devices (spectrometer papers are kept)
   - 'prefrontal|cerebral oxygenation'    # fNIRS-type studies
   - 'near-?infrared (fluorescence|imaging-guided|photothermal therapy)'
 
@@ -166,6 +228,17 @@ europepmc_terms:
   - '"raman optical activity"'
   - '"vibrational circular dichroism"'
   - '"photoacoustic spectroscopy"'
+  - '"quartz-enhanced photoacoustic"'
+  - '"light-induced thermoelastic"'
+  - '"hyperspectral imaging"'
+  - '"hyperspectral microscopy"'
+  - '"multispectral imaging"'
+  - '"spectral imaging"'
+  - '"chemical imaging"'
+  - '"computational spectrometer"'
+  - '"miniaturized spectrometer"'
+  - '"on-chip spectrometer"'
+  - '"reconstructive spectrometer"'
 
 # OpenAlex title+abstract searches (each paginated in full for the look-back window)
 openalex_terms:
@@ -184,6 +257,14 @@ openalex_terms:
   - vibrational spectroscopy
   - vibrational circular dichroism
   - raman optical activity
+  - photoacoustic spectroscopy
+  - quartz-enhanced photoacoustic
+  - hyperspectral imaging
+  - multispectral imaging
+  - spectral imaging
+  - computational spectrometer
+  - miniaturized spectrometer
+  - on-chip spectrometer
 # OpenAlex is searched by publication date, so it looks back further to catch late-indexed papers
 openalex_lookback_days: 30
 
@@ -206,6 +287,12 @@ crossref_queries:
   - femtosecond stimulated raman
   - raman optical activity
   - vibrational circular dichroism
+  - photoacoustic spectroscopy
+  - quartz-enhanced photoacoustic
+  - hyperspectral imaging
+  - spectral imaging
+  - computational spectrometer
+  - miniaturized spectrometer
 
 # arXiv abstract search terms
 arxiv_terms:
@@ -220,6 +307,10 @@ arxiv_terms:
   - '"terahertz spectroscopy"'
   - '"sum frequency generation"'
   - '"two-dimensional infrared"'
+  - '"photoacoustic spectroscopy"'
+  - '"hyperspectral imaging"'
+  - '"spectral imaging"'
+  - spectrometer
 
 arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, cond-mat.mtrl-sci, q-bio.QM]
 
@@ -254,7 +345,10 @@ categories:
     SERS / TERS: ['\bSERS\b', '\bTERS\b', 'surface[- ]enhanced raman', 'tip[- ]enhanced raman', 'plasmonic substrate']
     Brillouin: ['brillouin']
     IR / NIR: ['\bFT-?IR\b', 'infrared spectroscop', '\bNIR\b', 'near-?infrared', '\bATR\b']
-    Photothermal IR: ['photothermal', '\bO-?PTIR\b', '\bMIP\b', '\bAFM-?IR\b', 'photoacoustic']
+    Photothermal IR: ['photothermal', '\bO-?PTIR\b', '\bMIP\b', '\bAFM-?IR\b']
+    Photoacoustic: ['photo-?acoustic', 'opto-?acoustic', '\bQEPAS\b', 'thermo-?elastic']
+    Spectral Imaging: ['hyper-?spectral', 'multi-?spectral', '\bspectral imag', 'chemical imaging', 'imaging spectromet']
+    Spectrometer Design: ['computational spectromet', 'miniaturi[sz]ed spectromet', 'on-?chip spectromet', 'chip-?scale spectromet', 'reconstructive spectr', 'spectrometer design', 'compact spectromet', 'spectral reconstruction', 'metasurface spectromet']
     THz & Low-Frequency: ['terahertz', '\bTHz\b', 'low-?(frequency|wavenumber) raman', 'phonon mode']
     Ultrafast & SFG: ['sum[- ]frequency', '\bSFG\b', '2D[- ]IR', 'two-dimensional infrared', 'femtosecond stimulated raman', '\bFSRS\b', 'impulsive stimulated raman', 'pump[- ]probe', 'ultrafast vibrational']
     Chiral (ROA / VCD): ['raman optical activity', 'vibrational circular dichroism', '\bROA\b', '\bVCD\b']
