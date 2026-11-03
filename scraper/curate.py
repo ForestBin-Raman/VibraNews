@@ -14,6 +14,7 @@ selections.json
       "picks":   [{"id": "<article id>", "why": "One or two sentences on what is new."}, ...],
       "feature": {"id": "<article id>", "why": "..."}      (optional; may be one of the picks)
       "unpick":  ["<article id>", ...]                       (optional)
+      "notable": ["<article id>", ...]                       (optional: shown in "Selected Papers"; picks are always notable)
       "remove":  ["<article id>", ...]                       (optional: routine / off-topic papers; they move to
                                                               the issue's "removed" list and are never re-added)
       "reviewed_all": true                                   (mark every listed candidate as reviewed)
@@ -60,7 +61,8 @@ def cmd_status(args):
     iss = load(p)
     picks = [a for a in iss["articles"] if a.get("pick") or a.get("feature")]
     unrev = sum(1 for a in iss["articles"] if not a.get("reviewed") and not a.get("pick"))
-    print(f"Issue {iss['id']} (No. {iss['number']}): {len(iss['articles'])} papers, {len(picks)} Feature Articles, {unrev} not yet reviewed")
+    nn = sum(1 for a in iss["articles"] if a.get("tier") == "notable")
+    print(f"Issue {iss['id']} (No. {iss['number']}): {len(iss['articles'])} papers, {len(picks)} Feature Articles, {nn} selected (notable), {unrev} not yet reviewed")
     for a in sorted(picks, key=lambda a: (not a.get("feature"), a.get("pick_date", ""))):
         flag = "★ FOTW" if a.get("feature") else "  pick"
         print(f"{flag}  {a.get('pick_date', '?'):10}  {a['id']}\n        {a['title'][:110]}\n        why: {a.get('why', '')[:160]}")
@@ -109,8 +111,12 @@ def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15) -> d
     for aid in sel.get("unpick", []):
         if aid in by_id:
             by_id[aid].update(pick=False, feature=False)
+    for aid in sel.get("notable", []):
+        if aid in by_id:
+            by_id[aid]["tier"] = "notable"
     for x in sel.get("picks", []):
         a = by_id[x["id"]]
+        a["tier"] = "notable"
         if not a.get("pick"):
             a["pick_date"] = today
         a.update(pick=True, reviewed=True)
@@ -122,7 +128,7 @@ def apply_selections(iss: dict, sel: dict, today: str, max_picks: int = 15) -> d
         f = by_id[sel["feature"]["id"]]
         if not f.get("pick"):
             f["pick_date"] = today
-        f.update(feature=True, pick=True, reviewed=True)
+        f.update(feature=True, pick=True, reviewed=True, tier="notable")
         if sel["feature"].get("why"):
             f["why"] = sel["feature"]["why"].strip()
 

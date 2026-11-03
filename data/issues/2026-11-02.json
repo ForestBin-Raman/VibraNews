@@ -36,7 +36,8 @@
       },
       "source": "editor",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1063-5-0339935-51c75c",
@@ -64,7 +65,8 @@
       "fig": null,
       "source": "crossref",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2611-00561-50ecf9",
@@ -89,7 +91,8 @@
       "fig": null,
       "source": "arxiv",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1093-noajnl-vdag267-cd27cc",
@@ -120,7 +123,8 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1002-anie-4964422-561f7c",
@@ -148,7 +152,8 @@
       "fig": null,
       "source": "europepmc",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-64898-2026-10-25-761683-3e8047",
@@ -176,7 +181,8 @@
       "fig": null,
       "source": "europepmc",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1063-5-0344985-adb234",
@@ -204,7 +210,8 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1021-cbmi-6c00154-1fe028",
@@ -231,7 +238,8 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1364-ol-616403-efebc2",
@@ -257,7 +265,8 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-30610-aefb90",
@@ -286,7 +295,8 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1126-sciadv-aeh0887-2c64bb",
@@ -315,7 +325,8 @@
       "fig": null,
       "source": "europepmc",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1093-nsr-nwag660-c02344",
@@ -342,7 +353,8 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-64898-2026-10-14-759126-c23258",
@@ -372,7 +384,8 @@
       "fig": null,
       "source": "europepmc",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1039-d6ay01831a-4ec64d",
@@ -405,7 +418,8 @@
       },
       "source": "europepmc",
       "reviewed": true,
-      "pick_date": "2026-11-03"
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-1038-s41467-026-78699-z-17769b",
@@ -437,7 +451,8 @@
         "credit": "CC BY · via nature.com"
       },
       "source": "editor",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-icarus-2026-117367-20ece7",
@@ -483,7 +498,8 @@
       "feature": false,
       "fig": null,
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "https-europepmc-org-article-pmc-pmc13724524-ee5d67",
@@ -511,85 +527,6 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "https-europepmc-org-article-pmc-pmc13724598-8cb6c2",
-      "date": "2026-11-03",
-      "title": "Application of FTIR to detect changes in blood plasma during a pre-competition period in a professional heavyweight boxer",
-      "authors": "Król P, Depciuch J, Reich A, Cebulski J, Obmiński Z, Kasicki K, Czarny W, Różański Ł, Rydzik Ł",
-      "institutions": [
-        "College of Medical Sciences",
-        "Institute of Nuclear Physics",
-        "University of Rzeszow"
-      ],
-      "journal": "Frontiers in physiology",
-      "doi": null,
-      "url": "https://europepmc.org/article/PMC/PMC13724598",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "https-europepmc-org-article-pmc-pmc13725792-0b0efb",
-      "date": "2026-11-03",
-      "title": "Adsorption and precipitation of ODA on KCl surfaces during flotation: evidence from FTIR and XPS",
-      "authors": "Cheng H, Luo C, Hai Q",
-      "institutions": [
-        "Qinghai Institute of Salt Lakes"
-      ],
-      "journal": "RSC advances",
-      "doi": null,
-      "url": "https://europepmc.org/article/PMC/PMC13725792",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "This study investigates the concentration-dependent grain size evolution of octadecylamine hydrochloride (ODA·HCl), a commonly used cationic collector in potassium chloride flotation.",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-3390-ceramics9110124-b7d787",
-      "date": "2026-11-03",
-      "title": "Quantitative Analyses of Microstructural Alterations in Multiphasic Calcium Phosphate by Micro-Raman Spectroscopy",
-      "authors": "Takashi Yamashita, Nobuyuki Takeuchi, Sei Sonoda, Anna Bertocco, Tetsuya Adachi, Giuseppe Pezzotti, Wenliang Zhu",
-      "institutions": [
-        "Ceramic Physics Laboratory",
-        "Mie University",
-        "Ca’ Foscari University of Venice"
-      ],
-      "journal": "Ceramics",
-      "doi": "10.3390/ceramics9110124",
-      "url": "https://doi.org/10.3390/ceramics9110124",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Multiphasic calcium phosphate (CaP) composites made of hydroxyapatite (HAp), α-tricalcium phosphate (α-TCP), or β-tricalcium phosphate (β-TCP) are promising for biomedical applications. In this paper, the changes in Raman spectra of a series of HAp/α-TCP and HAp/β-TCP were calibrated and new algorithms using microRaman spectroscopy were established for an efficient and quantitative analysis of the constituent phases in multiphasic CaP systems, taking advantages of their characteristic Raman bands. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
       "reviewed": true
     },
     {
@@ -640,7 +577,8 @@
       "feature": false,
       "fig": null,
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1128-jcm-01113-26-c82a03",
@@ -694,7 +632,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-64898-2026-10-30-762336-b1b0fa",
@@ -722,33 +661,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1080-14786419-2026-2757725-7afbb2",
-      "date": "2026-11-02",
-      "title": "Development and validation of an HPTLC method for extraction optimization and simultaneous quantification of gallic acid and quercetin, with comparative FTIR analysis of Nymphaea nouchali var. nouchali flowers from different geographical location",
-      "authors": "Mondal S, Narasimhaji CV, Das M, Dutta S, Meena AK, Suryawanshi MN",
-      "institutions": [
-        "Central Council for Research in Ayurvedic Science",
-        "Ministry of AYUSH"
-      ],
-      "journal": "Natural product research",
-      "doi": "10.1080/14786419.2026.2757725",
-      "url": "https://doi.org/10.1080/14786419.2026.2757725",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "A simple, precise and efficient HPTLC technique has been developed for simultaneous quantification of Gallic acid (GA) and Quercetin (Q) in methanolic extract of flower of Nymphaea nouchali var. nouchali, collected from four different location of West Bengal. The HPTLC results showed that ultrasonication extraction yielded the highest mean contents of both markers, gallic acid and quercetin, compared with hot and cold extraction methods. The FTIR analysis of flowers indicated a common phytochemical profiling across all geographical locations and minor variation in peak intensity and peak wave number which may be associated with geographical factors. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s10527-026-10561-4-6f91d1",
@@ -808,7 +722,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s12596-026-03339-0-57ec0a",
@@ -838,7 +753,8 @@
         "credit": "Journal cover · Journal of Optics"
       },
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acs-analchem-6c05948-ec86b1",
@@ -865,7 +781,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1103-w2r2-92jr-c4fd0c",
@@ -938,7 +855,8 @@
       "feature": false,
       "fig": null,
       "source": "arxiv",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-3171-2026-8-focus26457-81482e",
@@ -967,7 +885,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1080-14737159-2026-2758705-4b10a4",
@@ -1054,7 +973,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-3171-2026-8-focus26439-0b59cb",
@@ -1088,32 +1008,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1111-ics-70113-738313",
-      "date": "2026-11-01",
-      "title": "Hair curl type and scalp health, part 2: FTIR spectroscopy studies and analysis of inflammatory cytokines",
-      "authors": "Gourion-Arsiquaud S, Shrestha R, Cornwell PA",
-      "institutions": [
-        "Princeton University"
-      ],
-      "journal": "International journal of cosmetic science",
-      "doi": "10.1111/ics.70113",
-      "url": "https://doi.org/10.1111/ics.70113",
-      "oa": true,
-      "license": "CC BY-NC-ND",
-      "categories": [
-        "IR / NIR",
-        "General Technology"
-      ],
-      "glyph": "ir",
-      "summary": "Part 1 of this study demonstrated that Walker Type 4 hair is associated with lower wash frequencies, leading to poor scalp conditions and that increasing wash frequency improves scalp health. This second part investigates how hair type and wash frequency affect scalp hydration, sebum levels and composition, scaling, and inflammatory cytokines using instrumental measurements. Healthy female panellists with chemically undamaged hair were recruited in the US and South Africa based on natural curl type: wavy (Type 2), curly (Type 3) or kinky (Type 4). Assessments were performed at baseline (Visit 1) and 1 week later (Visit 2). …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
       "id": "10-1016-j-saa-2026-129057-ea8f74",
       "date": "2026-11-01",
       "title": "Physics-constrained pairwise representation learning for Raman spectra matching",
@@ -1136,7 +1030,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-surfin-2026-111186-9c8948",
@@ -1190,7 +1085,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-jece-2026-125769-d08080",
@@ -1240,7 +1136,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1177-09670335261501232-53aaef",
@@ -1346,60 +1243,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1002-dvdy-70200-605bc0",
-      "date": "2026-10-31",
-      "title": "Different from bone: Tooth formation and enameloid mineralization are not affected by reduced dietary phosphorus intake",
-      "authors": "Cotti S, Huysseune A, Fiedler IAK, Busse B, Di Biagio C, Rücklin M, Marone F, Forlino A, Witten PE",
-      "institutions": [
-        "Ghent University",
-        "University of Pavia",
-        "University Medical Center Hamburg-Eppendorf"
-      ],
-      "journal": "Developmental dynamics : an official publication of the American Association of Anatomists",
-      "doi": "10.1002/dvdy.70200",
-      "url": "https://doi.org/10.1002/dvdy.70200",
-      "oa": true,
-      "license": "CC BY-NC-ND",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Background Vertebrates rely on phosphorus intake for skeletal mineralization. In humans, hypomineralized teeth associated with rickets, hypophosphatemia, hypophosphatasia, or idiopathic molar-incisor-hypomineralization pose significant problems. Here tooth development in wild-type zebrafish and in osteocalcin GFP reporter-line zebrafish is examined under conditions of low, regular, and high dietary phosphorus (P) intake. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-jhazmat-2026-144081-fd9a5c",
-      "date": "2026-10-31",
-      "title": "Hazard evolution in liquid dinitrogen tetroxide-isopropanol cleaning systems: thermal runaway and gas release",
-      "authors": "Weng S, Li JY, Hu J, Zhou Y, Guo Z, Rao G, Chen L, Chen W",
-      "institutions": [
-        "School of Safety Science and Engineering",
-        "Shanghai Institute of Space Propulsion"
-      ],
-      "journal": "Journal of hazardous materials",
-      "doi": "10.1016/j.jhazmat.2026.144081",
-      "url": "https://doi.org/10.1016/j.jhazmat.2026.144081",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Liquid dinitrogen tetroxide (N₂O₄, NTO) can pose severe hazards when contacting incompatible cleaning agents. A vessel rupture accident involving NTO and an isopropanol-containing cleaning agent was investigated using accident reconstruction, chemical analysis, online Raman monitoring, calorimetry and field validation. Temperature-pressure records supported chemically driven thermal runaway. Blank tests showed vigorous gas evolution but limited heat accumulation during NTO hydrolysis and neutralization. HPLC/HPLC-MS supported acetone formation and tentative assignments to isonitrosoacetone, nitrolic-acid- and isoxazoline-type products. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-vibspec-2026-103966-ced8d5",
@@ -1426,7 +1271,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-surfin-2026-111163-2f8ee5",
@@ -1568,7 +1414,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-41503-c27911",
@@ -1592,7 +1439,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1108-rpj-03-2026-0170-4c5de7",
@@ -1618,7 +1466,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s42823-026-01141-3-b13aa9",
@@ -1730,7 +1579,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acs-jnatprod-6c00878-85548f",
@@ -1835,7 +1685,8 @@
         "credit": "Journal cover · Atmospheric measurement techniques"
       },
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-pdpdt-2026-105700-4af649",
@@ -1892,7 +1743,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-oe-601226-29de21",
@@ -2007,7 +1859,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-64898-2026-10-26-26366514-6b8e93",
@@ -2208,33 +2061,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1021-acs-langmuir-6c05105-7b69e4",
-      "date": "2026-10-29",
-      "title": "Custom-Designed Carbosilane-Based Reactive Surfactants for Surface Hydrophobization─AFM, Raman Microscopy, and XPS Investigations",
-      "authors": "Sylwia Ronka, Łukasz Lamch, M. Kuchowicz, Rafał Szukiewicz, Przemysław Szklarz, Krzysztof Gawarecki",
-      "institutions": [
-        "Wrocław University of Science and Technology",
-        "University of Wrocław"
-      ],
-      "journal": "Langmuir",
-      "doi": "10.1021/acs.langmuir.6c05105",
-      "url": "https://doi.org/10.1021/acs.langmuir.6c05105",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman",
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "The reactive carbosilane cationic surfactant (SK) has been studied for glass surface hydrophobization by blending with oligodimethylsiloxane derivatives, comprising epoxide (EO) and amine/alkoxyl motifs (AO), and deposition using three different approaches: spray, spin, and dip coating. Our contribution comprises the synthesis and structure characterization of a surfactant (1H NMR, FT-IR and Raman spectroscopies), the optimization studies for the layer deposition by tuning the chosen parameters and compositions, as well as the determination of contact angles and surface energies. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
       "id": "10-48550-arxiv-2610-40739-fce29d",
       "date": "2026-10-29",
       "title": "Spectral properties of orthorhombic KSbOSiO4 crystals: studies of infrared, visible and ultraviolet radiation absorption, Raman scattering, cathodoluminescence and photoluminescence",
@@ -2281,7 +2107,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-39138-66b87a",
@@ -2309,7 +2136,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1088-1361-6641-aebb5d-5564a5",
@@ -2339,63 +2167,8 @@
         "credit": "Journal cover · Semiconductor Science and Technology"
       },
       "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1557-s43580-026-01791-5-7d829a",
-      "date": "2026-10-29",
-      "title": "Structural and optical characterization of rhenium disulfide grown by chemical vapor deposition",
-      "authors": "Oluwaseyi Oluwadamilola Ayinde, S. Talukder, Juwon Onasanya, Bothina A. Hamad, M. O. Manasreh",
-      "institutions": [
-        "University of Arkansas at Fayetteville"
-      ],
-      "journal": "MRS Advances",
-      "doi": "10.1557/s43580-026-01791-5",
-      "url": "https://doi.org/10.1557/s43580-026-01791-5",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Flakes of rhenium disulfide, ReS 2 , were synthesized on SiO 2 /Si and sapphire substrates by atmospheric-pressure chemical vapor deposition using ReO 3 and sulfur powders as precursors, with the ReO 3 source and substrates placed inside a confined, closed-end inner quartz tube. The growth produced isolated flakes with triangular and irregular morphologies on both substrates. Raman spectroscopy resolved features corresponding to the 18 Raman-active modes of ReS 2 between 100 and 450 cm −1 , consistent with the vibrational fingerprint of the distorted 1 T structure. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/mrs-advances.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · MRS Advances"
-      },
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1111-jace-71368-9a8dc4",
-      "date": "2026-10-29",
-      "title": "Ideal Silicate Glass Compositions: From the Perspective of Network Topology",
-      "authors": "Erhan Kilinc, Russell J. Hand",
-      "institutions": [
-        "Sheffield Hallam University",
-        "University of Sheffield"
-      ],
-      "journal": "Journal of the American Ceramic Society",
-      "doi": "10.1111/jace.71368",
-      "url": "https://doi.org/10.1111/jace.71368",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman",
-        "Reviews"
-      ],
-      "glyph": "raman",
-      "summary": "The interpretation of commercial soda‐lime‐silicate and related silicate glass properties through existing topological approaches has received little attention, despite its potential to clarify the relationship between glass chemistry and material properties, including crystallization, physical characteristics, and mechanical behavior. Moreover, robust validation of topological constraint theory in glasses requires a substantial body of experimental data spanning a wide range of structural, mechanical, physical, and physicochemical properties across systematic compositional variations. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1038-s41598-026-75776-7-0cc095",
@@ -2451,7 +2224,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-26434-chemrxiv-15011237-v1-41016c",
@@ -2478,7 +2252,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acs-inorgchem-6c03800-037f45",
@@ -2563,30 +2338,6 @@
       "reviewed": true
     },
     {
-      "id": "10-26599-phys-2026-9320437-d4d5a6",
-      "date": "2026-10-29",
-      "title": "DEVELOPMENT AND EXPERIMENTAL EXPLORATION OF AN OPEN TEACHING PLATFORM BASED ON TERAHERTZ TIME-DOMAIN SPECTROSCOPY",
-      "authors": "Xiancong YANG, Yingxin WANG, Guojun SUN, Jianyi LIU, Xu ZHOU, Wenbo SUN, Jianfei HUA",
-      "institutions": [],
-      "journal": "Physics and Engineering",
-      "doi": "10.26599/phys.2026.9320437",
-      "url": "https://doi.org/10.26599/phys.2026.9320437",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "THz & Low-Frequency",
-        "General Technology"
-      ],
-      "glyph": "thz",
-      "summary": "As an important tool for exploring the “terahertz gap” in the electromagnetic spectrum, terahertz time-domain spectroscopy has shown broad application prospects in materials science, biomedicine, nondestructive testing, and related fields. It has also been increasingly introduced into physics laboratory teaching as a frontier scientific topic. However, teaching platforms based on commercial terahertz time-domain spectrometers usually provide students with limited operational freedom. Their experimental procedures tend to be fixed, and students often follow prescribed steps mechanically, resulting in insufficient understanding of key principles. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
       "id": "10-1021-acs-jcim-6c02679-f44393",
       "date": "2026-10-29",
       "title": "The Delta-ML IR Spectroscopist: Structured Delta-Learning between Harmonic DFT Infrared Spectra",
@@ -2607,7 +2358,8 @@
       "feature": false,
       "fig": null,
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-40157-c9004f",
@@ -2660,7 +2412,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1039-d6cs00966b-a48288",
@@ -2695,7 +2448,8 @@
         "credit": "Journal cover · Chemical Society reviews"
       },
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acs-jpclett-6c02891-bbb47f",
@@ -2755,7 +2509,8 @@
         "credit": "Journal cover · Physical chemistry chemical physics : PCCP"
       },
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-saa-2026-129069-e3adbb",
@@ -2811,65 +2566,8 @@
         "credit": "Journal cover · Physical chemistry chemical physics : PCCP"
       },
       "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1002-adma-75547-32093c",
-      "date": "2026-10-28",
-      "title": "Electromigration-Biased Carbon Transport and Isotope Fractionation in High-Carbon-Solubility Metals",
-      "authors": "Sultangaziyev A, Kim Y, Meng Y, Zhang L, Lee SH, Ruoff RS, Seong WK",
-      "institutions": [
-        "Center for Multidimensional Carbon Materials (CMCM)",
-        "Ulsan National Institute of Science and Technology (UNIST)",
-        "School of Metallurgy and Environment"
-      ],
-      "journal": "Advanced materials (Deerfield Beach, Fla.)",
-      "doi": "10.1002/adma.75547",
-      "url": "https://doi.org/10.1002/adma.75547",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Electromigration, usually studied as a failure mechanism can also guide materials formation. We demonstrate that direct current drives interstitial carbon transport in solid cobalt and nickel leading to graphite precipitation, isotope fractionation, and distinct thermal properties of the recovered phase. Carbon supplied centrally accumulates as graphite 8-10 mm away on the cathode side, whereas alternating-current control experiments under comparable heating produce only thin deposits near the source. Raman mapping and ToF-SIMS profiling reveal 12 C enrichment across source compositions from natural abundance to ∼88 at% 13 C, with Raman-derived enrichment factors of 1.29-1.62. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1039-d6dt01545j-46937e",
-      "date": "2026-10-28",
-      "title": "Synthesis and crystal structure of K<sub>2</sub>Ni(IO<sub>3</sub>)<sub>4</sub>(H<sub>2</sub>O)<sub>2</sub>",
-      "authors": "Turnbull R, Salcedo-Abraira P, da Silva EL, Ibáñez-Insa J, Liang A, Jasmin M, Manjón FJ, Diéguez AR, Errandonea D",
-      "institutions": [
-        "Institute of Physics for Advanced Materials",
-        "University of Évora",
-        "Geosciences Barcelona (geo3bcn-CSIC)"
-      ],
-      "journal": "Dalton transactions (Cambridge, England : 2003)",
-      "doi": "10.1039/d6dt01545j",
-      "url": "https://doi.org/10.1039/d6dt01545j",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "K 2 Ni(IO 3 ) 4 (H 2 O) 2 , a new nickel-containing iodate with a previously unreported composition, has been synthesised using a single-diffusion gel technique and structurally characterised by single-crystal X-ray diffraction. The compound adopts a known structure type within this family, containing trigonal pyramidal IO 3 - units with stereochemically active lone electron pairs, together with secondary I⋯O interactions and hydrogen bonding involving water molecules. The structural model and estimated band gap are supported by density functional theory calculations. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/dalton-transactions-cambridge-england-2003.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · Dalton transactions (Cambridge, England : 2003)"
-      },
-      "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-64898-2026-10-25-26366432-2920c2",
@@ -2922,7 +2620,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-38093-93c325",
@@ -2949,7 +2648,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-2138-am-2025-10145-aa6b11",
@@ -3031,59 +2731,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1021-acs-nanolett-6c04817-ac60d5",
-      "date": "2026-10-28",
-      "title": "Light-Induced Reversible Broadening of Ferroelectric Domain Walls",
-      "authors": "Fernando Rubio‐Marcos, Jonathan Ordoñez-Pimentel, Adolfo del Campo, Michel Venet, José E. García",
-      "institutions": [
-        "Consejo Superior de Investigaciones Científicas",
-        "Instituto de Cerámica y Vidrio",
-        "Universidade Federal de São Carlos"
-      ],
-      "journal": "Nano Letters",
-      "doi": "10.1021/acs.nanolett.6c04817",
-      "url": "https://doi.org/10.1021/acs.nanolett.6c04817",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Ferroelectric domain walls are active nanoscale interfaces whose functionality is governed by their internal structure rather than solely by their position. While optical stimuli are known to induce domain-wall motion, their impact on the spatial configuration of the domain-wall region remains unexplored. Here, we demonstrate that visible light induces a reversible and intensity-dependent broadening of ferroelectric domain walls in BaTiO3 crystals. Using confocal Raman microscopy, we resolve the evolution of the Raman-defined interfacial region and show that illumination transforms its spectroscopic signature from a relatively sharp boundary into an extended, graded interface. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-jeurceramsoc-2026-119005-5bb558",
-      "date": "2026-10-28",
-      "title": "Silicon nitride additives in the direct nitridation of nitride-bonded silicon carbide refractories: Influence of α- and β-Si3N4 on reaction kinetics and phase distribution",
-      "authors": "Johannes Kehren, Jonas Fischer, Tobias Steffen, Sinje Zimmer, Christian Dannert, Olaf Krause",
-      "institutions": [
-        "Koblenz University of Applied Sciences",
-        "Forschungsgemeinschaft Feuerfest"
-      ],
-      "journal": "Journal of the European Ceramic Society",
-      "doi": "10.1016/j.jeurceramsoc.2026.119005",
-      "url": "https://doi.org/10.1016/j.jeurceramsoc.2026.119005",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "The influence of α - and β -Si 3 N 4 additions on the direct nitridation of nitride-bonded silicon carbide refractories was investigated at 1350 °C and 1420 °C. The reaction was studied by in situ thermogravimetry, Raman imaging and scanning electron microscopy. β -Si 3 N 4 accelerated the nitridation more than α -Si 3 N 4 , lowering the reaction onset by about 40 °C and increased the conversion within the dwell time at 1350 °C from 72 to 87%. At 1420 °C, all formulations reached 90 to 92% conversion, but the β -seeded sample reached it fastest and then stopped abruptly. A surface reaction zone enriched in Si 2 N 2 O or β -Si 3 N 4 , found in nearly all samples, does not explain this halt. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
       "id": "10-1016-j-snr-2026-100535-2d1c76",
       "date": "2026-10-28",
       "title": "An integrated passive microfluidic–SERS platform for label-free plasma analysis from whole blood",
@@ -3103,32 +2750,6 @@
       ],
       "glyph": "sers",
       "summary": "Blood plasma is widely used for molecular analysis, but conventional plasma isolation by centrifugation adds equipment and sample-processing requirements that can limit decentralised testing. Here, we present an integrated passive microfluidic–surface enhanced Raman spectroscopy (SERS) platform that combines membrane-based plasma separation, label-free molecular fingerprinting, and exploratory machine-learning analysis within a single workflow. The device incorporates a polyethersulfone membrane within a multilayer polydimethylsiloxane architecture to isolate plasma directly from whole blood without centrifugation or external pumping. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1088-1674-1056-aeba63-642490",
-      "date": "2026-10-28",
-      "title": "The Phase Evolution and Lattice Dynamics of Dy 3 + /Sr 2 + Co-Doped KNN Ferroelectric Ceramics",
-      "authors": "Jian Wu, ZheTing Zhang, Kai Jiang, LiBing Chen, Jun Wang, Kai Dai",
-      "institutions": [
-        "Shanghai Institute of Technology",
-        "Shanghai Dianji University"
-      ],
-      "journal": "Chinese Physics B",
-      "doi": "10.1088/1674-1056/aeba63",
-      "url": "https://doi.org/10.1088/1674-1056/aeba63",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "The phase structure serves as the fundamental determinant of the macroscopic optoelectronic response in ferroelectric ceramics, and therefore its evolutionary behavior constitutes the physical basis for understanding the functional properties. In this work, Dy 3+ /Sr 2+ co-doped (K 0.5 Na 0.5 )NbO 3 ceramics are comprehensively investigated via condensed matter spectroscopy. Doping-induced ionic radius mismatch produces lattice distortion, tunes A-site cation ordering, and promotes O-T phase coexistence at room temperature, while inducing composition-dependent evolution of the optical band gap and luminescence properties. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -3190,33 +2811,6 @@
       "reviewed": true
     },
     {
-      "id": "10-3390-nano16211386-64869f",
-      "date": "2026-10-28",
-      "title": "Rapid Plasma-Assisted Synthesis of Tannic Acid-Capped Gold Nanoparticles for SERS Applications",
-      "authors": "Nguyen Thi Huyen, Nguyen Quynh Chi, Nguyễn Thu Loan, Simon Chouteau, Jarl Tynan Collado, Pierre Vinchon, Ngoc Linh Vu, Mẫn Minh Tân, Nguyen Hoang Tung, Nguyễn Thanh Tùng, Nguyen Nhat Linh",
-      "institutions": [
-        "Ton Duc Thang University",
-        "Graduate University of Science and Technology",
-        "Vietnam Academy of Science and Technology"
-      ],
-      "journal": "Nanomaterials",
-      "doi": "10.3390/nano16211386",
-      "url": "https://doi.org/10.3390/nano16211386",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "Gold nanoparticles (AuNPs) are attractive substrates for surface-enhanced Raman scattering (SERS) because of their strong visible plasmon resonance, chemical stability, and biocompatibility. However, the enhancement they provide depends on how accessible the gold surface is to the analyte. Tannic acid (TA) is an effective green reductant and stabilizer for AuNPs. Conventional TA-based syntheses, however, require large doses and boiling, leaving a dense organic shell on the particles. Herein, an argon cold atmospheric-pressure plasma jet combined with a low dose of TA reduced HAuCl4 to AuNPs at room temperature without additional chemical reductants. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
       "id": "10-1016-j-snb-2026-141153-9cecc7",
       "date": "2026-10-28",
       "title": "Construction of a self-reporting Au nanodandelion SERS probe for simultaneous imaging of multiple DNA glycosylases in living cells",
@@ -3242,7 +2836,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-culher-2026-10-012-bb4c4e",
@@ -3297,7 +2892,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1088-1674-1056-aeba5e-e11039",
@@ -3322,7 +2918,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-38565-f69358",
@@ -3348,7 +2945,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-2138-am-2026-10338-e862dd",
@@ -3370,32 +2968,6 @@
       ],
       "glyph": "thz",
       "summary": "The spatial distribution of alteration minerals in orogenic gold deposits and their correlation with mineralization are important parameters for exploration. The Guocheng gold deposit, located on the northeastern margin of the Jiaolai Basin, contains multiple alteration assemblages, which are an ideal target for studying the relationship between alteration minerals and mineralization. By integrating petrographic observations with terahertz time-domain spectroscopy (THz-TDS). we systematically analyzed samples from distal host rock, proximal host rock, and orebody positions. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1021-acs-cgd-6c01022-91a365",
-      "date": "2026-10-28",
-      "title": "Growth, Physical Properties, Lattice Dynamics, and Defect Characteristics of Yb:LuGG Crystals",
-      "authors": "Mingliang Yang, Qingli Zhang, Chuancheng Zhang, Ruixian Wang, Wenli Qian, Fei Zheng, Xiaofei Wang, Renqin Dou, Guihua Sun, Youbao Ni",
-      "institutions": [
-        "University of Science and Technology of China",
-        "Chinese Academy of Sciences"
-      ],
-      "journal": "Crystal Growth & Design",
-      "doi": "10.1021/acs.cgd.6c01022",
-      "url": "https://doi.org/10.1021/acs.cgd.6c01022",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Yb:Lu3Ga5O12 crystals have attracted considerable interest for tunable solid-state and ultrashort-pulse laser applications owing to their broad absorption and emission bandwidths. However, the high volatility of the Ga2O3 component during crystal growth readily causes deviations of the melt composition from stoichiometry and promotes the formation of crystal defects, thereby limiting the growth of high-quality crystals and the improvement of laser performance. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -3428,7 +3000,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1360-ssc-2026-0189-031666",
@@ -3451,7 +3024,8 @@
       "feature": false,
       "fig": null,
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1039-d6an00716c-1bdae2",
@@ -3534,35 +3108,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1039-d6an00888g-fac6cd",
-      "date": "2026-10-27",
-      "title": "Self-adaptive nanophotonic metasurfaces enabling digital twins: toward continuous personalized healthcare in aging and disability",
-      "authors": "Taha BA, Addie AJ, Ibnaouf K, Jabir MS, Mahmood OT, Apsari R, Arsad N",
-      "institutions": [
-        "Universiti Kebangsaan Malaysia",
-        "Al-imam University College",
-        "Centre of Industrial Applications and Materials Technology"
-      ],
-      "journal": "The Analyst",
-      "doi": "10.1039/d6an00888g",
-      "url": "https://doi.org/10.1039/d6an00888g",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "SERS / TERS",
-        "Reviews"
-      ],
-      "glyph": "sers",
-      "summary": "Continuous physiological monitoring is a prerequisite in medicine that enables early disease detection, long-term health monitoring, and individualized therapeutic interventions. Although wearable optical biosensors have evolved significantly, their long-term clinical deployment remains limited by mechanical degradation, signal drift, biofouling, energy constraints, and poor integration with intelligent healthcare infrastructure. These issues are especially acute in the aged and disabled, when constant, dependable, and tailored monitoring is critical for proactive disease treatment. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1039-d6cc04001b-68a724",
@@ -3644,7 +3191,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1039-d6an01130f-190417",
@@ -3810,7 +3358,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-ppsc-70142-0c8bc9",
@@ -3833,34 +3382,6 @@
       ],
       "glyph": "thz",
       "summary": "We report a combined experimental–theoretical study of Raman‐active phonons in Cu 2 ZnSnS 4 (CZTS) and Cu 2 NiSnS 4 (CNTS) nanocrystals (NCs) of small size, synthesized by a “green” aqueous route. Low‐temperature (88 K) Raman spectra of NC films reveal a disordered kesterite structure (DKS) of the NCs, while X‐ray photoelectron spectroscopy (XPS) analysis reveals a non‐stoichiometric composition of both NC compounds. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1021-acsanm-6c03427-e8f141",
-      "date": "2026-10-27",
-      "title": "Composition- and Phase-Engineered Nanoscale WS2(1− x )Te2 x Alloyed Films for Broadband Photodetection and Surface-Enhanced Raman Sensing toward Molecular Recognition",
-      "authors": "Chia‐Chen Chung, Pei-Hsuan Wang, Yu‐Ren Peng, Sujith Lakshan Cooray, K.M.M.D.K. Kimbulapitiya, Po‐Chien Lai, Rovi Angelo B. Villaos, Feng‐Chuan Chuang, Yu‐Lun Chueh",
-      "institutions": [
-        "National Tsing Hua University",
-        "National Sun Yat-sen University",
-        "Luleå University of Technology"
-      ],
-      "journal": "ACS Applied Nano Materials",
-      "doi": "10.1021/acsanm.6c03427",
-      "url": "https://doi.org/10.1021/acsanm.6c03427",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "SERS / TERS",
-        "General Technology"
-      ],
-      "glyph": "sers",
-      "summary": "Two-dimensional transition metal dichalcogenides (TMDs) offer strong light−matter interactions and tunable electronic properties, but the fixed bandgap of binary WS2 limits its optical response to the visible region. Alloy engineering provides an effective pathway to overcome this constraint by enabling continuous modulation of the band structure and controlled 2H−1T′ phase transitions. In particular, Te alloying in WS2 introduces substantial lattice distortion, narrows the bandgap, and enhances charge-transfer interactions, making WS2(1−x)Te2x promising for broadband photodetection and SERS sensing. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -3917,7 +3438,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s10965-026-05160-6-42404b",
@@ -3973,7 +3495,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-26434-chemrxiv-15004288-v3-7e1e16",
@@ -3994,29 +3517,6 @@
       ],
       "glyph": "sfg",
       "summary": "Li + moves through an electrolyte both by diffusing with its intact solvation shell (vehicular transport) and by exchanging its solvent partners (structural transport). Structural diffusion depends on the frequency of solvent dissociation from Li + and how far the ion moves when it does, yet neither is well characterized experimentally. Li + transport in propylene carbonate solutions of LiTFSI, LiBF 4 , and LiPF 6 , from battery-relevant to superconcentrated levels, was studied via a vibrational probe molecule, phenyl selenocyanate, with ultrafast two-dimensional infrared chemical exchange spectroscopy. Li + diffusion coefficients significantly exceed the Stokes-Einstein prediction. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1142-s0218625x26501258-ab9ebe",
-      "date": "2026-10-27",
-      "title": "Defect-Mediated Optical and Dielectric Behavior of NiAl 2 O 4 Spinel and Its Correlation with Visible-Light Rhodamine B Photodegradation",
-      "authors": "Khaled Derkaoui, Ismail Bencherifa, Amal Elfiad, Khadidja Boukhouidem, Mohamed Kechouane, Yamina Mebdoua, Toufik Hadjersi",
-      "institutions": [],
-      "journal": "Surface Review and Letters",
-      "doi": "10.1142/s0218625x26501258",
-      "url": "https://doi.org/10.1142/s0218625x26501258",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Nickel aluminate spinel (NiAl 2 O 4 ) was synthesized and investigated as a multifunctional oxide material with emphasis on its structural, optical, dielectric, and photocatalytic properties. X-ray diffraction confirmed the formation of a well-crystallized cubic spinel phase, while Raman spectroscopy revealed characteristic vibrational modes associated with the NiAl 2 O 4 framework and indicated the presence of local structural disorder. SEM observations showed an agglomerated morphology composed of irregular particles, and EDS analysis confirmed the presence of Ni, Al, and O as the main constituent elements. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -4159,32 +3659,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1021-acs-est-6c09992-bea011",
-      "date": "2026-10-26",
-      "title": "Dynamic Hydrogen-Bonded Hydration Networks Mitigate Organic-Inorganic Fouling in Nanofiltration",
-      "authors": "Jiang T, Min Y, Guan YF, Jiang ZY",
-      "institutions": [
-        "University of Science and Technology of China",
-        "Tianjin University"
-      ],
-      "journal": "Environmental science & technology",
-      "doi": "10.1021/acs.est.6c09992",
-      "url": "https://doi.org/10.1021/acs.est.6c09992",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Ultrafast & SFG"
-      ],
-      "glyph": "sfg",
-      "summary": "Hydration layers are widely recognized as the molecular basis of antifouling membrane interfaces, yet their role is still largely viewed through a static barrier picture. The dynamic response of hydrated membrane-water interfaces to approaching foulants, particularly under organic-inorganic mixed fouling conditions, remains poorly understood. Here, using poly(sulfobetaine methacrylate) (pSBMA)-modified nanofiltration membranes as a model zwitterionic interface, we reveal that fouling reversibility is strongly influenced by the dynamic stability of hydrogen-bonded hydration networks at the membrane-water interface. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
       "id": "10-1039-d6cp03154d-ea2b7f",
       "date": "2026-10-26",
       "title": "The high-pressure behaviour of caesium hydroxide monohydrate",
@@ -4243,7 +3717,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1140-epjp-s13360-026-08475-x-c4dfb8",
@@ -4297,7 +3772,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-microc-2026-120122-2b1cb4",
@@ -4328,34 +3804,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1021-acsomega-6c08530-35c1cf",
-      "date": "2026-10-26",
-      "title": "Surface-Enhanced Raman Spectroscopic Characterization of Chitosan Extracted from Black Soldier Fly Pupa Shells",
-      "authors": "Nora Slekiene, Zineb Chiki, Ingrida Bružaitė, Juozas Padgurskas, Valentinas J. Snitka",
-      "institutions": [
-        "Vilnius University",
-        "Sidi Mohamed Ben Abdellah University",
-        "Vilnius Gediminas Technical University"
-      ],
-      "journal": "ACS Omega",
-      "doi": "10.1021/acsomega.6c08530",
-      "url": "https://doi.org/10.1021/acsomega.6c08530",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "SERS / TERS",
-        "IR / NIR"
-      ],
-      "glyph": "sers",
-      "summary": "Chitosan is widely used as a matrix in metal nanoparticle-based surface-enhanced Raman scattering (SERS) substrates; however, its intrinsic spectral features may interfere with analyte identification. Conventional Raman spectroscopy of chitosan is further limited by strong fluorescence, resulting in scarce, reliable spectral data. In this study, chitosan extracted from Black Soldier Fly (BSF) (Hermetia illucens) pupa shells was characterized using X-ray diffraction (XRD), Fourier transform infrared spectroscopy (FTIR), Raman spectroscopy, and silver nanoparticle-enhanced SERS. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
       "id": "10-48550-arxiv-2610-35214-f6faa8",
       "date": "2026-10-26",
       "title": "Optical Thermometry in Monolayer WS2: Raman and Photoluminescence Spectroscopy from 5 K to 1273 K",
@@ -4376,7 +3824,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-26434-chemrxiv-15011041-v1-d41343",
@@ -4430,7 +3879,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-optcon-613877-637ef8",
@@ -4448,33 +3898,6 @@
       ],
       "glyph": "raman",
       "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1021-acs-langmuir-6c04203-27bb2f",
-      "date": "2026-10-26",
-      "title": "Opto-Thermophoretic Printing of Gold Nanosphere Assemblies with Tailorable Packing via Ligand Chain Length",
-      "authors": "Ana Jiménez Amaya, Claire Goldmann, Jules Marcone, Eric H. Hill",
-      "institutions": [
-        "Basque Center for Materials, Applications and Nanostructures",
-        "Centre National de la Recherche Scientifique",
-        "Université Paris-Saclay"
-      ],
-      "journal": "Langmuir",
-      "doi": "10.1021/acs.langmuir.6c04203",
-      "url": "https://doi.org/10.1021/acs.langmuir.6c04203",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "The ability to control nanoparticle assembly on substrates using light offers unique opportunities for the fabrication of functional nanostructures. Herein, the opto-thermophoretic patterning of gold nanoparticles is mediated by carboxylated thiol ligands with varying chain length, revealing how ligand structure governs assembly dynamics and final morphology. Upon laser irradiation of a gold nanosphere dispersion in the presence of ω-mercaptocarboxylic acids, localized surface plasmon resonance creates a temperature gradient that promotes ligand exchange while attracting nearby particles, leading to thiol-functionalized nanoparticles that can bind to a glass substrate. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -4509,31 +3932,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1021-acs-jpcb-6c03977-b1699e",
-      "date": "2026-10-26",
-      "title": "Preparation Method Determines Valinomycin Organization and Phase Behavior in Charged Langmuir Monolayers",
-      "authors": "Amrita Chakraborty, Priyojit Das Gupta, Anabela Meier, Antara Roy, Saranya Pullanchery",
-      "institutions": [
-        "Texas A&M University"
-      ],
-      "journal": "The Journal of Physical Chemistry B",
-      "doi": "10.1021/acs.jpcb.6c03977",
-      "url": "https://doi.org/10.1021/acs.jpcb.6c03977",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Ultrafast & SFG"
-      ],
-      "glyph": "sfg",
-      "summary": "Amphiphilic molecules are typically incorporated into lipid Langmuir monolayers by two distinct methods: co-spreading, where lipid and amphiphile are deposited simultaneously, and injection, where the amphiphile is introduced into the aqueous subphase beneath a preformed monolayer. Whether these methods produce equivalent molecular arrangements remains an open question. Using valinomycin as a model ionophore, we investigate this question across lipid monolayers bearing anionic, zwitterionic, and cationic headgroups. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
       "id": "https-arxiv-org-abs-2610-35392-857616",
       "date": "2026-10-26",
       "title": "A Density-Matrix Formulation of Vibrational Circular Dichroism Spectra for Møller-Plesset and Configuration Interaction Methods",
@@ -4556,7 +3954,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1177-19322968261496268-303fec",
@@ -4721,7 +4120,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acssensors-6c03332-8742bb",
@@ -4750,7 +4150,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-apsusc-2026-168767-9ded3b",
@@ -4915,31 +4316,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1021-acsomega-6c09534-968fc7",
-      "date": "2026-10-24",
-      "title": "Ultrastructural, Chemical, and Wettability Insights into the Interaction between Novel Natural Dentifrices and Nanohybrid Composites: A Multi-Technique Microscopy Approach",
-      "authors": "Giovanna dos Santos S. Teixeira, Ilene Cristine R. Cesar, Luís Eduardo S. Soares",
-      "institutions": [
-        "University of Vale Do Paraíba"
-      ],
-      "journal": "ACS Omega",
-      "doi": "10.1021/acsomega.6c09534",
-      "url": "https://doi.org/10.1021/acsomega.6c09534",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "This study aims to provide a multimodal ultrastructural and microanalytical characterization of the effects of essential-oil and ozonated-oil toothpastes on a zirconia-reinforced nanohybrid composite resin. Fifty composite specimens were distributed into five groups: artificial saliva (AS), conventional toothpaste Colgate Total 12 (CT), Colgate Natural Extracts Reinforced Defense gel (CN), DoTERRA on guard (DT), and Ozonecare gel (OZ). …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
       "id": "10-3171-2026-5-jns2667-e0c5b9",
       "date": "2026-10-23",
       "title": "Near real-time intraoperative assessment of pituitary neuroendocrine tumors using stimulated Raman histology during endoscopic transsphenoidal surgery: comparison with conventional histopathology",
@@ -4964,7 +4340,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-oe-605499-0fa2d2",
@@ -4989,7 +4366,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-saa-2026-129027-1a74b9",
@@ -5016,7 +4394,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1088-1361-648x-aeb059-a52514",
@@ -5047,7 +4426,8 @@
         "credit": "Journal cover · Journal of physics. Condensed matter : an Institute of Physics journal"
       },
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1177-00037028261504101-13dc2f",
@@ -5097,7 +4477,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-ijpharm-2026-127594-f61564",
@@ -5181,7 +4562,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acs-analchem-6c02677-0ff9bc",
@@ -5254,7 +4636,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acsnano-6c05789-704766",
@@ -5310,7 +4693,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1063-5-0359187-0fc780",
@@ -5338,7 +4722,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-optcon-622384-52b359",
@@ -5387,7 +4772,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-fuel-2026-141811-ac0c98",
@@ -5442,7 +4828,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-surfin-2026-111093-a11077",
@@ -5575,58 +4962,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1007-s12374-026-09535-6-d9d14f",
-      "date": "2026-10-23",
-      "title": "The Intronic Long Noncoding RNA FTIR Contributes to CLF-Associated Repression of FLOWERING LOCUS T in Arabidopsis thaliana",
-      "authors": "Seong Ju Han, Jia Chae, Hyeon Ju Nam, Rak Jun Choi, Jee Hye Kim, Hye Jeong Kim, Sivabalan Karthik, Jae Bok Heo",
-      "institutions": [
-        "Dong-A University"
-      ],
-      "journal": "Journal of Plant Biology",
-      "doi": "10.1007/s12374-026-09535-6",
-      "url": "https://doi.org/10.1007/s12374-026-09535-6",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-seta-2026-105502-6312cd",
-      "date": "2026-10-23",
-      "title": "Pyrolytic product evolution and catalytic mechanism of industrial waste oil: Insights from online FTIR, Py-GC/MS, and fixed-bed experiments",
-      "authors": "Yafei Chen, Yutong Wu, Yuzhe Tang, Daijun Du, Hong Yin, Hua Tan, Donglin He, Ping Ouyang, Xia Xiao, Hua Suo, Haifeng Gong",
-      "institutions": [
-        "Chongqing Technology and Business University",
-        "Southwest Petroleum University",
-        "State Key Laboratory of Oil and Gas Reservoir Geology and Exploitation"
-      ],
-      "journal": "Sustainable Energy Technologies and Assessments",
-      "doi": "10.1016/j.seta.2026.105502",
-      "url": "https://doi.org/10.1016/j.seta.2026.105502",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
       "id": "10-1021-acs-jpcb-6c05764-018b6a",
       "date": "2026-10-23",
       "title": "Ion-Specific Interfacial Hydration Beyond Classical Chaotropicity",
@@ -5674,7 +5009,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s00604-026-08477-7-568aa4",
@@ -5759,7 +5095,8 @@
         "credit": "Journal cover · Physical chemistry chemical physics : PCCP"
       },
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1177-00037028261498088-374e53",
@@ -5808,32 +5145,6 @@
       ],
       "glyph": "raman",
       "summary": "Pore-scale CO 2 hydrate growth pathways and kinetics affect the flow behavior of multiphasic CO 2 , thereby controlling the efficiency and stability of CO 2 sequestration as clathrates in subsea sediments. Under subsea hydrostatic pressures, injected CO 2 exists in a gaseous or liquid phase, which results in drastically different CO 2 hydrate kinetic behavior in the pore space of sediments. In this study, a novel high-pressure microfluidic platform coupled with in situ Raman is devised to observe pore-scale CO 2 hydrate formation under two designed pressures covering multiphasic CO 2 . …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1039-d6ra09800b-6d8e21",
-      "date": "2026-10-22",
-      "title": "Tuning of defect-mediated AgInS<sub>2</sub>-based chalcogenides for highly efficient electroactive energy storage electrodes",
-      "authors": "Mustafa F, Masood A, Ali W, Zainab U, Iram A, Ilyas S, Xiang Z, Sultana I, Razaq A",
-      "institutions": [
-        "COMSATS University Islamabad Lahore Campus 54000 Pakistan",
-        "South China University of Technology Guangzhou 510640 China"
-      ],
-      "journal": "RSC advances",
-      "doi": "10.1039/d6ra09800b",
-      "url": "https://doi.org/10.1039/d6ra09800b",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Metal chalcogenides with enhanced electrochemical and electrical properties are promising next-generation supercapacitor electrodes. Cu-, Mn-, and Cu-Mn-doped and pristine AgInS 2 nanoparticles have been synthesized through a simple and low-cost hydrothermal route. Herein, we demonstrate for the first time a direct correlation between dual-dopant synergy and the defect landscape and charge-transfer pathways of an AgInS 2 lattice (I-III-VI 2 ) that tolerates cation substitution without structural degradation. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -5895,7 +5206,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-30746-55e86d",
@@ -5924,7 +5236,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-26434-chemrxiv-15005847-v2-33b53a",
@@ -5951,7 +5264,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acsomega-6c04490-506675",
@@ -6034,33 +5348,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1002-apxr-70209-415239",
-      "date": "2026-10-22",
-      "title": "A Simple Solvent Treatment to Modulate the Thermoelectric Properties of Single‐Walled Carbon Nanotubes over a Wide Range",
-      "authors": "Marén Gültner, Dieter Fischer, Julia Lötsch, Susanne Boye, Petr Formánek, Johannes Theiner, Beate Krause",
-      "institutions": [
-        "Leibniz Institute of Polymer Research",
-        "University of Vienna"
-      ],
-      "journal": "Advanced Physics Research",
-      "doi": "10.1002/apxr.70209",
-      "url": "https://doi.org/10.1002/apxr.70209",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Demand for sustainable energy is growing, so generating energy from new, sustainable sources is becoming increasingly important. One approach is to utilize the thermoelectric (TE) effect, which involves sustainably generating electrical energy from waste heat. Single‐walled carbon nanotubes (SWCNTs) can be used as thermoelectric materials for this purpose. This study investigates how the solvents used to prepare self‐standing buckypapers affect the thermoelectric properties of two SWCNT types that differ in purity, structure, and thickness. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-ejic-70319-010451",
@@ -6214,7 +5503,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-31976-b1214b",
@@ -6243,7 +5533,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acs-jpcc-6c04853-9436d6",
@@ -6269,7 +5560,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-boe-612014-4b200d",
@@ -6292,7 +5584,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-polymer-2026-131006-23d401",
@@ -6321,7 +5614,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1088-1674-4527-aeb855-d6dc9e",
@@ -6376,7 +5670,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-3389-fphy-2026-1973953-0141d2",
@@ -6401,7 +5696,8 @@
       "feature": false,
       "fig": null,
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s40472-026-00531-w-559c71",
@@ -6505,7 +5801,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-smtd-71139-a22146",
@@ -6532,7 +5829,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-adma-75459-da5f5d",
@@ -6619,36 +5917,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1007-s00894-026-06991-2-7e8dc7",
-      "date": "2026-10-21",
-      "title": "DFT study of electro-optical properties and molecular spectroscopy of heteroatom substituted terphenyl core LCs and comparison with their unsubstituted analogues",
-      "authors": "Akansha, Kumar M, Mishra M, Singh D, Kumar D",
-      "institutions": [
-        "Babasaheb Bhimrao Ambedkar University"
-      ],
-      "journal": "Journal of molecular modeling",
-      "doi": "10.1007/s00894-026-06991-2",
-      "url": "https://doi.org/10.1007/s00894-026-06991-2",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spontaneous Raman",
-        "THz & Low-Frequency"
-      ],
-      "glyph": "thz",
-      "summary": "Context Due to high birefringence, nematogenic behavior, and polarizability anisotropy, terphenyl core-based liquid crystals are useful in high-performance display technologies, photonics, and terahertz applications. These potential applications drew researchers' attention towards terphenyl core-based liquid crystalline molecules. The mesomorphic behavior and optical properties of a series of homologous liquid crystalline compounds belong to 4'-alkylthio-4\"-isothiocyanoterphenyl with lateral fluorine substitution as well as oxygen and alkene derivatives were previously analyzed and compared with their unsubstituted analogs which demonstrated that the presence of sulfur and oxygen atom …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/journal-of-molecular-modeling.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · Journal of molecular modeling"
-      },
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
       "id": "10-1103-tkkv-qm1v-a77913",
       "date": "2026-10-21",
       "title": "Raman optical activity and helicity-dependent phonon splitting in chiral CoSi",
@@ -6669,7 +5937,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-jallcom-2026-191821-da6574",
@@ -6696,7 +5965,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1103-1pkh-p8zb-45894a",
@@ -6719,7 +5989,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-2113-lithosphere-2026-124-6edc17",
@@ -6770,32 +6041,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-26434-chemrxiv-2026-bwt22-v3-5c5dea",
-      "date": "2026-10-21",
-      "title": "Cellulose Coating Altered the Electro-Chemo-Mechanical Evolution of Sodium Thioantimonate Electrolyte in Solid-state Sodium Batteries: An Operando Raman Study",
-      "authors": "Geng Xie, Xuehai Tan, Shu Dong, Fuwei Wen, Shihong Xu, Lingzi Sang",
-      "institutions": [
-        "University of Alberta"
-      ],
-      "journal": "ChemRxiv",
-      "doi": "10.26434/chemrxiv-2026-bwt22/v3",
-      "url": "https://doi.org/10.26434/chemrxiv-2026-bwt22/v3",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "All-solid-state batteries (ASSBs) attracted increasing attention due to their improved safety and energy densities; yet electrolyte decomposition and subsequent contact loss limited the interfacial stability of ASSBs. Herein, we report an operando Raman characterization that provides high voltage, time, and spatial resolutions, which enables simultaneous analysis of interfacial decomposition mechanism and morphological evolution. Using Na3SbS4 electrolyte (NSS) and its carboxymethyl-cellulose-encapsulated analogue (NSS-CMC) as exemplars, we precisely contrasted the subtle differences in the two-step reduction mechanism of the two electrolytes. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1063-5-0346044-8b45c3",
@@ -6846,36 +6093,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1007-s11665-026-15221-y-2bd5ef",
-      "date": "2026-10-21",
-      "title": "Iron Content Effect on Oxidation Kinetics and Oxide Phase Stability of Zr-Nb and Zr-Sn Alloys",
-      "authors": "Alexandre Roberto Soares, Rafael dos Santos, Guilherme Pennachin Sakamiti, Heloísa Andréa Acciari, Roberto Zenhei Nakazato",
-      "institutions": [
-        "Universidade Estadual Paulista (Unesp)"
-      ],
-      "journal": "Journal of Materials Engineering and Performance",
-      "doi": "10.1007/s11665-026-15221-y",
-      "url": "https://doi.org/10.1007/s11665-026-15221-y",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "This study investigates the influence of iron (Fe) content on the oxidation kinetics and oxide layer microstructural evolution of zirconium alloys under autoclave conditions. Four alloys were evaluated: three Zr-Nb alloys (300, 400, and 600 ppm Fe) and one Zr-Sn alloy (1100 ppm Fe). The experimental approach integrated ICP-OES, oxidation kinetics modeling, CALPHAD thermodynamic simulations up to 360 °C, x-ray diffraction, Raman spectroscopy, and SEM-EDS. Oxidation parameters were selected to produce stable, adherent oxide scales, enabling high-resolution characterization of the pre-transition regime. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/journal-of-materials-engineering-and-performance.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · Journal of Materials Engineering and Performance"
-      },
-      "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-29753-75a23e",
@@ -6903,7 +6122,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-infrared-2026-106975-5123a2",
@@ -6948,33 +6168,6 @@
       ],
       "glyph": "ir",
       "summary": "Observations of the aromatic infrared (IR) emission band at 3.3 μm often reveal satellite emission features in the 3.4 -- 3.6 μm range. While the 3.3 μm band is attributed to the CH stretching vibration of polycylic aromatic hydrocarbons (PAHs), the satellite bands, particularly its prominent 3.4 μm component, is assigned to aliphatic CH stretching vibrations in hydrogenated and methylated PAH-like species. We derive state-of-the-art IR emission spectra for aliphatic-containing pyrene derivatives and compare them with astronomical observations. This will help us to refine our understanding of the contribution of these species to the 3.4 μm emission band. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-coal-2026-105127-0f63f9",
-      "date": "2026-10-21",
-      "title": "Petrology of coals with diverse genetic types in China and their Fourier transform infrared spectral response",
-      "authors": "Tianyu Yang, Yilin Chen, Xuehai Fu, Wenfeng Wang, Jian Shen, Piaopiao Duan, Zhaobiao Yang, Hua Tian, Yong Hong, Xinyue Huang",
-      "institutions": [
-        "China University of Mining and Technology",
-        "Xinjiang University",
-        "Research Institute of Petroleum Exploration and Development"
-      ],
-      "journal": "International Journal of Coal Geology",
-      "doi": "10.1016/j.coal.2026.105127",
-      "url": "https://doi.org/10.1016/j.coal.2026.105127",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "",
       "why": "",
       "pick": false,
       "feature": false,
@@ -7033,7 +6226,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acsnano-6c03948-11b0d9",
@@ -7063,7 +6257,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-3389-fcimb-2026-1927600-65913c",
@@ -7146,7 +6341,8 @@
       "feature": false,
       "fig": null,
       "source": "crossref",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-37188-lam-2026-115-04549f",
@@ -7259,59 +6455,6 @@
       "reviewed": true
     },
     {
-      "id": "10-64898-2026-10-18-759929-013025",
-      "date": "2026-10-20",
-      "title": "Mechanoscribed Xolography for Multiscale Mechanical Patterning of Cell-laden Hydrogels",
-      "authors": "Elliger L, van Hattem TC, Oliva MAG, van Alphen TL, König NF, Genever P, Hofmann S, Ito K, Albertazzi L, Salmeron-Sanchez M, Castilho M",
-      "institutions": [
-        "Eindhoven University of Technology",
-        "Barcelona Institute of Science and Technology",
-        "Institute for Bioengineering of Catalonia"
-      ],
-      "journal": "bioRxiv",
-      "doi": "10.64898/2026.10.18.759929",
-      "url": "https://doi.org/10.64898/2026.10.18.759929",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Brillouin"
-      ],
-      "glyph": "brillouin",
-      "summary": "Mechanotransduction is a key regulator of healthy and malignant tissue development. However, current mechanobiological insights are largely derived from cells cultured on two-dimensional substrates or in homogeneous biomaterials, which insufficiently capture the three-dimensional (3D) heterogeneity and dynamic nature of the native extracellular matrix. This gap persists due to a lack of manufacturing processes and analysis modalities to control and monitor material properties and their evolution in 3D. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-jmgm-2026-109627-20adac",
-      "date": "2026-10-20",
-      "title": "Pressure-induced structural, vibrational and electronic evolution of ε-CL-20:A periodic DFT study",
-      "authors": "Ji J, Yu Y, Qiu Y, Xu J, Zhu W",
-      "institutions": [
-        "Jingchu University of Technology",
-        "Nanjing University of Science and Technology"
-      ],
-      "journal": "Journal of molecular graphics & modelling",
-      "doi": "10.1016/j.jmgm.2026.109627",
-      "url": "https://doi.org/10.1016/j.jmgm.2026.109627",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "The structures, IR and Raman spectra, electronic and optical properties of ε-2,4,6,8,10,12-hexanitro-2,4,6,8,10,12-hexaazaisowurtzitane (ε-CL-20) crystal under 0-250 GPa have been systematically studied by periodic density functional theory (DFT) method. The crystal structure, molecular configuration and hydrogen bond are discontinuous at 195 GPa, which indicate that the structural mutation of ε-CL-20 occurs. IR and Raman analysis prove that the structure of ε-CL-20 do mutate, and high pressure makes the system appear more absorption peaks of C-H stretching in the high frequency region of more than 3000 cm -1 . …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true
-    },
-    {
       "id": "10-1103-m2js-yzky-12c7dd",
       "date": "2026-10-20",
       "title": "Comparative Raman study of Ruddlesden-Popper nickelates and the monolayer-trilayer polymorph",
@@ -7332,7 +6475,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-opticaopen-34621080-v1-ecf4c5",
@@ -7355,34 +6499,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-matdes-2026-117312-e07f88",
-      "date": "2026-10-20",
-      "title": "In-depth mechanistic study of the oxidative dissolution of uranium dioxide under water radiolysis using oxygen isotopes and studtite’s Raman spectra",
-      "authors": "Aurélien Perrot, Christophe Jégou, Paul‐Henri Imbert, Laurent Claparède, S. Miro, Nicolas Dacheux",
-      "institutions": [
-        "Centre National de la Recherche Scientifique",
-        "Université de Montpellier",
-        "Commissariat à l'Énergie Atomique et aux Énergies Alternatives"
-      ],
-      "journal": "Materials & Design",
-      "doi": "10.1016/j.matdes.2026.117312",
-      "url": "https://doi.org/10.1016/j.matdes.2026.117312",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Understanding the oxidative dissolution mechanisms of uranium dioxide under water radiolysis is a major challenge in the context of the underwater storage of spent nuclear fuels. This study proposes an original approach using oxygen isotopes to better understand the role of radiolytic species in uranium oxidation and alteration product formation at the atomic scale. To this end, we studied an isotopically labeled reaction interface (U 18 O 2 /H 2 16 O), which was subjected to γ irradiation and, consequently, to water radiolysis, using Raman spectroscopy. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1038-s41598-026-75163-2-e29560",
@@ -7409,7 +6527,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s12668-026-02956-0-7be731",
@@ -7456,63 +6575,6 @@
       ],
       "glyph": "ir",
       "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1038-s41560-026-02148-w-3bd970",
-      "date": "2026-10-20",
-      "title": "Directed assembly of cathode interlayers enables efficient binary organic solar cells",
-      "authors": "Jia Yao, Rui Zhang, Ming Zhang, Tonghui Wang, Nakul Jain, Yushan Liu, 刘才和, Xiaohan Liu, Zhen Zhang, Shixin Meng, Aonan Song, 王庆元, Qi Chen, Feng Gao, Zhiguo Zhang, Yongfang Li",
-      "institutions": [
-        "Chinese Academy of Sciences",
-        "Beijing National Laboratory for Molecular Sciences",
-        "Institute of Chemistry"
-      ],
-      "journal": "Nature Energy",
-      "doi": "10.1038/s41560-026-02148-w",
-      "url": "https://doi.org/10.1038/s41560-026-02148-w",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Ultrafast & SFG"
-      ],
-      "glyph": "sfg",
-      "summary": "Cathode interlayers create interfacial dipoles in organic solar cells to maximize device efficiency. However, the dipoles are highly dependent on the molecular orientation of the interlayers, which remain challenging to be controlled. Here, based on the amphiphilic nature of the interlayers, we show a stepwise film deposition approach using a polar solvent for active layer pretreatment and a bipolar solvent for subsequent interlayer self assembly. Sum-frequency generation vibrational spectroscopy reveals a preferred perpendicular orientation of the interlayer molecules, thereby enhancing the surface potential and reducing the charge transport resistance. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/nature-energy.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · Nature Energy"
-      },
-      "source": "openalex",
-      "reviewed": true
-    },
-    {
-      "id": "10-1002-qua-70302-9dbb78",
-      "date": "2026-10-20",
-      "title": "Modulation of Electronic and Optical Properties in Li‐Doped Boron Clusters Under Dual Regulation Strategy",
-      "authors": "Tong‐Tong Nie, Shun‐Fa Lu, Meng‐Fei Guo, Zi‐Gang Shen, Ying‐Qi Cui, Hao Tian, Qin‐Qin Shao, Jie Zhang, Chenggang Li",
-      "institutions": [
-        "Zhengzhou Normal University",
-        "Zhengzhou University"
-      ],
-      "journal": "International Journal of Quantum Chemistry",
-      "doi": "10.1002/qua.70302",
-      "url": "https://doi.org/10.1002/qua.70302",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "In this work, two distinct regulation strategies—atomic doping modification and oriented external electric field (OEEF) modulation—are adopted to achieve systematic and continuous tuning of the electronic and optical properties of lithium‐doped boron clusters. First, using the Crystal Structure Analysis by Particle Swarm Optimization (CALYPSO) structural prediction algorithm combined with density functional theory (DFT), the geometric structures, electronic properties, and optical properties are systematically investigated for Li‐doped B 8 − clusters. …",
       "why": "",
       "pick": false,
       "feature": false,
@@ -7678,7 +6740,8 @@
         "credit": "Journal cover · Annals of Biomedical Engineering"
       },
       "source": "editor",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-chemolab-2026-105926-6d570d",
@@ -7705,52 +6768,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1016-j-animal-2026-101996-9e29c8",
-      "date": "2026-10-01",
-      "title": "Preliminary genetic investigations of Raman spectroscopy-based boar taint prediction in Piétrain×Landrace crossbred pigs",
-      "authors": "A. Markey, A. Genin, P. Lemal, D. Duarte, K. Wijnrocx, A.-C. Huet, J. Wavreille, Q. Arnould, D. Delhotte, V. Baeten, J.A. Fernández Pierna, N. Gengler",
-      "institutions": [],
-      "journal": "animal",
-      "doi": "10.1016/j.animal.2026.101996",
-      "url": "https://doi.org/10.1016/j.animal.2026.101996",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-nwnano-2026-100254-91f61a",
-      "date": "2026-10-01",
-      "title": "Raman-Trackable Heterojunction Nano-Objects for Pre-Delivery Mapping of Intracellular Trafficking Bottlenecks: A Critical Review",
-      "authors": "Dilpreet Singh",
-      "institutions": [],
-      "journal": "Nano Trends",
-      "doi": "10.1016/j.nwnano.2026.100254",
-      "url": "https://doi.org/10.1016/j.nwnano.2026.100254",
-      "oa": true,
-      "license": "CC BY-NC-ND 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
       "id": "10-1016-j-jqsrt-2026-110181-03459d",
       "date": "2026-10-01",
       "title": "Infrared Absorption Spectra of CaCO3: Calcite and Aragonite Polymorphs",
@@ -7761,29 +6778,6 @@
       "url": "https://doi.org/10.1016/j.jqsrt.2026.110181",
       "oa": true,
       "license": "CC BY 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-ceramint-2026-10-333-9ac127",
-      "date": "2026-10-01",
-      "title": "Raman guided control of etching kinetics for Ti3C2Tx MXene with enhanced charge-transfer properties",
-      "authors": "Tata Sanjay Kanna Sharma, Beena Mol Babu, Jayasmita Jana, Somnath Chowdhury, Kuo-Yuan Hwa, Sung Gu Kang, Seung Hyun Hur, Won Mook Choi",
-      "institutions": [],
-      "journal": "Ceramics International",
-      "doi": "10.1016/j.ceramint.2026.10.333",
-      "url": "https://doi.org/10.1016/j.ceramint.2026.10.333",
-      "oa": false,
-      "license": "",
       "categories": [
         "General Technology"
       ],
@@ -7843,98 +6837,6 @@
       "reviewed": true
     },
     {
-      "id": "10-1016-j-dib-2026-113378-d101d3",
-      "date": "2026-10-01",
-      "title": "Mid-Infrared Spectroscopy Dataset of Glass with Tholeiitic, Boninitic, and Komatiitic Compositions",
-      "authors": "Andreas Morlok, Oliver Burghardt, Stephan Klemme, Iris Weber, Maximilian P. Reitze, Harald Hiesinger",
-      "institutions": [],
-      "journal": "Data in Brief",
-      "doi": "10.1016/j.dib.2026.113378",
-      "url": "https://doi.org/10.1016/j.dib.2026.113378",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-siny-2026-101777-99fa79",
-      "date": "2026-10-01",
-      "title": "Cerebral Near Infrared Spectroscopy – Clinical Use in the Neonatal Intensive Care Unit",
-      "authors": "Sara de Crescenzo, Topun Austin, Silvia Martini",
-      "institutions": [],
-      "journal": "Seminars in Fetal and Neonatal Medicine",
-      "doi": "10.1016/j.siny.2026.101777",
-      "url": "https://doi.org/10.1016/j.siny.2026.101777",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-talanta-2026-130881-79ae1b",
-      "date": "2026-10-01",
-      "title": "DFT-Based Vibrational Spectroscopy, Electronic Structure and Nonlinear Optical Properties of a Pyridinylidene Benzamide with Dual Na+/K+-ATPase/SERCA2a Targeting Potential",
-      "authors": "Oumria Kourat, Nadia Benhalima, Yahia Cherif Fatima, Abdelkrim Guendouzi, Abdullah Yahya Abdullah Alzahrani, Sana Ben Moussa, Emad Rashad Sindi, Mohammad Borhan Uddin, Magdi E.A. Zaki",
-      "institutions": [],
-      "journal": "Talanta",
-      "doi": "10.1016/j.talanta.2026.130881",
-      "url": "https://doi.org/10.1016/j.talanta.2026.130881",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
-      "id": "10-1016-j-oregeorev-2026-107644-12a09c",
-      "date": "2026-10-01",
-      "title": "Chlorite short-wave infrared spectral and mineral-chemical constraints on mineralization in the Haopinggou Au–Ag polymetallic deposit, Xiong’ershan region, China",
-      "authors": "Li Jiang, Wei Jian, Jingwen Mao, Min Liu, Shiwei Song, Yongfei Tian, Lei Zhu, Shida Zhai, Yongqi Su, Xiuquan Wang",
-      "institutions": [],
-      "journal": "Ore Geology Reviews",
-      "doi": "10.1016/j.oregeorev.2026.107644",
-      "url": "https://doi.org/10.1016/j.oregeorev.2026.107644",
-      "oa": true,
-      "license": "CC BY-NC-ND 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true
-    },
-    {
       "id": "10-1016-j-rineng-2026-113683-faca09",
       "date": "2026-10-01",
       "title": "Remote characterization of metallurgical gas leaks using dual-band passive FTIR for process safety monitoring",
@@ -7985,18 +6887,22 @@
   "removed": [
     "10-1002-adma-75458-59e08d",
     "10-1002-adma-75513-1d161a",
+    "10-1002-adma-75547-32093c",
     "10-1002-adma-75605-138246",
     "10-1002-adma-75614-3970c9",
     "10-1002-adom-71968-9e8ca6",
     "10-1002-anie-7882744-847787",
     "10-1002-app-71712-0f2f8f",
+    "10-1002-apxr-70209-415239",
     "10-1002-cem-70187-6f8171",
     "10-1002-cepa-70820-8e0bb2",
     "10-1002-chem-71816-2bec9d",
     "10-1002-cnma-70397-7075b2",
     "10-1002-cphc-70590-e8d243",
+    "10-1002-dvdy-70200-605bc0",
     "10-1002-ejlt-70157-d08505",
     "10-1002-pen-71002-4b6ff5",
+    "10-1002-qua-70302-9dbb78",
     "10-1002-saj2-70389-f35288",
     "10-1002-slct-74956-5d5d63",
     "10-1002-smll-76465-cb0ee7",
@@ -8009,11 +6915,14 @@
     "10-1007-s00604-026-08473-x-928979",
     "10-1007-s00604-026-08476-8-90571c",
     "10-1007-s00604-026-08488-4-102790",
+    "10-1007-s00894-026-06991-2-7e8dc7",
     "10-1007-s10163-026-02781-3-7b207e",
     "10-1007-s10705-026-10520-1-468f97",
     "10-1007-s11082-026-09210-7-d6236f",
     "10-1007-s11119-026-10472-0-448304",
+    "10-1007-s11665-026-15221-y-2bd5ef",
     "10-1007-s12161-026-03324-0-44b656",
+    "10-1007-s12374-026-09535-6-d9d14f",
     "10-1007-s40242-026-6198-6-5adcc7",
     "10-1007-s44195-026-00147-8-6c49cb",
     "10-1007-s44378-026-00365-z-7f3090",
@@ -8021,6 +6930,7 @@
     "10-1007-s44422-026-00035-9-68eef0",
     "10-1007-s44462-026-00073-5-1800f0",
     "10-1016-j-afres-2026-102789-d38fae",
+    "10-1016-j-animal-2026-101996-9e29c8",
     "10-1016-j-apsusc-2026-168817-42c9bf",
     "10-1016-j-cca-2026-122336-c6c9fd",
     "10-1016-j-ccr-2026-218654-773384",
@@ -8028,8 +6938,11 @@
     "10-1016-j-cej-2026-183542-32a771",
     "10-1016-j-cej-2026-183573-4d3894",
     "10-1016-j-cej-2026-183664-7b1dd7",
+    "10-1016-j-ceramint-2026-10-333-9ac127",
+    "10-1016-j-coal-2026-105127-0f63f9",
     "10-1016-j-colsurfb-2026-116274-365392",
     "10-1016-j-diamond-2026-114315-ae74de",
+    "10-1016-j-dib-2026-113378-d101d3",
     "10-1016-j-foodchem-2026-151725-5e2ac5",
     "10-1016-j-foodcont-2026-112709-4da225",
     "10-1016-j-foodcont-2026-112729-664e38",
@@ -8039,10 +6952,14 @@
     "10-1016-j-inoche-2026-117771-b46f0a",
     "10-1016-j-jaccas-2026-110536-0a3319",
     "10-1016-j-jcis-2026-141846-8158ac",
+    "10-1016-j-jeurceramsoc-2026-119005-5bb558",
     "10-1016-j-jfca-2026-109612-d0b390",
     "10-1016-j-jfca-2026-109619-8a6eb4",
+    "10-1016-j-jhazmat-2026-144081-fd9a5c",
+    "10-1016-j-jmgm-2026-109627-20adac",
     "10-1016-j-macse-2026-100091-37f096",
     "10-1016-j-matchemphys-2026-133311-18ca0d",
+    "10-1016-j-matdes-2026-117312-e07f88",
     "10-1016-j-measurement-2026-123734-832257",
     "10-1016-j-microc-2026-120053-4f984c",
     "10-1016-j-microc-2026-120054-405341",
@@ -8054,8 +6971,10 @@
     "10-1016-j-mssp-2026-111308-440e33",
     "10-1016-j-mtcomm-2026-116436-fced7f",
     "10-1016-j-nmd-2026-107463-acc841",
+    "10-1016-j-nwnano-2026-100254-91f61a",
     "10-1016-j-optcom-2026-133852-438719",
     "10-1016-j-optcom-2026-133892-4c653d",
+    "10-1016-j-oregeorev-2026-107644-12a09c",
     "10-1016-j-saa-2026-128932-29dd8e",
     "10-1016-j-saa-2026-129004-57d6cd",
     "10-1016-j-saa-2026-129020-b540f4",
@@ -8064,54 +6983,70 @@
     "10-1016-j-saa-2026-129034-e01884",
     "10-1016-j-saa-2026-129047-2d553e",
     "10-1016-j-saa-2026-129056-198652",
+    "10-1016-j-seta-2026-105502-6312cd",
+    "10-1016-j-siny-2026-101777-99fa79",
     "10-1016-j-snb-2026-141107-7fa03d",
     "10-1016-j-snb-2026-141118-c1730d",
     "10-1016-j-surfin-2026-111143-5fb02e",
     "10-1016-j-talanta-2026-130818-2fc205",
     "10-1016-j-talanta-2026-130825-6969bb",
+    "10-1016-j-talanta-2026-130881-79ae1b",
     "10-1016-j-talanta-2026-130893-d21b5e",
     "10-1021-acs-analchem-6c04918-fbcfeb",
+    "10-1021-acs-cgd-6c01022-91a365",
     "10-1021-acs-est-6c03991-869116",
+    "10-1021-acs-est-6c09992-bea011",
     "10-1021-acs-inorgchem-6c03770-bffe5d",
     "10-1021-acs-inorgchem-6c04282-503acf",
     "10-1021-acs-jced-5c00689-24bf04",
     "10-1021-acs-jpca-6c05066-77e265",
+    "10-1021-acs-jpcb-6c03977-b1699e",
     "10-1021-acs-jpcc-6c04761-9f5206",
     "10-1021-acs-jpcc-6c06205-a94290",
+    "10-1021-acs-langmuir-6c04203-27bb2f",
     "10-1021-acs-langmuir-6c04304-6f4167",
+    "10-1021-acs-langmuir-6c05105-7b69e4",
     "10-1021-acs-macromol-6c02034-189bd9",
+    "10-1021-acs-nanolett-6c04817-ac60d5",
     "10-1021-acsaelm-6c01814-f9aa7d",
     "10-1021-acsami-6c11190-1e5c8b",
     "10-1021-acsami-6c14885-ee4efb",
     "10-1021-acsami-6c17334-5ad886",
     "10-1021-acsanm-6c03192-0c4eb3",
+    "10-1021-acsanm-6c03427-e8f141",
     "10-1021-acsanm-6c03428-2fa4ae",
     "10-1021-acsanm-6c03887-ff2ab4",
     "10-1021-acsaom-6c00542-997683",
     "10-1021-acsappcat-6c00060-70a2a6",
     "10-1021-acsenergylett-6c01776-373ea6",
+    "10-1021-acsomega-6c08530-35c1cf",
     "10-1021-acsomega-6c08659-3de83c",
+    "10-1021-acsomega-6c09534-968fc7",
     "10-1021-acssensors-6c02735-40978f",
     "10-1021-acssensors-6c03274-73af1b",
     "10-1021-acssensors-6c03700-2fa7f8",
     "10-1021-acssensors-6c03916-284a42",
     "10-1021-acssensors-6c03950-34b082",
     "10-1038-s41377-026-02442-y-3f137f",
+    "10-1038-s41560-026-02148-w-3bd970",
     "10-1038-s41598-026-76518-5-56308c",
     "10-1039-d5ay00685f-b380ce",
     "10-1039-d6an00751a-b006f0",
     "10-1039-d6an00812g-864a5a",
+    "10-1039-d6an00888g-fac6cd",
     "10-1039-d6ay01162d-59a233",
     "10-1039-d6ay01296e-344dce",
     "10-1039-d6ay01431c-cce511",
     "10-1039-d6ay01636g-5f750b",
     "10-1039-d6ay01716a-c56763",
     "10-1039-d6cp03280j-4dfb19",
+    "10-1039-d6dt01545j-46937e",
     "10-1039-d6nr01621a-4c7b1d",
     "10-1039-d6nr02189a-e68d6d",
     "10-1039-d6ra06673a-fdcb5b",
     "10-1039-d6ra08211d-224ab0",
     "10-1039-d6ra08992e-e8f700",
+    "10-1039-d6ra09800b-6d8e21",
     "10-1051-0004-6361-202663128-474e3a",
     "10-1051-e3sconf-202674902005-8c7bdc",
     "10-1051-e3sconf-202674903001-d6687a",
@@ -8125,8 +7060,10 @@
     "10-1080-01468030-2026-2748824-385b92",
     "10-1080-10408347-2026-2747726-613b4f",
     "10-1080-14786419-2026-2757718-b44fe3",
+    "10-1080-14786419-2026-2757725-7afbb2",
     "10-1080-87559129-2026-2750436-8318ec",
     "10-1088-1361-6528-aeac61-442c69",
+    "10-1088-1674-1056-aeba63-642490",
     "10-1088-1674-1056-aebba4-7dfc17",
     "10-1088-2053-1583-aebc9a-0ce436",
     "10-1088-2057-1976-aeb550-fd4caa",
@@ -8136,8 +7073,11 @@
     "10-1103-9m86-b9lr-882c41",
     "10-1103-gfr2-91ss-7d93e1",
     "10-1111-1541-4337-70688-8df599",
+    "10-1111-ics-70113-738313",
+    "10-1111-jace-71368-9a8dc4",
     "10-1111-jace-71369-6e3666",
     "10-1117-1-jbo-31-10-106006-d9838f",
+    "10-1142-s0218625x26501258-ab9ebe",
     "10-1177-00037028261505154-7c7fad",
     "10-1177-00037028261506406-4823d4",
     "10-1177-00220345261490528-5e66c1",
@@ -8160,6 +7100,7 @@
     "10-1364-optcon-614654-54edf3",
     "10-1515-joc-2026-0424-3febd8",
     "10-15421-0226150-5f038d",
+    "10-1557-s43580-026-01791-5-7d829a",
     "10-15587-1729-4061-2026-374218-b672f9",
     "10-17308-kcmf-2026-28-13820-6b5833",
     "10-17576-jkukm-2026-38-7-29-f2b500",
@@ -8192,7 +7133,9 @@
     "10-25217-jrie-v8i1-7755-955d02",
     "10-25258-ijddt-16-77s-166-0317d8",
     "10-26434-chemrxiv-15011273-v1-d4e404",
+    "10-26434-chemrxiv-2026-bwt22-v3-5c5dea",
     "10-26599-nr-2026-94909299-33a5ab",
+    "10-26599-phys-2026-9320437-d4d5a6",
     "10-26717-bjstr-2026-67-010449-e062e9",
     "10-30880-ekst-2026-06-01-003-1ab6f7",
     "10-30880-ekst-2026-06-01-006-ec3deb",
@@ -8207,6 +7150,7 @@
     "10-3390-bios16110599-693db7",
     "10-3390-bios16110606-4eff06",
     "10-3390-buildings16214315-67eb5d",
+    "10-3390-ceramics9110124-b7d787",
     "10-3390-chemosensors14110245-64d4c5",
     "10-3390-chemosensors14110247-fb87d3",
     "10-3390-diagnostics16213469-c05067",
@@ -8217,6 +7161,7 @@
     "10-3390-jof12110810-82f310",
     "10-3390-life16111793-c2d513",
     "10-3390-molecules31213890-fa6f0f",
+    "10-3390-nano16211386-64869f",
     "10-3390-polym18202592-dce5a6",
     "10-3390-polym18212655-7ba61d",
     "10-3390-pr14213536-2f6741",
@@ -8249,6 +7194,7 @@
     "10-61975-gjset-v4i2-142-45f7c9",
     "10-62643-ijerst-2026-v22-n4-s-4790-fd06e4",
     "10-62643-ijerst-2026-v22-n4-s-4805-c51637",
+    "10-64898-2026-10-18-759929-013025",
     "10-64898-2026-10-21-26364901-a75347",
     "10-64898-2026-10-21-760866-d15714",
     "10-64898-2026-10-28-762545-be623c",
@@ -8258,6 +7204,8 @@
     "10-9734-ajarr-2026-v20i111500-b4c89e",
     "10-9734-ajpas-2026-v28i11971-f8f841",
     "10-9734-ajrb-2026-v16i5530-cc9711",
+    "https-europepmc-org-article-pmc-pmc13724598-8cb6c2",
+    "https-europepmc-org-article-pmc-pmc13725792-0b0efb",
     "https-ojs-emt-ro-index-article-view-2556-646f53",
     "near-infrared-spectroscopy-with-data-analysis-model-for-rapi-9c5fee"
   ],

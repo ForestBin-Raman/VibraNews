@@ -253,7 +253,7 @@ function fromIssue(x, issue){
   const prefix = x.feature ? `Feature of the Week ${m}/${d}/${String(y).slice(2)}: ` : "";
   return {id:x.id, d:x.date, t:prefix + x.title, cats:x.categories||[], inst:x.institutions||[], au:x.authors||"",
     j:x.journal||"", doi:x.doi||"", link:x.url || (x.doi ? "https://doi.org/"+x.doi : "#"), oa:!!x.oa, license:x.license||"",
-    abs:x.summary||"", why:x.why||"", glyph:x.glyph||"raman", featured:!!(x.feature||x.pick), feature:!!x.feature, fig:x.fig||null};
+    abs:x.summary||"", why:x.why||"", glyph:x.glyph||"raman", featured:!!(x.feature||x.pick), feature:!!x.feature, notable:x.tier==="notable", fig:x.fig||null};
 }
 
 const PAGE=40;
@@ -262,7 +262,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&
 const P = iso => { const [y,m,d]=iso.split("-").map(Number); return {y,m,d}; };
 const longDate = iso => { const {y,m,d}=P(iso); return `${MONTHS[m-1]} ${d}, ${y}`; };
 
-let filter=null, query="", shown=PAGE;
+let filter=null, query="", shown=PAGE, showAll=false;
 const visible = a => (!filter || (filter.type==="cat" ? a.cats.includes(filter.value) : a.inst.includes(filter.value))) &&
   (!query || (a.t+" "+a.au+" "+a.j+" "+a.abs+" "+a.inst.join(" ")+" "+a.cats.join(" ")).toLowerCase().includes(query));
 
@@ -287,17 +287,23 @@ function artHTML(a){
 
 function render(){
   const feat = ARTS.filter(a=>a.featured && visible(a)).sort((x,y)=>(y.feature?1:0)-(x.feature?1:0)||y.d.localeCompare(x.d));
-  const rec = ARTS.filter(a=>!a.featured && visible(a)).sort((x,y)=>y.d.localeCompare(x.d));
   const filtering = filter || query;
+  const tiered = ARTS.some(a=>a.notable);
+  const selectedOnly = tiered && !showAll && !filtering;
+  const rec = ARTS.filter(a=>!a.featured && visible(a) && (!selectedOnly || a.notable)).sort((x,y)=>y.d.localeCompare(x.d));
   document.getElementById("featured").hidden = !feat.length;
   document.getElementById("featList").innerHTML = feat.map(artHTML).join("");
-  document.getElementById("recTitle").textContent = filter ? `${filter.type==="cat"?"Topic":"Institution"}: ${filter.value}` : (query ? "Search Results" : "Latest Papers");
+  document.getElementById("recTitle").textContent = filter ? `${filter.type==="cat"?"Topic":"Institution"}: ${filter.value}` : (query ? "Search Results" : (selectedOnly ? "Selected Papers" : "All Papers"));
   const total = ARTS.filter(a=>!a.featured).length;
+  const toggle = tiered && !filtering ? (selectedOnly
+      ? ` // ${rec.length} selected by the editor · <a href="#recent" id="allT">show all ${total} papers</a>`
+      : ` // <a href="#recent" id="allT">show selected papers only</a>`) : "";
   document.getElementById("pager").innerHTML = filtering
     ? `${rec.length+feat.length} matching paper${rec.length+feat.length===1?"":"s"} // <a href="#top" id="clearF">Show all papers</a>`
     : (ISSUE.updated
         ? `Issue No. ${ISSUE.number} · week of ${longDate(ISSUE.date)} · updated daily, last ${longDate(ISSUE.updated)} · ${total} papers`
-        : `Issue No. ${ISSUE.number} · ${longDate(ISSUE.date)} · papers from ${shortRange(ISSUE.window[0], ISSUE.window[1])} · ${total} papers`);
+        : `Issue No. ${ISSUE.number} · ${longDate(ISSUE.date)} · papers from ${shortRange(ISSUE.window[0], ISSUE.window[1])} · ${total} papers`) + toggle;
+  const at=document.getElementById("allT"); if(at) at.onclick=e=>{ e.preventDefault(); showAll=!showAll; shown=PAGE; render(); document.getElementById("recent").scrollIntoView(); };
   const cf=document.getElementById("clearF"); if(cf) cf.onclick=e=>{ filter=null; query=""; document.getElementById("q").value=""; render(); };
   document.getElementById("recList").innerHTML = rec.length
     ? rec.slice(0,shown).map(artHTML).join("") + (rec.length>shown ? `<button class="btn more" id="more" type="button">Show more papers (${rec.length-shown} more)</button>` : "")

@@ -33,6 +33,8 @@
 
 ## Feature Articles 与 Feature of the Week
 
+- 首页正文默认只显示 **Selected Papers**（`tier: "notable"`，由编辑每天挑选：方法学、仪器、物理、有分量的临床/生物研究）；“show all” 可展开本周全部论文，搜索和主题筛选始终覆盖全部论文。
+
 - 每期（周一到周日）选 10–15 篇 **Feature Articles**：技术层面的创新（新模态、新仪器、灵敏度/速度/分辨率突破、新探针、新算法），或特别有意义的应用创新。每篇附 1–2 句 “Why it matters”。
 - 每期一篇 **Feature of the Week**，从 Feature Articles 里选，置顶显示。
 - 上限 15 篇：新入选使总数超过 15 时，按入选日期先替换最早的；Feature of the Week 不会被替换。

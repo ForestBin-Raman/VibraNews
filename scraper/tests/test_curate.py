@@ -49,3 +49,10 @@ def test_remove_moves_to_removed_list_but_never_the_feature():
     ids = {a["id"] for a in iss["articles"]}
     assert res["removed"] == 2 and "a4" not in ids and "a1" in ids
     assert set(iss["removed"]) == {"a4", "a5"}
+
+
+def test_notable_tier():
+    iss = issue()
+    curate.apply_selections(iss, {"notable": ["a2", "a3"], "picks": [{"id": "a4"}]}, "2026-11-10")
+    by = {a["id"]: a for a in iss["articles"]}
+    assert by["a2"]["tier"] == by["a4"]["tier"] == "notable" and "tier" not in by["a5"]
