@@ -193,5 +193,8 @@ categories:
   Miscellaneous:
     Reviews: ['^review', '\breview of\b', 'a review', 'perspective', 'tutorial']
 
+# Daily mode: how many days back each daily run looks (overlap catches late indexing; duplicates are skipped)
+daily_lookback_days: 3
+
 # How long the trimmed abstract shown on the site may be (characters)
 summary_max_chars: 700

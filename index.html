@@ -230,7 +230,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   </aside>
 </main>
 
-<footer><div class="wrap"><span>VibraNews · new issue every Monday · thumbnails are each article's own preview image or the journal cover, with credit; titles link to the original articles</span><a href="#top">Back to top</a></div></footer>
+<footer><div class="wrap"><span>VibraNews · updated daily, new issue every Monday · thumbnails are each article's own preview image or the journal cover, with credit; titles link to the original articles</span><a href="#top">Back to top</a></div></footer>
 
 <script>
 const GROUPS = [
@@ -284,13 +284,15 @@ function render(){
   const feat = ARTS.filter(a=>a.featured && visible(a));
   const rec = ARTS.filter(a=>!a.featured && visible(a)).sort((x,y)=>y.d.localeCompare(x.d));
   const filtering = filter || query;
-  document.getElementById("featured").hidden = filtering ? !feat.length : false;
+  document.getElementById("featured").hidden = !feat.length;
   document.getElementById("featList").innerHTML = feat.map(artHTML).join("");
   document.getElementById("recTitle").textContent = filter ? `${filter.type==="cat"?"Topic":"Institution"}: ${filter.value}` : (query ? "Search Results" : "Latest Papers");
   const total = ARTS.filter(a=>!a.featured).length;
   document.getElementById("pager").innerHTML = filtering
     ? `${rec.length+feat.length} matching paper${rec.length+feat.length===1?"":"s"} // <a href="#top" id="clearF">Show all papers</a>`
-    : `Issue No. ${ISSUE.number} · ${longDate(ISSUE.date)} · papers from ${shortRange(ISSUE.window[0], ISSUE.window[1])} · ${total} papers`;
+    : (ISSUE.updated
+        ? `Issue No. ${ISSUE.number} · week of ${longDate(ISSUE.date)} · updated daily, last ${longDate(ISSUE.updated)} · ${total} papers`
+        : `Issue No. ${ISSUE.number} · ${longDate(ISSUE.date)} · papers from ${shortRange(ISSUE.window[0], ISSUE.window[1])} · ${total} papers`);
   const cf=document.getElementById("clearF"); if(cf) cf.onclick=e=>{ filter=null; query=""; document.getElementById("q").value=""; render(); };
   document.getElementById("recList").innerHTML = rec.length ? rec.map(artHTML).join("") : (feat.length?"":`<p class="empty">No papers match. Try another topic or search term.</p>`);
   renderCats(); drawThumbs();

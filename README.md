@@ -1,10 +1,10 @@
 # VibraNews
 
-振动光谱（Raman、SRS/CARS、SERS/TERS、布里渊、IR/NIR、光热/光声红外、太赫兹与低波数、SFG/2D-IR/FSRS、ROA/VCD 等）社区周报网站，参照 OCT News 的形式：每周一自动抓取上一周发表的新论文，生成一期草稿，编辑审核后合并，网站自动更新。
+振动光谱（Raman、SRS/CARS、SERS/TERS、布里渊、IR/NIR、光热/光声红外、太赫兹与低波数、SFG/2D-IR/FSRS、ROA/VCD 等）社区周报网站，参照 OCT News 的形式：**每天自动抓取并发布新论文**，按周归为一期（每周一开新一期），编辑随时可以修改、删除、选特稿。
 
 - 网站：纯静态页面（`index.html`），托管在 GitHub Pages，读取 `data/issues/*.json`
 - 抓取：`scraper/vibranews_scraper.py`，数据源为 Europe PMC、Crossref、arXiv（免费接口，不需要 API key）
-- 自动化：GitHub Actions，每周一新加坡时间 07:17 运行，生成一个待审的 Pull Request
+- 自动化：GitHub Actions，每天新加坡时间 06:23 运行（`daily-update.yml`），抓过去 3 天的新论文，直接发布
 
 ---
 
@@ -15,19 +15,21 @@
 3. **允许工作流写入和开 PR**：*Settings → Actions → General → Workflow permissions* 选 **Read and write permissions**，并勾选 **Allow GitHub Actions to create and approve pull requests**。
 4. **填网址**：把 `scraper/config.yaml` 里的 `site.url` 改成你的 Pages 地址（本站为 `https://forestbin-raman.github.io/VibraNews/`）。它只用于抓取时的 User-Agent，表明来源。
 5. **第一次发布**：推送到 `main` 会自动运行 *Deploy site to GitHub Pages*，几分钟后网站上线，显示第 1 期。
-6. **手动试跑抓取**：*Actions → Weekly issue (draft for review) → Run workflow*，留空即按本周一出刊；也可以填日期补抓。
+6. **手动试跑每日抓取**：*Actions → Daily update → Run workflow*。
 
-## 每周流程
+## 日常流程
 
-1. 周一早上，工作流抓取上周（周一至周日）的论文，开一个标题为 *VibraNews No. N · 日期 — draft for review* 的 PR。
-2. 在 PR 里编辑 `data/issues/<日期>.json`，手机网页版点文件右上角的铅笔即可：
+1. **每天早上 06:23（新加坡时间）**：自动抓取过去 3 天的新论文，加入当周这一期（以本周一的日期命名，如 `data/issues/2026-11-09.json`），直接发布。
+   - 已经在任何一期出现过、或被你删除过的论文不会重复出现
+   - 周一如果还没抓到新论文，网站继续显示上一期，不会出现空的一期
+2. **你随时可以修改**：在 GitHub 网页上打开当期的 `data/issues/<日期>.json`，点铅笔编辑，保存（Commit）后网站自动更新：
    - 删掉不相关的文章，并把它的 `id` 加进 `"removed"`，以后不会再被抓回来
-   - 选一篇 **Feature of the Week**：`"feature": true`，在 `"why"` 写一句为什么重要
+   - 选 **Feature of the Week**：`"feature": true`，在 `"why"` 写一句为什么重要
    - **Editor's Picks**：`"pick": true`
-   - 需要时改 `"summary"`、`"categories"`、`"institutions"`
-3. 点 **Merge**，网站几分钟内更新。旧的期次保留在侧栏的 Archive 里。
+   - 改 `"summary"`、`"categories"`、`"institutions"`
+3. 侧栏 Archive 保留所有往期。
 
-重复运行同一期是安全的：已有文章和你的修改都会保留，只追加新发现的论文。
+**手动工具**：*Actions → Manual run (draft PR) → Run workflow*，可以补抓某段时间，或给某一期补缩略图（勾选 `refresh_figures`），结果以 PR 形式给你审核。
 
 ## 投稿 / 手动加文章
 
@@ -42,7 +44,7 @@
 OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（gold / diamond / hybrid 且为 CC 许可才算 OA）。
 如果想像 OCT News 那样所有文章都用预览图，把 `figures.mode` 改成 `all`。
 
-**给已有期次补图**：*Actions → Weekly issue → Run workflow*，填 `issue_date`（如 2026-11-02），勾选 `refresh_figures`，会开一个只更新缩略图的 PR。本地等价命令：`python scraper/vibranews_scraper.py --refresh-figures --issue-date 2026-11-02`。
+**给已有期次补图**：*Actions → Manual run (draft PR) → Run workflow*，填 `issue_date`（如 2026-11-02），勾选 `refresh_figures`，会开一个只更新缩略图的 PR。本地等价命令：`python scraper/vibranews_scraper.py --refresh-figures --issue-date 2026-11-02`。
 
 抓取遵守 `robots.txt`，每个站点请求间隔 1 秒。
 
@@ -60,7 +62,8 @@ OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（
 ```bash
 pip install -r scraper/requirements.txt pytest
 python -m pytest -q scraper/tests                         # 离线自测
-python scraper/vibranews_scraper.py --issue-date 2026-11-09 # 抓取并写入 data/
+python scraper/vibranews_scraper.py --daily                 # 每日模式：过去 3 天的论文写入本周一期
+python scraper/vibranews_scraper.py --issue-date 2026-11-09 # 按周模式：某一期补抓上一周
 python -m http.server 8000                                # 浏览 http://localhost:8000
 ```
 
@@ -77,5 +80,5 @@ data/inbox.txt             投稿 DOI
 figs/                      文章缩略图（自动生成）
 covers/                    期刊封面缓存（自动生成）
 scraper/                   抓取脚本、配置、测试
-.github/workflows/         每周抓取、自动发布
+.github/workflows/         每日抓取并发布、手动补抓/补图、推送后自动发布
 ```

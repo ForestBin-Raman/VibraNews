@@ -406,3 +406,22 @@ def test_other_vibrational_techniques(title, abstract, keep, cat, glyph):
         assert cat in cats
         if glyph:
             assert vs.glyph_for(cats) == glyph
+
+
+# ----------------------------------------------------------------- daily mode
+
+def test_daily_mode_adds_to_this_weeks_issue_and_never_repeats_across_issues(repo):
+    assert vs.main(["--root", str(repo), "--daily", "--today", "2026-11-11", "--no-figures"]) == 0   # Wednesday
+    wk1 = json.loads((repo / "data/issues/2026-11-09.json").read_text())
+    assert wk1["window"][0] == "2026-11-09" and wk1["updated"] == "2026-11-11"
+    n1 = len(wk1["articles"])
+    assert n1 >= 3
+    # next day: same papers come back from the APIs -> nothing new, window extends
+    vs.main(["--root", str(repo), "--daily", "--today", "2026-11-12", "--no-figures"])
+    wk1b = json.loads((repo / "data/issues/2026-11-09.json").read_text())
+    assert len(wk1b["articles"]) == n1 and wk1b["window"][1] == "2026-11-12"
+    # following Monday: a new issue starts, but papers already published last week are not repeated
+    vs.main(["--root", str(repo), "--daily", "--today", "2026-11-16", "--no-figures"])
+    assert not (repo / "data/issues/2026-11-16.json").exists()      # no empty issue published
+    idx = json.loads((repo / "data/issues/index.json").read_text())
+    assert [i["id"] for i in idx["issues"]] == ["2026-11-09"]

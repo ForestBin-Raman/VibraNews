@@ -14,7 +14,8 @@ IR/NIR, photothermal IR, THz, SFG/2D-IR, ROA/VCD) published in a date window, an
 Sources: Europe PMC, Crossref, arXiv (free APIs, no key needed).
 
 Usage
-    python scraper/vibranews_scraper.py                     # issue for this Monday, previous 7 days
+    python scraper/vibranews_scraper.py --daily             # daily: last 3 days into this week's issue
+    python scraper/vibranews_scraper.py                     # weekly: issue for this Monday, previous 7 days
     python scraper/vibranews_scraper.py --issue-date 2026-11-09
     python scraper/vibranews_scraper.py --since 2026-11-02 --until 2026-11-08
     python scraper/vibranews_scraper.py --no-figures --dry-run
@@ -774,6 +775,8 @@ def update_index(root: Path, issue: dict):
     idx_path = root / "data" / "issues" / "index.json"
     idx = load_json(idx_path, {"issues": []})
     entry = {"id": issue["id"], "number": issue["number"], "date": issue["date"], "window": issue["window"], "count": len(issue["articles"])}
+    if issue.get("updated"):
+        entry["updated"] = issue["updated"]
     idx["issues"] = [i for i in idx["issues"] if i["id"] != issue["id"]] + [entry]
     idx["issues"].sort(key=lambda i: i["id"], reverse=True)
     idx_path.write_text(json.dumps(idx, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -849,8 +852,15 @@ def run(args) -> int:
     issue_date = dt.date.fromisoformat(args.issue_date) if args.issue_date else default_issue_date()
     if args.refresh_figures:
         return refresh_figures(args, cfg, root, issue_date)
-    until = dt.date.fromisoformat(args.until) if args.until else issue_date - dt.timedelta(days=1)
-    since = dt.date.fromisoformat(args.since) if args.since else until - dt.timedelta(days=6)
+    if args.daily:
+        # daily mode: papers from the last few days go into this week's issue (Monday, Singapore time)
+        today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(SGT).date()
+        issue_date = dt.date.fromisoformat(args.issue_date) if args.issue_date else default_issue_date(today)
+        until = today
+        since = today - dt.timedelta(days=cfg.get("daily_lookback_days", 3))
+    else:
+        until = dt.date.fromisoformat(args.until) if args.until else issue_date - dt.timedelta(days=1)
+        since = dt.date.fromisoformat(args.since) if args.since else until - dt.timedelta(days=6)
     s, u = since.isoformat(), until.isoformat()
     log.info("Issue %s · window %s → %s", issue_date, s, u)
 
@@ -879,9 +889,21 @@ def run(args) -> int:
     idx = load_json(root / "data" / "issues" / "index.json", {"issues": []})
     existing = load_json(issue_path, None)
     number = existing["number"] if existing else (max([i["number"] for i in idx["issues"]], default=0) + 1)
-    issue = existing or {"id": issue_date.isoformat(), "number": number, "date": issue_date.isoformat(), "window": [s, u], "articles": [], "removed": []}
-    known = {a["id"] for a in issue["articles"]} | set(issue.get("removed", []))
-    known_doi = {a.get("doi") for a in issue["articles"] if a.get("doi")}
+    first_day = issue_date.isoformat() if args.daily else s
+    issue = existing or {"id": issue_date.isoformat(), "number": number, "date": issue_date.isoformat(), "window": [first_day, u], "articles": [], "removed": []}
+    if args.daily:
+        issue["window"] = [min(issue["window"][0], first_day), max(issue["window"][1], u)]
+        issue["updated"] = u
+    # never repeat a paper that is already in ANY issue, or that the editor removed from one
+    known, known_doi = set(), set()
+    for f in (root / "data" / "issues").glob("*.json"):
+        if f.name == "index.json":
+            continue
+        other = issue if f == issue_path else load_json(f, {})
+        known |= {a["id"] for a in other.get("articles", [])} | set(other.get("removed", []))
+        known_doi |= {a.get("doi") for a in other.get("articles", []) if a.get("doi")}
+    known |= {a["id"] for a in issue["articles"]} | set(issue.get("removed", []))
+    known_doi |= {a.get("doi") for a in issue["articles"] if a.get("doi")}
 
     figs = FigureFetcher(http, cfg, root)
     added = 0
@@ -902,6 +924,15 @@ def run(args) -> int:
     if args.dry_run:
         json.dump(issue, sys.stdout, indent=2, ensure_ascii=False)
         return 0
+    if not existing and added == 0:
+        # don't publish an empty issue: the site keeps showing the previous one until papers arrive
+        log.info("No new papers; issue %s not created yet", issue["id"])
+        figs.save_cache()
+        clear_inbox(root, done_inbox)
+        print(f"ISSUE_ID={issue['id']}")
+        print(f"ISSUE_NUMBER={issue['number']}")
+        print("ADDED=0")
+        return 0
     issue_path.parent.mkdir(parents=True, exist_ok=True)
     issue_path.write_text(json.dumps(issue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     update_index(root, issue)
@@ -921,6 +952,8 @@ def main(argv=None) -> int:
     ap.add_argument("--since", help="window start YYYY-MM-DD (default: issue date − 7 days)")
     ap.add_argument("--until", help="window end YYYY-MM-DD (default: issue date − 1 day)")
     ap.add_argument("--no-figures", action="store_true", help="skip preview-image download")
+    ap.add_argument("--daily", action="store_true", help="daily mode: last few days' papers into this week's issue")
+    ap.add_argument("--today", help="override today's date for --daily (YYYY-MM-DD, testing)")
     ap.add_argument("--refresh-figures", action="store_true", help="only (re)fetch thumbnails for an existing issue; no crawl")
     ap.add_argument("--force", action="store_true", help="with --refresh-figures: also redo articles that already have a thumbnail")
     ap.add_argument("--no-openalex", action="store_true", help="skip the OpenAlex open-access check")
