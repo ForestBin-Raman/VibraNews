@@ -155,8 +155,10 @@ figures:
 # Journal covers, used when an article page offers no preview image.
 # Key = journal title as Crossref/Europe PMC reports it (case-insensitive) or its ISSN.
 # Value = an image URL you are allowed to use. Leave empty to let the crawler try the journal homepage's og:image.
-journal_covers: {}
-#  "Journal of Raman Spectroscopy": https://.../jrs-cover.jpg
+# Wiley sites (e.g. Journal of Raman Spectroscopy) answer crawlers with a Cloudflare challenge,
+# so their covers must be listed here by hand if wanted.
+journal_covers:
+  "Annals of Biomedical Engineering": https://media.springernature.com/w316/springer-static/cover-hires/journal/10439
 
 # Category rules. A category is added when any of its patterns matches title or abstract.
 # Group names must match the site's groups: Applications, Business News, Technology, Miscellaneous.
