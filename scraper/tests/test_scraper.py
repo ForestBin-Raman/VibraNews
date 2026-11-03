@@ -341,6 +341,14 @@ def test_open_access_page_without_og_image_uses_first_figure(tmp_path):
     assert fig["kind"] == "figure" and (tmp_path / "figs/lam.jpg").exists()
 
 
+def test_first_figure_ignores_related_article_thumbnails():
+    page = ('<figure><img src="https://media.springernature.com/w72/springer-static/cover-hires/journal/12911"></figure>'
+            '<figure><img src="https://media.springernature.com/w215h120/springer-static/image/art%3A10.1186%2Fs40644-025-00921-w/MediaObjects/Fig1.png"></figure>')
+    assert vs.extract_first_figure(page, "https://link.springer.com/x", "10.1186/s12911-026-03922-2") is None
+    own = page + '<figure><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12911-026-03922-2/MediaObjects/Fig1.png"></figure>'
+    assert "s12911-026-03922-2" in vs.extract_first_figure(own, "https://link.springer.com/x", "10.1186/s12911-026-03922-2")
+
+
 def test_springer_paywalled_gets_upgraded_homepage_cover_not_figure(tmp_path):
     f = vs.FigureFetcher(PolicyHttp(CFG), CFG, tmp_path)
     rec = vs.enrich_oa(f.http, {"source": "crossref", "title": "Bone SRS", "doi": "10.1007/s10439-026-99999-x", "url": "https://doi.org/10.1007/s10439-026-99999-x", "journal": "Annals of Biomedical Engineering", "oa": False})

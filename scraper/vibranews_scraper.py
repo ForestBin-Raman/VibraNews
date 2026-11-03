@@ -488,14 +488,27 @@ def _img_src(tag, base_url: str) -> str | None:
     return None
 
 
-def extract_first_figure(page_html: str, base_url: str) -> str | None:
-    """First article figure on a page (for open-access pages that publish no og:image)."""
+def _foreign_doi(src: str, doi: str | None) -> bool:
+    """True if an image URL embeds a DOI that is not this article's (e.g. 'related articles' thumbnails)."""
+    from urllib.parse import unquote
+    dec = unquote(unquote(src)).lower()
+    found = re.findall(r"10\.\d{4,9}/[^/?#\s]+", dec)
+    if not found:
+        return False
+    if not doi:
+        return True
+    suffix = doi.lower().split("/", 1)[-1]
+    return not any(suffix in f for f in found)
+
+
+def extract_first_figure(page_html: str, base_url: str, doi: str | None = None) -> str | None:
+    """First figure of THIS article on a page (for open-access pages that publish no og:image)."""
     soup = BeautifulSoup(page_html, "html.parser")
     selectors = ["figure img", "img.figure_img", "div.figure img", "div[class*=fig] img", "img[class*=fig]", "img[src*=fig]", "img[data-src*=fig]"]
     for sel in selectors:
         for tag in soup.select(sel):
             src = _img_src(tag, base_url)
-            if src and not re.search(r"logo|icon|sprite|orcid|badge|cover", src, re.I):
+            if src and not re.search(r"logo|icon|sprite|orcid|badge|cover", src, re.I) and not _foreign_doi(src, doi):
                 return src
     return None
 
@@ -705,7 +718,7 @@ class FigureFetcher:
             fig_url = img_url if (img_url and not looks_like_cover(img_url)) else None
             im = self._get_image(fig_url)
             if im is None and html_text:
-                fig_url = extract_first_figure(html_text, final)
+                fig_url = extract_first_figure(html_text, final, rec.get("doi"))
                 im = self._get_image(fig_url)
             if im is not None:
                 write_thumbnail(im, self.root / f"figs/{art_id}.jpg", self.cfg)
