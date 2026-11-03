@@ -6,9 +6,10 @@ IR/NIR, photothermal IR, THz, SFG/2D-IR, ROA/VCD) published in a date window, an
 
     data/issues/<issue-date>.json      the issue (articles, categories, figures)
     data/issues/index.json             list of all issues, newest first
-    figs/<article-id>.jpg              thumbnail: the article page's preview image
-                                       (og:image / twitter:image, usually Fig. 1 or
-                                       the graphical abstract), else the journal cover
+    figs/<article-id>.jpg              open-access papers: the article page's preview image
+                                       (og:image / twitter:image, usually Fig. 1 or the
+                                       graphical abstract)
+    covers/<journal>.jpg               paywalled papers (or no preview): the journal cover
 
 Sources: Europe PMC, Crossref, arXiv (free APIs, no key needed).
 
@@ -17,6 +18,7 @@ Usage
     python scraper/vibranews_scraper.py --issue-date 2026-11-09
     python scraper/vibranews_scraper.py --since 2026-11-02 --until 2026-11-08
     python scraper/vibranews_scraper.py --no-figures --dry-run
+    python scraper/vibranews_scraper.py --refresh-figures --issue-date 2026-11-02   # thumbnails for an existing issue
 
 Re-running for an existing issue keeps everything the editor changed
 (summaries, picks, Feature of the Week, deletions are NOT re-added if listed
@@ -463,29 +465,93 @@ def looks_like_cover(url: str) -> bool:
     return bool(re.search(r"cover|journal[-_]?image|jcover|issue[-_]?image", url, re.I))
 
 
-def save_thumbnail(img_bytes: bytes, dest: Path, cfg: dict) -> bool:
-    fc = cfg.get("figures", {})
+def load_image(img_bytes: bytes, cfg: dict) -> Image.Image | None:
+    """Decode an image; return None if it is not an image or is logo-sized."""
     try:
         im = Image.open(io.BytesIO(img_bytes))
         im.load()
     except Exception as e:  # noqa: BLE001 — any decode failure means "no usable image"
         log.info("not an image: %s", e)
-        return False
-    if min(im.size) < fc.get("min_side_px", 120):
-        return False
+        return None
+    if min(im.size) < cfg.get("figures", {}).get("min_side_px", 120):
+        return None
     if im.mode not in ("RGB", "L"):
         bg = Image.new("RGB", im.size, (255, 255, 255))
-        im_rgba = im.convert("RGBA")
-        bg.paste(im_rgba, mask=im_rgba.split()[-1])
+        rgba = im.convert("RGBA")
+        bg.paste(rgba, mask=rgba.split()[-1])
         im = bg
-    im = im.convert("RGB")
+    return im.convert("RGB")
+
+
+def is_portrait(im: Image.Image) -> bool:
+    """Journal covers are portrait (roughly 3:4); figures and graphical abstracts mostly are not."""
+    w, h = im.size
+    return h >= 1.15 * w
+
+
+def write_thumbnail(im: Image.Image, dest: Path, cfg: dict) -> None:
+    fc = cfg.get("figures", {})
+    im = im.copy()
     im.thumbnail((fc.get("max_width", 400), fc.get("max_height", 280)), Image.LANCZOS)
     dest.parent.mkdir(parents=True, exist_ok=True)
     im.save(dest, "JPEG", quality=82, optimize=True, progressive=True)
+
+
+def save_thumbnail(img_bytes: bytes, dest: Path, cfg: dict) -> bool:
+    im = load_image(img_bytes, cfg)
+    if im is None:
+        return False
+    write_thumbnail(im, dest, cfg)
     return True
 
 
+def openalex_work(http: Http, doi: str) -> dict | None:
+    """Open-access status, licence and journal (source) of a DOI from OpenAlex."""
+    r = http.get(f"https://api.openalex.org/works/doi:{doi}")
+    if not r:
+        return None
+    w = r.json()
+    oa = w.get("open_access") or {}
+    best = w.get("best_oa_location") or {}
+    prim_loc = w.get("primary_location") or {}
+    prim = prim_loc.get("source") or {}
+    return {
+        "is_oa": bool(oa.get("is_oa")),
+        "oa_status": oa.get("oa_status") or "",
+        "license": best.get("license") or prim_loc.get("license") or "",
+        "source_id": (prim.get("id") or "").rsplit("/", 1)[-1],
+        "issn": prim.get("issn_l"),
+    }
+
+
+def enrich_oa(http: Http, rec: dict) -> dict:
+    """Mark a paper open access when OpenAlex reports a gold/diamond/hybrid CC-licensed version."""
+    doi = rec.get("doi") or ""
+    if not doi or doi.startswith("10.48550/"):
+        return rec
+    w = openalex_work(http, doi)
+    if not w:
+        return rec
+    rec["_openalex_source"] = w["source_id"]
+    rec["issn"] = rec.get("issn") or w["issn"]
+    lic = (w["license"] or "").lower()
+    if w["oa_status"] in ("gold", "diamond", "hybrid") and lic.startswith("cc"):
+        rec["oa"] = True
+        m = re.match(r"cc-([a-z\-]+)", lic)
+        if not rec.get("license") or rec.get("license") == "Open access":
+            rec["license"] = "CC " + m.group(1).upper() if m else "CC"
+    return rec
+
+
 class FigureFetcher:
+    """Thumbnail policy (config figures.mode):
+
+    oa_figure_else_cover (default)  open-access paper -> its own preview image (Fig. 1 / graphical abstract);
+                                    paywalled paper   -> journal cover only.
+    all                             every paper -> its preview image, journal cover as fallback.
+    Nothing found -> None, and the site draws a technique glyph.
+    """
+
     def __init__(self, http: Http, cfg: dict, root: Path):
         self.http, self.cfg, self.root = http, cfg, root
         self.cover_cache_path = root / "covers" / "index.json"
@@ -493,63 +559,88 @@ class FigureFetcher:
             self.cover_cache = json.loads(self.cover_cache_path.read_text(encoding="utf-8"))
         except (FileNotFoundError, json.JSONDecodeError):
             self.cover_cache = {}
-        self.manual_covers = {k.lower(): v for k, v in (cfg.get("journal_covers") or {}).items()}
+        self.manual_covers = {k.lower(): v for k, v in (self.cfg.get("journal_covers") or {}).items()}
+        self._pages: dict[str, tuple[str | None, str]] = {}
 
-    def _download(self, url: str, dest: Path) -> bool:
+    # -- helpers
+    def _get_image(self, url: str | None) -> Image.Image | None:
+        if not url:
+            return None
         pats = self.cfg.get("figures", {}).get("reject_url_patterns", [])
         if any(p in url.lower() for p in pats):
-            return False
+            return None
         r = self.http.get(url, check_robots=True)
         if not r or not r.headers.get("Content-Type", "image").startswith("image"):
-            return False
-        return save_thumbnail(r.content, dest, self.cfg)
+            return None
+        return load_image(r.content, self.cfg)
+
+    def _preview(self, url: str | None) -> tuple[str | None, str]:
+        """(preview image URL, host) of a landing page, fetched once per run."""
+        if not url:
+            return None, ""
+        if url not in self._pages:
+            page = self.http.get(url, check_robots=True)
+            if page is not None and "html" in page.headers.get("Content-Type", "html"):
+                self._pages[url] = (extract_preview_image(page.text, page.url), urlparse(page.url).netloc.replace("www.", ""))
+            else:
+                self._pages[url] = (None, urlparse(url).netloc.replace("www.", ""))
+        return self._pages[url]
 
     def journal_key(self, rec: dict) -> str:
         return (rec.get("journal") or rec.get("issn") or "").strip().lower()
 
-    def cover_for(self, rec: dict) -> dict | None:
+    def _store_cover(self, rec: dict, im: Image.Image) -> dict:
         key = self.journal_key(rec)
-        if not key:
-            return None
-        if key in self.cover_cache and (self.root / self.cover_cache[key]["src"]).exists():
-            return dict(self.cover_cache[key])
-        url = self.manual_covers.get(key) or (self.manual_covers.get((rec.get("issn") or "").lower()) if rec.get("issn") else None)
-        if not url:
-            return None
-        name = "covers/" + re.sub(r"[^a-z0-9]+", "-", key).strip("-")[:60] + ".jpg"
-        if self._download(url, self.root / name):
-            entry = {"src": name, "kind": "cover", "credit": f"Journal cover · {rec.get('journal', '')}"}
+        name = "covers/" + (re.sub(r"[^a-z0-9]+", "-", key).strip("-")[:60] or "journal") + ".jpg"
+        write_thumbnail(im, self.root / name, self.cfg)
+        entry = {"src": name, "kind": "cover", "credit": f"Journal cover · {rec.get('journal', '')}"}
+        if key:
             self.cover_cache[key] = entry
-            return dict(entry)
+        return dict(entry)
+
+    def _homepage_cover(self, rec: dict) -> Image.Image | None:
+        """Journal homepage (found via OpenAlex) -> its preview image, accepted only if it looks like a cover."""
+        src = rec.get("_openalex_source")
+        if not src and rec.get("issn"):
+            src = f"issn:{rec['issn']}"
+        if not src:
+            return None
+        r = self.http.get(f"https://api.openalex.org/sources/{src}")
+        home = r.json().get("homepage_url") if r else None
+        img_url, _ = self._preview(home)
+        im = self._get_image(img_url)
+        if im is not None and (is_portrait(im) or looks_like_cover(img_url or "")):
+            return im
         return None
 
+    # -- public
+    def cover_for(self, rec: dict, landing_img_url: str | None = None) -> dict | None:
+        key = self.journal_key(rec)
+        if key and key in self.cover_cache and (self.root / self.cover_cache[key]["src"]).exists():
+            return dict(self.cover_cache[key])
+        manual = self.manual_covers.get(key) or (self.manual_covers.get((rec.get("issn") or "").lower()) if rec.get("issn") else None)
+        im = self._get_image(manual)
+        if im is None and landing_img_url:
+            cand = self._get_image(landing_img_url)
+            if cand is not None and (looks_like_cover(landing_img_url) or is_portrait(cand)):
+                im = cand
+        if im is None:
+            im = self._homepage_cover(rec)
+        return self._store_cover(rec, im) if im is not None else None
+
     def fetch(self, rec: dict, art_id: str) -> dict | None:
-        mode = self.cfg.get("figures", {}).get("mode", "all")
-        host_credit = urlparse(rec.get("url") or "").netloc
-        if rec.get("is_preprint") and rec.get("source") == "arxiv":
+        if rec.get("source") == "arxiv" or (rec.get("journal") or "").lower().startswith("arxiv"):
             return None
-        if mode == "open_access_only" and not rec.get("oa"):
-            return self.cover_for(rec)
-        if rec.get("url"):
-            page = self.http.get(rec["url"], check_robots=True)
-            if page is not None and "html" in page.headers.get("Content-Type", "html"):
-                img_url = extract_preview_image(page.text, page.url)
-                host_credit = urlparse(page.url).netloc.replace("www.", "")
-                if img_url:
-                    if looks_like_cover(img_url):
-                        key = self.journal_key(rec)
-                        name = "covers/" + re.sub(r"[^a-z0-9]+", "-", key or art_id).strip("-")[:60] + ".jpg"
-                        if self._download(img_url, self.root / name):
-                            entry = {"src": name, "kind": "cover", "credit": f"Journal cover · {rec.get('journal', '')}"}
-                            if key:
-                                self.cover_cache[key] = entry
-                            return dict(entry)
-                    else:
-                        name = f"figs/{art_id}.jpg"
-                        if self._download(img_url, self.root / name):
-                            lic = rec.get("license") or ("Open access" if rec.get("oa") else "© the publisher")
-                            return {"src": name, "kind": "figure", "credit": f"{lic} · via {host_credit}"}
-        return self.cover_for(rec)
+        mode = self.cfg.get("figures", {}).get("mode", "oa_figure_else_cover")
+        want_figure = mode == "all" or bool(rec.get("oa"))
+        img_url, host = self._preview(rec.get("url"))
+        if want_figure and img_url and not looks_like_cover(img_url):
+            im = self._get_image(img_url)
+            if im is not None:
+                write_thumbnail(im, self.root / f"figs/{art_id}.jpg", self.cfg)
+                lic = rec.get("license") or ("Open access" if rec.get("oa") else "© the publisher")
+                return {"src": f"figs/{art_id}.jpg", "kind": "figure", "credit": f"{lic} · via {host}"}
+        return self.cover_for(rec, img_url)
 
     def save_cache(self):
         self.cover_cache_path.parent.mkdir(parents=True, exist_ok=True)
@@ -631,10 +722,44 @@ def clear_inbox(root: Path, done: list[str]):
     p.write_text("\n".join(keep).rstrip() + "\n", encoding="utf-8")
 
 
+def refresh_figures(args, cfg: dict, root: Path, issue_date: dt.date) -> int:
+    """Fetch thumbnails (and OA status) for an existing issue without crawling for new papers."""
+    issue_path = root / "data" / "issues" / f"{issue_date.isoformat()}.json"
+    issue = load_json(issue_path, None)
+    if not issue:
+        log.error("No issue file %s", issue_path)
+        return 1
+    http = Http(cfg)
+    figs = FigureFetcher(http, cfg, root)
+    done = 0
+    for art in issue["articles"]:
+        if art.get("fig") and not args.force:
+            continue
+        rec = {"doi": art.get("doi"), "url": art.get("url"), "journal": art.get("journal", ""), "oa": art.get("oa", False),
+               "license": art.get("license", ""), "source": art.get("source"), "issn": art.get("issn")}
+        if not args.no_openalex:
+            enrich_oa(http, rec)
+            art["oa"], art["license"] = bool(rec.get("oa")), rec.get("license", "")
+        art["fig"] = figs.fetch(rec, art["id"])
+        done += 1
+        log.info("%s -> %s", art["title"][:60], (art["fig"] or {}).get("kind", "glyph"))
+    if args.dry_run:
+        json.dump(issue, sys.stdout, indent=2, ensure_ascii=False)
+        return 0
+    issue_path.write_text(json.dumps(issue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    figs.save_cache()
+    print(f"ISSUE_ID={issue['id']}")
+    print(f"ISSUE_NUMBER={issue['number']}")
+    print(f"ADDED=0 (thumbnails refreshed for {done} articles)")
+    return 0
+
+
 def run(args) -> int:
     cfg = load_config(Path(args.config))
     root = Path(args.root)
     issue_date = dt.date.fromisoformat(args.issue_date) if args.issue_date else default_issue_date()
+    if args.refresh_figures:
+        return refresh_figures(args, cfg, root, issue_date)
     until = dt.date.fromisoformat(args.until) if args.until else issue_date - dt.timedelta(days=1)
     since = dt.date.fromisoformat(args.since) if args.since else until - dt.timedelta(days=6)
     s, u = since.isoformat(), until.isoformat()
@@ -675,6 +800,9 @@ def run(args) -> int:
         art = to_article(rec, cfg)
         if art["id"] in known or (art["doi"] and art["doi"] in known_doi):
             continue
+        if not args.no_openalex:
+            enrich_oa(http, rec)
+            art["oa"], art["license"] = bool(rec.get("oa")), rec.get("license", "")
         if not args.no_figures:
             art["fig"] = figs.fetch(rec, art["id"])
         issue["articles"].append(art)
@@ -704,6 +832,9 @@ def main(argv=None) -> int:
     ap.add_argument("--since", help="window start YYYY-MM-DD (default: issue date − 7 days)")
     ap.add_argument("--until", help="window end YYYY-MM-DD (default: issue date − 1 day)")
     ap.add_argument("--no-figures", action="store_true", help="skip preview-image download")
+    ap.add_argument("--refresh-figures", action="store_true", help="only (re)fetch thumbnails for an existing issue; no crawl")
+    ap.add_argument("--force", action="store_true", help="with --refresh-figures: also redo articles that already have a thumbnail")
+    ap.add_argument("--no-openalex", action="store_true", help="skip the OpenAlex open-access check")
     ap.add_argument("--dry-run", action="store_true", help="print the issue JSON instead of writing files")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)

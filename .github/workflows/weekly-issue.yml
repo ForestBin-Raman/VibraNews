@@ -14,6 +14,14 @@ on:
       until:
         description: "Window end YYYY-MM-DD (blank = day before issue date)"
         required: false
+      refresh_figures:
+        description: "Only fetch thumbnails for an existing issue (no new papers)"
+        type: boolean
+        default: false
+      force:
+        description: "With refresh: redo thumbnails that already exist"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,8 +56,12 @@ jobs:
           ISSUE_DATE: ${{ inputs.issue_date }}
           SINCE: ${{ inputs.since }}
           UNTIL: ${{ inputs.until }}
+          REFRESH: ${{ inputs.refresh_figures }}
+          FORCE: ${{ inputs.force }}
         run: |
           args=()
+          [ "$REFRESH" = "true" ] && args+=(--refresh-figures)
+          [ "$FORCE" = "true" ] && args+=(--force)
           [ -n "$ISSUE_DATE" ] && args+=(--issue-date "$ISSUE_DATE")
           [ -n "$SINCE" ] && args+=(--since "$SINCE")
           [ -n "$UNTIL" ] && args+=(--until "$UNTIL")
@@ -59,17 +71,18 @@ jobs:
       - name: Open pull request with the draft issue
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: issue/${{ steps.scrape.outputs.ISSUE_ID }}
+          branch: issue/${{ steps.scrape.outputs.ISSUE_ID }}${{ inputs.refresh_figures && '-figures' || '' }}
           delete-branch: true
           add-paths: |
             data/**
             figs/**
             covers/**
           commit-message: "Draft issue No. ${{ steps.scrape.outputs.ISSUE_NUMBER }} (${{ steps.scrape.outputs.ISSUE_ID }})"
-          title: "VibraNews No. ${{ steps.scrape.outputs.ISSUE_NUMBER }} · ${{ steps.scrape.outputs.ISSUE_ID }} — draft for review"
+          title: "VibraNews No. ${{ steps.scrape.outputs.ISSUE_NUMBER }} · ${{ steps.scrape.outputs.ISSUE_ID }} — ${{ inputs.refresh_figures && 'thumbnails' || 'draft for review' }}"
           labels: draft-issue
           body: |
-            The weekly crawl found **${{ steps.scrape.outputs.ADDED }}** new papers for issue **${{ steps.scrape.outputs.ISSUE_ID }}**.
+            Issue **${{ steps.scrape.outputs.ISSUE_ID }}** · new papers: **${{ steps.scrape.outputs.ADDED }}**.
+            Thumbnails: open-access papers show their own Fig. 1 / graphical abstract; paywalled papers show the journal cover.
 
             Before merging, edit `data/issues/${{ steps.scrape.outputs.ISSUE_ID }}.json` (the pencil icon on the file in this PR works on a phone):
 

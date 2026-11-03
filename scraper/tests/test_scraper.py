@@ -260,14 +260,82 @@ def test_rerun_keeps_editor_changes_and_removed(repo):
     assert again["articles"][0]["id"] == srs2["id"]  # feature sorts first
 
 
-def test_open_access_only_mode_skips_paywalled_figures(repo, monkeypatch):
+class PolicyHttp(FakeHttp):
+    """Extra routes for the OA-figure / paywalled-cover policy."""
+
+    def get(self, url, check_robots=False, params=None, **kw):
+        routes = {
+            # paywalled ACS paper: landing image is a landscape TOC graphic (must NOT be used)
+            "https://doi.org/10.1021/acs.analchem.6c99999": ("https://pubs.acs.org/doi/10.1021/acs.analchem.6c99999", '<meta property="og:image" content="https://pubs.acs.org/cms/toc.jpg">', "text/html"),
+            "https://pubs.acs.org/cms/toc.jpg": (url, png_bytes(600, 300), "image/jpeg"),
+            "https://api.openalex.org/works/doi:10.1021/acs.analchem.6c99999": (url, json.dumps({"open_access": {"is_oa": False, "oa_status": "closed"}, "primary_location": {"source": {"id": "https://openalex.org/S123", "issn_l": "0003-2700"}}}), "application/json"),
+            "https://api.openalex.org/sources/S123": (url, json.dumps({"homepage_url": "https://pubs.acs.org/journal/ancham"}), "application/json"),
+            "https://pubs.acs.org/journal/ancham": (url, '<meta property="og:image" content="https://pubs.acs.org/ancham-img.jpg">', "text/html"),
+            "https://pubs.acs.org/ancham-img.jpg": (url, png_bytes(300, 400, (10, 60, 120)), "image/jpeg"),
+            # OA status discovered only through OpenAlex
+            "https://api.openalex.org/works/doi:10.1038/s41467-026-00001-x": (url, json.dumps({"open_access": {"is_oa": True, "oa_status": "gold"}, "best_oa_location": {"license": "cc-by"}, "primary_location": {"source": {"id": "https://openalex.org/S9", "issn_l": "2041-1723"}}}), "application/json"),
+            # paywalled paper with no cover anywhere
+            "https://doi.org/10.9999/nocover": ("https://example.org/nocover", "<html></html>", "text/html"),
+        }
+        if url in routes:
+            final, body, ctype = routes[url]
+            return FakeResp(final, body, ctype)
+        return super().get(url, check_robots, params, **kw)
+
+
+def paywalled_acs():
+    return {"source": "crossref", "title": "SERS assay", "doi": "10.1021/acs.analchem.6c99999", "url": "https://doi.org/10.1021/acs.analchem.6c99999",
+            "journal": "Analytical Chemistry", "oa": False, "license": ""}
+
+
+def test_paywalled_paper_gets_journal_cover_never_its_figure(tmp_path):
+    f = vs.FigureFetcher(PolicyHttp(CFG), CFG, tmp_path)
+    rec = vs.enrich_oa(f.http, paywalled_acs())
+    assert rec["oa"] is False and rec["_openalex_source"] == "S123"
+    fig = f.fetch(rec, "acs1")
+    assert fig["kind"] == "cover" and fig["src"].startswith("covers/analytical-chemistry")
+    assert not (tmp_path / "figs" / "acs1.jpg").exists()
+    # second paper from the same journal reuses the cached cover without new requests
+    FakeHttp.calls = []
+    again = f.fetch(dict(paywalled_acs(), doi="10.1021/x", url=""), "acs2")
+    assert again["src"] == fig["src"] and not any("ancham-img" in c[0] for c in FakeHttp.calls)
+
+
+def test_paywalled_paper_without_any_cover_falls_back_to_glyph(tmp_path):
+    f = vs.FigureFetcher(PolicyHttp(CFG), CFG, tmp_path)
+    rec = {"source": "crossref", "title": "x", "doi": "10.9999/nocover", "url": "https://doi.org/10.9999/nocover", "journal": "Obscure Letters", "oa": False}
+    assert f.fetch(rec, "n1") is None
+
+
+def test_open_access_paper_gets_its_own_figure_and_openalex_upgrades_oa(tmp_path):
+    f = vs.FigureFetcher(PolicyHttp(CFG), CFG, tmp_path)
+    rec = vs.parse_europepmc(dict(EPMC_RESULT, isOpenAccess="N", license=""))
+    assert rec["oa"] is False
+    vs.enrich_oa(f.http, rec)
+    assert rec["oa"] is True and rec["license"] == "CC BY"
+    fig = f.fetch(rec, "oa1")
+    assert fig["kind"] == "figure" and "CC BY" in fig["credit"] and (tmp_path / "figs/oa1.jpg").exists()
+
+
+def test_mode_all_uses_figure_even_for_paywalled(tmp_path):
     cfg = vs.load_config(HERE.parent / "config.yaml")
-    cfg["figures"]["mode"] = "open_access_only"
-    f = vs.FigureFetcher(FakeHttp(cfg), cfg, repo)
-    paywalled = vs.parse_crossref(CROSSREF_ITEM)
-    assert f.fetch(paywalled, "x") is None          # no manual cover configured -> glyph
-    oa = vs.parse_europepmc(EPMC_RESULT)
-    assert f.fetch(oa, "y")["kind"] == "figure"
+    cfg["figures"]["mode"] = "all"
+    f = vs.FigureFetcher(PolicyHttp(cfg), cfg, tmp_path)
+    assert f.fetch(paywalled_acs(), "acs3")["kind"] == "figure"
+
+
+def test_refresh_figures_for_existing_issue(repo, monkeypatch):
+    monkeypatch.setattr(vs, "Http", PolicyHttp)
+    issue = {"id": "2026-11-02", "number": 1, "date": "2026-11-02", "window": ["2026-10-26", "2026-11-01"], "removed": [], "articles": [
+        {"id": "oa-paper", "title": "OA paper", "doi": "10.1038/s41467-026-00001-x", "url": "https://doi.org/10.1038/s41467-026-00001-x", "journal": "Nature Communications", "oa": False, "license": "", "fig": None},
+        {"id": "pw-paper", "title": "Paywalled paper", "doi": "10.1021/acs.analchem.6c99999", "url": "https://doi.org/10.1021/acs.analchem.6c99999", "journal": "Analytical Chemistry", "oa": False, "license": "", "fig": None},
+    ]}
+    p = repo / "data/issues/2026-11-02.json"
+    p.write_text(json.dumps(issue))
+    assert vs.main(["--root", str(repo), "--issue-date", "2026-11-02", "--refresh-figures"]) == 0
+    out = {a["id"]: a for a in json.loads(p.read_text())["articles"]}
+    assert out["oa-paper"]["oa"] is True and out["oa-paper"]["fig"]["kind"] == "figure"
+    assert out["pw-paper"]["fig"]["kind"] == "cover"
 
 
 # ----------------------------------------------------------------- broader vibrational techniques

@@ -138,10 +138,15 @@ arxiv_terms:
 
 arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, cond-mat.mtrl-sci, q-bio.QM]
 
-# Thumbnails, OCT News style: the article page's own preview image (og:image / twitter:image,
-# usually Fig. 1 or the graphical abstract); if none, the journal cover; if none, the site draws a glyph.
+# Thumbnails
+#   oa_figure_else_cover : open-access paper -> its own preview image (og:image, usually Fig. 1 or the
+#                          graphical abstract); paywalled paper -> journal cover only. (default)
+#   all                  : every paper -> its preview image; journal cover as fallback (OCT News style)
+# Open-access status comes from Europe PMC / Crossref licences, checked again against OpenAlex.
+# Journal covers: config `journal_covers` -> article page image if it is a cover (portrait or 'cover' in URL)
+# -> journal homepage image found via OpenAlex. If nothing is found the site draws a technique glyph.
 figures:
-  mode: all                # all | open_access_only
+  mode: oa_figure_else_cover
   max_width: 400
   max_height: 280
   min_side_px: 120         # smaller images are treated as logos and ignored

@@ -33,15 +33,18 @@
 
 把 DOI 一行一个写进 `data/inbox.txt`，下次抓取时会被加入当期（不受关键词过滤限制），处理完会自动从 inbox 删除。
 
-## 缩略图规则（同 OCT News）
+## 缩略图规则
 
-1. 打开文章页面，读取它自带的预览图（`og:image` / `twitter:image`）。多数期刊给的是 Fig. 1 或图形摘要。
-2. 如果预览图其实是期刊封面（文件名含 cover 等），或文章页没有预览图，就用期刊封面。封面会按期刊缓存在 `covers/`，也可以在 `config.yaml` 的 `journal_covers` 里手动指定。
-3. 都没有时，网站画一个技术类型小图标（Raman / SRS / SERS / IR / MIP）。
+- **开放获取（OA）文章**：用文章页自带的预览图（`og:image` / `twitter:image`），通常是 Fig. 1 或图形摘要，图下注明许可（如 `CC BY 4.0 · via nature.com`）。
+- **非 OA 文章**：只用期刊封面，不使用论文配图。封面来源依次为：`config.yaml` 里 `journal_covers` 手动指定 → 文章页预览图本身就是封面（竖版或文件名含 cover）→ 通过 OpenAlex 找到期刊主页，取主页的封面图。封面按期刊缓存在 `covers/`，同一期刊只抓一次。
+- **都没有**：网站显示技术类型小图标。
 
-每张图下面注明来源和许可（如 `CC BY 4.0 · via nature.com`）。抓取遵守 `robots.txt`，每个站点请求间隔 1 秒。
+OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（gold / diamond / hybrid 且为 CC 许可才算 OA）。
+如果想像 OCT News 那样所有文章都用预览图，把 `figures.mode` 改成 `all`。
 
-**版权提示**：开放获取（CC BY）文章的配图注明出处即可使用；非开放获取文章的预览图属于出版商。若想更保守，把 `config.yaml` 里 `figures.mode` 改成 `open_access_only`，非 OA 文章就只显示期刊封面或图标。
+**给已有期次补图**：*Actions → Weekly issue → Run workflow*，填 `issue_date`（如 2026-11-02），勾选 `refresh_figures`，会开一个只更新缩略图的 PR。本地等价命令：`python scraper/vibranews_scraper.py --refresh-figures --issue-date 2026-11-02`。
+
+抓取遵守 `robots.txt`，每个站点请求间隔 1 秒。
 
 ## 调整抓取范围
 
