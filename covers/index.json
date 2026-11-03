@@ -13,5 +13,195 @@
     "src": "covers/annals-of-biomedical-engineering.jpg",
     "kind": "cover",
     "credit": "Journal cover · Annals of Biomedical Engineering"
+  },
+  "analytical and bioanalytical chemistry": {
+    "src": "covers/analytical-and-bioanalytical-chemistry.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Analytical and bioanalytical chemistry"
+  },
+  "mikrochimica acta": {
+    "src": "covers/mikrochimica-acta.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Mikrochimica acta"
+  },
+  "chemical society reviews": {
+    "src": "covers/chemical-society-reviews.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Chemical Society reviews"
+  },
+  "chemical communications (cambridge, england)": {
+    "src": "covers/chemical-communications-cambridge-england.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Chemical communications (Cambridge, England)"
+  },
+  "analytical methods : advancing methods and applications": {
+    "src": "covers/analytical-methods-advancing-methods-and-applications.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Analytical methods : advancing methods and applications"
+  },
+  "physical chemistry chemical physics : pccp": {
+    "src": "covers/physical-chemistry-chemical-physics-pccp.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Physical chemistry chemical physics : PCCP"
+  },
+  "journal of physics. condensed matter : an institute of physics journal": {
+    "src": "covers/journal-of-physics-condensed-matter-an-institute-of-physics-.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of physics. Condensed matter : an Institute of Physics journal"
+  },
+  "dalton transactions (cambridge, england : 2003)": {
+    "src": "covers/dalton-transactions-cambridge-england-2003.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Dalton transactions (Cambridge, England : 2003)"
+  },
+  "journal of molecular modeling": {
+    "src": "covers/journal-of-molecular-modeling.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of molecular modeling"
+  },
+  "biomedical engineering": {
+    "src": "covers/biomedical-engineering.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Biomedical Engineering"
+  },
+  "journal of applied spectroscopy": {
+    "src": "covers/journal-of-applied-spectroscopy.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Applied Spectroscopy"
+  },
+  "the european physical journal plus": {
+    "src": "covers/the-european-physical-journal-plus.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · The European Physical Journal Plus"
+  },
+  "journal of optics": {
+    "src": "covers/journal-of-optics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Optics"
+  },
+  "laser and particle beams": {
+    "src": "covers/laser-and-particle-beams.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Laser and Particle Beams"
+  },
+  "journal of astrophysics and astronomy": {
+    "src": "covers/journal-of-astrophysics-and-astronomy.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Astrophysics and Astronomy"
+  },
+  "atmospheric measurement techniques": {
+    "src": "covers/atmospheric-measurement-techniques.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Atmospheric measurement techniques"
+  },
+  "carbon letters": {
+    "src": "covers/carbon-letters.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Carbon letters"
+  },
+  "kreatifitas jurnal ilmiah pendidikan islam": {
+    "src": "covers/kreatifitas-jurnal-ilmiah-pendidikan-islam.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Kreatifitas Jurnal Ilmiah Pendidikan Islam"
+  },
+  "semiconductor science and technology": {
+    "src": "covers/semiconductor-science-and-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Semiconductor Science and Technology"
+  },
+  "mrs advances": {
+    "src": "covers/mrs-advances.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · MRS Advances"
+  },
+  "journal of materials engineering and performance": {
+    "src": "covers/journal-of-materials-engineering-and-performance.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Materials Engineering and Performance"
+  },
+  "international journal of engineering research and science & technology": {
+    "src": "covers/international-journal-of-engineering-research-and-science-te.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · International Journal of Engineering Research and Science & Technology"
+  },
+  "journal of optics and photonics research": {
+    "src": "covers/journal-of-optics-and-photonics-research.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Optics and Photonics Research"
+  },
+  "nutrient cycling in agroecosystems": {
+    "src": "covers/nutrient-cycling-in-agroecosystems.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nutrient Cycling in Agroecosystems"
+  },
+  "journal of cluster science": {
+    "src": "covers/journal-of-cluster-science.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Cluster Science"
+  },
+  "nemzetközi vegyészkonferencia": {
+    "src": "covers/nemzetk-zi-vegy-szkonferencia.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nemzetközi Vegyészkonferencia"
+  },
+  "grimsa journal of science engineering and technology": {
+    "src": "covers/grimsa-journal-of-science-engineering-and-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Grimsa Journal of Science Engineering and Technology"
+  },
+  "terrestrial atmospheric and oceanic sciences": {
+    "src": "covers/terrestrial-atmospheric-and-oceanic-sciences.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Terrestrial Atmospheric and Oceanic Sciences"
+  },
+  "chemical research in chinese universities": {
+    "src": "covers/chemical-research-in-chinese-universities.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Chemical Research in Chinese Universities"
+  },
+  "nature energy": {
+    "src": "covers/nature-energy.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nature Energy"
+  },
+  "nano research": {
+    "src": "covers/nano-research.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nano Research"
+  },
+  "biosciences biotechnology research asia": {
+    "src": "covers/biosciences-biotechnology-research-asia.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Biosciences Biotechnology Research Asia"
+  },
+  "radiophysics and quantum electronics": {
+    "src": "covers/radiophysics-and-quantum-electronics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Radiophysics and Quantum Electronics"
+  },
+  "food analytical methods": {
+    "src": "covers/food-analytical-methods.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Food Analytical Methods"
+  },
+  "journal of material cycles and waste management": {
+    "src": "covers/journal-of-material-cycles-and-waste-management.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Material Cycles and Waste Management"
+  },
+  "eastern-european journal of enterprise technologies": {
+    "src": "covers/eastern-european-journal-of-enterprise-technologies.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Eastern-European Journal of Enterprise Technologies"
+  },
+  "the astrophysical journal": {
+    "src": "covers/the-astrophysical-journal.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · The Astrophysical Journal"
+  },
+  "journal of pharmacognosy and phytochemistry": {
+    "src": "covers/journal-of-pharmacognosy-and-phytochemistry.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Pharmacognosy and Phytochemistry"
   }
 }
