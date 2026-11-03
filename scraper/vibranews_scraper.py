@@ -142,11 +142,28 @@ class Http:
 
 # --------------------------------------------------------------------------- text helpers
 
+LATEX_SYMBOLS = {"textmu": "µ", "mu": "µ", "alpha": "α", "beta": "β", "gamma": "γ", "delta": "δ", "Delta": "Δ",
+                 "epsilon": "ε", "kappa": "κ", "lambda": "λ", "pi": "π", "sigma": "σ", "tau": "τ", "omega": "ω",
+                 "times": "×", "pm": "±", "sim": "~", "approx": "≈", "circ": "°", "AA": "Å", "%": "%"}
+
+
+def delatex(s: str) -> str:
+    """Strip the simple LaTeX that arXiv titles and abstracts carry (Cs$_2$SnI$_6$, {\textmu}m, $α$-MnTe)."""
+    if "\\" not in s and "$" not in s:
+        return s
+    s = re.sub(r"\\texorpdfstring\{((?:[^{}]|\{[^{}]*\})*)\}\{[^{}]*\}", r"\1", s)
+    s = re.sub(r"\\([A-Za-z]+|%)\b ?", lambda m: LATEX_SYMBOLS.get(m.group(1), m.group(0)), s)
+    s = re.sub(r"\$([^$]{0,80})\$", lambda m: re.sub(r"[_^{}]|\\(mathrm|rm|text)", "", m.group(1)), s)
+    s = re.sub(r"\{([^{}\\]{0,40})\}", r"\1", s)
+    return s
+
+
 def clean_text(s: str | None) -> str:
     if not s:
         return ""
     s = re.sub(r"<[^>]+>", " ", s)          # JATS / HTML tags
     s = html.unescape(s)
+    s = delatex(s)
     s = re.sub(r"\s+", " ", s).strip()
     s = re.sub(r"^(abstract|summary)[\s:.\-–]+", "", s, flags=re.I)
     return s
@@ -247,6 +264,7 @@ def institutions_from(affiliations: list[str], limit: int = 3) -> list[str]:
     for aff in affiliations:
         aff = re.sub(r"\S+@\S+", "", aff)                      # e-mails
         aff = re.sub(r"^\s*[\d*†‡§#]+\s*", "", aff)            # footnote markers
+        aff = re.sub(r"\s+\d+\s*$", "", aff)                    # trailing affiliation numbers
         parts = [p.strip(" .;") for p in re.split(r",|;", aff) if p.strip(" .;")]
         org = None
         for p in parts:

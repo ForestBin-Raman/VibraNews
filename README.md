@@ -31,6 +31,14 @@
 
 **手动工具**：*Actions → Manual run (draft PR) → Run workflow*，可以补抓某段时间，或给某一期补缩略图（勾选 `refresh_figures`），结果以 PR 形式给你审核。
 
+## Feature Articles 与 Feature of the Week
+
+- 每期（周一到周日）选 10–15 篇 **Feature Articles**：技术层面的创新（新模态、新仪器、灵敏度/速度/分辨率突破、新探针、新算法），或特别有意义的应用创新。每篇附 1–2 句 “Why it matters”。
+- 每期一篇 **Feature of the Week**，从 Feature Articles 里选，置顶显示。
+- 上限 15 篇：新入选使总数超过 15 时，按入选日期先替换最早的；Feature of the Week 不会被替换。
+- 每天早上抓取完成后，定时任务会启动一个 Claude 会话：读当天新增的论文 → 选稿、写推荐语 → `python scraper/curate.py apply` → 推送到 main，网站自动更新。
+- 手动调整：`python scraper/curate.py status` 查看本期入选；把 JSON 写成 `{"picks":[{"id":…,"why":…}], "feature":{"id":…}, "unpick":[…]}` 再 `apply`。也可以直接改 issue 文件里的 `pick` / `feature` / `why` 字段。
+
 ## 投稿 / 手动加文章
 
 把 DOI 一行一个写进 `data/inbox.txt`，下次抓取时会被加入当期（不受关键词过滤限制），处理完会自动从 inbox 删除。
