@@ -53,7 +53,7 @@ jobs:
           [ -n "$ISSUE_DATE" ] && args+=(--issue-date "$ISSUE_DATE")
           [ -n "$SINCE" ] && args+=(--since "$SINCE")
           [ -n "$UNTIL" ] && args+=(--until "$UNTIL")
-          python scraper/vibspec_scraper.py "${args[@]}" | tee scrape-output.txt
+          python scraper/vibranews_scraper.py "${args[@]}" | tee scrape-output.txt
           grep -E '^(ISSUE_ID|ISSUE_NUMBER|ADDED)=' scrape-output.txt >> "$GITHUB_OUTPUT"
 
       - name: Open pull request with the draft issue
@@ -66,7 +66,7 @@ jobs:
             figs/**
             covers/**
           commit-message: "Draft issue No. ${{ steps.scrape.outputs.ISSUE_NUMBER }} (${{ steps.scrape.outputs.ISSUE_ID }})"
-          title: "VibSpec News No. ${{ steps.scrape.outputs.ISSUE_NUMBER }} · ${{ steps.scrape.outputs.ISSUE_ID }} — draft for review"
+          title: "VibraNews No. ${{ steps.scrape.outputs.ISSUE_NUMBER }} · ${{ steps.scrape.outputs.ISSUE_ID }} — draft for review"
           labels: draft-issue
           body: |
             The weekly crawl found **${{ steps.scrape.outputs.ADDED }}** new papers for issue **${{ steps.scrape.outputs.ISSUE_ID }}**.

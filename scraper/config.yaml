@@ -1,13 +1,13 @@
-# VibSpec News — scraper configuration
+# VibraNews — scraper configuration
 # Edit this file to change what the weekly crawl looks for.
 
 site:
-  name: VibSpec News
-  url: https://YOUR-GITHUB-USERNAME.github.io/vibspecnews/   # used in the bot User-Agent; update after first deploy
+  name: VibraNews
+  url: https://YOUR-GITHUB-USERNAME.github.io/vibranews/   # used in the bot User-Agent; update after first deploy
 
 # Polite crawling
 http:
-  user_agent: "VibSpecNewsBot/1.0 (+{site_url}; weekly literature digest)"
+  user_agent: "VibraNewsBot/1.0 (+{site_url}; weekly literature digest)"
   timeout_s: 20
   delay_s: 1.0            # pause between requests to the same host
   respect_robots_txt: true

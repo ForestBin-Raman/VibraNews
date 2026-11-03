@@ -1,25 +1,25 @@
-# VibSpec News
+# VibraNews
 
 振动光谱（Raman、SRS/CARS、SERS/TERS、IR/NIR、光热红外）社区周报网站，参照 OCT News 的形式：每周一自动抓取上一周发表的新论文，生成一期草稿，编辑审核后合并，网站自动更新。
 
 - 网站：纯静态页面（`index.html`），托管在 GitHub Pages，读取 `data/issues/*.json`
-- 抓取：`scraper/vibspec_scraper.py`，数据源为 Europe PMC、Crossref、arXiv（免费接口，不需要 API key）
+- 抓取：`scraper/vibranews_scraper.py`，数据源为 Europe PMC、Crossref、arXiv（免费接口，不需要 API key）
 - 自动化：GitHub Actions，每周一新加坡时间 07:17 运行，生成一个待审的 Pull Request
 
 ---
 
 ## 一次性设置（约 10 分钟）
 
-1. **新建仓库**：在 GitHub 新建公开仓库，例如 `vibspecnews`，把本目录全部内容推上去（默认分支 `main`）。
+1. **新建仓库**：在 GitHub 新建公开仓库，例如 `vibranews`，把本目录全部内容推上去（默认分支 `main`）。
 2. **打开 Pages**：仓库 *Settings → Pages → Build and deployment → Source* 选 **GitHub Actions**。
 3. **允许工作流写入和开 PR**：*Settings → Actions → General → Workflow permissions* 选 **Read and write permissions**，并勾选 **Allow GitHub Actions to create and approve pull requests**。
-4. **填网址**：把 `scraper/config.yaml` 里的 `site.url` 改成你的 Pages 地址（如 `https://你的用户名.github.io/vibspecnews/`）。它只用于抓取时的 User-Agent，表明来源。
+4. **填网址**：把 `scraper/config.yaml` 里的 `site.url` 改成你的 Pages 地址（如 `https://你的用户名.github.io/vibranews/`）。它只用于抓取时的 User-Agent，表明来源。
 5. **第一次发布**：推送到 `main` 会自动运行 *Deploy site to GitHub Pages*，几分钟后网站上线，显示第 1 期。
 6. **手动试跑抓取**：*Actions → Weekly issue (draft for review) → Run workflow*，留空即按本周一出刊；也可以填日期补抓。
 
 ## 每周流程
 
-1. 周一早上，工作流抓取上周（周一至周日）的论文，开一个标题为 *VibSpec News No. N · 日期 — draft for review* 的 PR。
+1. 周一早上，工作流抓取上周（周一至周日）的论文，开一个标题为 *VibraNews No. N · 日期 — draft for review* 的 PR。
 2. 在 PR 里编辑 `data/issues/<日期>.json`，手机网页版点文件右上角的铅笔即可：
    - 删掉不相关的文章，并把它的 `id` 加进 `"removed"`，以后不会再被抓回来
    - 选一篇 **Feature of the Week**：`"feature": true`，在 `"why"` 写一句为什么重要
@@ -57,7 +57,7 @@
 ```bash
 pip install -r scraper/requirements.txt pytest
 python -m pytest -q scraper/tests                         # 离线自测
-python scraper/vibspec_scraper.py --issue-date 2026-11-09 # 抓取并写入 data/
+python scraper/vibranews_scraper.py --issue-date 2026-11-09 # 抓取并写入 data/
 python -m http.server 8000                                # 浏览 http://localhost:8000
 ```
 

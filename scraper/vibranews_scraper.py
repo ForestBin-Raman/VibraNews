@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""VibSpec News weekly scraper.
+"""VibraNews weekly scraper.
 
 Finds new vibrational-spectroscopy papers (Raman, SRS/CARS, SERS/TERS, IR/NIR,
 photothermal IR) published in a date window, and writes one issue file:
@@ -13,10 +13,10 @@ photothermal IR) published in a date window, and writes one issue file:
 Sources: Europe PMC, Crossref, arXiv (free APIs, no key needed).
 
 Usage
-    python scraper/vibspec_scraper.py                     # issue for this Monday, previous 7 days
-    python scraper/vibspec_scraper.py --issue-date 2026-11-09
-    python scraper/vibspec_scraper.py --since 2026-11-02 --until 2026-11-08
-    python scraper/vibspec_scraper.py --no-figures --dry-run
+    python scraper/vibranews_scraper.py                     # issue for this Monday, previous 7 days
+    python scraper/vibranews_scraper.py --issue-date 2026-11-09
+    python scraper/vibranews_scraper.py --since 2026-11-02 --until 2026-11-08
+    python scraper/vibranews_scraper.py --no-figures --dry-run
 
 Re-running for an existing issue keeps everything the editor changed
 (summaries, picks, Feature of the Week, deletions are NOT re-added if listed
@@ -44,7 +44,7 @@ import yaml
 from bs4 import BeautifulSoup
 from PIL import Image
 
-log = logging.getLogger("vibspec")
+log = logging.getLogger("vibranews")
 ROOT = Path(__file__).resolve().parent.parent
 SGT = dt.timezone(dt.timedelta(hours=8))
 
@@ -74,7 +74,7 @@ class Http:
 
     def __init__(self, cfg: dict):
         h = cfg.get("http", {})
-        self.ua = h.get("user_agent", "VibSpecNewsBot/1.0").format(site_url=cfg.get("site", {}).get("url", ""))
+        self.ua = h.get("user_agent", "VibraNewsBot/1.0").format(site_url=cfg.get("site", {}).get("url", ""))
         self.timeout = h.get("timeout_s", 20)
         self.delay = h.get("delay_s", 1.0)
         self.respect_robots = h.get("respect_robots_txt", True)

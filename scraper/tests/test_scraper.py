@@ -1,4 +1,4 @@
-"""Offline tests for the VibSpec News scraper (no network: HTTP is faked)."""
+"""Offline tests for the VibraNews scraper (no network: HTTP is faked)."""
 import io
 import json
 import shutil
@@ -10,7 +10,7 @@ from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-import vibspec_scraper as vs  # noqa: E402
+import vibranews_scraper as vs  # noqa: E402
 
 CFG = vs.load_config(HERE.parent / "config.yaml")
 

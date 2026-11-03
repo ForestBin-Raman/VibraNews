@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VibSpecNews</title>
+<title>VibraNews</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
@@ -136,7 +136,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
 <body>
 <header class="head">
   <div class="wrap">
-    <a class="logo" href="#top" id="top" aria-label="VibSpec News home">
+    <a class="logo" href="#top" id="top" aria-label="VibraNews home">
       <svg viewBox="0 0 100 100" aria-hidden="true">
         <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a5966"/><stop offset="1" stop-color="#0d2d35"/></linearGradient></defs>
         <rect x="3" y="3" width="94" height="94" rx="22" fill="url(#lg)"/>
@@ -149,7 +149,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
         <circle cx="62" cy="38" r="7" fill="#e9f5f3"/>
         <circle cx="70" cy="22" r="5.5" fill="#ef6a6a"/>
       </svg>
-      <span><span class="name">VibSpec <span>News</span></span><span class="sub">Vibrational Spectroscopy News</span></span>
+      <span><span class="name">Vibra<span>News</span></span><span class="sub">Vibrational Spectroscopy News</span></span>
     </a>
     <div class="banner" aria-hidden="true"><canvas id="spec"></canvas><span class="bt">Raman · IR · SRS / CARS · SERS</span><span class="bs">Raman shift / cm⁻¹</span></div>
   </div>
@@ -230,7 +230,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
   </aside>
 </main>
 
-<footer><div class="wrap"><span>VibSpec News · new issue every Monday · thumbnails are each article's own preview image or the journal cover, with credit; titles link to the original articles</span><a href="#top">Back to top</a></div></footer>
+<footer><div class="wrap"><span>VibraNews · new issue every Monday · thumbnails are each article's own preview image or the journal cover, with credit; titles link to the original articles</span><a href="#top">Back to top</a></div></footer>
 
 <script>
 const GROUPS = [
@@ -373,7 +373,7 @@ const menu=document.getElementById("menu"), burger=document.getElementById("burg
 function closeMenu(){ menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
 burger.addEventListener("click", ()=>{ const o=menu.classList.toggle("open"); burger.setAttribute("aria-expanded", String(o)); });
 document.getElementById("copyTpl").addEventListener("click", async ()=>{
-  const tpl="VibSpec News — Submit a Paper\nType (journal article / in-press / preprint / patent / thesis / job / Feature Of The Week):\nTitle:\nAuthors:\nInstitutions:\nJournal & DOI:\nAbstract or summary:\nFig. 1 / representative figure (attach) and its licence (e.g. CC BY 4.0):\nCategories (e.g. SRS / CARS, SERS / TERS, IR / NIR, Oncology):\nContact:\n";
+  const tpl="VibraNews — Submit a Paper\nType (journal article / in-press / preprint / patent / thesis / job / Feature Of The Week):\nTitle:\nAuthors:\nInstitutions:\nJournal & DOI:\nAbstract or summary:\nFig. 1 / representative figure (attach) and its licence (e.g. CC BY 4.0):\nCategories (e.g. SRS / CARS, SERS / TERS, IR / NIR, Oncology):\nContact:\n";
   const ok=document.getElementById("copied");
   try{ await navigator.clipboard.writeText(tpl); ok.textContent="Copied"; }catch(err){ ok.textContent="Copy was blocked by the browser"; }
   ok.hidden=false; setTimeout(()=>ok.hidden=true,2000);
