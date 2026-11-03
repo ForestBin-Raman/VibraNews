@@ -488,3 +488,19 @@ def test_recall_safeguards_end_to_end(repo):
 def test_strong_term_once_is_enough_but_generic_raman_needs_two():
     assert vs.is_relevant({"title": "Metabolic imaging", "abstract": "Imaged by SERS nanotags."}, CFG)
     assert not vs.is_relevant({"title": "Battery cathodes", "abstract": "Characterised by XRD, Raman and XPS."}, CFG)
+
+
+def test_blocked_publisher_is_skipped_after_two_403s(tmp_path):
+    class BlockHttp(FakeHttp):
+        def get(self, url, check_robots=False, params=None, **kw):
+            FakeHttp.calls.append((url, params))
+            self.last_url = url.replace("https://doi.org/", "https://www.sciencedirect.com/")
+            self.last_status = 403
+            return None
+    FakeHttp.calls = []
+    f = vs.FigureFetcher(BlockHttp(CFG), CFG, tmp_path)
+    for i in range(6):
+        rec = {"source": "crossref", "title": f"p{i}", "doi": f"10.1016/j.x.{i}", "url": f"https://doi.org/10.1016/j.x.{i}", "journal": "Talanta", "oa": True}
+        assert f.fetch(rec, f"e{i}") is None
+    landing = [c for c in FakeHttp.calls if c[0].startswith("https://doi.org/10.1016/")]
+    assert len(landing) == 2          # after two 403s the prefix is skipped

@@ -9,7 +9,8 @@ site:
 http:
   user_agent: "VibraNewsBot/1.0 (+{site_url}; weekly literature digest)"
   timeout_s: 20
-  delay_s: 1.0            # pause between requests to the same host
+  delay_s: 1.0            # pause between requests to the same publisher site
+  api_delay_s: 0.2        # pause between requests to the open APIs (OpenAlex, Crossref, Europe PMC, arXiv)
   respect_robots_txt: true
 
 # Search sources (all free, no API key needed)

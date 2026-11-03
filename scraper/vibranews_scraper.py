@@ -84,6 +84,10 @@ class Http:
         self.ua = h.get("user_agent", "VibraNewsBot/1.0").format(site_url=cfg.get("site", {}).get("url", ""))
         self.timeout = h.get("timeout_s", 20)
         self.delay = h.get("delay_s", 1.0)
+        self.api_delay = h.get("api_delay_s", 0.2)
+        self.api_hosts = set(h.get("api_hosts", ["api.openalex.org", "api.crossref.org", "www.ebi.ac.uk", "export.arxiv.org"]))
+        self.last_status: int | None = None
+        self.last_url: str = ""
         self.respect_robots = h.get("respect_robots_txt", True)
         self.s = requests.Session()
         self.s.headers.update({"User-Agent": self.ua, "Accept-Language": "en"})
@@ -92,10 +96,11 @@ class Http:
 
     def _wait(self, host: str):
         last = self._last.get(host)
+        delay = self.api_delay if host in self.api_hosts else self.delay
         if last is not None:
             gap = time.time() - last
-            if gap < self.delay:
-                time.sleep(self.delay - gap)
+            if gap < delay:
+                time.sleep(delay - gap)
         self._last[host] = time.time()
 
     def allowed(self, url: str) -> bool:
@@ -119,11 +124,13 @@ class Http:
             log.info("robots.txt disallows %s", url)
             return None
         self._wait(urlparse(url).netloc)
+        self.last_status, self.last_url = None, url
         try:
             r = self.s.get(url, timeout=self.timeout, allow_redirects=True, **kw)
         except requests.RequestException as e:
             log.warning("GET %s failed: %s", url, e)
             return None
+        self.last_status, self.last_url = r.status_code, r.url
         if r.status_code >= 400:
             log.info("GET %s -> HTTP %s", url, r.status_code)
             return None
@@ -740,16 +747,37 @@ class FigureFetcher:
             self.cover_cache = {}
         self.manual_covers = {k.lower(): v for k, v in (self.cfg.get("journal_covers") or {}).items()}
         self._pages: dict[str, tuple[str | None, str, str, str]] = {}
+        self._fails: dict[str, int] = {}          # DOI prefix / host -> number of 401/403/429 answers
+        self._no_cover: set[str] = set()          # journals with no findable cover this run
+
+    BLOCK_AFTER = 2
+
+    @staticmethod
+    def _doi_prefix(url: str) -> str | None:
+        m = re.match(r"https?://(dx\.)?doi\.org/(10\.\d{4,9})/", url or "", re.I)
+        return m.group(2) if m else None
+
+    def _blocked(self, url: str) -> bool:
+        keys = [k for k in (self._doi_prefix(url), urlparse(url).netloc) if k]
+        return any(self._fails.get(k, 0) >= self.BLOCK_AFTER for k in keys)
+
+    def _note_failure(self, url: str):
+        if getattr(self.http, "last_status", None) in (401, 403, 429):
+            for k in {self._doi_prefix(url), urlparse(url).netloc, urlparse(getattr(self.http, "last_url", "") or "").netloc} - {None, ""}:
+                self._fails[k] = self._fails.get(k, 0) + 1
 
     # -- helpers
     def _get_image(self, url: str | None) -> Image.Image | None:
         if not url:
             return None
         pats = self.cfg.get("figures", {}).get("reject_url_patterns", [])
-        if any(p in url.lower() for p in pats):
+        if any(p in url.lower() for p in pats) or self._blocked(url):
             return None
         r = self.http.get(url, check_robots=True)
-        if not r or not r.headers.get("Content-Type", "image").startswith("image"):
+        if not r:
+            self._note_failure(url)
+            return None
+        if not r.headers.get("Content-Type", "image").startswith("image"):
             return None
         return load_image(r.content, self.cfg)
 
@@ -758,7 +786,11 @@ class FigureFetcher:
         if not url:
             return None, "", "", ""
         if url not in self._pages:
+            if self._blocked(url):
+                return None, urlparse(url).netloc.replace("www.", ""), "", url
             page = self.http.get(url, check_robots=True)
+            if page is None:
+                self._note_failure(url)
             if page is not None and "html" in page.headers.get("Content-Type", "html"):
                 self._pages[url] = (extract_preview_image(page.text, page.url), urlparse(page.url).netloc.replace("www.", ""), page.text, page.url)
             else:
@@ -804,15 +836,21 @@ class FigureFetcher:
         key = self.journal_key(rec)
         if key and key in self.cover_cache and (self.root / self.cover_cache[key]["src"]).exists():
             return dict(self.cover_cache[key])
+        if key and key in self._no_cover and not landing_img_url:
+            return None
         manual = self.manual_covers.get(key) or (self.manual_covers.get((rec.get("issn") or "").lower()) if rec.get("issn") else None)
         im = self._get_image(manual)
         if im is None and landing_img_url:
             cand = self._get_image(landing_img_url)
             if cand is not None and (looks_like_cover(landing_img_url) or is_portrait(cand)):
                 im = cand
-        if im is None:
+        if im is None and key not in self._no_cover:
             im = self._homepage_cover(rec)
-        return self._store_cover(rec, im) if im is not None else None
+        if im is None:
+            if key:
+                self._no_cover.add(key)
+            return None
+        return self._store_cover(rec, im)
 
     def fetch(self, rec: dict, art_id: str) -> dict | None:
         if rec.get("source") == "arxiv" or (rec.get("journal") or "").lower().startswith("arxiv"):
@@ -1030,7 +1068,7 @@ def run(args) -> int:
         art = to_article(rec, cfg)
         if art["id"] in known or (art["doi"] and art["doi"] in known_doi):
             continue
-        if not args.no_openalex:
+        if not args.no_openalex and not rec.get("_openalex_source"):
             enrich_oa(http, rec)
             art["oa"], art["license"] = bool(rec.get("oa")), rec.get("license", "")
         if not args.no_figures:
