@@ -78,6 +78,10 @@ def load_config(path: Path) -> dict:
     cfg["_cats"] = cats
     comp = lambda xs: [re.compile(p, re.I) for p in (xs or [])]
     cfg["_exclude_title"] = comp(cfg.get("exclude_title"))
+    tq = cfg.get("technique") or {}
+    cfg["_tech_terms"], cfg["_tech_cues"] = comp(tq.get("terms")), comp(tq.get("cues"))
+    cfg["_tech_strong"] = comp(tq.get("strong_cues"))
+    cfg["_tech_journals"] = comp(tq.get("journals"))
     ra = cfg.get("routine_application") or {}
     cfg["_routine_domain"], cfg["_routine_method"] = comp(ra.get("domain")), comp(ra.get("method"))
     soft = cfg.get("soft_exclude") or {}
@@ -214,6 +218,17 @@ def is_core_journal(rec: dict, cfg: dict) -> bool:
     return j in cfg.get("_core_titles", set()) or bool(issns & cfg.get("_core_issn", set()))
 
 
+def is_technique(rec: dict, cfg: dict, strong: bool = False) -> bool:
+    """Technique / instrument / method development in vibrational spectroscopy (or the related topics).
+    Such papers must never be missed: they bypass the routine-application, title and soft exclusions,
+    need only ONE mention of a technique term, and go straight to the front page."""
+    title, abstract = rec.get("title", ""), rec.get("abstract", "")
+    text = f"{title} {abstract}"
+    if not any(p.search(text) for p in cfg.get("_tech_terms", [])):
+        return False
+    return any(p.search(text) for p in cfg.get("_tech_strong" if strong else "_tech_cues", []))
+
+
 def is_relevant(rec: dict, cfg: dict) -> bool:
     title, abstract = rec.get("title", ""), rec.get("abstract", "")
     if SKIP_TITLE.search(title):
@@ -223,12 +238,17 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     journal = (rec.get("journal") or "").lower()
     if rec.get("_type") in ("dataset", "paratext", "other", "erratum", "retraction") or any(x == journal or journal.startswith(x) for x in cfg.get("_excl_sources", [])):
         return False
-    if is_routine_application(title, cfg):    # e.g. "NIR spectroscopy for grading tea", "SERS detection of pesticide in fruit"
+    if is_routine_application(title, cfg) and not is_technique(rec, cfg):   # e.g. "NIR grading of tea"
         return False
     if is_core_journal(rec, cfg):              # core vibrational-spectroscopy journals: everything
         return True
     text = f"{title} {abstract}"
-    if any(p.search(text) for p in cfg["_exclude"]) or any(p.search(title) for p in cfg.get("_exclude_title", [])):
+    if any(p.search(text) for p in cfg["_exclude"]):
+        return False
+    technique = is_technique(rec, cfg)
+    if technique:                              # method papers: one mention of any technique term is enough
+        return True
+    if any(p.search(title) for p in cfg.get("_exclude_title", [])):
         return False
     # off-topic uses of NIR/SWIR (tissue oximetry, detector devices...) unless the title names a vibrational technique
     if any(p.search(text) for p in cfg.get("_soft", [])) and not any(p.search(title) for p in cfg.get("_soft_unless", [])):
@@ -243,6 +263,8 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     hits = sum(len(p.findall(body)) for p in cfg["_include"])
     if hits >= 2:
         return True
+    if hits >= 1 and any(p.search(rec.get("journal") or "") for p in cfg.get("_tech_journals", [])):
+        return True                            # optics / instrumentation journals: one mention is enough
     return any(topic_match(rec, t) for t in cfg.get("_topics", []))
 
 
@@ -530,10 +552,17 @@ def arxiv_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
     cats = " OR ".join(f"cat:{c}" for c in cfg.get("arxiv_categories", []))
     terms = " OR ".join(f"abs:{t}" for t in cfg.get("arxiv_terms", ["raman"]))
     q = f"({cats}) AND ({terms})"
-    r = http.get("http://export.arxiv.org/api/query", params={"search_query": q, "sortBy": "submittedDate", "sortOrder": "descending", "max_results": cfg["sources"].get("max_results_per_query", 400)})
-    if not r:
-        return []
-    return parse_arxiv(r.text, since, until)
+    out, page, limit = [], 200, cfg["sources"].get("max_arxiv", 2000)
+    for start in range(0, limit, page):        # newest first; stop once a page reaches before `since`
+        r = http.get("http://export.arxiv.org/api/query", params={"search_query": q, "sortBy": "submittedDate", "sortOrder": "descending", "start": start, "max_results": page})
+        if not r:
+            break
+        recs = parse_arxiv(r.text, since, until)
+        out += recs
+        dates = re.findall(r"<published>(\d{4}-\d{2}-\d{2})", r.text)
+        if not dates or min(dates) < since or len(dates) < page:
+            break
+    return out
 
 
 def parse_arxiv(xml_text: str, since: str, until: str) -> list[dict]:
@@ -652,7 +681,7 @@ class VenueChecker:
         prefix = (norm_doi(rec.get("doi") or "") or "").split("/")[0].lower()
         if prefix in self.blocked:
             return False
-        if prefix in self.trusted:
+        if prefix in self.trusted or is_technique(rec, self.cfg):    # method papers are kept from any unblocked venue
             return True
         return self.h_index(rec) >= self.min_h
 
@@ -1014,6 +1043,7 @@ def to_article(rec: dict, cfg: dict) -> dict:
         "glyph": glyph_for(cats),
         "summary": trim_summary(rec.get("abstract", ""), cfg.get("summary_max_chars", 700)),
         "why": "",
+        **({"tier": "notable"} if is_technique(rec, cfg, strong=True) else {}),
         "pick": False,
         "feature": False,
         "fig": None,

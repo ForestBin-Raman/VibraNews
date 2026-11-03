@@ -2085,7 +2085,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-40739-fce29d",
@@ -3246,7 +3247,8 @@
       "feature": false,
       "fig": null,
       "source": "europepmc",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-64898-2026-10-23-761404-430cc2",
@@ -3828,7 +3830,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-35214-f6faa8",
@@ -4036,7 +4039,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-26434-chemrxiv-15011020-v1-48d087",
@@ -5320,7 +5324,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s12036-026-10188-7-9de3b2",
@@ -5671,7 +5676,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2610-31727-548e14",
@@ -6177,7 +6183,8 @@
       "feature": false,
       "fig": null,
       "source": "openalex",
-      "reviewed": true
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1051-0004-6361-202662036-612d6e",

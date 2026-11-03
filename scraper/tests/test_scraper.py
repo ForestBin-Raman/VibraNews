@@ -588,3 +588,25 @@ def test_photothermal_microspectroscopy_is_relevant():
            "abstract": "Photothermal microspectroscopy provides a route to localized vibrational measurements."}
     assert vs.is_relevant(rec, cfg)
     assert vs.is_relevant({"title": "Broadband sensing", "abstract": rec["abstract"]}, cfg)
+
+
+def test_technique_papers_always_included_and_promoted():
+    cfg = vs.load_config(Path(__file__).resolve().parent.parent / "config.yaml")
+    # a method paper that also looks like a routine application is still kept
+    rec = {"title": "Snapshot hyperspectral Raman microscope for food analysis",
+           "abstract": "Here we develop a snapshot Raman microscope and apply it to grading tea."}
+    assert vs.is_technique(rec, cfg, strong=True) and vs.is_relevant(rec, cfg)
+    # one mention is enough for a method paper
+    rec2 = {"title": "A broadband photothermal platform",
+            "abstract": "We demonstrate a new interferometer that reads out vibrational absorption in one shot."}
+    assert vs.is_relevant(rec2, cfg)
+    art = vs.to_article({**rec, "date": "2026-11-03", "authors": [], "doi": "10.1/x"}, cfg)
+    assert art.get("tier") == "notable"
+    # routine application without technique cues is still dropped, and is not promoted
+    rec3 = {"title": "Near-infrared spectroscopy for grade identification of baijiu", "abstract": "PLS models were built."}
+    assert not vs.is_technique(rec3, cfg) and not vs.is_relevant(rec3, cfg)
+    # mass spectrometers are not spectrometers for us
+    assert not vs.is_technique({"title": "A compact mass spectrometer", "abstract": "We develop a compact mass spectrometer."}, cfg)
+    # analysis-method and theory papers
+    assert vs.is_technique({"title": "Baseline correction using DU-GridNet for Raman spectra", "abstract": ""}, cfg)
+    assert vs.is_technique({"title": "A Density-Matrix Formulation of Vibrational Circular Dichroism Spectra", "abstract": ""}, cfg)

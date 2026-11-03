@@ -62,6 +62,11 @@ OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（
 
 除振动光谱外，还收录三类相关主题（`config.yaml` 的 `extra_topics`）：**光声光谱**（PAS、QEPAS、LITES、中红外/光谱光声）、**光谱成像**（高光谱、多光谱、化学成像、快照光谱成像；卫星/航空/无人机遥感除外）、**新型光谱仪设计**（计算/重构型、片上、超表面、微型光谱仪等；质谱、NMR、X 射线等除外）。标题命中即收录，摘要里出现一次专门术语也收录；高光谱只在标题命中时收录。
 
+**技术类论文必收（`config.yaml` 的 `technique`）**
+- 用到振动光谱/相关技术术语、且有方法学信号的论文（摘要里“we develop/demonstrate/present … microscope / spectrometer / imaging modality / light source …”，标题里有显微镜、光谱仪、断层、干涉、超分辨、video-rate、快照、超连续谱、频率梳、超表面、腔增强等，或光谱去噪/基线校正/解混等分析方法，或振动光谱理论）一律保留：绕过常规应用、标题和 NIR/SWIR 排除，摘要提到一次即可，不受期刊 h-index 限制（黑名单除外）。
+- 其中方法学信号强的（`strong_cues`）自动上首页 Selected Papers；其余由每日编辑判断，技术类一律标为 Selected。
+- 检索覆盖：光热、红外显微/纳米显微（nano-FTIR、s-SNOM、AFM-IR）、SEIRA、双光梳、场分辨光谱、振动探针等；arXiv 加入 physics.ins-det、physics.app-ph、physics.med-ph、eess.IV、cond-mat.str-el，并翻页抓全。
+
 **去杂（`config.yaml`）**
 - 期刊质量：只收主流出版社（ACS、RSC、Elsevier、Springer Nature、Wiley、Optica、AIP、APS、IOP、IEEE、SPIE、T&F、SAGE、MDPI、Frontiers 等，见 `venues.trusted_doi_prefixes`）和 arXiv / bioRxiv / medRxiv / ChemRxiv；Research Square、Preprints.org、CyberLeninka、会议合集等直接排除；其他期刊在 OpenAlex 的 h-index ≥ 40 才收（结果缓存在 `data/venues.json`）。核心期刊和 inbox 投稿不受影响。
 - 非振动含义的工程应用：STIRAP/原子光学、Raman 激光雷达、分布式测温、Orbach 弛豫、通信放大器、微波光子 SBS 等（`exclude`）。偏物理的 Raman/Brillouin 激光、SBS 光子学、等离子体 Raman 等保留。

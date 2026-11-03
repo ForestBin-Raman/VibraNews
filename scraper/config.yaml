@@ -73,6 +73,16 @@ include:
   - 'fourier[- ]transform photothermal'
   - 'vibrational (measurement|contrast|absorption|fingerprint|band|transition|overtone|dynamics|response|state)'
   - '(overtone|combination) (band|absorption|spectr)'
+  - '\bs-?SNOM\b|nano-?FTIR|near-field infrared|infrared nanoscop|infrared near-field'
+  - 'surface-enhanced infrared|\bSEIRA'
+  - 'photo-?induced force (microscop|spectroscop)|\bPiFM\b'
+  - 'dual-comb (spectroscop|imaging|raman)|frequency[- ]comb (spectroscop|raman)'
+  - 'field-resolved (infrared |vibrational )?spectroscop|electro-optic sampling'
+  - 'spectral focusing'
+  - 'bioorthogonal raman|raman (tag|probe|reporter|label)s?\b|alkyne[- ]tag|vibrational (probe|tag|label)s?\b'
+  - 'molecular vibrations?'
+  - 'quantum (infrared|raman|vibrational)|nonlinear interferomet'
+  - 'infrared (microscop|nanoscop|tomograph)'
   - 'vibrational (EELS|electron energy loss)'
   - 'inelastic neutron scattering'
   - 'nuclear resonance vibrational'
@@ -219,6 +229,28 @@ exclude:
   - 'quantum state transfer|privacy amplification|superadiabatic'
   - 'microwave photonic|optical vector analy|angle of arrival'
   - '(fib(er|re)|erbium-doped) (lasers?|amplifiers?)|optical (networks?|communications?)'
+
+# Technique / instrument / method papers MUST be included: a paper that uses one of `terms` AND matches
+# one of `cues` (a development statement, an instrument/modality noun, a spectral-analysis method) bypasses
+# the routine-application, title and soft exclusions and the venue h-index check, needs only one mention,
+# and is put on the front page ("Selected Papers") automatically.
+technique:
+  terms:
+    - '\braman\b|\bSERS\b|\bTERS\b|\bSRS\b|\bCARS\b|\bCSRS\b|coherent anti-?stokes'
+    - 'infrared|\bIR\b|\bFT-?IR\b|vibrational|molecular vibration|photothermal|brillouin|terahertz|\bTHz\b'
+    - 'sum[- ]frequency|\bSFG\b|2D[- ]IR|photo-?acoustic spectroscop|hyper-?spectral|(?<!mass )(?<!ion )spectrometers?\b'
+    - '\bs-?SNOM\b|nano-?FTIR|AFM-?IR|\bSEIRA|dual-comb|frequency comb|field-resolved|electro-optic sampling|phonon'
+  # broad cues: protect the paper from every exclusion (it is never dropped)
+  cues:
+    - '\b(we|here,? we|this work|this paper)\s+(\w+\s+){0,3}(develop|demonstrat|present|introduc|report|propos|realiz|build|construct|design|invent)\w*\s+(\S+\s+){0,8}?(microscop\w*|spectromet\w*|nanoscop\w*|tomograph\w*|interferomet\w*|imaging (system|modality|technique|platform)|(spectroscopic|microscopy|imaging) (technique|modality)|light source|laser source|instrument\w*)'
+    - '^(?=.*(raman|infrared|vibrational|photothermal|brillouin|terahertz|\bSFG\b|\bSRS\b|\bCARS\b|spectromet|hyperspectral|phonon)).*(microscope\b|spectrometers?\b|nanoscop|tomograph|interferomet|super-resolution|sub-diffraction|video-rate|high-speed|wide-?field|snapshot|single-shot|shot-noise|quantum-enhanced|light source|supercontinuum|frequency comb|dual-comb|endoscop|fib(er|re)[- ]probe|waveguide|metasurface|cavity-enhanced|near-field|fourier-transform photothermal|(stimulated|coherent|photothermal|nonlinear|multimodal|correlative|polarization-resolved|time-resolved|femtosecond|ultrafast|broadband) (raman|infrared|vibrational|brillouin|photothermal) (microscopy|imaging|microspectroscopy|tomography|spectroscopy))'
+    - '^(?=.*(raman|infrared|vibrational|\bSRS\b|\bCARS\b|brillouin|spectra\b|spectroscop)).*(denois|baseline correction|spectral unmixing|unmixing|peak fitting|spectral reconstruction|calibration transfer|foundation model|self-supervised|physics-(informed|constrained)|wavenumber-aware|batch effect)'
+    - '(theory|theoretical (framework|description|model)|density-matrix formulation|simulation|machine-learned force field|quantum dynamics)s? (of|for) (\\w+[ -]){0,3}(raman|infrared|vibrational|VCD|ROA|SFG|brillouin)'
+  # strict cues: the paper also goes straight to the front page ("Selected Papers")
+  strong_cues:
+    - '\b(we|here,? we|this work)\s+(\w+\s+){0,2}(develop|demonstrat|present|introduc|report|propos|realiz|build|construct|design|invent)\w*\s+(a|an|the first)\s+(\S+\s+){0,6}?(microscope|spectrometer|nanoscope|interferometer|imaging (system|modality|platform|technique)|(spectroscopic|spectroscopy|microscopy|imaging) (technique|modality|platform)|light source|laser source|instrument)\b'
+    - '^(?=.*(raman|infrared|vibrational|photothermal|brillouin|terahertz|\bSFG\b|\bSRS\b|\bCARS\b|spectromet|hyperspectral)).*(microscope\b|spectrometers?\b|nanoscop|tomograph|interferomet|super-resolution|sub-diffraction|video-rate|high-speed|snapshot|single-shot|shot-noise|quantum-enhanced|supercontinuum|frequency comb|dual-comb|endoscop|metasurface|cavity-enhanced|fourier-transform photothermal)'
+  journals: ['^optica\b', 'optics express', 'optics letters', 'light: science', 'nature photonics', 'nature methods', 'biomedical optics express', 'journal of biomedical optics', 'apl photonics', 'advanced photonics', '^elight', 'photonix', 'laser & photonics', 'review of scientific instruments', 'applied spectroscopy', 'analytical chemistry', 'the analyst', 'science advances', 'nature communications', 'acs photonics', 'journal of physical chemistry letters', 'journal of chemical physics', 'chemical & biomedical imaging', 'acs measurement science', 'ultrafast science', 'communications physics', 'physical review applied', 'optics continuum', 'optics & laser technology', 'optics communications']
 
 # Routine applications: the TITLE names an everyday analyte / product / matrix AND a standard technique
 # (NIR, FTIR, SERS, hyperspectral, Raman + chemometrics). Methods papers, physics and clinical studies are unaffected.
@@ -370,6 +402,19 @@ europepmc_terms:
   - '"vibrational circular dichroism"'
   - '"photoacoustic spectroscopy"'
   - '"photothermal spectroscopy"'
+  - '"label-free chemical imaging"'
+  - '"infrared microscopy"'
+  - '"infrared nanoscopy"'
+  - '"nano-FTIR"'
+  - '"AFM-IR"'
+  - '"near-field infrared"'
+  - '"surface-enhanced infrared"'
+  - '"dual-comb spectroscopy"'
+  - '"field-resolved spectroscopy"'
+  - '"vibrational probe"'
+  - '"bioorthogonal Raman"'
+  - '"molecular vibrations"'
+  - '"vibrational microscopy"'
   - '"photothermal microspectroscopy"'
   - '"photothermal microscopy"'
   - '"quartz-enhanced photoacoustic"'
@@ -404,6 +449,15 @@ openalex_terms:
   - photoacoustic spectroscopy
   - photothermal spectroscopy
   - photothermal microscopy
+  - label-free chemical imaging
+  - infrared microscopy
+  - infrared nanoscopy
+  - nano-FTIR
+  - AFM-IR
+  - surface-enhanced infrared absorption
+  - dual-comb spectroscopy
+  - field-resolved spectroscopy
+  - vibrational probe
   - quartz-enhanced photoacoustic
   - hyperspectral imaging
   - multispectral imaging
@@ -436,6 +490,10 @@ crossref_queries:
   - photoacoustic spectroscopy
   - photothermal spectroscopy
   - photothermal microscopy
+  - label-free chemical imaging
+  - infrared microscopy
+  - nano-FTIR
+  - dual-comb spectroscopy
   - quartz-enhanced photoacoustic
   - hyperspectral imaging
   - spectral imaging
@@ -461,10 +519,14 @@ arxiv_terms:
   - spectrometer
   - photothermal
   - vibrational
+  - infrared
+  - '"dual-comb"'
+  - '"nano-FTIR"'
+  - SNOM
   - '"coherent anti-Stokes"'
   - phonon
 
-arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, cond-mat.mtrl-sci, q-bio.QM]
+arxiv_categories: [physics.optics, physics.chem-ph, physics.bio-ph, physics.ins-det, physics.app-ph, physics.med-ph, eess.IV, cond-mat.mtrl-sci, cond-mat.str-el, q-bio.QM]
 
 # Thumbnails
 #   oa_figure_else_cover : open-access paper -> its own preview image (og:image, usually Fig. 1 or the
