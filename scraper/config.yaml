@@ -202,6 +202,132 @@ exclude:
   - '(?s)^(?!.*spectromet).*photodetector'   # SWIR/IR detector devices (spectrometer papers are kept)
   - 'prefrontal|cerebral oxygenation'    # fNIRS-type studies
   - 'near-?infrared (fluorescence|imaging-guided|photothermal therapy)'
+  # "Raman" / "Brillouin" in a non-spectroscopic sense (lasers, atom optics, telecom, plasma, magnetism)
+  - 'raman (lasers?|conversion|amplification|frequency comb|soliton)'
+  - 'raman[- ]induced (self-)?frequency'
+  - 'raman (gain|scattering) suppression|raman suppression'
+  - 'stimulated raman adiabatic|\bSTIRAP\b'
+  - 'atom (optics|interferomet)|cold atoms?\b'
+  - 'raman lidar|\blidar\b'
+  - 'distributed temperature sens'
+  - '\borbach\b|single-molecule magnets?|magnetic relaxation'
+  - 'backward raman amplif|laser[- ]plasma|magneti[sz]ed plasma|plasma waves?'
+  - 'quantum frequency conversion|quantum state transfer|privacy amplification|superadiabatic'
+  - 'microwave photonic|optical vector analy|angle of arrival'
+  - 'kerr (soliton|comb)'
+  - '(fib(er|re)|erbium-doped) (lasers?|amplifiers?)|optical (networks?|communications?)'
+  - 'forward[- ]stimulated brillouin|brillouin (dynamic grating|lasing)'
+
+# Title-only exclusions: routine characterisation, natural-product/extract profiling, off-topic hits
+exclude_title:
+  - 'homo?eopath|triturat|mother tinctures?|bhasma|\bjamu\b'
+  - 'phytochemi|ethnomedic|GC-?MS profiling|molecular docking'
+  - '(synthesis|preparation|fabrication),? (and |crystal structure,? and )?characteri[sz]ation'
+  - 'structural, (morphological|optical|electrical)|dielectric properties'
+  - 'antibacterial activity|antioxidant (activity|exploration)'
+  - 'pedagog|teaching and learning|islamic|\beducation\b'
+  - '^comment on\b|^reply to\b'
+  - '\b(stellar|circumstellar|nova|Mira variables?|hot Jupiter|spectropolarimetry|SPHEREx|exoplanets?)\b'   # astronomy
+
+# Off-topic uses of NIR / SWIR (tissue oximetry, detector and emitter devices) are dropped
+# unless the title names a vibrational technique
+soft_exclude:
+  patterns:
+    - 'oxygenation|oximetr|h(a)?emodynamic|oxygen saturation|\bIVUS\b|intravascular|blood pressure|cerebral (near-?infrared|NIRS)|muscle oxygen'
+    - 'quantum dots?|optoelectronic|light-emitting|\bLEDs?\b|photodiode|downconverter|bolometer|nanosensor|NIR-II|photothermal therapy|detector arrays?|image processing pipeline'
+  unless_title: ['raman', '\bSERS\b', '\bTERS\b', 'brillouin', 'vibrational', '\bFT-?IR\b', 'mid-?infrared', 'photothermal (infrared|imaging|microscop)', 'terahertz', '\bSFG\b', '2D-IR', 'spectromet', 'photo-?acoustic spectroscop', 'lattice dynamics', 'phonon']
+
+# Venue filter: papers from these DOI prefixes (publishers / preprint servers) are kept; papers from
+# blocked prefixes or journals are dropped; any other venue is kept only if its OpenAlex h-index is at
+# least min_h_index (looked up once per journal and cached in data/venues.json). Core journals and
+# inbox submissions are always kept.
+venues:
+  min_h_index: 40
+  trusted_doi_prefixes:
+    - '10.48550'   # arXiv
+    - '10.1101'    # bioRxiv / medRxiv
+    - '10.64898'   # bioRxiv / medRxiv (new prefix)
+    - '10.26434'   # ChemRxiv
+    - '10.1016'    # Elsevier / Cell Press
+    - '10.1021'    # ACS
+    - '10.1039'    # RSC
+    - '10.1002'    # Wiley
+    - '10.1111'    # Wiley
+    - '10.1155'    # Hindawi (Wiley)
+    - '10.1007'    # Springer
+    - '10.1038'    # Nature Portfolio
+    - '10.1186'    # BMC
+    - '10.1140'    # EPJ
+    - '10.1557'    # MRS
+    - '10.1364'    # Optica
+    - '10.1117'    # SPIE
+    - '10.1063'    # AIP
+    - '10.1103'    # APS
+    - '10.1088'    # IOP
+    - '10.1109'    # IEEE
+    - '10.1126'    # Science / AAAS
+    - '10.34133'   # Science Partner Journals
+    - '10.1073'    # PNAS
+    - '10.1093'    # Oxford UP
+    - '10.1017'    # Cambridge UP
+    - '10.1080'    # Taylor & Francis
+    - '10.1177'    # SAGE (Applied Spectroscopy, JNIRS)
+    - '10.3390'    # MDPI
+    - '10.3389'    # Frontiers
+    - '10.1371'    # PLOS
+    - '10.7554'    # eLife
+    - '10.1515'    # De Gruyter
+    - '10.1055'    # Thieme
+    - '10.1142'    # World Scientific
+    - '10.1108'    # Emerald
+    - '10.1149'    # ECS
+    - '10.1146'    # Annual Reviews
+    - '10.1152'    # American Physiological Society
+    - '10.1128'    # ASM
+    - '10.1158'    # AACR
+    - '10.1161'    # AHA
+    - '10.1172'    # SNMMI
+    - '10.3171'    # J Neurosurgery
+    - '10.1001'    # JAMA
+    - '10.1056'    # NEJM
+    - '10.1136'    # BMJ
+    - '10.1029'    # AGU
+    - '10.5194'    # Copernicus
+    - '10.2138'    # Mineralogical Society of America
+    - '10.1130'    # GSA
+    - '10.2113'    # GSA (Lithosphere)
+    - '10.1180'    # Mineralogical Society
+    - '10.1051'    # EDP Sciences (A&A, EPJ)
+    - '10.1360'    # Science China
+    - '10.26599'   # Tsinghua UP (Nano Research)
+    - '10.31635'   # CCS Chemistry
+    - '10.37188'   # Light: Advanced Manufacturing
+    - '10.3762'    # Beilstein
+    - '10.3791'    # JoVE
+    - '10.1246'    # Chemical Society of Japan
+    - '10.7567'    # JJAP
+    - '10.1209'    # JPSJ
+    - '10.1143'    # Japan Society of Applied Physics
+    - '10.21273'   # ASHS (HortScience)
+    - '10.5713'    # Animal Bioscience
+    - '10.3724'    # Acta Biochim Biophys Sin
+    - '10.20517'   # OAE Publishing
+  blocked_doi_prefixes:
+    - '10.21203'   # Research Square
+    - '10.20944'   # Preprints.org
+    - '10.22541'   # Authorea
+    - '10.31219'   # OSF Preprints
+    - '10.17605'   # OSF
+    - '10.31224'   # OSF / EarthArXiv
+    - '10.24412'   # CyberLeninka
+    - '10.5281'    # Zenodo
+    - '10.13140'   # ResearchGate
+    - '10.6084'    # figshare
+    - '10.9734'    # Sciencedomain (Asian Journal of ...)
+    - '10.22271'   # AkiNik (J Pharmacognosy & Phytochemistry)
+  blocked_journals: ['web of conferences', '^DOAJ', 'cyberlenin']
+  # preprint servers recognised by name when a record carries no DOI
+  trusted_journals: ['^arxiv', 'biorxiv', 'medrxiv', 'chemrxiv']
 
 # Europe PMC search terms (combined with OR, searched in title + abstract)
 europepmc_terms:

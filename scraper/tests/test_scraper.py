@@ -531,3 +531,41 @@ def test_extra_topics_photoacoustic_spectral_imaging_spectrometers():
         assert not vs.is_relevant({"title": t, "abstract": a}, cfg), t
     cats = vs.categorize({"title": "Quartz-enhanced photoacoustic spectroscopy of CO2", "abstract": ""}, cfg)
     assert "Photoacoustic" in cats
+
+
+def test_clutter_filters_and_venues(tmp_path):
+    cfg = vs.load_config(Path(__file__).resolve().parent.parent / "config.yaml")
+    drop = ["Optimization of multistate stimulated Raman adiabatic passage by pulse shaping",
+            "100 W second-order Stokes output from a picosecond diamond Raman laser",
+            "Phytochemical Characterization, GC-MS Profiling and FTIR Analysis of Leaf Extracts",
+            "Spectroscopic fingerprinting of homoeopathic triturations by FTIR",
+            "Size-Focused Growth of Short-Wave Infrared InAs Quantum Dots",
+            "Continuous Near-Infrared Spectroscopy as a Monitor of Cerebral Oxygenation in Stroke"]
+    keep = ["Raman spectroscopy of quantum dots reveals phonon confinement",
+            "Hydrogenation of uracil in solid para-hydrogen: infrared spectra of radicals",
+            "Stimulated Raman scattering microscopy of lipid droplets"]
+    for t in drop:
+        assert not vs.is_relevant({"title": t, "abstract": ""}, cfg), t
+    for t in keep:
+        assert vs.is_relevant({"title": t, "abstract": ""}, cfg), t
+
+    class H:
+        calls = 0
+        def get(self, url):
+            H.calls += 1
+            class R:
+                def json(self_inner):
+                    return {"summary_stats": {"h_index": 55 if "1234-5678" in url else 3}}
+            return R()
+    v = vs.VenueChecker(H(), cfg, tmp_path, online=True)
+    (tmp_path / "data").mkdir()
+    assert v.ok({"doi": "10.1021/acs.analchem.1", "journal": "Analytical Chemistry"})
+    assert v.ok({"doi": "", "journal": "arXiv (preprint)"})
+    assert not v.ok({"doi": "10.21203/rs.3", "journal": "Research Square"})
+    assert not v.ok({"doi": "10.1051/e3sconf/1", "journal": "E3S Web of Conferences"})
+    assert v.ok({"doi": "10.9999/x", "journal": "Good Society Journal", "issns": ["1234-5678"]})
+    assert not v.ok({"doi": "10.9998/y", "journal": "Unknown Journal", "issns": ["0000-0001"]})
+    n = H.calls
+    assert v.ok({"doi": "10.9999/z", "journal": "Good Society Journal", "issns": ["1234-5678"]}) and H.calls == n  # cached
+    v.save()
+    assert json.loads((tmp_path / "data" / "venues.json").read_text())["issn:1234-5678"] == 55

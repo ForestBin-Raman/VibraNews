@@ -60,6 +60,13 @@ OA 判定：Europe PMC / Crossref 的许可证信息，再用 OpenAlex 复核（
 
 除振动光谱外，还收录三类相关主题（`config.yaml` 的 `extra_topics`）：**光声光谱**（PAS、QEPAS、LITES、中红外/光谱光声）、**光谱成像**（高光谱、多光谱、化学成像、快照光谱成像；卫星/航空/无人机遥感除外）、**新型光谱仪设计**（计算/重构型、片上、超表面、微型光谱仪等；质谱、NMR、X 射线等除外）。标题命中即收录，摘要里出现一次专门术语也收录；高光谱只在标题命中时收录。
 
+**去杂（`config.yaml`）**
+- 期刊质量：只收主流出版社（ACS、RSC、Elsevier、Springer Nature、Wiley、Optica、AIP、APS、IOP、IEEE、SPIE、T&F、SAGE、MDPI、Frontiers 等，见 `venues.trusted_doi_prefixes`）和 arXiv / bioRxiv / medRxiv / ChemRxiv；Research Square、Preprints.org、CyberLeninka、会议合集等直接排除；其他期刊在 OpenAlex 的 h-index ≥ 40 才收（结果缓存在 `data/venues.json`）。核心期刊和 inbox 投稿不受影响。
+- 非光谱含义：Raman 激光/放大器、STIRAP、原子光学、Raman 激光雷达、分布式测温、Orbach 弛豫、等离子体、微波光子 SBS 等（`exclude`）。
+- 标题排除：顺势疗法、植物提取物成分分析、“合成与表征”、教育类等（`exclude_title`）。
+- NIR/SWIR 的非光谱用途：组织血氧、量子点/光电探测器件等，除非标题里写明振动光谱技术（`soft_exclude`）。
+
+
 不按期刊名单抓，而是按关键词检索四个数据源，任何期刊发表的相关论文都会进来：
 
 | 数据源 | 覆盖 | 时间窗口（每日模式） |

@@ -77,6 +77,9 @@ def load_config(path: Path) -> dict:
             cats.append((group, name, [re.compile(p, re.I) for p in pats]))
     cfg["_cats"] = cats
     comp = lambda xs: [re.compile(p, re.I) for p in (xs or [])]
+    cfg["_exclude_title"] = comp(cfg.get("exclude_title"))
+    soft = cfg.get("soft_exclude") or {}
+    cfg["_soft"], cfg["_soft_unless"] = comp(soft.get("patterns")), comp(soft.get("unless_title"))
     cfg["_topics"] = [{"name": t.get("name", ""), "title": comp(t.get("title")), "abstract": comp(t.get("abstract")),
                        "exclude": comp(t.get("exclude"))} for t in (cfg.get("extra_topics") or [])]
     return cfg
@@ -221,7 +224,10 @@ def is_relevant(rec: dict, cfg: dict) -> bool:
     if is_core_journal(rec, cfg):              # core vibrational-spectroscopy journals: everything
         return True
     text = f"{title} {abstract}"
-    if any(p.search(text) for p in cfg["_exclude"]):
+    if any(p.search(text) for p in cfg["_exclude"]) or any(p.search(title) for p in cfg.get("_exclude_title", [])):
+        return False
+    # off-topic uses of NIR/SWIR (tissue oximetry, detector devices...) unless the title names a vibrational technique
+    if any(p.search(text) for p in cfg.get("_soft", [])) and not any(p.search(title) for p in cfg.get("_soft_unless", [])):
         return False
     if any(p.search(title) for p in cfg["_include"]):
         return True
@@ -584,6 +590,61 @@ def lookup_doi(http: Http, doi: str) -> dict | None:
 
 
 # --------------------------------------------------------------------------- merge
+
+class VenueChecker:
+    """Keep papers from established publishers and the main preprint servers; drop predatory or
+    low-visibility venues. Unknown publishers pass if their OpenAlex h-index is high enough."""
+
+    def __init__(self, http, cfg: dict, root: Path, online: bool = True):
+        v = cfg.get("venues") or {}
+        self.http, self.cfg, self.online = http, cfg, online
+        self.trusted = {p.lower() for p in v.get("trusted_doi_prefixes", [])}
+        self.blocked = {p.lower() for p in v.get("blocked_doi_prefixes", [])}
+        self.blocked_journals = [re.compile(p, re.I) for p in v.get("blocked_journals", [])]
+        self.trusted_journals = [re.compile(p, re.I) for p in v.get("trusted_journals", [])]
+        self.min_h = int(v.get("min_h_index", 40))
+        self.path = root / "data" / "venues.json"
+        self.cache: dict = load_json(self.path, {})
+        self.enabled = bool(v)
+
+    def h_index(self, rec: dict) -> int:
+        keys = [rec.get("_openalex_source")] + [f"issn:{x}" for x in (rec.get("issns") or []) + [rec.get("issn")] if x]
+        keys = [k for k in keys if k]
+        for k in keys:
+            if k in self.cache:
+                return self.cache[k]
+        if not self.online:
+            return 0
+        for k in keys:
+            r = self.http.get(f"https://api.openalex.org/sources/{k}")
+            if r is not None:
+                try:
+                    h = int((r.json().get("summary_stats") or {}).get("h_index") or 0)
+                except ValueError:
+                    h = 0
+                self.cache[k] = h
+                return h
+        if keys:
+            self.cache[keys[0]] = 0
+        return 0
+
+    def ok(self, rec: dict) -> bool:
+        if not self.enabled or rec.get("_force") or is_core_journal(rec, self.cfg):
+            return True
+        if any(p.search(rec.get("journal") or "") for p in self.blocked_journals):
+            return False
+        if any(p.search(rec.get("journal") or "") for p in self.trusted_journals):
+            return True
+        prefix = (norm_doi(rec.get("doi") or "") or "").split("/")[0].lower()
+        if prefix in self.blocked:
+            return False
+        if prefix in self.trusted:
+            return True
+        return self.h_index(rec) >= self.min_h
+
+    def save(self):
+        self.path.write_text(json.dumps(self.cache, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
 
 def merge_records(records: list[dict]) -> list[dict]:
     """Deduplicate by DOI, then by normalised title. Europe PMC wins; Crossref fills gaps."""
@@ -1107,10 +1168,15 @@ def run(args) -> int:
     known_doi |= {a.get("doi") for a in issue["articles"] if a.get("doi")}
 
     figs = FigureFetcher(http, cfg, root)
-    added = 0
+    venues = VenueChecker(http, cfg, root, online=not args.no_openalex)
+    added = rejected = 0
     for rec in merged:
         art = to_article(rec, cfg)
         if art["id"] in known or (art["doi"] and art["doi"] in known_doi):
+            continue
+        if not venues.ok(rec):
+            rejected += 1
+            log.debug("venue filter: %s (%s)", rec.get("title", "")[:80], rec.get("journal"))
             continue
         if not args.no_openalex and not rec.get("_openalex_source"):
             enrich_oa(http, rec)
@@ -1120,8 +1186,10 @@ def run(args) -> int:
         issue["articles"].append(art)
         added += 1
     issue["articles"].sort(key=lambda a: (a.get("feature", False), a.get("pick", False), a.get("date", "")), reverse=True)
-    log.info("Added %d new articles (issue now has %d)", added, len(issue["articles"]))
-    stats["added"] = added
+    log.info("Added %d new articles (issue now has %d); %d dropped by the venue filter", added, len(issue["articles"]), rejected)
+    stats["added"], stats["venue_rejected"] = added, rejected
+    if not args.dry_run:
+        venues.save()
     if not args.dry_run:
         sp = root / "data" / "stats.json"
         hist = load_json(sp, [])
