@@ -1,1 +1,17 @@
-{}
+{
+  "bmc medical informatics and decision making": {
+    "src": "covers/bmc-medical-informatics-and-decision-making.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · BMC Medical Informatics and Decision Making"
+  },
+  "current transplantation reports 13, 34": {
+    "src": "covers/current-transplantation-reports-13-34.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Current Transplantation Reports 13, 34"
+  },
+  "annals of biomedical engineering": {
+    "src": "covers/annals-of-biomedical-engineering.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Annals of Biomedical Engineering"
+  }
+}

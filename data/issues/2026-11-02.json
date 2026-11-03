@@ -19,7 +19,7 @@
       "doi": "10.1038/s41566-026-01995-z",
       "url": "https://doi.org/10.1038/s41566-026-01995-z",
       "oa": true,
-      "license": "Open access",
+      "license": "CC BY",
       "categories": [
         "SRS / CARS",
         "General Technology"
@@ -29,7 +29,11 @@
       "why": "A refocusable coherent Raman signal that does not rely on sample scattering opens same-side detection for thick tissue, opaque substrates and fibre-based probes.",
       "pick": false,
       "feature": true,
-      "fig": null,
+      "fig": {
+        "src": "figs/10-1038-s41566-026-01995-z-65de98.jpg",
+        "kind": "figure",
+        "credit": "CC BY · via nature.com"
+      },
       "source": "editor"
     },
     {
@@ -45,7 +49,7 @@
       "doi": "10.1038/s41467-026-78699-z",
       "url": "https://doi.org/10.1038/s41467-026-78699-z",
       "oa": true,
-      "license": "Open access",
+      "license": "CC BY",
       "categories": [
         "Photothermal IR",
         "Cell Biology"
@@ -55,7 +59,11 @@
       "why": "",
       "pick": true,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "figs/10-1038-s41467-026-78699-z-17769b.jpg",
+        "kind": "figure",
+        "credit": "CC BY · via nature.com"
+      },
       "source": "editor"
     },
     {
@@ -92,7 +100,7 @@
       "doi": "10.1186/s41512-026-00226-x",
       "url": "https://doi.org/10.1186/s41512-026-00226-x",
       "oa": true,
-      "license": "Open access",
+      "license": "CC BY-NC-ND",
       "categories": [
         "Neurology",
         "Oncology",
@@ -103,7 +111,11 @@
       "why": "",
       "pick": false,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "figs/10-1186-s41512-026-00226-x-de031f.jpg",
+        "kind": "figure",
+        "credit": "CC BY-NC-ND · via link.springer.com"
+      },
       "source": "editor"
     },
     {
@@ -116,7 +128,7 @@
       "doi": "10.1186/s12911-026-03922-2",
       "url": "https://doi.org/10.1186/s12911-026-03922-2",
       "oa": true,
-      "license": "Open access",
+      "license": "CC BY-NC-ND",
       "categories": [
         "Oncology",
         "Spontaneous Raman",
@@ -127,7 +139,11 @@
       "why": "",
       "pick": false,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "covers/bmc-medical-informatics-and-decision-making.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · BMC Medical Informatics and Decision Making"
+      },
       "source": "editor"
     },
     {
@@ -139,8 +155,8 @@
       "journal": "Agricultural Products Processing and Storage 2, 37",
       "doi": "10.1007/s44462-026-00073-5",
       "url": "https://doi.org/10.1007/s44462-026-00073-5",
-      "oa": false,
-      "license": "",
+      "oa": true,
+      "license": "CC BY-NC-ND",
       "categories": [
         "SERS / TERS",
         "Food & Agriculture",
@@ -151,7 +167,11 @@
       "why": "",
       "pick": false,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "figs/10-1007-s44462-026-00073-5-1800f0.jpg",
+        "kind": "figure",
+        "credit": "CC BY-NC-ND · via link.springer.com"
+      },
       "source": "editor"
     },
     {
@@ -163,8 +183,8 @@
       "journal": "Current Transplantation Reports 13, 34",
       "doi": "10.1007/s40472-026-00531-w",
       "url": "https://doi.org/10.1007/s40472-026-00531-w",
-      "oa": false,
-      "license": "",
+      "oa": true,
+      "license": "CC BY",
       "categories": [
         "Nephrology",
         "Spontaneous Raman",
@@ -176,7 +196,11 @@
       "why": "",
       "pick": false,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "covers/current-transplantation-reports-13-34.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Current Transplantation Reports 13, 34"
+      },
       "source": "editor"
     },
     {
@@ -186,10 +210,10 @@
       "authors": "Lucie Dewyspelaere, Lénaïk Belec, Isabelle Martin, Véronique Madigou, Olivia Gérigny, Alexandre Merlen",
       "institutions": [],
       "journal": "Journal of Raman Spectroscopy",
-      "doi": null,
-      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "doi": "10.1002/jrs.70219",
+      "url": "https://doi.org/10.1002/jrs.70219",
       "oa": true,
-      "license": "Open access",
+      "license": "CC BY-NC-ND",
       "categories": [
         "Materials",
         "Environmental",
@@ -210,10 +234,10 @@
       "authors": "Zhi Gao, Alexei V. Sokolov",
       "institutions": [],
       "journal": "Journal of Raman Spectroscopy",
-      "doi": null,
-      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
-      "oa": false,
-      "license": "",
+      "doi": "10.1002/jrs.70227",
+      "url": "https://doi.org/10.1002/jrs.70227",
+      "oa": true,
+      "license": "CC BY",
       "categories": [
         "SERS / TERS",
         "General Technology"
@@ -238,7 +262,7 @@
       "doi": "10.37188/lam.2026.115",
       "url": "https://doi.org/10.37188/lam.2026.115",
       "oa": true,
-      "license": "Open access",
+      "license": "CC BY",
       "categories": [
         "SERS / TERS",
         "Materials"
@@ -248,7 +272,11 @@
       "why": "",
       "pick": false,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "figs/10-37188-lam-2026-115-04549f.jpg",
+        "kind": "figure",
+        "credit": "CC BY · via light-am.com"
+      },
       "source": "editor"
     },
     {
@@ -258,10 +286,10 @@
       "authors": "Gianmarco Luchetti Sfondalmondo, Marieke E. Klijn",
       "institutions": [],
       "journal": "Journal of Raman Spectroscopy",
-      "doi": null,
-      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
-      "oa": false,
-      "license": "",
+      "doi": "10.1002/jrs.70223",
+      "url": "https://doi.org/10.1002/jrs.70223",
+      "oa": true,
+      "license": "CC BY",
       "categories": [
         "Data Analysis & AI",
         "Spontaneous Raman",
@@ -306,8 +334,8 @@
       "authors": "Yang Zhao, Gehua Huang, Huadan Zheng, Yaohong Zhao, Canqin Li, Furong Huang",
       "institutions": [],
       "journal": "Journal of Raman Spectroscopy",
-      "doi": null,
-      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10974555",
+      "doi": "10.1002/jrs.70226",
+      "url": "https://doi.org/10.1002/jrs.70226",
       "oa": false,
       "license": "",
       "categories": [
@@ -346,7 +374,11 @@
       "why": "",
       "pick": false,
       "feature": false,
-      "fig": null,
+      "fig": {
+        "src": "covers/annals-of-biomedical-engineering.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Annals of Biomedical Engineering"
+      },
       "source": "editor"
     }
   ],
