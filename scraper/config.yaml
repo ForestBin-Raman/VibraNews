@@ -18,7 +18,10 @@ sources:
   openalex: true           # every journal (Crossref + more), with abstracts and institutions
   crossref: true           # physics & chemistry journals not in PubMed (JRS early view, Opt. Express, ...)
   arxiv: true              # physics.optics, physics.chem-ph, physics.bio-ph preprints
-  max_results_per_query: 400
+  max_results_per_query: 400    # arXiv
+  max_europepmc: 6000           # records per run
+  max_crossref_rows: 1000       # per query (Crossref maximum)
+  max_openalex_per_term: 6000   # per search term
 
 # A paper is kept if its TITLE matches any include pattern,
 # or its ABSTRACT matches one at least twice. Patterns are case-insensitive regular expressions.

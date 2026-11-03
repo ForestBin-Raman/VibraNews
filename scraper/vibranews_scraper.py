@@ -258,7 +258,7 @@ def europepmc_search(http: Http, cfg: dict, since: str, until: str, date_field: 
     terms = " OR ".join([f"TITLE_ABS:{t}" for t in cfg.get("europepmc_terms", ["raman"])] + [f"KW:{t}" for t in cfg.get("europepmc_terms", ["raman"])])
     query = f"({terms}) AND {date_field}:[{since} TO {until}]"
     url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
-    cursor, out, cap = "*", [], cfg["sources"].get("max_results_per_query", 400) * 3
+    cursor, out, cap = "*", [], cfg["sources"].get("max_europepmc", 6000)
     while len(out) < cap:
         r = http.get(url, params={"query": query, "format": "json", "resultType": "core", "pageSize": 200, "cursorMark": cursor})
         if not r:
@@ -362,7 +362,7 @@ def parse_openalex(w: dict) -> dict:
 
 def openalex_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
     out = []
-    cap = cfg["sources"].get("max_results_per_query", 400) * 10
+    cap = cfg["sources"].get("max_openalex_per_term", 6000)
     select = "id,doi,display_name,publication_date,authorships,primary_location,open_access,best_oa_location,abstract_inverted_index,type"
     for term in cfg.get("openalex_terms", []):
         cursor, n = "*", 0
@@ -399,7 +399,7 @@ def crossref_core_journals(http: Http, cfg: dict, since: str, until: str) -> lis
 
 def crossref_search(http: Http, cfg: dict, since: str, until: str) -> list[dict]:
     out = []
-    rows = min(cfg["sources"].get("max_results_per_query", 400), 1000)
+    rows = min(cfg["sources"].get("max_crossref_rows", 1000), 1000)
     for q in cfg.get("crossref_queries", []):
         r = http.get("https://api.crossref.org/works", params={
             "query.bibliographic": q,
