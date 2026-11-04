@@ -313,5 +313,15 @@
     "src": "covers/suranaree-journal-of-science-and-technology.jpg",
     "kind": "cover",
     "credit": "Journal cover · Suranaree Journal of Science and Technology"
+  },
+  "journal of thermal spray technology": {
+    "src": "covers/journal-of-thermal-spray-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Thermal Spray Technology"
+  },
+  "electronic journal of general medicine": {
+    "src": "covers/electronic-journal-of-general-medicine.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Electronic Journal of General Medicine"
   }
 }
