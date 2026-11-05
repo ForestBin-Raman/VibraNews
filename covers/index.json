@@ -323,5 +323,20 @@
     "src": "covers/electronic-journal-of-general-medicine.jpg",
     "kind": "cover",
     "credit": "Journal cover · Electronic Journal of General Medicine"
+  },
+  "the european physical journal b": {
+    "src": "covers/the-european-physical-journal-b.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · The European Physical Journal B"
+  },
+  "journal of infrared, millimeter, and terahertz waves": {
+    "src": "covers/journal-of-infrared-millimeter-and-terahertz-waves.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Infrared, Millimeter, and Terahertz Waves"
+  },
+  "fine chemical technologies": {
+    "src": "covers/fine-chemical-technologies.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Fine Chemical Technologies"
   }
 }
