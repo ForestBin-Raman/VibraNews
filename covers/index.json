@@ -338,5 +338,15 @@
     "src": "covers/fine-chemical-technologies.jpg",
     "kind": "cover",
     "credit": "Journal cover · Fine Chemical Technologies"
+  },
+  "journal of physics d applied physics": {
+    "src": "covers/journal-of-physics-d-applied-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Physics D Applied Physics"
+  },
+  "archive of applied mechanics": {
+    "src": "covers/archive-of-applied-mechanics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Archive of Applied Mechanics"
   }
 }
