@@ -348,5 +348,15 @@
     "src": "covers/archive-of-applied-mechanics.jpg",
     "kind": "cover",
     "credit": "Journal cover · Archive of Applied Mechanics"
+  },
+  "plasma sources science and technology": {
+    "src": "covers/plasma-sources-science-and-technology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Plasma Sources Science and Technology"
+  },
+  "journal of physics d: applied physics": {
+    "src": "covers/journal-of-physics-d-applied-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Physics D: Applied Physics"
   }
 }

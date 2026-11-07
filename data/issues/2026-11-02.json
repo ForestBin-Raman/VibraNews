@@ -4,7 +4,7 @@
   "date": "2026-11-02",
   "window": [
     "2026-10-16",
-    "2026-11-07"
+    "2026-11-08"
   ],
   "articles": [
     {
@@ -88,65 +88,6 @@
       "pick": true,
       "feature": false,
       "fig": null,
-      "source": "openalex",
-      "reviewed": true,
-      "tier": "notable",
-      "pick_date": "2026-11-04"
-    },
-    {
-      "id": "10-1103-26tr-1jdy-72f9ca",
-      "date": "2026-10-26",
-      "title": "Tip-enhanced vibrational ladder climbing in surface molecular system",
-      "authors": "Tatsuto Mochizuki, Shota Takahashi, Atsunori Sakurai, Toshiki Sugimoto",
-      "institutions": [],
-      "journal": "Physical Review Letters",
-      "doi": "10.1103/26tr-1jdy",
-      "url": "https://doi.org/10.1103/26tr-1jdy",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Ultrafast & SFG"
-      ],
-      "glyph": "sfg",
-      "summary": "Achieving high-lying vibrational states is essential for actively controlling molecular reactions. We demonstrate vibrational ladder climbing of CO adsorbed on Pt(111) within the plasmonic tip-substrate nanogap formed in a scanning tunneling microscope, detected via tip-enhanced sum-frequency generation (TE-SFG). As the infrared pulse energy increases, hot-band peaks appear sequentially up to the 3-4 transition, indicating the stepwise population of higher vibrational states. Numerical analysis using the optical Bloch equations captures the observed energy dependence of these features. …",
-      "why": "Drives CO on Pt(111) up the vibrational ladder to the 3–4 transition inside an STM plasmonic nanogap, read out by tip-enhanced sum-frequency generation; reaching high-lying vibrational states locally is a step toward actively controlling surface reactions at the nanoscale.",
-      "tier": "notable",
-      "pick": true,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true,
-      "pick_date": "2026-11-04"
-    },
-    {
-      "id": "10-1038-s41567-026-03458-2-2d7caa",
-      "date": "2026-10-16",
-      "title": "Cavity-less Brillouin strong coupling in a solid-state continuous system",
-      "authors": "Laura Blázquez Martínez, Changlong Zhu, Birgit Stiller",
-      "institutions": [
-        "Leibniz University Hannover",
-        "Friedrich-Alexander-Universität Erlangen-Nürnberg",
-        "Max Planck Institute for the Science of Light"
-      ],
-      "journal": "Nature Physics",
-      "doi": "10.1038/s41567-026-03458-2",
-      "url": "https://doi.org/10.1038/s41567-026-03458-2",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Brillouin",
-        "Photoacoustic"
-      ],
-      "glyph": "brillouin",
-      "summary": "Strong coupling between two systems allows them to exchange coherent information before the systems decohere. This important regime in light–matter interactions has predominantly been reached in optical resonator configurations. Here we demonstrate strong coupling between optical and acoustic fields within a continuum of modes in a cavity-less configuration after a single pass through an optical waveguide. The underlying physical effect of anti-Stokes Brillouin–Mandelstam scattering in a highly nonlinear fibre at cryogenic temperature allows us to experimentally demonstrate strong coupling in a waveguide scenario. …",
-      "why": "Strong coupling between light and sound after a single pass through a cryogenic highly nonlinear fibre, with no optical resonator, via anti-Stokes Brillouin–Mandelstam scattering; extends a regime usually reserved for cavities to continuous waveguides.",
-      "pick": true,
-      "feature": false,
-      "fig": {
-        "src": "covers/nature-physics.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · Nature Physics"
-      },
       "source": "openalex",
       "reviewed": true,
       "tier": "notable",
@@ -303,6 +244,31 @@
       "tier": "notable"
     },
     {
+      "id": "10-1103-26tr-1jdy-72f9ca",
+      "date": "2026-10-26",
+      "title": "Tip-enhanced vibrational ladder climbing in surface molecular system",
+      "authors": "Tatsuto Mochizuki, Shota Takahashi, Atsunori Sakurai, Toshiki Sugimoto",
+      "institutions": [],
+      "journal": "Physical Review Letters",
+      "doi": "10.1103/26tr-1jdy",
+      "url": "https://doi.org/10.1103/26tr-1jdy",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Ultrafast & SFG"
+      ],
+      "glyph": "sfg",
+      "summary": "Achieving high-lying vibrational states is essential for actively controlling molecular reactions. We demonstrate vibrational ladder climbing of CO adsorbed on Pt(111) within the plasmonic tip-substrate nanogap formed in a scanning tunneling microscope, detected via tip-enhanced sum-frequency generation (TE-SFG). As the infrared pulse energy increases, hot-band peaks appear sequentially up to the 3-4 transition, indicating the stepwise population of higher vibrational states. Numerical analysis using the optical Bloch equations captures the observed energy dependence of these features. …",
+      "why": "Drives CO on Pt(111) up the vibrational ladder to the 3–4 transition inside an STM plasmonic nanogap, read out by tip-enhanced sum-frequency generation; reaching high-lying vibrational states locally is a step toward actively controlling surface reactions at the nanoscale.",
+      "tier": "notable",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "openalex",
+      "reviewed": true,
+      "pick_date": "2026-11-04"
+    },
+    {
       "id": "10-1063-5-0344985-adb234",
       "date": "2026-10-26",
       "title": "A-scan Raman microspectroscopy based on remote focusing with a planar mirror",
@@ -441,158 +407,38 @@
       "tier": "notable"
     },
     {
-      "id": "10-1063-5-0339935-51c75c",
-      "date": "2026-11-02",
-      "title": "Microfluidic Brillouin platform for frequency-resolved mechanics of complex fluids",
-      "authors": "Chingis Kharmyssov, Vsevolod Cheburkanov, Mykyta Kizilov, Brian Sanders, Evren Oktem, Ankit Kumar, Abhishek Jain, Vladislav V. Yakovlev",
+      "id": "10-1038-s41567-026-03458-2-2d7caa",
+      "date": "2026-10-16",
+      "title": "Cavity-less Brillouin strong coupling in a solid-state continuous system",
+      "authors": "Laura Blázquez Martínez, Changlong Zhu, Birgit Stiller",
       "institutions": [
-        "Texas A&M University",
-        "Texas A&M Health Science Center"
+        "Leibniz University Hannover",
+        "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+        "Max Planck Institute for the Science of Light"
       ],
-      "journal": "Applied Physics Letters",
-      "doi": "10.1063/5.0339935",
-      "url": "https://doi.org/10.1063/5.0339935",
-      "oa": false,
-      "license": "",
+      "journal": "Nature Physics",
+      "doi": "10.1038/s41567-026-03458-2",
+      "url": "https://doi.org/10.1038/s41567-026-03458-2",
+      "oa": true,
+      "license": "CC BY",
       "categories": [
-        "Materials",
-        "Brillouin"
+        "Brillouin",
+        "Photoacoustic"
       ],
       "glyph": "brillouin",
-      "summary": "We introduce an integrated microfluidic platform that combines pressure-flow rheology with depth-resolved Brillouin microspectroscopy to investigate complex fluids in extensive frequency ranges. Apparent viscosity is measured via calibrated pressure-flow in a rectangular polydimethylsiloxane microchannel, while GHz-frequency Brillouin spectroscopy probes longitudinal mechanics under identical steady-flow conditions. Using semi-dilute methylcellulose solutions in a cell-culture medium as a model, we reveal mild shear-thinning behavior, whereas the Brillouin frequency shift and linewidth values remain constant throughout the flow rate range, mainly influenced by polymer concentration. …",
-      "why": "Couples pressure-flow rheology with depth-resolved Brillouin microspectroscopy on one microfluidic chip, linking low-frequency viscosity and GHz longitudinal mechanics under identical flow.",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref",
-      "reviewed": true,
-      "pick_date": "2026-11-03",
-      "tier": "notable"
-    },
-    {
-      "id": "10-48550-arxiv-2610-30610-aefb90",
-      "date": "2026-10-22",
-      "title": "Metasurface engineering of transient photothermal responses for vibrational imaging at living interfaces",
-      "authors": "Zhibin Hu, Tianrun Zhang, Jiayu Ding, Pengcheng Fu, Ziyang Huang, Bo Chen, Bangjie Song, Minglu Li, Xinyu Deng, Quan Zhou, Delong Zhang, Siying Peng",
-      "institutions": [
-        "Westlake University",
-        "Zhejiang University",
-        "First Affiliated Hospital Zhejiang University"
-      ],
-      "journal": "arXiv (Cornell University)",
-      "doi": "10.48550/arxiv.2610.30610",
-      "url": "https://doi.org/10.48550/arxiv.2610.30610",
-      "oa": true,
-      "license": "",
-      "categories": [
-        "Cell Biology",
-        "Photothermal IR"
-      ],
-      "glyph": "mip",
-      "summary": "Chemical transformations at biological interfaces are central to cellular function, yet the weak vibrational signals associated with subtle molecular changes limit their spatially resolved observation. Here, we present metasurface-driven mid-infrared photothermal imaging (MetaMIP), which uses resonantly engineered metasurfaces to amplify molecular temperature modulation while retaining rapid thermal recovery. Visible-light detection converts this response into submicrometre maps of individual nanoparticles and biological cells. In living cells, MetaMIP resolves spatially distinct chemical changes during enzymatic lipid conversion across the cell membrane. …",
-      "why": "Resonant metasurfaces amplify the photothermal signal while keeping fast thermal recovery, so weak vibrational changes at the cell membrane can be imaged in living cells during an enzymatic lipid conversion.",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true,
-      "pick_date": "2026-11-03",
-      "tier": "notable"
-    },
-    {
-      "id": "10-1126-sciadv-aeh0887-2c64bb",
-      "date": "2026-10-21",
-      "title": "Anomalous phonon selection rules and Raman optical activity in RuO<sub>2</sub>",
-      "authors": "Cheng D, Wu A, Pan H, Zhu YP, Luo S, Yip KY, Zhang W, Ariando A, Liu C, Wang JS, Li X",
-      "institutions": [
-        "National University of Singapore",
-        "Southern University of Science and Technology"
-      ],
-      "journal": "Science advances",
-      "doi": "10.1126/sciadv.aeh0887",
-      "url": "https://doi.org/10.1126/sciadv.aeh0887",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Environmental",
-        "Spontaneous Raman",
-        "Chiral (ROA / VCD)"
-      ],
-      "glyph": "chiral",
-      "summary": "Breakdown of selection rules and emergence of optical activity in Raman spectroscopy typically signal symmetry-breaking events essential for understanding novel phases of solids. Here, we apply our recently developed rotational anisotropy Raman spectroscopy technique to single-crystal ruthenium dioxide-a compound of recent interest as a candidate workhorse material for altermagnetism yet whose magnetic ground state remains under intense debate. Our data reveal a salient breakdown of selection rules for zone-center phonons, accompanied by clear splitting in the angle-dependent polarimetry plots for the two opposite helicity-nonconserving circularly polarized scattering channels. …",
-      "why": "Rotational-anisotropy Raman finds broken phonon selection rules and Raman optical activity in RuO₂, giving optical evidence in the debate over whether it is an altermagnet.",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true,
-      "pick_date": "2026-11-03",
-      "tier": "notable"
-    },
-    {
-      "id": "10-64898-2026-10-14-759126-c23258",
-      "date": "2026-10-20",
-      "title": "Label-free identification and classification of leukocyte subpopulations in peripheral blood smears by optical photothermal infrared spectroscopy",
-      "authors": "Raghunathan S, Piehler S, Reuter C, Kiehntopf M, Popp J, Krafft C",
-      "institutions": [
-        "Leibniz Institute of Photonic Technology",
-        "Jena University Hospital",
-        "Friedrich Schiller University Jena"
-      ],
-      "journal": "bioRxiv",
-      "doi": "10.64898/2026.10.14.759126",
-      "url": "https://doi.org/10.64898/2026.10.14.759126",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Cell Biology",
-        "IR / NIR",
-        "Photothermal IR"
-      ],
-      "glyph": "mip",
-      "summary": "The differential count of leukocyte subpopulations from peripheral blood smears remains a cornerstone of clinical hematology but relies on staining protocols or flow cytometry, that introduce variability and obscure native biochemistry. This study presents label-free workflows that distinguish leukocytes from erythrocytes in full blood smears and classifies the leukocyte subtypes as granulocytes, lymphocytes and monocytes using their single cell optical photothermal infrared (OPTIR) spectra. The first approach uses discrete wavenumber images using two key bands at 1546 and 2922 cm -1 to screen leukocytes. …",
-      "why": "A label-free differential white-cell count from ordinary blood smears using single-cell optical photothermal IR spectra, without stains or flow cytometry.",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc",
-      "reviewed": true,
-      "pick_date": "2026-11-03",
-      "tier": "notable"
-    },
-    {
-      "id": "10-1039-d6ay01831a-4ec64d",
-      "date": "2026-10-20",
-      "title": "Dual-channel digital surface-enhanced Raman spectroscopy resolves GPC1<sup>+</sup>MUC4<sup>+</sup> single-exosome heterogeneity released by PANC-1 and BxPC-3 pancreatic cancer cells",
-      "authors": "Wang X, Zhang Z, Zheng B",
-      "institutions": [
-        "Tianjin University",
-        "The 4th Center Hospital",
-        "Academy of Medical Engineering and Translational Medicine"
-      ],
-      "journal": "Analytical methods : advancing methods and applications",
-      "doi": "10.1039/d6ay01831a",
-      "url": "https://doi.org/10.1039/d6ay01831a",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Oncology",
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "Extracellular-vesicle populations average molecular signals across particles and can conceal rare, co-expressing phenotypes. We developed a dual-channel digital surface-enhanced Raman spectroscopy platform that partitions individual CD63-captured vesicles and identifies glypican-1 (GPC1) and mucin 4 (MUC4) with 4-mercaptobenzoic acid and 5,5'-dithiobis(2-nitrobenzoic acid) nanotags. The method was evaluated with eight independent batches from each of PANC-1, BxPC-3, HPDE and hTERT-HPNE cell models, seven blinded PANC-1/BxPC-3 mixtures, artificial-serum spikes and defined interferents. …",
-      "why": "Digital SERS that reads single vesicles one by one, revealing rare GPC1+/MUC4+ co-expressing exosomes from pancreatic cancer cells that bulk measurements average away.",
-      "pick": false,
+      "summary": "Strong coupling between two systems allows them to exchange coherent information before the systems decohere. This important regime in light–matter interactions has predominantly been reached in optical resonator configurations. Here we demonstrate strong coupling between optical and acoustic fields within a continuum of modes in a cavity-less configuration after a single pass through an optical waveguide. The underlying physical effect of anti-Stokes Brillouin–Mandelstam scattering in a highly nonlinear fibre at cryogenic temperature allows us to experimentally demonstrate strong coupling in a waveguide scenario. …",
+      "why": "Strong coupling between light and sound after a single pass through a cryogenic highly nonlinear fibre, with no optical resonator, via anti-Stokes Brillouin–Mandelstam scattering; extends a regime usually reserved for cavities to continuous waveguides.",
+      "pick": true,
       "feature": false,
       "fig": {
-        "src": "covers/analytical-methods-advancing-methods-and-applications.jpg",
+        "src": "covers/nature-physics.jpg",
         "kind": "cover",
-        "credit": "Journal cover · Analytical methods : advancing methods and applications"
+        "credit": "Journal cover · Nature Physics"
       },
-      "source": "europepmc",
+      "source": "openalex",
       "reviewed": true,
-      "pick_date": "2026-11-03",
-      "tier": "notable"
+      "tier": "notable",
+      "pick_date": "2026-11-04"
     },
     {
       "id": "10-1016-j-icarus-2026-117367-20ece7",
@@ -713,6 +559,29 @@
       "reviewed": true
     },
     {
+      "id": "10-1016-j-wasman-2026-115988-fb2600",
+      "date": "2027-01-01",
+      "title": "Deep learning-based hyperspectral imaging for the identification and quantification of multi-component polypropylene blends",
+      "authors": "Edward Ren Kai Neo, Sophia Hui Yu Lee, Farain Efran Lau, Felicia Mei Ling Tan, Xinying Deng, Shuyun Chng",
+      "institutions": [],
+      "journal": "Waste Management",
+      "doi": "10.1016/j.wasman.2026.115988",
+      "url": "https://doi.org/10.1016/j.wasman.2026.115988",
+      "oa": true,
+      "license": "CC BY-NC-ND 4.0",
+      "categories": [
+        "Spectral Imaging",
+        "Data Analysis & AI"
+      ],
+      "glyph": "hsi",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
       "id": "10-1016-j-clman-2026-100024-22ad1a",
       "date": "2026-12-01",
       "title": "Real-time mid-infrared characterization of post-consumer plastics for in-line quality control using physics-informed deep learning",
@@ -734,6 +603,130 @@
       "fig": null,
       "source": "crossref",
       "reviewed": true
+    },
+    {
+      "id": "10-1021-acs-jpclett-6c02827-3483e1",
+      "date": "2026-11-07",
+      "title": "Distinct Plasmonic and Electronically Mediated Pathways for Vibrational Excitation",
+      "authors": "Bing Gao, Jameel Damoah, Wassie Mersha Takele, Terefe G. Habteyes",
+      "institutions": [
+        "University of New Mexico"
+      ],
+      "journal": "The Journal of Physical Chemistry Letters",
+      "doi": "10.1021/acs.jpclett.6c02827",
+      "url": "https://doi.org/10.1021/acs.jpclett.6c02827",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Understanding how plasmonic energy is transferred into molecular vibrations at metal–molecule interfaces is essential for controlling plasmon-driven chemistry and surface-enhanced spectroscopies. However, distinguishing vibrational excitation mediated by electronic transitions and vibronic coupling (VC) from plasmon-enhanced Raman vibrational pumping (PERVP) remains challenging because both mechanisms generate nonequilibrium vibrational populations. Here, we combine cryogenic surface-enhanced Raman scattering with controlled surface chemistry to investigate these competing excitation pathways using thionine adsorbed on gold nanostructures. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1038-s41598-026-78258-y-2684b6",
+      "date": "2026-11-07",
+      "title": "High-throughput mineralogical characterization using automated in-situ microscopy and Raman spectroscopy",
+      "authors": "Luca Stigliano, Julie Cosmidis",
+      "institutions": [],
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-026-78258-y",
+      "url": "https://doi.org/10.1038/s41598-026-78258-y",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Spontaneous Raman",
+        "Data Analysis & AI"
+      ],
+      "glyph": "raman",
+      "summary": "Mineral precipitation in natural and engineered systems is controlled by complex interactions among physicochemical variables and organic molecules, making large-scale systematic exploration of mineralization pathways challenging. Here we present a high-throughput experimental and analytical workflow that enables rapid, particle-resolved characterization of mineral formation. The platform integrates miniaturized mineralization experiments in multi-well plates with automated optical microscopy, particle detection, morphometric analysis, machine-learning classification, and targeted Raman spectromicroscopy. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-22159-ajpcr-2026v19i11-60970-55c384",
+      "date": "2026-11-07",
+      "title": "SOLVENT POLARITY EFFECTS ON PHENOLIC-FLAVONOID COMPOSITION, IN VITRO BIOACTIVITIES, AND FTIR-BASED CHEMOMETRIC CLASSIFICATION OF SOLANUM MAURITIANUM SCOP. LEAF EXTRACTS",
+      "authors": "MASFRIA, HAFID SYAHPUTRA, FEBY AISHA A HARAHAP, STEPHANIE",
+      "institutions": [],
+      "journal": "Asian Journal of Pharmaceutical and Clinical Research",
+      "doi": "10.22159/ajpcr.2026v19i11.60970",
+      "url": "https://doi.org/10.22159/ajpcr.2026v19i11.60970",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Food & Agriculture",
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "Objective: This study aimed to compare the total phenolic content (TPC) and total flavonoid content (TFC) of Solanum mauritianum Scop. leaf extracts obtained using solvents of different polarities (n-hexane, chloroform, ethyl acetate, ethanol, and water), evaluate their in vitro antioxidant and anti-inflammatory activities, and classify the extracts using FTIR-based chemometric analysis. Methods: The extracts were prepared by successive maceration. TPC was determined using the Folin–Ciocalteu method, and TFC was determined using the aluminum chloride colorimetric method with sodium acetate reagents. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acsanm-6c03854-719fb1",
+      "date": "2026-11-07",
+      "title": "Tunable Palladium Nanopores for Broadband Optical Absorber Coatings",
+      "authors": "M. E. Karahadian, C. P. Johnston, C. F. Shelden, D. Kopper, M. S. Leite, J. N. Munday",
+      "institutions": [
+        "University of California Davis"
+      ],
+      "journal": "ACS Applied Nano Materials",
+      "doi": "10.1021/acsanm.6c03854",
+      "url": "https://doi.org/10.1021/acsanm.6c03854",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "IR / NIR",
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "Nanoporous palladium (np-Pd) is of interest for broadband optical absorber coatings, photothermal conversion, and plasmon-assisted catalysis because it combines metallic conductivity, high surface area, and hydrogen uptake capability within a single material system. However, to achieve high optical absorptivity, other plasmonically active materials are often employed to attain the necessary optical absorption. Here we demonstrate a simple, scalable route to tunable np-Pd thin films formed by chemical dealloying of co-sputtered Pd−Cu alloys. Composition- and angle-resolved absorption reveal broadband absorptance exceeding 85% between 450 nm and 800 nm. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acsnano-6c16809-623b1d",
+      "date": "2026-11-07",
+      "title": "Quantum Dot Colloidosomes as Triggerable Microlasers",
+      "authors": "Cristian Gonzalez, Saranya Subramanian, Marco Reale, Giuseppe Soligno, Ilia Geints, Siyuan Yin, Claire Y. Kang, Ricky Ronquillo, Gary Chen, Marco Cannas, Cherie R. Kagan, Alice Sciortino, Michael Engel, Fabrizio Messina, Christopher B. Murray, Emanuele Marino",
+      "institutions": [
+        "University of Pennsylvania",
+        "University of Palermo",
+        "INSTM − National Interuniversity Consortium of Materials Science and Technology"
+      ],
+      "journal": "ACS Nano",
+      "doi": "10.1021/acsnano.6c16809",
+      "url": "https://doi.org/10.1021/acsnano.6c16809",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Food & Agriculture",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Quantum dot (QD) supraparticle lasers are promising platforms for microscale light sources and photonic labeling, yet their optical properties are set during assembly. Here, we introduce QD colloidosomes, liquid-core/solid-shell supraparticles that combine whispering-gallery-mode (WGM) optical feedback with stimulus-triggered structural collapse. Intact QD colloidosomes exhibit narrow, cavity-defined emission consistent with WGM-assisted lasing from 4.2 mJ/cm2, with line widths of 2.2–3.7 nm, demonstrating light confinement without a solid core. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
     },
     {
       "id": "10-1126-sciadv-aee7712-0959ce",
@@ -1140,6 +1133,297 @@
       "fig": null,
       "source": "crossref",
       "reviewed": true
+    },
+    {
+      "id": "10-64898-2026-11-04-764180-ec0b9a",
+      "date": "2026-11-06",
+      "title": "Temperature-dependent Fano resonance in Microtubules and Tubulin investigated with Spontaneous Raman Spectroscopy",
+      "authors": "Mario D’Acunto",
+      "institutions": [
+        "National Research Council"
+      ],
+      "journal": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "doi": "10.64898/2026.11.04.764180",
+      "url": "https://doi.org/10.64898/2026.11.04.764180",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Cell Biology",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Microtubules are self-assembled biological hollow nanotubes composed by protein tubulin. They are essential for many biological functions, including cell motility, cell division, and act as intracellular track for organelle transport. In turn, through dynamic assembly and disassembly, they form spindle fibers for chromosome segregation during mitosis and meiosis. In this paper, we have measured the Raman spectra of microtubules and their constituent protein tubulin in dry powder form for a range of temperatures, from nitrogen liquid T=77 K up to room and physiological temperature T=310 K, to determine if molecular bond vibrations present potential Fano resonance asymmetry. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1080-1040841x-2026-2756947-2be72d",
+      "date": "2026-11-06",
+      "title": "Imaging biofilms in three dimensions: modalities, quantitative readouts, and the path to four-dimensional measurement",
+      "authors": "Seongsoo Lee, YongKeun Park",
+      "institutions": [
+        "Korea Basic Science Institute",
+        "Hanyang University",
+        "Chung-Ang University"
+      ],
+      "journal": "Critical Reviews in Microbiology",
+      "doi": "10.1080/1040841x.2026.2756947",
+      "url": "https://doi.org/10.1080/1040841x.2026.2756947",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Bacteriology",
+        "Brillouin",
+        "Reviews"
+      ],
+      "glyph": "brillouin",
+      "summary": "Biofilms are spatially structured microbial communities whose architecture, chemistry, mechanics, and cellular states evolve over time. Bulk assays and two-dimensional projections remain useful but cannot resolve how these properties vary with depth or during growth, treatment, dispersal, and regrowth. Imaging offers complementary routes to three-dimensional measurement: fluorescence microscopy provides molecular, taxonomic, and functional specificity; optical coherence tomography resolves mesoscale architecture and dynamics; quantitative phase imaging and holotomography report refractive index and biomass-related changes; Raman methods provide chemical and metabolic contrast; and Brillouin …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1021-acs-nanolett-6c02622-a60bc5",
+      "date": "2026-11-06",
+      "title": "Extreme Light Confinement Mediated by the Transverse Kerker Effect",
+      "authors": "Sergei Gladyshev, Connor Heimig, Dmytro Gryb, Tao Jiang, Angana Bhattacharya, Sebastian A. Schulz, Peter Banzer, Andreas Tittl, Adrià Canós Valero, Thomas Weiss",
+      "institutions": [
+        "University of Graz",
+        "Nawi Graz",
+        "Ludwig-Maximilians-Universität München"
+      ],
+      "journal": "Nano Letters",
+      "doi": "10.1021/acs.nanolett.6c02622",
+      "url": "https://doi.org/10.1021/acs.nanolett.6c02622",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Brillouin"
+      ],
+      "glyph": "brillouin",
+      "summary": "Dielectric nanoparticles can be engineered to scatter light predominantly in the transverse direction, perpendicular to the incident plane wave’s propagation direction, a phenomenon known as the transverse Kerker effect. Although complete cancellation of forward scattering from a single object is forbidden by the optical theorem, we show that a single photonic mode can provide an ideal transverse Kerker effect. When combining several nanoparticles to form a metasurface, the mode evolves into an accidental bound state in the continuum. This enables polarization-independent quasi bound states in the continuum whose quality factors are tunable without symmetry breaking. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-5194-essd-2026-762-c58757",
+      "date": "2026-11-06",
+      "title": "Long-term time series of ground-based NDACC FTIR trace gases at Paris between 2011 and 2022",
+      "authors": "Hao Fu, Pascal Jeseck, Christof Janssen, Corinne Boursier, C. Rouillé, Patrick Marie-Jeanne, Julien Rozé, Tamer Abou Karroum, Yao Té",
+      "institutions": [
+        "Centre National de la Recherche Scientifique",
+        "Sorbonne Université",
+        "Institut Pierre-Simon Laplace"
+      ],
+      "journal": "Earth System Science Data Discussions",
+      "doi": "10.5194/essd-2026-762",
+      "url": "https://doi.org/10.5194/essd-2026-762",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "IR / NIR",
+        "General Technology"
+      ],
+      "glyph": "ir",
+      "summary": "We present long‐term atmospheric trace gas measurements at Paris (48°50′04″ N, 2°21′02″ E; 60 m a.s.l.), using ground-based remote sensing technique and covering the period 2011–2022. The Fourier Transform Spectrometer of the Paris station (FTS-Paris) has been operated regularly since 2011 and has been part of the Total Carbon Column Observing Network (TCCON) since 2014. It also recently joined the Network for the Detection of Atmospheric Composition Change – InfRared Working Group (NDACC-IRWG). Here we describe the instrument setup, the automated operation mode, and the SFIT4 retrieval strategy for ten Paris NDACC-IRWG products: CH4, N2O, CO, C2H6, H2CO, NO2, OCS, HCl, HF and HCN. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1088-1361-6595-aebef7-bec09c",
+      "date": "2026-11-06",
+      "title": "CW laser absorption spectroscopy for the diagnostic of I 2 molecules and I atoms in iodine plasmas",
+      "authors": "Romain Pioch, Tom Beaumont, Benjamin Esteves, Cyril Drag",
+      "institutions": [
+        "Laboratoire de Physique des Plasmas"
+      ],
+      "journal": "Plasma Sources Science and Technology",
+      "doi": "10.1088/1361-6595/aebef7",
+      "url": "https://doi.org/10.1088/1361-6595/aebef7",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "This paper details the implementation of optical diagnostics in a simplified system constituted of a radio frequency capacitive plasma discharge in a cylindrical glass cell with fixed initial density to probe the ground state of the neutral species of iodine plasmas: the molecules I2 and the atoms I. Three distinct diagnostics are implemented. First, the temperature and density of the iodine atoms is measured via laser absorption by a hyperfine component of the forbidden transition between the two fine-structure levels 2Po3/2 and 2Po1/2. Second, saturated absorption spectroscopy is implemented to measure the hyperfine structure of the absorption line P(28)\\,42-0 of the iodine molecule. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/plasma-sources-science-and-technology.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Plasma Sources Science and Technology"
+      },
+      "source": "openalex"
+    },
+    {
+      "id": "10-1002-eco-70290-e766f6",
+      "date": "2026-11-06",
+      "title": "Using Small Unoccupied Aerial System (sUAS) Multispectral Imagery to Compare Hydrodynamics Around Different Aged Patches of Marsh Vegetation",
+      "authors": "Sarah M. Brannum, Kory Konsoer, Matthew Hiatt",
+      "institutions": [
+        "Louisiana State University"
+      ],
+      "journal": "Ecohydrology",
+      "doi": "10.1002/eco.70290",
+      "url": "https://doi.org/10.1002/eco.70290",
+      "oa": true,
+      "license": "CC BY-NC",
+      "categories": [
+        "Food & Agriculture",
+        "Spectral Imaging",
+        "General Technology"
+      ],
+      "glyph": "hsi",
+      "summary": "Wetland vegetation influences water and sediment transport by altering flow resistance. Vegetation presence, stem density, leaf and stem morphology, and flexibility, among other characteristics, control the degree to which vegetation impacts transport patterns. While well‐predicted by laboratory and numerical modelling studies, in‐situ observations of flow interaction with wetland vegetation remain scarce largely due to instrument limitations. Using a small Unoccupied Aerial System (sUAS) equipped with a multi‐spectral camera, we performed dye surveys and tracked the intensity of dye propagating through and around patches of Phragmites australis in the lower Mississippi River Delta (MRD). …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1002-jrs-70232-cda3ab",
+      "date": "2026-11-06",
+      "title": "Towards Raman Spectroscopic Characterization of Tardigrade Molecular Composition",
+      "authors": "A. N. Omelchenko, K. A. Okotrub, N. V. Surovtsev",
+      "institutions": [
+        "Institute of Automation and Electrometry"
+      ],
+      "journal": "Journal of Raman Spectroscopy",
+      "doi": "10.1002/jrs.70232",
+      "url": "https://doi.org/10.1002/jrs.70232",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Tardigrades are microscopic animals known for their sustainability to various stressful conditions. The mechanisms underlying tardigrades adaptation are of great interest, but in vivo study of their internal composition is challenging. Raman spectroscopy is an attractive technique for such studies; however, no successful measurements of nonresonant Raman spectra from major organic molecules were reported for tardigrades. Here, we demonstrate that low‐fluorescence Raman spectra with a high signal‐to‐noise ratio can be measured in living tardigrades immobilized by tun formation. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1002-jbio-70386-914bc7",
+      "date": "2026-11-06",
+      "title": "Molecular Profiling of Pediatric Helicobacter pylori Gastritis Using R aman Spectroscopy: Spectral Patterns Corresponding to Local Biochemical Changes",
+      "authors": "Jiří Bufka, Lenka Vaňková, Jan Schwarz, Magdalena Daumová, Petr Bouř, Josef Sýkora",
+      "institutions": [
+        "Faculty of Medicine in Pilsen Charles University in Prague Pilsen Czech Republic",
+        "Institute of Organic Chemistry and Biochemistry",
+        "Faculty of Medicine in Pilsen Charles University Pilsen Czech Republic"
+      ],
+      "journal": "Journal of Biophotonics",
+      "doi": "10.1002/jbio.70386",
+      "url": "https://doi.org/10.1002/jbio.70386",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Helicobacter pylori infection is a major cause of chronic gastritis; however, biomolecular alterations in pediatric gastric mucosa remain poorly characterized. Fresh antral and corpus biopsies from 12 infected children and 20 controls yield 165 Raman spectra at 532 nm. Each baseline‐corrected spectrum undergoes vector normalization before aggregation within site and child. Patient‐level comparisons identify higher relative band areas at 746, 1126, 1300, 1337, 1446, 1583 and 1657 cm −1 and lower areas at 1002, 1154, 1515 and 2936 cm −1 (all false‐discovery‐rate‐adjusted p < 0.05). Statistical significance at 1126, 1583 and 1657 cm −1 depends on the normalization range. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acsanm-6c04099-f73142",
+      "date": "2026-11-06",
+      "title": "Melanin-Mediated Growth of Ag Nanostructures for Ultrasensitive SERS of l -Dopa",
+      "authors": "Michela Ottolini, Pacifico De Matteo, Mariafrancesca Coccimiglio, Simona Bettini, Gabriele Giancane, Ludovico Valli",
+      "institutions": [
+        "University of Salento",
+        "National Interuniversity Consortium of Materials Science and Technology (INSTM)"
+      ],
+      "journal": "ACS Applied Nano Materials",
+      "doi": "10.1021/acsanm.6c04099",
+      "url": "https://doi.org/10.1021/acsanm.6c04099",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Art & Heritage",
+        "Environmental",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Hybrid interfaces based on melanin films and electrochemically deposited silver nanoparticles (Mel@Ag) are presented as effective platforms for ultrasensitive surface-enhanced Raman scattering (SERS). Natural melanin extracted from sepia pigment was processed into homogeneous thin films on indium tin oxide (ITO) via a controlled dip-coating approach, providing a chemically stable and redox-active interface. The presence of the melanin layer promotes an anodic shift in the Ag+ reduction potential and enables controlled nucleation and growth of silver nanostructures. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acs-nanolett-6c04123-bea47e",
+      "date": "2026-11-06",
+      "title": "High-Q/V Plasmonic Metasurfaces Enable Ultrafast Probing of Long-Lived Carrier Relaxation in Potassium",
+      "authors": "Qile Wu, Peng Tan, Zhaoqi Yuan, Weixi Lu, Shizhuang Wang, Yanan Dai, Jia Zhu, Shining Zhu, Lin Zhou",
+      "institutions": [
+        "Nanjing University",
+        "Southern University of Science and Technology",
+        "Quantum Science Center of Guangdong−Hong Kong−Macao Greater Bay Area (Guangdong)"
+      ],
+      "journal": "Nano Letters",
+      "doi": "10.1021/acs.nanolett.6c04123",
+      "url": "https://doi.org/10.1021/acs.nanolett.6c04123",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Environmental"
+      ],
+      "glyph": "raman",
+      "summary": "Alkali metals are promising materials for low-loss plasmonics, because of their intrinsically weak optical damping and favorable free-electron response. However, their high chemical reactivity and weak optical absorption make their ultrafast carrier dynamics difficult to access conventionally. Here, we investigate the long-lived carrier relaxation in potassium using a mode-engineered concave metasurface as a resonantly enhanced optical readout. A strongly confined hybrid mode with a high quality-factor-to-mode-volume ratio (Q/V) greatly enhances the sensitivity to pump-induced dielectric perturbations. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1117-1-jrs-20-046507-9b57fd",
+      "date": "2026-11-06",
+      "title": "Physics-guided spatial-spectral Mamba network for hyperspectral nonlinear blind unmixing",
+      "authors": "Kuobing Hu, Huadong Yang, Nan Xu",
+      "institutions": [
+        "Shenyang Ligong University",
+        "Shenyang Jianzhu University"
+      ],
+      "journal": "Journal of Applied Remote Sensing",
+      "doi": "10.1117/1.jrs.20.046507",
+      "url": "https://doi.org/10.1117/1.jrs.20.046507",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "Hyperspectral blind unmixing aims to recover endmember spectra and abundance fractions from mixed pixels. In complex real scenes, nonlinear interactions, illumination variations, and other unmodeled effects make the linear mixing assumption insufficient. Existing deep unmixing methods still struggle to jointly model long-range spatial-spectral dependencies, preserve physical interpretability in reconstruction, and provide stable endmember initialization. To address these issues, we propose a physics-guided spatial-spectral Mamba network for hyperspectral nonlinear blind unmixing. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
     },
     {
       "id": "10-1021-acsomega-6c08147-f692d5",
@@ -1736,6 +2020,132 @@
       "tier": "notable"
     },
     {
+      "id": "10-26434-chemrxiv-15011768-v1-1aa51c",
+      "date": "2026-11-05",
+      "title": "Sharp Bounds for Raman Band-Area Ratios",
+      "authors": "Seyedeh Rahemeh Amiri",
+      "institutions": [
+        "University at Albany, State University of New York"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15011768/v1",
+      "url": "https://doi.org/10.26434/chemrxiv.15011768/v1",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "Nonnegative signal and background components, bounded observational error, constraints on background smoothness and band-free anchor measurements define a set of admissible decompositions. Linear-fractional optimization gives the exact minimum and maximum band ratios over this set, while a feasibility problem tests consistency of the imposed constraints. A closed-form bound relates remaining area uncertainty to the anchor spacing, background curvature, noise and band profile. In a study of 320 simulated spectra, the computed intervals contained the known ratios whenever the imposed assumptions were satisfied. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-26434-chemrxiv-15011775-v1-48444d",
+      "date": "2026-11-05",
+      "title": "Accurate and Rapid Vibrational Spectra of Molecular Crystals from Machine-Learned Interatomic Potentials",
+      "authors": "Maria Petrov, Johanna Kölbel, W. Stoll, Michael T. Ruggiero",
+      "institutions": [
+        "University of Rochester"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15011775/v1",
+      "url": "https://doi.org/10.26434/chemrxiv.15011775/v1",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "Currently, vibrational spectra of molecular crystals often require computational methods to aid in band assignment, especially in the low-frequency region where no functional group specific transitions exist. DFT methods are the gold-standard for computational spectroscopy, but their high computational cost limits simulations to systems characterized by small unit cells. Universal machine-learned interatomic potentials (MLIPs) offer a much cheaper alternative, but their reliability for phonons in molecular crystals has been little explored. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-48550-arxiv-2611-07511-35614b",
+      "date": "2026-11-05",
+      "title": "Chiral-vibration-induced magnetism and circular dichroism in organic molecules",
+      "authors": "Han Xu, Cheng Xu, Zi-Yang Xu, Xiao‐Long Yang, Hang Xie",
+      "institutions": [],
+      "journal": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2611.07511",
+      "url": "https://doi.org/10.48550/arxiv.2611.07511",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Chiral (ROA / VCD)"
+      ],
+      "glyph": "chiral",
+      "summary": "We investigate the vibrational inverse Faraday effect and transient vibrational circular dichroism in benzene, coronene, and methane at the single-molecule level. We combine density-functional tight-binding calculations with damped normal-mode dynamics. Circularly polarized light excites suitable degenerate infrared-active modes, driving chiral nuclear motion that produces effective magnetic moments. Reversing the pump helicity reverses the vibrational chirality and the sign of the transient dichroic response. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1002-pro-70867-424046",
+      "date": "2026-11-05",
+      "title": "Lipid membrane composition modulates the structural evolution of early‐stage human islet amyloid polypeptide amyloids",
+      "authors": "Daniel Warren, Jadon Sitton, Joshua T. Skrehot, Dmitry Kurouski",
+      "institutions": [
+        "Texas A&M University"
+      ],
+      "journal": "Protein Science",
+      "doi": "10.1002/pro.70867",
+      "url": "https://doi.org/10.1002/pro.70867",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Environmental",
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "Progressive β cell death resulting from the aggregation of human islet amyloid polypeptide (hIAPP) in the pancreas is a molecular driver of type 2 diabetes (T2D). Recent studies from our group have shown that hIAPP forms two distinct amyloid oligomers: on-path donut oligomers (DOs) and off-path round oligomers (ROs). Previous studies have also shown lipids, one of the most abundant classes of biomolecules within cells, alter the kinetics of hIAPP amyloid formation and template structurally distinct hIAPP fibrils. However, the influence of the specific lipid environment on the evolution of early-stage hIAPP amyloids remains unknown. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1088-1361-6463-aebe3a-77d270",
+      "date": "2026-11-05",
+      "title": "Dynamically reconfigurable dual-band circular dichroism in a terahertz hybrid dielectric-graphene metasurface",
+      "authors": "Yawei Dou, Yunping Qi, Jiayong Hu, Xiangxian Wang",
+      "institutions": [
+        "Northwest Normal University",
+        "Lanzhou University of Technology"
+      ],
+      "journal": "Journal of Physics D: Applied Physics",
+      "doi": "10.1088/1361-6463/aebe3a",
+      "url": "https://doi.org/10.1088/1361-6463/aebe3a",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "Circular dichroism (CD) is a crucial physical quantity characterizing the differential response of chiral systems to circularly polarized light, holding broad application value in polarization control, chiral recognition, and high-sensitivity sensing. However, existing metasurface devices predominantly operate in single-band or static regimes, failing to meet the demands for multiband coordinated control and dynamic tunability. To overcome these limitations, we numerically investigate a dynamic metasurface based on a polymethylpentene (TPX)–LiTaO3–graphene hybrid platform. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/journal-of-physics-d-applied-physics.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Journal of Physics D: Applied Physics"
+      },
+      "source": "crossref"
+    },
+    {
       "id": "10-1021-acsami-6c19050-426c3d",
       "date": "2026-11-04",
       "title": "Shape-Memory Photonic–Plasmonic Crystals for Programmable Surface-Enhanced Raman Scattering",
@@ -2174,6 +2584,32 @@
       "source": "openalex",
       "reviewed": true,
       "tier": "notable"
+    },
+    {
+      "id": "10-26434-chemrxiv-15011658-v1-3e65e5",
+      "date": "2026-11-04",
+      "title": "Uncovering Heterogeneous Energetic Trajectories in NiFe Oxygen Evolution Electrocatalysis through Integrated Raman, Electrochemical and Microkinetic Analysis",
+      "authors": "Krishna Halder, Kenko Tsuchimoto, Masaki Itatani, Tomohiro Fukushima, Kei Murakoshi",
+      "institutions": [
+        "Hokkaido University",
+        "Japan Science and Technology Agency"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15011658/v1",
+      "url": "https://doi.org/10.26434/chemrxiv.15011658/v1",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Fe incorporation strongly modifies the activity of Ni-based electrocatalysts, but how heterogeneous surface states contribute to this behavior remain unclear due to improper understanding about intermediate evolution. Here, we investigate whether correlations between spatially resolved spectroscopic features and electrochemical responses can reveal distinct energetic and kinetic characteristics of NiFe electrodes. We combine in-situ Raman mapping, electrochemistry and microkinetic modeling to study three NiFe electrodes prepared under different Fe-deposition conditions. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
     },
     {
       "id": "https-europepmc-org-article-pmc-pmc13724524-ee5d67",
@@ -2951,6 +3387,35 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true,
+      "tier": "notable"
+    },
+    {
+      "id": "10-1063-5-0339935-51c75c",
+      "date": "2026-11-02",
+      "title": "Microfluidic Brillouin platform for frequency-resolved mechanics of complex fluids",
+      "authors": "Chingis Kharmyssov, Vsevolod Cheburkanov, Mykyta Kizilov, Brian Sanders, Evren Oktem, Ankit Kumar, Abhishek Jain, Vladislav V. Yakovlev",
+      "institutions": [
+        "Texas A&M University",
+        "Texas A&M Health Science Center"
+      ],
+      "journal": "Applied Physics Letters",
+      "doi": "10.1063/5.0339935",
+      "url": "https://doi.org/10.1063/5.0339935",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "Brillouin"
+      ],
+      "glyph": "brillouin",
+      "summary": "We introduce an integrated microfluidic platform that combines pressure-flow rheology with depth-resolved Brillouin microspectroscopy to investigate complex fluids in extensive frequency ranges. Apparent viscosity is measured via calibrated pressure-flow in a rectangular polydimethylsiloxane microchannel, while GHz-frequency Brillouin spectroscopy probes longitudinal mechanics under identical steady-flow conditions. Using semi-dilute methylcellulose solutions in a cell-culture medium as a model, we reveal mild shear-thinning behavior, whereas the Brillouin frequency shift and linewidth values remain constant throughout the flow rate range, mainly influenced by polymer concentration. …",
+      "why": "Couples pressure-flow rheology with depth-resolved Brillouin microspectroscopy on one microfluidic chip, linking low-frequency viscosity and GHz longitudinal mechanics under identical flow.",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "pick_date": "2026-11-03",
       "tier": "notable"
     },
     {
@@ -5103,6 +5568,223 @@
       "source": "crossref",
       "reviewed": true,
       "tier": "notable"
+    },
+    {
+      "id": "10-1002-adpr-202500132-da122f",
+      "date": "2026-11-01",
+      "title": "Optical‐Field Engineering and Instrumentation in Brillouin Microscopy",
+      "authors": "Kangwen Tong, Feihong Lin, Xiaoyu Yang, Emiliano Descrovi, Xu Liu, Qing Yang",
+      "institutions": [
+        "Zhejiang University",
+        "University of Cambridge",
+        "Politecnico di Torino"
+      ],
+      "journal": "Advanced Photonics Research",
+      "doi": "10.1002/adpr.202500132",
+      "url": "https://doi.org/10.1002/adpr.202500132",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Brillouin",
+        "General Technology"
+      ],
+      "glyph": "brillouin",
+      "summary": "Brillouin microscopy provides label‐free optical contrast related to the high‐frequency longitudinal mechanical response of materials, yet weak Brillouin signals and strong elastic background continue to limit measurement speed and precision, particularly under constrained optical exposure. Recent advances in optical instrumentation have improved the generation, discrimination, and detection of Brillouin signals. This review discusses these developments, focusing on the relationships among spectral precision, acquisition throughput, background rejection, and optical dose, as well as how different instrument architectures address specific measurement requirements and sample conditions. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-infrared-2026-106997-ee535a",
+      "date": "2026-11-01",
+      "title": "Molecular structures of neogene pale and dark lithotypes: new insights from quantitative analysis of Fourier-transform infrared spectroscopy and X-ray photoelectron spectroscopy",
+      "authors": "刘邦俊, Xinyang Cao, Jingzhi Li, Yumeng Sun, Yueting Liu, Yue Yuan, Wenmu Guo, Shiming Liu, 赵存良",
+      "institutions": [],
+      "journal": "Infrared Physics & Technology",
+      "doi": "10.1016/j.infrared.2026.106997",
+      "url": "https://doi.org/10.1016/j.infrared.2026.106997",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1111-ejss-70452-e4319f",
+      "date": "2026-11-01",
+      "title": "Unlock Soil Spectra: Moisture Impact and Correction of Visible, Near and Mid Infrared Spectra From Airdry to Field‐Wet",
+      "authors": "CLEDIANE ALENCAR DA SILVA, Nuwan Kumara Wijewardane, Yasas Gamagedara, Michael S. Cox, Xin Zhang",
+      "institutions": [
+        "Mississippi State University",
+        "University of Georgia"
+      ],
+      "journal": "European Journal of Soil Science",
+      "doi": "10.1111/ejss.70452",
+      "url": "https://doi.org/10.1111/ejss.70452",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "Moisture is the most significant limiting factor for the field application of soil spectroscopy. Understanding this impact on spectra qualitatively and quantitatively will help identify ways to eliminate it, enabling cost‐effective use of the technology for field‐level applications. Considering this, two objectives were identified and tested: (1) to evaluate how the moisture systematically impacts visible/near‐infrared (VisNIR) and mid‐infrared (MIR) spectra at different moisture levels, (2) to compare three different calibration transfer techniques to enable the transferring of field level scans to airdry condition. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-apcato-2026-207126-a472d0",
+      "date": "2026-11-01",
+      "title": "Completing the vibrational spectroscopy duo: Combining IR and Raman spectroscopy to monitor species formation in the ligand-modified rhodium-based catalysis supported by DFT calculations",
+      "authors": "Александр Соболев, Andreas Berger, Martin Gerlach, Christof Hamel",
+      "institutions": [],
+      "journal": "Applied Catalysis O Open",
+      "doi": "10.1016/j.apcato.2026.207126",
+      "url": "https://doi.org/10.1016/j.apcato.2026.207126",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "Materials",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-compag-2026-112656-a9f7f4",
+      "date": "2026-11-01",
+      "title": "Development of a novel snapshot hyperspectral imager for proximal monitoring of solar-induced chlorophyll fluorescence",
+      "authors": "Yongqing Fang, Zhengang Li, Jiaxiang Liu, Xin Yu, Haichun Xu, Junfang Miao, 王灿龙 Wang Canlong, Ying Pan, Yonghua Fang",
+      "institutions": [],
+      "journal": "Computers and Electronics in Agriculture",
+      "doi": "10.1016/j.compag.2026.112656",
+      "url": "https://doi.org/10.1016/j.compag.2026.112656",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1002-jbio-70384-e6e65c",
+      "date": "2026-11-01",
+      "title": "Deep Learning‐Based Analysis of Microscopic Hyperspectral Images of HER2 ‐Stained Breast Cancer Sections for Molecular Status Prediction",
+      "authors": "Lin Yan, Yan Wan, Haonan Liu, Wenlou Liu, Yang Zhao, Hongmei Wang, Juanjuan Tang, Xuanyu Chen, Zhengxiang Han, Xiaobing Qin",
+      "institutions": [
+        "Xuzhou Medical College",
+        "Affiliated Hospital of Xuzhou Medical College"
+      ],
+      "journal": "Journal of Biophotonics",
+      "doi": "10.1002/jbio.70384",
+      "url": "https://doi.org/10.1002/jbio.70384",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Dermatology",
+        "Oncology",
+        "Spectral Imaging",
+        "Data Analysis & AI"
+      ],
+      "glyph": "hsi",
+      "summary": "HER2 assessment in breast cancer relies on immunohistochemistry (IHC) with reflex in situ hybridization for equivocal cases, while conventional bright‐field imaging provides limited quantitative optical information. We investigated microscopic hyperspectral imaging (HSI) of HER2‐stained sections for slide‐level molecular status prediction. HSI data from 43 cases (21 HER2‐positive, 22 HER2‐negative; 400–1000 nm, 128 bands) were acquired between January 2024 and August 2025. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-saa-2026-129085-3f8d5b",
+      "date": "2026-11-01",
+      "title": "Plasmon-enhanced fluorescence and FTIR spectroscopy of saliva with silver nanoparticles for lung cancer detection",
+      "authors": "Gulnara Kelgali, Assylbek Zeinidenov, Aitbek Aimukhanov, Alexander Alekseev, Aibibi Mendibayeva, Assel Zhumina, Kairat Shakeyev, Uldana Sagyngali, Dmitriy Shestakov",
+      "institutions": [],
+      "journal": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "doi": "10.1016/j.saa.2026.129085",
+      "url": "https://doi.org/10.1016/j.saa.2026.129085",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-saa-2026-129104-59da0a",
+      "date": "2026-11-01",
+      "title": "Broadband terahertz metasurface fingerprint sensor: enhanced detection of fingerprint spectra from single substances to mixtures",
+      "authors": "Mingyao Gao, Hongshun Sun, Shuai Wang, Yunhao Cao, Yusa Chen, Dingbang Liu, Guodong Gu, Xubo Song, Zhihong Feng, Wengang Wu",
+      "institutions": [],
+      "journal": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "doi": "10.1016/j.saa.2026.129104",
+      "url": "https://doi.org/10.1016/j.saa.2026.129104",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-meatsci-2026-110248-850bc1",
+      "date": "2026-11-01",
+      "title": "Lamb intramuscular fat can be predicted using an on-line hyperspectral imaging camera in an Australian commercial processing plant",
+      "authors": "S.M. Moyes, C.R. Craigie, S. Hitchman, M. Sharifi, D.W. Pethick",
+      "institutions": [],
+      "journal": "Meat Science",
+      "doi": "10.1016/j.meatsci.2026.110248",
+      "url": "https://doi.org/10.1016/j.meatsci.2026.110248",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
     },
     {
       "id": "10-1016-j-critrevonc-2026-105675-c7e3dd",
@@ -10682,6 +11364,36 @@
       "tier": "notable"
     },
     {
+      "id": "10-48550-arxiv-2610-30610-aefb90",
+      "date": "2026-10-22",
+      "title": "Metasurface engineering of transient photothermal responses for vibrational imaging at living interfaces",
+      "authors": "Zhibin Hu, Tianrun Zhang, Jiayu Ding, Pengcheng Fu, Ziyang Huang, Bo Chen, Bangjie Song, Minglu Li, Xinyu Deng, Quan Zhou, Delong Zhang, Siying Peng",
+      "institutions": [
+        "Westlake University",
+        "Zhejiang University",
+        "First Affiliated Hospital Zhejiang University"
+      ],
+      "journal": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2610.30610",
+      "url": "https://doi.org/10.48550/arxiv.2610.30610",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Cell Biology",
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "Chemical transformations at biological interfaces are central to cellular function, yet the weak vibrational signals associated with subtle molecular changes limit their spatially resolved observation. Here, we present metasurface-driven mid-infrared photothermal imaging (MetaMIP), which uses resonantly engineered metasurfaces to amplify molecular temperature modulation while retaining rapid thermal recovery. Visible-light detection converts this response into submicrometre maps of individual nanoparticles and biological cells. In living cells, MetaMIP resolves spatially distinct chemical changes during enzymatic lipid conversion across the cell membrane. …",
+      "why": "Resonant metasurfaces amplify the photothermal signal while keeping fast thermal recovery, so weak vibrational changes at the cell membrane can be imaged in living cells during an enzymatic lipid conversion.",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex",
+      "reviewed": true,
+      "pick_date": "2026-11-03",
+      "tier": "notable"
+    },
+    {
       "id": "10-1007-s00604-026-08477-7-568aa4",
       "date": "2026-10-22",
       "title": "Nanozyme-Raman enhancement active α-MoO<sub>3-x</sub>-CuCl<sub>2</sub> composite for SERS detection of phosphate species",
@@ -11641,6 +12353,36 @@
       "tier": "notable"
     },
     {
+      "id": "10-1126-sciadv-aeh0887-2c64bb",
+      "date": "2026-10-21",
+      "title": "Anomalous phonon selection rules and Raman optical activity in RuO<sub>2</sub>",
+      "authors": "Cheng D, Wu A, Pan H, Zhu YP, Luo S, Yip KY, Zhang W, Ariando A, Liu C, Wang JS, Li X",
+      "institutions": [
+        "National University of Singapore",
+        "Southern University of Science and Technology"
+      ],
+      "journal": "Science advances",
+      "doi": "10.1126/sciadv.aeh0887",
+      "url": "https://doi.org/10.1126/sciadv.aeh0887",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Environmental",
+        "Spontaneous Raman",
+        "Chiral (ROA / VCD)"
+      ],
+      "glyph": "chiral",
+      "summary": "Breakdown of selection rules and emergence of optical activity in Raman spectroscopy typically signal symmetry-breaking events essential for understanding novel phases of solids. Here, we apply our recently developed rotational anisotropy Raman spectroscopy technique to single-crystal ruthenium dioxide-a compound of recent interest as a candidate workhorse material for altermagnetism yet whose magnetic ground state remains under intense debate. Our data reveal a salient breakdown of selection rules for zone-center phonons, accompanied by clear splitting in the angle-dependent polarimetry plots for the two opposite helicity-nonconserving circularly polarized scattering channels. …",
+      "why": "Rotational-anisotropy Raman finds broken phonon selection rules and Raman optical activity in RuO₂, giving optical evidence in the debate over whether it is an altermagnet.",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc",
+      "reviewed": true,
+      "pick_date": "2026-11-03",
+      "tier": "notable"
+    },
+    {
       "id": "10-1007-s40472-026-00531-w-559c71",
       "date": "2026-10-21",
       "title": "From spectra to clinical insight: Raman spectroscopy in kidney transplant monitoring and donor assessment",
@@ -12446,6 +13188,97 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true
+    },
+    {
+      "id": "10-1364-ol-610807-794a3f",
+      "date": "2026-10-21",
+      "title": "Extra-cavity generation of repetition-rate-tunable noise-like pulse in a 2.1 μm MOPA system",
+      "authors": "Lin Yang, Jiachen Wang, Jun Guo, Mengmeng Li, Zhijian Zheng, Xing Luo, Fanlong Dong, Chunyu GUO, Shuangchen Ruan",
+      "institutions": [
+        "Shenzhen University",
+        "Shenzhen Technology University",
+        "Ningbo University"
+      ],
+      "journal": "Optics Letters",
+      "doi": "10.1364/ol.610807",
+      "url": "https://doi.org/10.1364/ol.610807",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SRS / CARS"
+      ],
+      "glyph": "srs",
+      "summary": "We report extra-cavity generation of a repetition-rate-tunable noise-like pulse (NLP) at 2.1 μm from a two-stage master oscillator power amplifier (MOPA) system. The pulse conserves solitonic behavior in the master oscillator and preamplifier until it evolves into an NLP in the main amplifier. We attribute such evolution to modulation instability and stimulated Raman scattering (SRS). Asymmetric spectral broadening indicates the domination of SRS, providing evidence for the extra-cavity generation of the NLP.",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-64898-2026-10-14-759126-c23258",
+      "date": "2026-10-20",
+      "title": "Label-free identification and classification of leukocyte subpopulations in peripheral blood smears by optical photothermal infrared spectroscopy",
+      "authors": "Raghunathan S, Piehler S, Reuter C, Kiehntopf M, Popp J, Krafft C",
+      "institutions": [
+        "Leibniz Institute of Photonic Technology",
+        "Jena University Hospital",
+        "Friedrich Schiller University Jena"
+      ],
+      "journal": "bioRxiv",
+      "doi": "10.64898/2026.10.14.759126",
+      "url": "https://doi.org/10.64898/2026.10.14.759126",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Cell Biology",
+        "IR / NIR",
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "The differential count of leukocyte subpopulations from peripheral blood smears remains a cornerstone of clinical hematology but relies on staining protocols or flow cytometry, that introduce variability and obscure native biochemistry. This study presents label-free workflows that distinguish leukocytes from erythrocytes in full blood smears and classifies the leukocyte subtypes as granulocytes, lymphocytes and monocytes using their single cell optical photothermal infrared (OPTIR) spectra. The first approach uses discrete wavenumber images using two key bands at 1546 and 2922 cm -1 to screen leukocytes. …",
+      "why": "A label-free differential white-cell count from ordinary blood smears using single-cell optical photothermal IR spectra, without stains or flow cytometry.",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc",
+      "reviewed": true,
+      "pick_date": "2026-11-03",
+      "tier": "notable"
+    },
+    {
+      "id": "10-1039-d6ay01831a-4ec64d",
+      "date": "2026-10-20",
+      "title": "Dual-channel digital surface-enhanced Raman spectroscopy resolves GPC1<sup>+</sup>MUC4<sup>+</sup> single-exosome heterogeneity released by PANC-1 and BxPC-3 pancreatic cancer cells",
+      "authors": "Wang X, Zhang Z, Zheng B",
+      "institutions": [
+        "Tianjin University",
+        "The 4th Center Hospital",
+        "Academy of Medical Engineering and Translational Medicine"
+      ],
+      "journal": "Analytical methods : advancing methods and applications",
+      "doi": "10.1039/d6ay01831a",
+      "url": "https://doi.org/10.1039/d6ay01831a",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Extracellular-vesicle populations average molecular signals across particles and can conceal rare, co-expressing phenotypes. We developed a dual-channel digital surface-enhanced Raman spectroscopy platform that partitions individual CD63-captured vesicles and identifies glypican-1 (GPC1) and mucin 4 (MUC4) with 4-mercaptobenzoic acid and 5,5'-dithiobis(2-nitrobenzoic acid) nanotags. The method was evaluated with eight independent batches from each of PANC-1, BxPC-3, HPDE and hTERT-HPNE cell models, seven blinded PANC-1/BxPC-3 mixtures, artificial-serum spikes and defined interferents. …",
+      "why": "Digital SERS that reads single vesicles one by one, revealing rare GPC1+/MUC4+ co-expressing exosomes from pancreatic cancer cells that bulk measurements average away.",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/analytical-methods-advancing-methods-and-applications.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Analytical methods : advancing methods and applications"
+      },
+      "source": "europepmc",
+      "reviewed": true,
+      "pick_date": "2026-11-03",
+      "tier": "notable"
     },
     {
       "id": "10-37188-lam-2026-115-04549f",
@@ -13533,6 +14366,31 @@
       "fig": null,
       "source": "europepmc",
       "reviewed": true
+    },
+    {
+      "id": "10-1364-ao-610347-49e90f",
+      "date": "2026-10-19",
+      "title": "PMDA-Net: a polarization-conditioned multi-scale dynamic attention network for polarimetric hyperspectral camouflage target classification",
+      "authors": "Lining Yan, Yunhua Cao, Lu Bai, Xing Guo",
+      "institutions": [
+        "Xidian University"
+      ],
+      "journal": "Applied Optics",
+      "doi": "10.1364/ao.610347",
+      "url": "https://doi.org/10.1364/ao.610347",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging",
+        "Data Analysis & AI"
+      ],
+      "glyph": "hsi",
+      "summary": "To effectively fuse heterogeneous polarimetric hyperspectral data and improve the classification performance of camouflage targets in complex backgrounds, this paper proposes a polarization-conditioned multi-scale dynamic attention network (PMDA-Net). PMDA-Net adopts a dual-stream framework for modality-specific feature extraction, where spectral and polarimetric information are separately modeled. A multi-scale dynamic AoLP attention module is designed to transform geometric information encoded in the angle of linear polarization into dynamic weights. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
     },
     {
       "id": "the-infrared-and-raman-spectra-of-the-jahn-teller-distorted--229084",
@@ -15305,6 +16163,32 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true
+    },
+    {
+      "id": "10-1103-mkhw-ltd2-87a4ee",
+      "date": "2026-10-15",
+      "title": "Geometry-driven magnetization reversal and spin-wave dynamics in permalloy artificial anti–spin ice lattices",
+      "authors": "Szymon P Oramus, Riccardo Fornari, G. Gubbiotti, Adekunle Olusola Adeyeye",
+      "institutions": [
+        "Durham University",
+        "University of Perugia",
+        "Istituto Officina dei Materiali"
+      ],
+      "journal": "Physical Review Applied",
+      "doi": "10.1103/mkhw-ltd2",
+      "url": "https://doi.org/10.1103/mkhw-ltd2",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Brillouin"
+      ],
+      "glyph": "brillouin",
+      "summary": "Antiartificial spin ice (AASI), realized through spin-ice-derived antidot lattices of stadium-shaped holes in continuous Permalloy ( Ni 81 Fe 19 ) films, provides a powerful route for embedding geometry-induced magnetic anisotropy within a connected magnonic medium. Here, homogeneous and bicomponent AASI lattices are investigated through a combined experimental and micromagnetic approach, establishing a direct link between lattice geometry, magnetization reversal, and spin-wave (SW) dynamics. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
     },
     {
       "id": "https-arxiv-org-abs-2610-20755-17c1d0",
@@ -22466,5 +23350,5 @@
     "near-infrared-spectroscopy-with-data-analysis-model-for-rapi-9c5fee"
   ],
   "curated": "2026-11-07",
-  "updated": "2026-11-07"
+  "updated": "2026-11-08"
 }
