@@ -8,55 +8,6 @@
   ],
   "articles": [
     {
-      "id": "10-1016-j-swevo-2026-102602-4ebcca",
-      "date": "2026-12-01",
-      "title": "Unsupervised hyperspectral band selection via global–local geometric modeling and dual-elite-guided adaptive multi-objective whale optimization",
-      "authors": "Yihao Huang, Hongqi Zhang, Xiaodi Shang, Xu Lei, Jiahua Zhang, Xudong Sun",
-      "institutions": [],
-      "journal": "Swarm and Evolutionary Computation",
-      "doi": "10.1016/j.swevo.2026.102602",
-      "url": "https://doi.org/10.1016/j.swevo.2026.102602",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spectral Imaging"
-      ],
-      "glyph": "hsi",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1002-nap2-70350-e39ad9",
-      "date": "2026-11-07",
-      "title": "AIM‐Photonics Visible‐to‐Near‐Infrared Silicon‐Nitride‐Based Silicon‐Photonics Platform and Component Library",
-      "authors": "Andres Garcia Coleto, Henry Crawford-Eng, Theodore J. Dahl, Maya Shapiro, Maria Schnuck, Kyle J. Walsh, Steven T. Lipkowitz, Marcel W. Pruessner, Nathan F. Tyndall, Jacob N. Bouchard, Alin O. Antohe, Soumen Kar, Patrick O’Mullan, Cooper D. Hurley, Peter Hedlesky, Vijay S. S. Sundaram, Stefan F. Preble, Kevin A. McComber, James Eakin, Douglas T. Petkie et al.",
-      "institutions": [
-        "Massachusetts Institute of Technology",
-        "United States Naval Research Laboratory",
-        "Amentum (United States)"
-      ],
-      "journal": "Nanophotonics",
-      "doi": "10.1002/nap2.70350",
-      "url": "https://doi.org/10.1002/nap2.70350",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Silicon‐photonics platforms operating at visible and near‐infrared wavelengths are essential for a growing range of applications, including biosensing, chemical detection, Raman spectroscopy, quantum, optogenetics, and displays. However, unlike their infrared counterparts, visible‐wavelength platforms have lacked comprehensive component libraries with pre‐characterized devices, limiting the ability to rapidly design photonic integrated circuits for these applications. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
-    },
-    {
       "id": "10-1021-acsphotonics-6c01470-aabf5f",
       "date": "2026-11-07",
       "title": "Tunable Optical-to-THz Frequency Conversion Driven by Localized Surface Phonon Polaritons in LiNbO3 Metasurfaces",
@@ -76,11 +27,65 @@
       ],
       "glyph": "thz",
       "summary": "We demonstrate tunable THz generation by optical rectification in LiNbO3 rod metasurfaces supporting localized surface phonon polaritons (LSPhPs). By varying the rod length, the LSPhP resonance is tuned across the 4–5 THz range, producing a systematic red-shift of the generated THz spectral peak. THz time-domain spectroscopy and numerical calculations show that the emitted spectrum is governed by the geometry-dependent LSPhP response. …",
+      "why": "LiNbO3 rod metasurfaces generate THz light by optical rectification, with the output tuned across 4–5 THz simply by changing rod length to shift a localized surface phonon polariton resonance. THz time-domain spectroscopy and calculations show the emitted spectrum is set by this geometry-dependent phonon-polariton response, giving a design handle for THz sources.",
+      "pick": true,
+      "feature": true,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-09"
+    },
+    {
+      "id": "10-26434-chemrxiv-15010325-v2-755ec5",
+      "date": "2026-10-12",
+      "title": "FRACTAL: A Ratiometric-based Fingerprinting Framework for Robust Spectral Classification and Ratio-based Spectroscopic Marker Discovery",
+      "authors": "Lamyaa M. Almehmadi",
+      "institutions": [
+        "Massachusetts Institute of Technology"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15010325/v2",
+      "url": "https://doi.org/10.26434/chemrxiv.15010325/v2",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Spectral classification is conventionally performed on band intensities, yet ratios between bands have long served as diagnostic indices in vibrational spectroscopy, from lipid-to-protein markers of membrane composition to amide ratios reporting protein secondary structure. Their use, however, has remained confined to a handful of expert-selected pairs, leaving most of the ratio information contained in a spectrum unexamined. Here I present FRACTAL (Full Ratio Combinatorial Analysis for Classification and Analytical Interpretation), which computes every pairwise log-intensity ratio among detected peaks to form a complete ratiometric fingerprint, grounded in compositional data analysis. …",
+      "why": "FRACTAL computes every pairwise log-intensity ratio among detected peaks to build a complete ratiometric fingerprint, grounded in compositional data analysis. It extends band-ratio analysis beyond the handful of expert-selected pairs used until now, so more of the ratio information in a spectrum can be used for classification and marker discovery.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "openalex",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-09"
+    },
+    {
+      "id": "10-1016-j-swevo-2026-102602-4ebcca",
+      "date": "2026-12-01",
+      "title": "Unsupervised hyperspectral band selection via global–local geometric modeling and dual-elite-guided adaptive multi-objective whale optimization",
+      "authors": "Yihao Huang, Hongqi Zhang, Xiaodi Shang, Xu Lei, Jiahua Zhang, Xudong Sun",
+      "institutions": [],
+      "journal": "Swarm and Evolutionary Computation",
+      "doi": "10.1016/j.swevo.2026.102602",
+      "url": "https://doi.org/10.1016/j.swevo.2026.102602",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "",
       "why": "",
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1088-1402-4896-aebf11-e41b42",
@@ -107,31 +112,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1016-j-microc-2026-120237-34ac35",
-      "date": "2026-11-01",
-      "title": "Flexible adhesive-tape-based UiO66-NH2@Au SERS platform with synergistic coupling of analyte enrichment and plasmonic enhancement for ultrasensitive furmonertinib detection",
-      "authors": "Yanfei Yang, Yuan Meng, Yiyi Li, Wangjun Yu, Juntao Zhang, Tao Jiang, Huaying Wang",
-      "institutions": [
-        "Ningbo University"
-      ],
-      "journal": "Microchemical Journal",
-      "doi": "10.1016/j.microc.2026.120237",
-      "url": "https://doi.org/10.1016/j.microc.2026.120237",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-bios-2026-119398-9f7889",
@@ -155,33 +137,15 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-26434-chemrxiv-15010325-v2-755ec5",
-      "date": "2026-10-12",
-      "title": "FRACTAL: A Ratiometric-based Fingerprinting Framework for Robust Spectral Classification and Ratio-based Spectroscopic Marker Discovery",
-      "authors": "Lamyaa M. Almehmadi",
-      "institutions": [
-        "Massachusetts Institute of Technology"
-      ],
-      "journal": "ChemRxiv",
-      "doi": "10.26434/chemrxiv.15010325/v2",
-      "url": "https://doi.org/10.26434/chemrxiv.15010325/v2",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spontaneous Raman"
-      ],
-      "glyph": "raman",
-      "summary": "Spectral classification is conventionally performed on band intensities, yet ratios between bands have long served as diagnostic indices in vibrational spectroscopy, from lipid-to-protein markers of membrane composition to amide ratios reporting protein secondary structure. Their use, however, has remained confined to a handful of expert-selected pairs, leaving most of the ratio information contained in a spectrum unexamined. Here I present FRACTAL (Full Ratio Combinatorial Analysis for Classification and Analytical Interpretation), which computes every pairwise log-intensity ratio among detected peaks to form a complete ratiometric fingerprint, grounded in compositional data analysis. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true,
+      "tier": "notable"
     }
   ],
-  "removed": [],
-  "updated": "2026-11-09"
+  "removed": [
+    "10-1002-nap2-70350-e39ad9",
+    "10-1016-j-microc-2026-120237-34ac35"
+  ],
+  "updated": "2026-11-09",
+  "curated": "2026-11-09"
 }
