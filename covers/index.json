@@ -358,5 +358,20 @@
     "src": "covers/journal-of-physics-d-applied-physics.jpg",
     "kind": "cover",
     "credit": "Journal cover · Journal of Physics D: Applied Physics"
+  },
+  "journal of the korean physical society": {
+    "src": "covers/journal-of-the-korean-physical-society.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of the Korean Physical Society"
+  },
+  "the astronomical journal": {
+    "src": "covers/the-astronomical-journal.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · The Astronomical Journal"
+  },
+  "applied physics a": {
+    "src": "covers/applied-physics-a.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Applied Physics A"
   }
 }
