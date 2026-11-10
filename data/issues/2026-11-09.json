@@ -37,6 +37,306 @@
       "pick_date": "2026-11-09"
     },
     {
+      "id": "10-1021-acsami-6c16716-33415d",
+      "date": "2026-11-10",
+      "title": "SERS-Active Nanocomposite Contact Lenses for Label-Free Multiplexed Biosensing of Tear Analytes",
+      "authors": "Ahmed E. Salih, Connie M. Wang, Roberta M. Sabino, Loza F. Tadesse, Elazer R. Edelman",
+      "institutions": [
+        "University of Wyoming"
+      ],
+      "journal": "ACS Applied Materials &amp; Interfaces",
+      "doi": "10.1021/acsami.6c16716",
+      "url": "https://doi.org/10.1021/acsami.6c16716",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Continuous monitoring remains limited by the fact that most wearable biosensors are built around single-analyte recognition chemistries, even though many physiological states are defined by changes across multiple metabolites. Tear fluid is one of the most biochemically informative biofluids accessible non-invasively, but contact lens biosensors have largely relied on enzymatic or electrochemical techniques that are difficult to extend beyond one target marker at a time. Here, we report a label-free surface-enhanced Raman spectroscopy (SERS)-active contact lens in which gold nanostars are grown in situ on commercial hydrogel contact lenses. …",
+      "why": "Gold nanostars grown in situ on commercial hydrogel contact lenses make them SERS-active for label-free, multiplexed sensing of tear analytes. This moves wearable tear sensing beyond the one-analyte-at-a-time limit of enzymatic and electrochemical lenses.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1021-acs-nanolett-6c04439-1d38a1",
+      "date": "2026-11-09",
+      "title": "Operando Imaging of Battery Interfaces through Combined Analysis of Broadband Optical Backgrounds and Raman Features",
+      "authors": "Shengfu Wei, Zhengcheng Gu, Yufeng Zhang, Weigang Ma, Aoran Fan, Xing Zhang",
+      "institutions": [
+        "Tsinghua University"
+      ],
+      "journal": "Nano Letters",
+      "doi": "10.1021/acs.nanolett.6c04439",
+      "url": "https://doi.org/10.1021/acs.nanolett.6c04439",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials"
+      ],
+      "glyph": "raman",
+      "summary": "Solid-state batteries promise improved safety and energy density, but their performance is governed by buried interfaces where ion transport, chemical reactions, and stress evolution are strongly coupled. Resolving these processes during operation remains challenging. Here, we present an operando spectroscopic strategy that jointly analyzes broadband optical backgrounds and characteristic electrolyte Raman features within a single measurement. …",
+      "why": "Rather than discarding the broadband optical background, this operando method analyses it jointly with electrolyte Raman bands in a single measurement to image buried solid-state battery interfaces during operation. It turns a usual nuisance signal into extra information about coupled interfacial processes.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1021-acs-est-6c11891-75ad7c",
+      "date": "2026-11-09",
+      "title": "Droplet-Shielded Micropore Raman-Activated Cell Sorting Improves Recovery of Emerging-Contaminant-Degrading Microorganisms",
+      "authors": "Jibing Li, Xixi Cai, Ying Xue, Jiarui Liu, Weiping Mei, Qiqian Li, Longfei Jiang, Dayi Zhang, Bei Li, Chunling Luo",
+      "institutions": [
+        "Guangzhou Institute of Geochemistry",
+        "Guangdong-Hong Kong-Macao Joint Laboratory for Environmental Pollution and Control",
+        "University of Chinese Academy of Sciences"
+      ],
+      "journal": "Environmental Science &amp;\nTechnology",
+      "doi": "10.1021/acs.est.6c11891",
+      "url": "https://doi.org/10.1021/acs.est.6c11891",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Bacteriology",
+        "Cell Biology"
+      ],
+      "glyph": "raman",
+      "summary": "Identifying, isolating, and cultivating functional microorganisms from complex environmental microbiomes remains a central challenge in linking microbial identity with contaminant transformation. Conventional Raman-activated cell sorting (RACS) enables label-free single-cell phenotyping but often compromises cell viability during laser interrogation and ejection, limiting the cultivation of functional indigenous microorganisms. Tire-wear-derived 6PPD-quinone (6PPDQ) is increasingly recognized as a highly toxic emerging contaminant in roadside soils, yet the indigenous microorganisms associated with its biological attenuation in roadside soils remain poorly characterized. …",
+      "why": "A droplet-shielded micropore design for Raman-activated cell sorting protects cells during laser interrogation and ejection, addressing the poor viability that limits conventional RACS. It is used to recover and cultivate soil microbes linked to degradation of the tire-wear toxicant 6PPD-quinone.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1117-1-ap-9-1-016005-ce6e3d",
+      "date": "2026-11-09",
+      "title": "Chip-scale differential near-infrared spectroscopy in strongly water-absorbing environments",
+      "authors": "Chunhui Yao, Tongyun Li, Richard Penty",
+      "institutions": [
+        "University of Cambridge"
+      ],
+      "journal": "Advanced Photonics",
+      "doi": "10.1117/1.ap.9.1.016005",
+      "url": "https://doi.org/10.1117/1.ap.9.1.016005",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Environmental",
+        "IR / NIR",
+        "Spectrometer Design"
+      ],
+      "glyph": "spec",
+      "summary": "Near-infrared (NIR) spectroscopy enables nondestructive chemical analysis, yet quantitative measurements in aqueous environments are fundamentally hindered by water’s dominant, broadband absorption. This strong background obscures weak analyte signatures and can destabilize spectral inference in chip-scale spectrometers. Here, we demonstrate a chip-scale differential NIR spectrometer based on an integrated bidirectional photonic circuit that operates robustly in strongly water-absorbing environments. …",
+      "why": "A chip-scale differential NIR spectrometer built on an integrated bidirectional photonic circuit cancels the overwhelming broadband water background that normally swamps weak analyte bands. This makes quantitative on-chip NIR measurements robust in strongly water-absorbing samples.",
+      "tier": "notable",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-3389-fenrg-2026-1969837-20ad02",
+      "date": "2026-11-09",
+      "title": "Modified lithium-ion cell design enabling operando gas sensing using optical fiber photothermal spectroscopy",
+      "authors": "Zongchang Luo, Fangyuan Han, Longfei Zhang, Qinqin Liang, Bin Tang, Jiqi Pan, Min Yu",
+      "institutions": [
+        "Guangxi Key Laboratory of Intelligent Control and Maintenance of Power Equipment"
+      ],
+      "journal": "Frontiers in Energy Research",
+      "doi": "10.3389/fenrg.2026.1969837",
+      "url": "https://doi.org/10.3389/fenrg.2026.1969837",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "A modified lithium-ion cell integrated with a hollow-core fiber photothermal spectroscopy (HCF-PTS) sensor was developed for operando monitoring of gas evolution during electrochemical cycling. The platform enabled simultaneous measurements of cell voltage, internal pressure, and gas-phase concentrations of C 2 H 4 and CO 2 in a sealed LiFePO 4 /graphite cell. The HCF-PTS system with limits of detection of 1.2 ppm for C 2 H 4 and 1.7 ppm for CO 2 were obtained. Measurements from two independently assembled modified cells showed similar voltage, pressure, and gas-evolution profiles, demonstrating good reproducibility under the present experimental conditions. …",
+      "why": "A hollow-core-fibre photothermal spectroscopy sensor built into a modified lithium-ion cell tracks C2H4 and CO2 evolution at ppm level operando, alongside voltage and internal pressure. It brings laser gas spectroscopy inside a working sealed battery.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-3724-lpe-20260014-2240eb",
+      "date": "2026-11-09",
+      "title": "Light-induced thermoelastic spectroscopy based on Quartz-PZT dual-resonance enhancement method for high-sensitivity gas sensing",
+      "authors": "Ma Hanxu, Song Yushuo, Cai Jingze, Qiao Shunda, He Ying, Sun Haiyue, Sampaolo Angelo, Spagnolo Vincenzo, Ma Yufei",
+      "institutions": [],
+      "journal": "Light Precision Engineering",
+      "doi": "10.3724/lpe-20260014",
+      "url": "https://doi.org/10.3724/lpe-20260014",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Photoacoustic"
+      ],
+      "glyph": "pas",
+      "summary": "",
+      "why": "Introduces a quartz–PZT dual-resonance enhancement scheme for light-induced thermoelastic spectroscopy (LITES), aimed at boosting gas-sensing sensitivity beyond a single quartz tuning-fork detector.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1002-adma-75661-27779b",
+      "date": "2026-11-09",
+      "title": "High‐Density Pixelated Metasurfaces for Terahertz Hyperspectral Imaging",
+      "authors": "Zhanqiang Xue, Hongyang Xing, Guizhen Xu, Junxing Fan, Zijian Liao, Ye Zhou, Longqing Cong",
+      "institutions": [],
+      "journal": "Advanced Materials",
+      "doi": "10.1002/adma.75661",
+      "url": "https://doi.org/10.1002/adma.75661",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging",
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "Metasurface‐enabled terahertz imaging and spectroscopy are moving toward compact, high‐throughput systems, but current approaches remain limited by discrete spectral sampling, computational reconstruction, and the trade‐off between spatial resolution and resonance quality in nonlocal designs. Here, we introduce a fundamentally different paradigm based on photonic crystal heterojunction‐enabled pixelated metasurfaces that directly encode spatial information into spectrally resolved, high‐quality‐factor resonances. …",
+      "why": "Pixelated metasurfaces built from photonic-crystal heterojunctions encode spatial position directly into distinct high-Q terahertz resonances, enabling hyperspectral THz imaging without discrete spectral sampling or computational reconstruction. It sidesteps the usual trade-off between spatial resolution and resonance quality in nonlocal metasurfaces.",
+      "tier": "notable",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1002-lpor-72175-37c9d1",
+      "date": "2026-11-08",
+      "title": "Raman‐Enabled Platicon Microcomb and Stokes Soliton in 4H‐SiC Microresonator",
+      "authors": "Jingwei Li, Ruixuan Wang, Qing Li",
+      "institutions": [],
+      "journal": "Laser &amp; Photonics Reviews",
+      "doi": "10.1002/lpor.72175",
+      "url": "https://doi.org/10.1002/lpor.72175",
+      "oa": true,
+      "license": "CC BY-NC-ND 4.0",
+      "categories": [
+        "SRS / CARS"
+      ],
+      "glyph": "srs",
+      "summary": "Stimulated Raman scattering in Kerr microresonators is generally regarded as a competing nonlinear process that hinders the formation of Kerr soliton microcombs. Here, we experimentally demonstrate that the ubiquitous Raman gain in Kerr microresonators can instead be harnessed to enable efficient platicon microcomb generation in the normal‐dispersion regime. We demonstrate this mechanism in a compact silicon carbide microresonator supporting a broadband platicon microcomb spanning 1500–1700 nm with a pump‐to‐comb conversion efficiency as high as . …",
+      "why": "Instead of treating stimulated Raman scattering as a nuisance for Kerr microcombs, this work harnesses Raman gain in a 4H-SiC microresonator to generate platicon microcombs in the normal-dispersion regime, together with a Stokes soliton. It turns an unavoidable vibrational nonlinearity into a comb-generation tool.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1002-lpor-72176-b05d39",
+      "date": "2026-11-08",
+      "title": "Non‐Pixelated Spatial‐Spectral Imaging via Electrically Tunable Lateral Photocarrier Dynamics in a MoS 2 /p‐Ge Position‐Sensitive Detector",
+      "authors": "Kaiyang Liu, Di Wang, Wentao Liu, Peiyu Zeng, Dingli Guo, Wenhui Wang, Zhenhua Ni, Junpeng Lu",
+      "institutions": [],
+      "journal": "Laser &amp; Photonics Reviews",
+      "doi": "10.1002/lpor.72176",
+      "url": "https://doi.org/10.1002/lpor.72176",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging",
+        "General Technology"
+      ],
+      "glyph": "hsi",
+      "summary": "Spectral sensitivity is essential for advanced visual perception, including object identification, material discrimination, and high‐fidelity color reproduction. However, conventional spectral imaging systems often rely on pixel‐level wavelength‐selective filters, sacrificing spatial resolution and limiting spectral discrimination, or on vertically stacked heterostructures with electrically tunable band alignment, which increase fabrication complexity and array nonuniformity. …",
+      "why": "A MoS2/p-Ge position-sensitive detector uses electrically tunable lateral photocarrier dynamics to obtain spatial and spectral information without pixelated filters or stacked heterostructures. This offers a simpler route to spectral imaging that does not sacrifice spatial resolution.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1002-lpor-72169-34b12c",
+      "date": "2026-11-08",
+      "title": "Photonic Integrated Circuits for End‐to‐End Spectral Analysis: Computational Sampling With Neural Network Reconstruction",
+      "authors": "Yuhang Wang, Ang Li, Xiaozhuo Zhao, Yang Zhao, Qiang Li, Ye Tian, Shilong Pan",
+      "institutions": [
+        "United Microelectronics Center Chongqing China"
+      ],
+      "journal": "Laser &amp; Photonics Reviews",
+      "doi": "10.1002/lpor.72169",
+      "url": "https://doi.org/10.1002/lpor.72169",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Neurology",
+        "Spectrometer Design",
+        "Data Analysis & AI"
+      ],
+      "glyph": "spec",
+      "summary": "On‐chip spectral analysis enables transformative applications, from smartphone‐based glucose monitoring to UAV‐mounted remote sensing. While progress has been made in on‐chip spectral sampling, on‐chip spectral reconstruction remains a critical unmet need as current approaches rely upon computer to run complex algorithms. Here, we report an on‐chip solution for end‐to‐end spectral analysis by combining high‐resolution spectral sampling and real‐time high‐fidelity spectral reconstruction on CMOS compatible platform. …",
+      "why": "Combines high-resolution computational spectral sampling and real-time neural-network spectral reconstruction on one CMOS-compatible photonic chip, removing the need for an external computer to recover spectra. A step toward fully self-contained miniature spectrometers.",
+      "tier": "notable",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-1103-51xg-rsrb-275f5d",
+      "date": "2026-10-01",
+      "title": "Nonlinear Phonon-Assisted Up-Conversion Photoluminescence Under Vibrational Pumping at Liquid-Helium Temperatures",
+      "authors": "Chang H, Lai JM, Song F, Lv Y, Zhang J",
+      "institutions": [
+        "Institute of Semiconductors",
+        "University of Chinese Academy of Sciences",
+        "School of Materials Science and Engineering of Shanxi Normal University"
+      ],
+      "journal": "Physical review letters",
+      "doi": "10.1103/51xg-rsrb",
+      "url": "https://doi.org/10.1103/51xg-rsrb",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials"
+      ],
+      "glyph": "raman",
+      "summary": "Optical refrigeration in semiconductors is driven by anti-Stokes photoluminescence (PL) arising from phonon-assisted up-conversion. In the conventional picture, lattice vibrations remain in thermal equilibrium and the relevant phonon population is pump independent, so the up-conversion rate scales approximately linearly with excitation power, which places a practical limit on cooling power density and predicts a rapid collapse of cooling efficiency at cryogenic temperatures. …",
+      "why": "Shows that phonon-assisted up-conversion photoluminescence becomes nonlinear under vibrational pumping at liquid-helium temperatures, contrary to the conventional picture of a pump-independent thermal phonon population. This bears directly on the limits of optical refrigeration of semiconductors at cryogenic temperatures.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-10"
+    },
+    {
       "id": "10-26434-chemrxiv-15010325-v2-755ec5",
       "date": "2026-10-12",
       "title": "FRACTAL: A Ratiometric-based Fingerprinting Framework for Robust Spectral Classification and Ratio-based Spectroscopic Marker Discovery",
@@ -109,7 +409,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-icheatmasstransfer-2026-113085-d195a7",
@@ -131,31 +432,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acsami-6c16716-33415d",
-      "date": "2026-11-10",
-      "title": "SERS-Active Nanocomposite Contact Lenses for Label-Free Multiplexed Biosensing of Tear Analytes",
-      "authors": "Ahmed E. Salih, Connie M. Wang, Roberta M. Sabino, Loza F. Tadesse, Elazer R. Edelman",
-      "institutions": [
-        "University of Wyoming"
-      ],
-      "journal": "ACS Applied Materials &amp; Interfaces",
-      "doi": "10.1021/acsami.6c16716",
-      "url": "https://doi.org/10.1021/acsami.6c16716",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "Continuous monitoring remains limited by the fact that most wearable biosensors are built around single-analyte recognition chemistries, even though many physiological states are defined by changes across multiple metabolites. Tear fluid is one of the most biochemically informative biofluids accessible non-invasively, but contact lens biosensors have largely relied on enzymatic or electrochemical techniques that are difficult to extend beyond one target marker at a time. Here, we report a label-free surface-enhanced Raman spectroscopy (SERS)-active contact lens in which gold nanostars are grown in situ on commercial hydrogel contact lenses. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acssensors-6c03929-b1988f",
@@ -181,33 +460,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acs-langmuir-6c04516-37d038",
-      "date": "2026-11-09",
-      "title": "Engineering Pt@β-Cyclodextrin/ZIF-8 Hybrid Thin Films: From Interfacial Surface-Enhanced Raman Spectroscopy to Enhanced Methanol Oxidation Performance in Fuel Cell",
-      "authors": "Azam Zare Asadabadi, S. Jafar Hoseini, Mehrangiz Bahrami, S. Masoud Nabavizadeh",
-      "institutions": [
-        "Shiraz University"
-      ],
-      "journal": "Langmuir",
-      "doi": "10.1021/acs.langmuir.6c04516",
-      "url": "https://doi.org/10.1021/acs.langmuir.6c04516",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Materials",
-        "SERS / TERS",
-        "IR / NIR"
-      ],
-      "glyph": "sers",
-      "summary": "We report the design, synthesis, and electrocatalytic evaluation of two platinum-containing thin film catalysts for the methanol oxidation reaction (MOR): Pt@β-cyclodextrin (Pt@β-CD) and Pt@β-CD confined within zeolitic imidazolate framework-8 (Pt@β-CD/ZIF-8). Both materials were comprehensively characterized by FT-IR, SEM, XRD, Raman spectroscopy, TGA, BET, and AFM. Notably, Pt@β-CD exhibits a previously unreported Pt-induced surface-enhanced Raman scattering (SERS) signature: a broad doublet attributable to Raman-active β-CD-derived interfacial species (including oxidized CD products), supported by synthesis conditions and its suppression after ZIF-8 encapsulation. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1007-s12596-026-03387-6-b7d091",
@@ -233,31 +487,8 @@
         "kind": "cover",
         "credit": "Journal cover · Journal of Optics"
       },
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acs-nanolett-6c04439-1d38a1",
-      "date": "2026-11-09",
-      "title": "Operando Imaging of Battery Interfaces through Combined Analysis of Broadband Optical Backgrounds and Raman Features",
-      "authors": "Shengfu Wei, Zhengcheng Gu, Yufeng Zhang, Weigang Ma, Aoran Fan, Xing Zhang",
-      "institutions": [
-        "Tsinghua University"
-      ],
-      "journal": "Nano Letters",
-      "doi": "10.1021/acs.nanolett.6c04439",
-      "url": "https://doi.org/10.1021/acs.nanolett.6c04439",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Materials"
-      ],
-      "glyph": "raman",
-      "summary": "Solid-state batteries promise improved safety and energy density, but their performance is governed by buried interfaces where ion transport, chemical reactions, and stress evolution are strongly coupled. Resolving these processes during operation remains challenging. Here, we present an operando spectroscopic strategy that jointly analyzes broadband optical backgrounds and characteristic electrolyte Raman features within a single measurement. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-3390-molecules31214030-d17d80",
@@ -286,7 +517,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s40042-026-01755-w-e49310",
@@ -312,61 +545,8 @@
         "kind": "cover",
         "credit": "Journal cover · Journal of the Korean Physical Society"
       },
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acs-est-6c11891-75ad7c",
-      "date": "2026-11-09",
-      "title": "Droplet-Shielded Micropore Raman-Activated Cell Sorting Improves Recovery of Emerging-Contaminant-Degrading Microorganisms",
-      "authors": "Jibing Li, Xixi Cai, Ying Xue, Jiarui Liu, Weiping Mei, Qiqian Li, Longfei Jiang, Dayi Zhang, Bei Li, Chunling Luo",
-      "institutions": [
-        "Guangzhou Institute of Geochemistry",
-        "Guangdong-Hong Kong-Macao Joint Laboratory for Environmental Pollution and Control",
-        "University of Chinese Academy of Sciences"
-      ],
-      "journal": "Environmental Science &amp;\nTechnology",
-      "doi": "10.1021/acs.est.6c11891",
-      "url": "https://doi.org/10.1021/acs.est.6c11891",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Bacteriology",
-        "Cell Biology"
-      ],
-      "glyph": "raman",
-      "summary": "Identifying, isolating, and cultivating functional microorganisms from complex environmental microbiomes remains a central challenge in linking microbial identity with contaminant transformation. Conventional Raman-activated cell sorting (RACS) enables label-free single-cell phenotyping but often compromises cell viability during laser interrogation and ejection, limiting the cultivation of functional indigenous microorganisms. Tire-wear-derived 6PPD-quinone (6PPDQ) is increasingly recognized as a highly toxic emerging contaminant in roadside soils, yet the indigenous microorganisms associated with its biological attenuation in roadside soils remain poorly characterized. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1117-1-ap-9-1-016005-ce6e3d",
-      "date": "2026-11-09",
-      "title": "Chip-scale differential near-infrared spectroscopy in strongly water-absorbing environments",
-      "authors": "Chunhui Yao, Tongyun Li, Richard Penty",
-      "institutions": [
-        "University of Cambridge"
-      ],
-      "journal": "Advanced Photonics",
-      "doi": "10.1117/1.ap.9.1.016005",
-      "url": "https://doi.org/10.1117/1.ap.9.1.016005",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Environmental",
-        "IR / NIR",
-        "Spectrometer Design"
-      ],
-      "glyph": "spec",
-      "summary": "Near-infrared (NIR) spectroscopy enables nondestructive chemical analysis, yet quantitative measurements in aqueous environments are fundamentally hindered by water’s dominant, broadband absorption. This strong background obscures weak analyte signatures and can destabilize spectral inference in chip-scale spectrometers. Here, we demonstrate a chip-scale differential NIR spectrometer based on an integrated bidirectional photonic circuit that operates robustly in strongly water-absorbing environments. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1021-acsami-6c14968-0d458c",
@@ -391,7 +571,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1080-02678292-2026-2758846-dff9aa",
@@ -413,7 +594,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1063-5-0358628-142d1b",
@@ -441,7 +623,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s10762-026-01189-2-3e267c",
@@ -467,53 +651,9 @@
         "kind": "cover",
         "credit": "Journal cover · Journal of Infrared, Millimeter, and Terahertz Waves"
       },
-      "source": "crossref"
-    },
-    {
-      "id": "10-3389-fenrg-2026-1969837-20ad02",
-      "date": "2026-11-09",
-      "title": "Modified lithium-ion cell design enabling operando gas sensing using optical fiber photothermal spectroscopy",
-      "authors": "Zongchang Luo, Fangyuan Han, Longfei Zhang, Qinqin Liang, Bin Tang, Jiqi Pan, Min Yu",
-      "institutions": [
-        "Guangxi Key Laboratory of Intelligent Control and Maintenance of Power Equipment"
-      ],
-      "journal": "Frontiers in Energy Research",
-      "doi": "10.3389/fenrg.2026.1969837",
-      "url": "https://doi.org/10.3389/fenrg.2026.1969837",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Photothermal IR"
-      ],
-      "glyph": "mip",
-      "summary": "A modified lithium-ion cell integrated with a hollow-core fiber photothermal spectroscopy (HCF-PTS) sensor was developed for operando monitoring of gas evolution during electrochemical cycling. The platform enabled simultaneous measurements of cell voltage, internal pressure, and gas-phase concentrations of C 2 H 4 and CO 2 in a sealed LiFePO 4 /graphite cell. The HCF-PTS system with limits of detection of 1.2 ppm for C 2 H 4 and 1.7 ppm for CO 2 were obtained. Measurements from two independently assembled modified cells showed similar voltage, pressure, and gas-evolution profiles, demonstrating good reproducibility under the present experimental conditions. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-3724-lpe-20260014-2240eb",
-      "date": "2026-11-09",
-      "title": "Light-induced thermoelastic spectroscopy based on Quartz-PZT dual-resonance enhancement method for high-sensitivity gas sensing",
-      "authors": "Ma Hanxu, Song Yushuo, Cai Jingze, Qiao Shunda, He Ying, Sun Haiyue, Sampaolo Angelo, Spagnolo Vincenzo, Ma Yufei",
-      "institutions": [],
-      "journal": "Light Precision Engineering",
-      "doi": "10.3724/lpe-20260014",
-      "url": "https://doi.org/10.3724/lpe-20260014",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Photoacoustic"
-      ],
-      "glyph": "pas",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1155-nri-7575719-ee8d40",
@@ -535,38 +675,11 @@
       "glyph": "ir",
       "summary": "Background We aimed to determine whether two‐channelled near‐infrared spectroscopy (NIRS) was feasible for recognising anterior large vessel occlusion (LVO) with a device suitable for prehospital use and whether probe placement (frontal vs. parietal) made a difference. Methods We analysed NIRS readings of six computed tomography angiography (CTA)‐confirmed LVO‐stroke patients at Tampere University Hospital during the six‐month study period. We placed four sensors on patients’ heads: two frontally and two parietally. We provided a detailed description and analysis of these recordings and their correlation with imaging‐confirmed changes in perfusion. …",
       "why": "",
-      "tier": "notable",
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-3389-fchbi-2026-2003261-639cc7",
-      "date": "2026-11-09",
-      "title": "Where should surface plasmon resonance go next? Toward mechanistic drug discovery",
-      "authors": "Todd W. Pascarella, Jason M. Newman, Jessica Demitor, Júlio C. Borges, Paulo R. Dores-Silva",
-      "institutions": [
-        "São Carlos Institute of Chemistry"
-      ],
-      "journal": "Frontiers in Chemical Biology",
-      "doi": "10.3389/fchbi.2026.2003261",
-      "url": "https://doi.org/10.3389/fchbi.2026.2003261",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Environmental",
-        "Pharmaceutics",
-        "SERS / TERS",
-        "Reviews"
-      ],
-      "glyph": "sers",
-      "summary": "Surface plasmon resonance (SPR) has become a central method for quantifying biomolecular interactions through real-time measurements of affinity, association and dissociation rate constants, residence time, and binding capacity. However, these parameters do not necessarily identify the molecular state responsible for biological activity. This Perspective examines how SPR can move beyond binary interaction analysis toward a more mechanistic description of molecular recognition. We discuss how assay design, surface presentation, membrane context, multicomponent formats, and computational analysis have already expanded the biological questions accessible to SPR. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1021-acs-jpcc-6c05527-23ae80",
@@ -591,38 +704,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-3847-1538-3881-aea614-2c589b",
-      "date": "2026-11-09",
-      "title": "Photometric and Spectroscopic Observations of Comet 2P/Encke’s Nucleus in the Mid-infrared Wavelength Region",
-      "authors": "Takafumi Ootsubo, Hideyo Kawakita, Jun-ichi Watanabe, Hitomi Kobayashi, Yoshiharu Shinnaka",
-      "institutions": [
-        "University of Occupational and Environmental Health",
-        "Kyoto Sangyo University",
-        "Photocross Co. Ltd"
-      ],
-      "journal": "The Astronomical Journal",
-      "doi": "10.3847/1538-3881/aea614",
-      "url": "https://doi.org/10.3847/1538-3881/aea614",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "We observed comet 2P/Encke with the Cooled Mid-Infrared Camera and Spectrometer on the Subaru telescope on UT 2003 November 12.3, when the comet was at heliocentric and geocentric distances of 1.09 and 0.27 au, respectively. Imaging observations of the comet with narrowband filters centered at 8.8, 10.5, 11.7, 12.4, 18.8, and 24.5 μ m, and low-resolution spectroscopic observations in the N -band (8–13 μ m, R ∼ 250) of the comet were performed. The observed spatial profiles of the comet were consistent with those of a standard star (FWHM ∼0 . …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/the-astronomical-journal.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · The Astronomical Journal"
-      },
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1007-s12289-026-02098-4-117828",
@@ -644,7 +727,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1145-3842569-723baa",
@@ -666,7 +751,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-5194-angeo-44-1281-2026-cd1650",
@@ -698,33 +784,8 @@
         "kind": "cover",
         "credit": "Journal cover · Annales Geophysicae"
       },
-      "source": "crossref"
-    },
-    {
-      "id": "10-1145-3842507-433619",
-      "date": "2026-11-09",
-      "title": "Vibrational Affine Body Dynamics",
-      "authors": "Haoyang Shi, Yumeng He, Sheldon Andrews, Chenfanfu Jiang, Kui Wu, Yin Yang",
-      "institutions": [
-        "University of Utah",
-        "University of Southern California",
-        "École de technologie supérieure (ÉTS)"
-      ],
-      "journal": "ACM Transactions on Graphics",
-      "doi": "10.1145/3842507",
-      "url": "https://doi.org/10.1145/3842507",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Neurology"
-      ],
-      "glyph": "raman",
-      "summary": "Rigid-body and affine body dynamics are default simulation modalities for rigid or near-rigid objects. Their low-rank kinematic models inherently preclude vibrational responses that stiff bodies exhibit during abrupt impacts or contacts. Simulating such behavior with full or reduced finite element method (FEM) requires high spatial resolution and small time steps, which significantly increases computational costs of system solving and collision handling. We propose vibrational affine body dynamics (VABD), a novel simulation framework that captures these missing high-frequency vibrations while preserving excellent efficiency and robustness, even in complex scenarios. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1038-s41598-026-78318-3-25791d",
@@ -746,31 +807,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-5414-te500179-1153f7",
-      "date": "2026-11-09",
-      "title": "Investigation on growth and morphology of different gallstone types using FTIR and XRD spectrometers",
-      "authors": "Orhan Çimen, Ferda Keskin Çimen, Sevil Porikli Durdaği, Hatice Gedik",
-      "institutions": [],
-      "journal": "Trace Elements and Electrolytes",
-      "doi": "10.5414/te500179",
-      "url": "https://doi.org/10.5414/te500179",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR",
-        "General Technology"
-      ],
-      "glyph": "ir",
-      "summary": "",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1515-auto-2026-0033-694df1",
@@ -796,31 +835,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1002-adma-75661-27779b",
-      "date": "2026-11-09",
-      "title": "High‐Density Pixelated Metasurfaces for Terahertz Hyperspectral Imaging",
-      "authors": "Zhanqiang Xue, Hongyang Xing, Guizhen Xu, Junxing Fan, Zijian Liao, Ye Zhou, Longqing Cong",
-      "institutions": [],
-      "journal": "Advanced Materials",
-      "doi": "10.1002/adma.75661",
-      "url": "https://doi.org/10.1002/adma.75661",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spectral Imaging",
-        "THz & Low-Frequency"
-      ],
-      "glyph": "thz",
-      "summary": "Metasurface‐enabled terahertz imaging and spectroscopy are moving toward compact, high‐throughput systems, but current approaches remain limited by discrete spectral sampling, computational reconstruction, and the trade‐off between spatial resolution and resonance quality in nonlocal designs. Here, we introduce a fundamentally different paradigm based on photonic crystal heterojunction‐enabled pixelated metasurfaces that directly encode spatial information into spectrally resolved, high‐quality‐factor resonances. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1007-s00339-026-09930-3-987c5b",
@@ -840,7 +857,6 @@
       "glyph": "thz",
       "summary": "Integrating optically thin metasurfaces with continuous-wave (CW) terahertz sources offers an alternative to conventional bulky optical elements for manipulating terahertz waves. However, planar optical elements composed of metasurfaces have yet to be actively adopted in CW terahertz sources due to limited fabrication methods suitable for micrometer-scale meta-atoms. Here, we fabricate two types of printed terahertz collimating metalenses on cyclo-olefin polymer and polyimide films using super inkjet printing. …",
       "why": "",
-      "tier": "notable",
       "pick": false,
       "feature": false,
       "fig": {
@@ -848,58 +864,8 @@
         "kind": "cover",
         "credit": "Journal cover · Applied Physics A"
       },
-      "source": "crossref"
-    },
-    {
-      "id": "10-1007-s12161-026-03341-z-dfef96",
-      "date": "2026-11-09",
-      "title": "Rapid and Non-destructive Discrimination of Salt Tolerance in Rice Seeds Using Terahertz Time-Domain Spectroscopic Imaging",
-      "authors": "Zhongjian Wang, Shiyue Ma, Lei Zhao",
-      "institutions": [],
-      "journal": "Food Analytical Methods",
-      "doi": "10.1007/s12161-026-03341-z",
-      "url": "https://doi.org/10.1007/s12161-026-03341-z",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "THz & Low-Frequency"
-      ],
-      "glyph": "thz",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": {
-        "src": "covers/food-analytical-methods.jpg",
-        "kind": "cover",
-        "credit": "Journal cover · Food Analytical Methods"
-      },
-      "source": "crossref"
-    },
-    {
-      "id": "10-2514-1-a36620-15b88a",
-      "date": "2026-11-09",
-      "title": "Transition and Tunnel Noise Effects on Three-Dimensional Separated Shear Layers",
-      "authors": "Adelbert A. Francis, Brandon C. Chynoweth, Joseph S. Jewell",
-      "institutions": [
-        "Purdue University"
-      ],
-      "journal": "Journal of Spacecraft and Rockets",
-      "doi": "10.2514/1.a36620",
-      "url": "https://doi.org/10.2514/1.a36620",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Experiments investigating three-dimensional separated flows and reattached boundary-layer transition behaviors on a cone/inclined-slice/ramp test article were conducted in the Boeing/AFOSR (The Air Force Office of Scientific Research) Mach-6 Quiet Tunnel at freestream unit Reynolds numbers from [Formula: see text] to [Formula: see text] with low freestream noise levels. Infrared thermography revealed a strong Reynolds-number dependence in the formation and subsequent splitting of streaks within transitional and turbulent reattachment regimes on the ramp. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1038-s41467-026-79237-7-24c692",
@@ -922,7 +888,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1364-optcon-611338-4c81b5",
@@ -944,82 +911,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acs-chemmater-6c02356-148d26",
-      "date": "2026-11-09",
-      "title": "Internal Free Volume Directs Hydration-Induced Amorphization of Hollow α-V2O5",
-      "authors": "Chutharat Yonchai, Nutthira Pakkang, Chiya Numako, Seulgee Lee, Yuta Yamamoto, Sangwoo Chae, Uijun Kim, Garbis Akceoglu, Pinit Kidkhunthod, Supinya Nijpanich, Suttipong Wannapaiboon, Yasuyuki Sawada, Jitti Kasemchainan, Nagahiro Saito",
-      "institutions": [
-        "Chulalongkorn University",
-        "Nagoya University",
-        "Chiba University"
-      ],
-      "journal": "Chemistry of Materials",
-      "doi": "10.1021/acs.chemmater.6c02356",
-      "url": "https://doi.org/10.1021/acs.chemmater.6c02356",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Hollow particles are designed to keep their cavities open, but a cavity can also be consumed as a structural resource. Thin-walled hollow α-V2O5 converts in aqueous ZnSO4 at 80 °C into a filled, hydrated, amorphous phase, Zn0.23(OH)0.46V2O5·1.0H2Oa charge-balanced composition from ICP-OES and TGA that assumes V5+ and hydroxide compensation of the zinc. Electron tomography shows the cavity disappearing as the particle grows from 246 to about 420 nm, with 6% of the vanadium lost to solution. The hollow shell takes up three times the water of commercial V2O5. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1063-5-0338590-42fd84",
-      "date": "2026-11-09",
-      "title": "Measurement of a lepton–lepton electroweak reaction (MOLLER) spectrometer magnet—Magnetic field measurement and analysis at Jefferson lab",
-      "authors": "P. K. Ghoshal, B. Eng, I. Gildea, S. Gopinath, M. P. Dion, B. U. Don, J. Mammei, R. Rajput-Ghoshal, K. Paschke, F. Burini",
-      "institutions": [
-        "University of Manitoba 4",
-        "University of Virginia 5"
-      ],
-      "journal": "Review of Scientific Instruments",
-      "doi": "10.1063/5.0338590",
-      "url": "https://doi.org/10.1063/5.0338590",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "The Thomas Jefferson National Accelerator Facility has developed a specialized spectrometer system for the MOLLER (Measurement Of a Lepton Lepton Electroweak Reaction) experiment, which is designed to probe weak interactions between electrons using 12 GeV electron LINAC. Scheduled to operate over a three-year period, the experiment relies on five water-cooled toroidal magnets—each with seven-fold symmetry and unique geometry—engineered to focus scattered particles. These magnets generate the magnetic field necessary to separate Moller-scattered electrons from elastically scattered protons within the liquid hydrogen target. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1002-lpor-72175-37c9d1",
-      "date": "2026-11-08",
-      "title": "Raman‐Enabled Platicon Microcomb and Stokes Soliton in 4H‐SiC Microresonator",
-      "authors": "Jingwei Li, Ruixuan Wang, Qing Li",
-      "institutions": [],
-      "journal": "Laser &amp; Photonics Reviews",
-      "doi": "10.1002/lpor.72175",
-      "url": "https://doi.org/10.1002/lpor.72175",
-      "oa": true,
-      "license": "CC BY-NC-ND 4.0",
-      "categories": [
-        "SRS / CARS"
-      ],
-      "glyph": "srs",
-      "summary": "Stimulated Raman scattering in Kerr microresonators is generally regarded as a competing nonlinear process that hinders the formation of Kerr soliton microcombs. Here, we experimentally demonstrate that the ubiquitous Raman gain in Kerr microresonators can instead be harnessed to enable efficient platicon microcomb generation in the normal‐dispersion regime. We demonstrate this mechanism in a compact silicon carbide microresonator supporting a broadband platicon microcomb spanning 1500–1700 nm with a pump‐to‐comb conversion efficiency as high as . …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-lpor-72177-614c03",
@@ -1040,11 +934,11 @@
       "glyph": "thz",
       "summary": "Metasurfaces, as two‐dimensional ultrathin artificial structures, have significantly facilitated the manipulation of electromagnetic waves. Recent advances show that metasurface functionalities can be further promoted from performing in only the transmission/reflection space to simultaneously and independently in both spaces. However, related studies so far mostly rely on electromagnetic multiplexing strategies where two intrinsically incident waves are required, i.e., the transmission and reflection functionalities are realized at different electromagnetic parameter conditions. …",
       "why": "",
-      "tier": "notable",
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1002-lpor-72162-15e7ea",
@@ -1071,57 +965,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1002-lpor-72176-b05d39",
-      "date": "2026-11-08",
-      "title": "Non‐Pixelated Spatial‐Spectral Imaging via Electrically Tunable Lateral Photocarrier Dynamics in a MoS 2 /p‐Ge Position‐Sensitive Detector",
-      "authors": "Kaiyang Liu, Di Wang, Wentao Liu, Peiyu Zeng, Dingli Guo, Wenhui Wang, Zhenhua Ni, Junpeng Lu",
-      "institutions": [],
-      "journal": "Laser &amp; Photonics Reviews",
-      "doi": "10.1002/lpor.72176",
-      "url": "https://doi.org/10.1002/lpor.72176",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spectral Imaging",
-        "General Technology"
-      ],
-      "glyph": "hsi",
-      "summary": "Spectral sensitivity is essential for advanced visual perception, including object identification, material discrimination, and high‐fidelity color reproduction. However, conventional spectral imaging systems often rely on pixel‐level wavelength‐selective filters, sacrificing spatial resolution and limiting spectral discrimination, or on vertically stacked heterostructures with electrically tunable band alignment, which increase fabrication complexity and array nonuniformity. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1002-lpor-72169-34b12c",
-      "date": "2026-11-08",
-      "title": "Photonic Integrated Circuits for End‐to‐End Spectral Analysis: Computational Sampling With Neural Network Reconstruction",
-      "authors": "Yuhang Wang, Ang Li, Xiaozhuo Zhao, Yang Zhao, Qiang Li, Ye Tian, Shilong Pan",
-      "institutions": [
-        "United Microelectronics Center Chongqing China"
-      ],
-      "journal": "Laser &amp; Photonics Reviews",
-      "doi": "10.1002/lpor.72169",
-      "url": "https://doi.org/10.1002/lpor.72169",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Neurology",
-        "Spectrometer Design",
-        "Data Analysis & AI"
-      ],
-      "glyph": "spec",
-      "summary": "On‐chip spectral analysis enables transformative applications, from smartphone‐based glucose monitoring to UAV‐mounted remote sensing. While progress has been made in on‐chip spectral sampling, on‐chip spectral reconstruction remains a critical unmet need as current approaches rely upon computer to run complex algorithms. Here, we report an on‐chip solution for end‐to‐end spectral analysis by combining high‐resolution spectral sampling and real‐time high‐fidelity spectral reconstruction on CMOS compatible platform. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1002-ansa-70116-50ec66",
@@ -1148,7 +993,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "europepmc"
+      "source": "europepmc",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-ejpb-2026-115283-1ed785",
@@ -1173,7 +1019,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "europepmc"
+      "source": "europepmc",
+      "reviewed": true
     },
     {
       "id": "10-1038-s41598-026-79334-z-537bc8",
@@ -1196,7 +1043,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1038-s41598-026-79776-5-6c24b0",
@@ -1215,11 +1063,11 @@
       "glyph": "thz",
       "summary": "",
       "why": "",
-      "tier": "notable",
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1021-acselectrochem-6c00354-c8064c",
@@ -1245,33 +1093,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1177-14658011261504488-572b46",
-      "date": "2026-11-07",
-      "title": "Dual-waste valorisation of pine needle biomass and post-consumer PET into sustainable composites: Mechanical, dynamic mechanical and environmental performance",
-      "authors": "Ajay Kumar, Raman Bedi",
-      "institutions": [
-        "Dr B R Ambedkar National Institute of Technology"
-      ],
-      "journal": "Plastics, Rubber and Composites: Macromolecular Engineering",
-      "doi": "10.1177/14658011261504488",
-      "url": "https://doi.org/10.1177/14658011261504488",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Environmental",
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "The use of lignocellulosic biomass with post-consumer polyethylene terephthalate (PET) is an attractive option for waste diversion and resource recovery. In this study, pine needle (PN) biomass was used to reinforce a commercial unsaturated polyester resin (UPR) made from recycled PET (rPET). The untreated (UPN) and NaOH-treated (TPN) fibres were added at 30 wt% using the vacuum-bagging method and subsequently characterised by tensile and flexural testing, dynamic mechanical analysis, Fourier-transform infrared (FTIR), X-ray diffraction (XRD), scanning electron microscope (SEM), and 45-day water immersion and soil burial ageing. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1088-1402-4896-aebf11-e41b42",
@@ -1328,7 +1151,8 @@
         "kind": "cover",
         "credit": "Journal cover · Analytical methods : advancing methods and applications"
       },
-      "source": "europepmc"
+      "source": "europepmc",
+      "reviewed": true
     },
     {
       "id": "10-1007-s44346-026-00023-w-b17d48",
@@ -1355,35 +1179,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "europepmc"
-    },
-    {
-      "id": "10-1002-anie-4127398-c38a71",
-      "date": "2026-11-06",
-      "title": "Interfacial Bond Fabricated From High Entropy MOFs Facilitates Electric Field Modulation for Boosted Photoelectrochemical DHA Formation on BiVO 4 ",
-      "authors": "Gu S, Liu J, Zhu Y, Wang K, An P, Geng W, Chang L, Shi T, Li S",
-      "institutions": [
-        "School of Materials Science and Engineering",
-        "Centre for Environmental and Energy Nanomaterials",
-        "University of Science and Technology of China"
-      ],
-      "journal": "Angewandte Chemie (International ed. in English)",
-      "doi": "10.1002/anie.4127398",
-      "url": "https://doi.org/10.1002/anie.4127398",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Environmental",
-        "Materials",
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "BiVO4 (BVO) photoanodes are promising for photoelectrochemical glycerol oxidation (PEC GOR), but their performance is limited by sluggish hole extraction, V5+ dissolution, and poor control over selective C3 oxidation. Herein, we develop an in situ surface-confined topological transformation strategy to construct an amorphous FeCoNiCuMn high-entropy MOF interfacial layer on BVO (BVO-H MOF). The high-entropy layer acts as a catalytically coupled interface rather than a passive coating: it induces a Ni-V-OX activation layer to suppress V5+ leaching and establishes an interfacial electric field that promotes directional hole extraction. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc"
+      "source": "europepmc",
+      "reviewed": true
     },
     {
       "id": "10-3390-rs18213830-d718a7",
@@ -1412,59 +1209,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-3390-qubs10040025-01046e",
-      "date": "2026-11-06",
-      "title": "Characterization of the BIFROST Spectrometer Through Virtual Experiments",
-      "authors": "Kristine M. L. Krighaar, Silas B. Schack, Nicolai L. Amin, Gregory S. Tucker, Rasmus Toft-Petersen, Kim Lefmann",
-      "institutions": [
-        "Nanoscience Center",
-        "Technical University of Denmark"
-      ],
-      "journal": "Quantum Beam Science",
-      "doi": "10.3390/qubs10040025",
-      "url": "https://doi.org/10.3390/qubs10040025",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Using the Monte Carlo ray tracing package McStas, we illustrate the possibilities of creatingvirtual experiments of the neutron spectrometer BIFROST, before its commissioning at theEuropean Spallation Source (ESS). With this model, we are able to benchmark BIFROSTwith respect to expected intensity, Q-and energy resolution. The simulations reproduce theexpected resolution behaviour and quantify effects that are difficult to capture analytically,including a wavelength-dependent edge enhancement arising from a combination of thelong-pulsed source and the pulse-shaping chopper. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1016-j-bios-2026-119407-da0d32",
-      "date": "2026-11-05",
-      "title": "Closed-loop in-situ management of organic water contaminants enabled by a layered nanoarchitectured sensor with autonomous purge function",
-      "authors": "Ding J, Che Y, Wang X, Yang B, Zhou J, Kong L, Pullerits T, Song P, Yang Y",
-      "institutions": [
-        "Liaoning University",
-        "Lund University"
-      ],
-      "journal": "Biosensors & bioelectronics",
-      "doi": "10.1016/j.bios.2026.119407",
-      "url": "https://doi.org/10.1016/j.bios.2026.119407",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Environmental",
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "The accelerated pace of industrialization, coupled with rising consumption demands, has exacerbated pollution problems caused by organic dyes. Therefore, the development of efficient detection and degradation technologies for these pollutants has become a critical issue in environmental science and engineering. Herein, a dual-functional Ag@In 2 S 3 @Fe 2 O 3 nanosystem was constructed via a layer-by-layer assembly approach. The as-prepared nanosystem exhibits dual functionalities. First, it enables the highly sensitive detection of Rhodamine B (RB) at a concentration as low as 10 -8 mol/L through surface-enhanced Raman spectroscopy (SERS). …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-bios-2026-119398-9f7889",
@@ -1516,7 +1262,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-saa-2026-129101-2d9fa7",
@@ -1538,7 +1285,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-ijbiomac-2026-155211-d884ef",
@@ -1560,7 +1308,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-apsusc-2026-168915-c42b84",
@@ -1582,7 +1331,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-microc-2026-120235-7dbd59",
@@ -1605,7 +1355,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-cej-2026-183912-4d1527",
@@ -1627,88 +1379,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1016-j-foodchem-2026-151803-359750",
-      "date": "2026-10-31",
-      "title": "Chemometric-assisted quantitative SERS detection of okadaic acid using paper-based MoS<sub>2</sub> nanoflower-Au nanoparticle substrate",
-      "authors": "Saleem M, Hassan MM, Shoaib M, Li S, Xu Y, Chen Q",
-      "institutions": [
-        "College of Ocean Food and Biological Engineering",
-        "College of Biosystems Engineering and Food Science"
-      ],
-      "journal": "Food chemistry",
-      "doi": "10.1016/j.foodchem.2026.151803",
-      "url": "https://doi.org/10.1016/j.foodchem.2026.151803",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Food & Agriculture",
-        "SRS / CARS",
-        "SERS / TERS"
-      ],
-      "glyph": "srs",
-      "summary": "Food safety has become a critical global concern, and monitoring trace levels of marine biotoxins in shellfish remains a significant challenge for effective seafood safety assessment and public health protection. This study proposes a nanostructured chemometric system for the determination of okadaic acid in shellfish extracts. A MoS 2 nanoflower-Au nanoparticle hybrid plasmonic substrate enhanced Raman signals, showing an estimated enhancement factor of 6.72 × 10 6 . Quantitative analysis combined SERS with PLS-based chemometric models across a concentration range of 1.0 × 10 -4 to 1.0 μg/mL. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc"
-    },
-    {
-      "id": "10-1029-2025jd045292-1081d0",
-      "date": "2026-10-31",
-      "title": "Surface Subsidence as an Effective Indicator of Methane Emissions From Underground Coal Mines",
-      "authors": "Zhonghua He, Changjun Zhao, Miao Liang, Chunyan Zhou, Cunren Liang, Huilin Chen, Zhao‐Cheng Zeng",
-      "institutions": [
-        "Peking University",
-        "Zhejiang Meteorological Bureau",
-        "University of Electronic Science and Technology of China"
-      ],
-      "journal": "Journal of Geophysical Research Atmospheres",
-      "doi": "10.1029/2025jd045292",
-      "url": "https://doi.org/10.1029/2025jd045292",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spectral Imaging"
-      ],
-      "glyph": "hsi",
-      "summary": "Methane (CH 4 ) emissions from underground coal mining remain a major and uncertain anthropogenic source. This study tests whether surface subsidence, a direct consequence of underground mining, can serve as an indicator of CH 4 emissions. We use the Changzhi coal belt in Shanxi of China, a major emission hotspot, as a case study. Time‐series Interferometric Synthetic Aperture Radar analysis of Sentinel‐1 SAR data (November 2019 to October 2024) revealed persistent subsidence across the region. Over a similar period, hyperspectral images from four satellite platforms (March 2019 to October 2024) detected 568 CH 4 plumes from 33 point sources. The two data sets showed strong spatial overlap. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-1016-j-archoralbio-2026-106796-458965",
-      "date": "2026-10-29",
-      "title": "Amorphous calcium-containing cyclotriphosphate improves enamel resistance to erosive softening and mineral loss",
-      "authors": "Guisso LP, Hosida TY, Pessan JP, Sampaio C, Moraes JCS, Camargo ER, Delbem ACB",
-      "institutions": [
-        "Araçatuba School of Dentistry",
-        "São Paulo State University (UNESP)",
-        "Federal University of São Carlos (UFSCar)"
-      ],
-      "journal": "Archives of oral biology",
-      "doi": "10.1016/j.archoralbio.2026.106796",
-      "url": "https://doi.org/10.1016/j.archoralbio.2026.106796",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "Objectives This study synthesized calcium-containing cyclotriphosphate materials from sodium cyclotriphosphate (NaCTP) using calcium hydroxide [Ca(OH)₂], calcium chloride (CaCl₂), or calcium nitrate [Ca(NO₃)₂], designated Ca(OH)₂-CTP, CaCl₂-CTP, and Ca(NO₃)₂-CTP, respectively, and evaluated their effects on initial enamel erosion. The powders were characterized by scanning electron microscopy (SEM), energy-dispersive X-ray spectroscopy (EDS), Fourier-transform infrared spectroscopy (FTIR), and X-ray diffraction (XRD). Design Bovine enamel blocks (n = 10/group) were allocated to placebo; 0.24% sodium fluoride (NaF); or 0.5% and 1% NaCTP, Ca(OH)₂-CTP, CaCl₂-CTP, or Ca(NO₃)₂-CTP groups. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-diagmicrobio-2026-117718-38f260",
@@ -1735,7 +1407,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "europepmc"
+      "source": "europepmc",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-talanta-2026-130735-70aef4",
@@ -1762,33 +1435,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-1103-51xg-rsrb-275f5d",
-      "date": "2026-10-01",
-      "title": "Nonlinear Phonon-Assisted Up-Conversion Photoluminescence Under Vibrational Pumping at Liquid-Helium Temperatures",
-      "authors": "Chang H, Lai JM, Song F, Lv Y, Zhang J",
-      "institutions": [
-        "Institute of Semiconductors",
-        "University of Chinese Academy of Sciences",
-        "School of Materials Science and Engineering of Shanxi Normal University"
-      ],
-      "journal": "Physical review letters",
-      "doi": "10.1103/51xg-rsrb",
-      "url": "https://doi.org/10.1103/51xg-rsrb",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Materials"
-      ],
-      "glyph": "raman",
-      "summary": "Optical refrigeration in semiconductors is driven by anti-Stokes photoluminescence (PL) arising from phonon-assisted up-conversion. In the conventional picture, lattice vibrations remain in thermal equilibrium and the relevant phonon population is pump independent, so the up-conversion rate scales approximately linearly with excitation power, which places a practical limit on cooling power density and predicts a rapid collapse of cooling efficiency at cryogenic temperatures. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "europepmc"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1002-advs-75908-5cf85d",
@@ -1813,13 +1461,30 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "europepmc"
+      "source": "europepmc",
+      "reviewed": true
     }
   ],
   "removed": [
+    "10-1002-anie-4127398-c38a71",
     "10-1002-nap2-70350-e39ad9",
-    "10-1016-j-microc-2026-120237-34ac35"
+    "10-1007-s12161-026-03341-z-dfef96",
+    "10-1016-j-archoralbio-2026-106796-458965",
+    "10-1016-j-bios-2026-119407-da0d32",
+    "10-1016-j-foodchem-2026-151803-359750",
+    "10-1016-j-microc-2026-120237-34ac35",
+    "10-1021-acs-chemmater-6c02356-148d26",
+    "10-1021-acs-langmuir-6c04516-37d038",
+    "10-1029-2025jd045292-1081d0",
+    "10-1063-5-0338590-42fd84",
+    "10-1145-3842507-433619",
+    "10-1177-14658011261504488-572b46",
+    "10-2514-1-a36620-15b88a",
+    "10-3389-fchbi-2026-2003261-639cc7",
+    "10-3390-qubs10040025-01046e",
+    "10-3847-1538-3881-aea614-2c589b",
+    "10-5414-te500179-1153f7"
   ],
   "updated": "2026-11-10",
-  "curated": "2026-11-09"
+  "curated": "2026-11-10"
 }
