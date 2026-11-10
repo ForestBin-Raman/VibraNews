@@ -373,5 +373,10 @@
     "src": "covers/applied-physics-a.jpg",
     "kind": "cover",
     "credit": "Journal cover · Applied Physics A"
+  },
+  "pharmaceutical research": {
+    "src": "covers/pharmaceutical-research.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Pharmaceutical Research"
   }
 }
