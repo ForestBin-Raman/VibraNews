@@ -378,5 +378,10 @@
     "src": "covers/pharmaceutical-research.jpg",
     "kind": "cover",
     "credit": "Journal cover · Pharmaceutical Research"
+  },
+  "ctu journal of innovation and sustainable development": {
+    "src": "covers/ctu-journal-of-innovation-and-sustainable-development.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · CTU Journal of Innovation and Sustainable Development"
   }
 }
