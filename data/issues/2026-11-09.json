@@ -37,6 +37,91 @@
       "pick_date": "2026-11-09"
     },
     {
+      "id": "10-1021-acsami-6c10956-4e397b",
+      "date": "2026-11-12",
+      "title": "Dielectric Mie-Resonant Metasurface Integrated ATR Chip for Spectrally Tunable Surface-Enhanced Infrared Spectroscopy in Aqueous Media",
+      "authors": "Aneesh Vincent Veluthandath, Waseem Ahmed, Eleanor L. Osborne, Jonathan Butement, James S. Wilkinson, Ganapathy Senthil Murugan",
+      "institutions": [
+        "University of Southampton"
+      ],
+      "journal": "ACS Applied Materials &amp; Interfaces",
+      "doi": "10.1021/acsami.6c10956",
+      "url": "https://doi.org/10.1021/acsami.6c10956",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Food & Agriculture",
+        "Materials",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Fourier transform infrared (FTIR) spectroscopy provides label-free molecular fingerprints but often lacks sensitivity for trace analysis in aqueous media. Surface-enhanced infrared absorption (SEIRA) spectroscopy amplifies vibrational signals near nanostructured surfaces, yet conventional SEIRA platforms typically require sample drying, preconcentration, or noble metal substrates. Here, we introduce a monolithic all-silicon chip that integrates dielectric Mie-resonant micropillar arrays onto a microattenuated total reflection (µ-ATR) element using a complementary metal–oxide–semiconductor (CMOS)-compatible fabrication process. …",
+      "why": "A monolithic all-silicon chip places dielectric Mie-resonant micropillars directly on a micro-ATR element, giving spectrally tunable surface-enhanced infrared absorption in water. It avoids the drying, preconcentration and noble-metal substrates that conventional SEIRA needs, using CMOS-compatible fabrication.",
+      "tier": "notable",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "pick_date": "2026-11-12"
+    },
+    {
+      "id": "10-1021-acsnano-6c09613-cd52c3",
+      "date": "2026-11-11",
+      "title": "Ferroelectric-Empowered van der Waals Spectrometer with Record-High Sensitivity and Ultralow Noise",
+      "authors": "Jiaqi Zhu, Yi Hong, Qingfeng Hu, Yusong Sheng, Zhongyang Yu, Xiuteng Chen, Weifeng Zhao, Zhaohong Meng, Qiang Wu, Feng Qiu, Zongyin Yang, He Zhu, Ning Dai",
+      "institutions": [
+        "University of Chinese Academy of Sciences",
+        "Zhejiang University School of Medicine",
+        "Juhe Electrooptic (Hangzhou) Tech. Co. Ltd"
+      ],
+      "journal": "ACS Nano",
+      "doi": "10.1021/acsnano.6c09613",
+      "url": "https://doi.org/10.1021/acsnano.6c09613",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "Spectrometer Design",
+        "General Technology"
+      ],
+      "glyph": "spec",
+      "summary": "Miniaturized spectrometers are essential for portable and consumer-oriented applications, yet their reduced physical footprint inherently limits the detector’s active area, leading to compromised sensitivity. Conventional strategies to enhance sensitivity, such as cryogenic cooling or photomultiplier tubes, are incompatible with miniaturization due to their bulk, cost, and power demands. Here, we present a miniaturized spectrometer based on a van der Waals heterojunction integrated on a ferroelectric thin film. …",
+      "why": "A miniaturised spectrometer built from a van der Waals heterojunction on a ferroelectric thin film, reporting record-high sensitivity and ultralow noise. It tackles the core weakness of shrinking spectrometers, the loss of sensitivity with smaller detector area, without cooling or photomultipliers.",
+      "tier": "notable",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "crossref",
+      "reviewed": true,
+      "pick_date": "2026-11-12"
+    },
+    {
+      "id": "10-48550-arxiv-2611-13483-f45a4a",
+      "date": "2026-11-10",
+      "title": "Coupled Cluster Simulations of Vibrational Circular Dichroism Spectra",
+      "authors": "T. Daniel Crawford, Aparna Krishnan, Brendan M. Shumberger",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.13483",
+      "url": "https://arxiv.org/abs/2611.13483",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Chiral (ROA / VCD)"
+      ],
+      "glyph": "chiral",
+      "summary": "We report the first simulations of vibrational circular dichroism (VCD) spectra at the coupled-cluster level of theory. Using a generalization of Stephens's pioneering magnetic-field perturbation theory framework for the magnetic-dipole vibrational transition moment to biorthonormal wave functions, we have derived generalized expressions for the corresponding atomic axial tensors (AATs) and velocity-gauge atomic polar tensors that collapse to Stephens's expressions for real, Hermitian states. …",
+      "why": "The first simulations of vibrational circular dichroism spectra at the coupled-cluster level, made possible by generalising Stephens's magnetic-field perturbation framework to biorthonormal wave functions. This brings the gold-standard of quantum chemistry to VCD, the key tool for assigning absolute configuration of chiral molecules.",
+      "pick": true,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-12"
+    },
+    {
       "id": "10-1021-acsphotonics-6c02151-915bf4",
       "date": "2026-11-10",
       "title": "Voltage-Tunable Microhole-Structured Silicon Spectrometer",
@@ -66,31 +151,29 @@
       "pick_date": "2026-11-11"
     },
     {
-      "id": "10-1021-acsami-6c16716-33415d",
-      "date": "2026-11-10",
-      "title": "SERS-Active Nanocomposite Contact Lenses for Label-Free Multiplexed Biosensing of Tear Analytes",
-      "authors": "Ahmed E. Salih, Connie M. Wang, Roberta M. Sabino, Loza F. Tadesse, Elazer R. Edelman",
-      "institutions": [
-        "University of Wyoming"
-      ],
-      "journal": "ACS Applied Materials &amp; Interfaces",
-      "doi": "10.1021/acsami.6c16716",
-      "url": "https://doi.org/10.1021/acsami.6c16716",
+      "id": "10-48550-arxiv-2611-09783-74f01c",
+      "date": "2026-11-06",
+      "title": "Time-gated optical-parametric-amplification and field-resolved detection of mid-infrared free-induction decay signals",
+      "authors": "Sergio Revuelta, Gerard Faustino, Ka Fai Mak, Ferenc Krausz, Nicholas Karpowicz",
+      "institutions": [],
+      "journal": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2611.09783",
+      "url": "https://doi.org/10.48550/arxiv.2611.09783",
       "oa": false,
       "license": "",
       "categories": [
-        "SERS / TERS"
+        "IR / NIR"
       ],
-      "glyph": "sers",
-      "summary": "Continuous monitoring remains limited by the fact that most wearable biosensors are built around single-analyte recognition chemistries, even though many physiological states are defined by changes across multiple metabolites. Tear fluid is one of the most biochemically informative biofluids accessible non-invasively, but contact lens biosensors have largely relied on enzymatic or electrochemical techniques that are difficult to extend beyond one target marker at a time. Here, we report a label-free surface-enhanced Raman spectroscopy (SERS)-active contact lens in which gold nanostars are grown in situ on commercial hydrogel contact lenses. …",
-      "why": "Gold nanostars grown in situ on commercial hydrogel contact lenses make them SERS-active for label-free, multiplexed sensing of tear analytes. This moves wearable tear sensing beyond the one-analyte-at-a-time limit of enzymatic and electrochemical lenses.",
+      "glyph": "ir",
+      "summary": "Infrared spectroscopy is a key tool to study complex structural dynamics in molecular systems. However, resolving weak or broad vibrational modes is challenging due to their rapid decay. Here, we demonstrate a technique to significantly extend the detectable lifetime - and thereby spectral resolution - of molecular signatures by employing synchronized time-gated optical parametric amplification of mid-infrared free-induction decay signals. …",
+      "why": "Weak or broad vibrational modes are hard to resolve because their mid-infrared free-induction decay dies out quickly. Synchronised time-gated optical parametric amplification of that decay, read out with field-resolved detection, significantly extends the detectable lifetime and thereby the spectral resolution of molecular signatures.",
       "pick": true,
       "feature": false,
       "fig": null,
-      "source": "crossref",
+      "source": "openalex",
       "reviewed": true,
       "tier": "notable",
-      "pick_date": "2026-11-10"
+      "pick_date": "2026-11-11"
     },
     {
       "id": "10-1021-acs-nanolett-6c04439-1d38a1",
@@ -337,56 +420,31 @@
       "pick_date": "2026-11-10"
     },
     {
-      "id": "10-48550-arxiv-2611-09783-74f01c",
-      "date": "2026-11-06",
-      "title": "Time-gated optical-parametric-amplification and field-resolved detection of mid-infrared free-induction decay signals",
-      "authors": "Sergio Revuelta, Gerard Faustino, Ka Fai Mak, Ferenc Krausz, Nicholas Karpowicz",
-      "institutions": [],
-      "journal": "arXiv (Cornell University)",
-      "doi": "10.48550/arxiv.2611.09783",
-      "url": "https://doi.org/10.48550/arxiv.2611.09783",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "Infrared spectroscopy is a key tool to study complex structural dynamics in molecular systems. However, resolving weak or broad vibrational modes is challenging due to their rapid decay. Here, we demonstrate a technique to significantly extend the detectable lifetime - and thereby spectral resolution - of molecular signatures by employing synchronized time-gated optical parametric amplification of mid-infrared free-induction decay signals. …",
-      "why": "Weak or broad vibrational modes are hard to resolve because their mid-infrared free-induction decay dies out quickly. Synchronised time-gated optical parametric amplification of that decay, read out with field-resolved detection, significantly extends the detectable lifetime and thereby the spectral resolution of molecular signatures.",
-      "pick": true,
-      "feature": false,
-      "fig": null,
-      "source": "openalex",
-      "reviewed": true,
-      "tier": "notable",
-      "pick_date": "2026-11-11"
-    },
-    {
-      "id": "10-26434-chemrxiv-15010325-v2-755ec5",
-      "date": "2026-10-12",
-      "title": "FRACTAL: A Ratiometric-based Fingerprinting Framework for Robust Spectral Classification and Ratio-based Spectroscopic Marker Discovery",
-      "authors": "Lamyaa M. Almehmadi",
+      "id": "10-1021-acsami-6c16716-33415d",
+      "date": "2026-11-10",
+      "title": "SERS-Active Nanocomposite Contact Lenses for Label-Free Multiplexed Biosensing of Tear Analytes",
+      "authors": "Ahmed E. Salih, Connie M. Wang, Roberta M. Sabino, Loza F. Tadesse, Elazer R. Edelman",
       "institutions": [
-        "Massachusetts Institute of Technology"
+        "University of Wyoming"
       ],
-      "journal": "ChemRxiv",
-      "doi": "10.26434/chemrxiv.15010325/v2",
-      "url": "https://doi.org/10.26434/chemrxiv.15010325/v2",
+      "journal": "ACS Applied Materials &amp; Interfaces",
+      "doi": "10.1021/acsami.6c16716",
+      "url": "https://doi.org/10.1021/acsami.6c16716",
       "oa": false,
       "license": "",
       "categories": [
-        "Spontaneous Raman"
+        "SERS / TERS"
       ],
-      "glyph": "raman",
-      "summary": "Spectral classification is conventionally performed on band intensities, yet ratios between bands have long served as diagnostic indices in vibrational spectroscopy, from lipid-to-protein markers of membrane composition to amide ratios reporting protein secondary structure. Their use, however, has remained confined to a handful of expert-selected pairs, leaving most of the ratio information contained in a spectrum unexamined. Here I present FRACTAL (Full Ratio Combinatorial Analysis for Classification and Analytical Interpretation), which computes every pairwise log-intensity ratio among detected peaks to form a complete ratiometric fingerprint, grounded in compositional data analysis. …",
-      "why": "FRACTAL computes every pairwise log-intensity ratio among detected peaks to build a complete ratiometric fingerprint, grounded in compositional data analysis. It extends band-ratio analysis beyond the handful of expert-selected pairs used until now, so more of the ratio information in a spectrum can be used for classification and marker discovery.",
-      "pick": true,
+      "glyph": "sers",
+      "summary": "Continuous monitoring remains limited by the fact that most wearable biosensors are built around single-analyte recognition chemistries, even though many physiological states are defined by changes across multiple metabolites. Tear fluid is one of the most biochemically informative biofluids accessible non-invasively, but contact lens biosensors have largely relied on enzymatic or electrochemical techniques that are difficult to extend beyond one target marker at a time. Here, we report a label-free surface-enhanced Raman spectroscopy (SERS)-active contact lens in which gold nanostars are grown in situ on commercial hydrogel contact lenses. …",
+      "why": "Gold nanostars grown in situ on commercial hydrogel contact lenses make them SERS-active for label-free, multiplexed sensing of tear analytes. This moves wearable tear sensing beyond the one-analyte-at-a-time limit of enzymatic and electrochemical lenses.",
+      "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex",
+      "source": "crossref",
       "reviewed": true,
       "tier": "notable",
-      "pick_date": "2026-11-09"
+      "pick_date": "2026-11-10"
     },
     {
       "id": "10-1103-51xg-rsrb-275f5d",
@@ -409,13 +467,40 @@
       "glyph": "raman",
       "summary": "Optical refrigeration in semiconductors is driven by anti-Stokes photoluminescence (PL) arising from phonon-assisted up-conversion. In the conventional picture, lattice vibrations remain in thermal equilibrium and the relevant phonon population is pump independent, so the up-conversion rate scales approximately linearly with excitation power, which places a practical limit on cooling power density and predicts a rapid collapse of cooling efficiency at cryogenic temperatures. …",
       "why": "Shows that phonon-assisted up-conversion photoluminescence becomes nonlinear under vibrational pumping at liquid-helium temperatures, contrary to the conventional picture of a pump-independent thermal phonon population. This bears directly on the limits of optical refrigeration of semiconductors at cryogenic temperatures.",
-      "pick": true,
+      "pick": false,
       "feature": false,
       "fig": null,
       "source": "europepmc",
       "reviewed": true,
       "tier": "notable",
       "pick_date": "2026-11-10"
+    },
+    {
+      "id": "10-26434-chemrxiv-15010325-v2-755ec5",
+      "date": "2026-10-12",
+      "title": "FRACTAL: A Ratiometric-based Fingerprinting Framework for Robust Spectral Classification and Ratio-based Spectroscopic Marker Discovery",
+      "authors": "Lamyaa M. Almehmadi",
+      "institutions": [
+        "Massachusetts Institute of Technology"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15010325/v2",
+      "url": "https://doi.org/10.26434/chemrxiv.15010325/v2",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Spectral classification is conventionally performed on band intensities, yet ratios between bands have long served as diagnostic indices in vibrational spectroscopy, from lipid-to-protein markers of membrane composition to amide ratios reporting protein secondary structure. Their use, however, has remained confined to a handful of expert-selected pairs, leaving most of the ratio information contained in a spectrum unexamined. Here I present FRACTAL (Full Ratio Combinatorial Analysis for Classification and Analytical Interpretation), which computes every pairwise log-intensity ratio among detected peaks to form a complete ratiometric fingerprint, grounded in compositional data analysis. …",
+      "why": "FRACTAL computes every pairwise log-intensity ratio among detected peaks to build a complete ratiometric fingerprint, grounded in compositional data analysis. It extends band-ratio analysis beyond the handful of expert-selected pairs used until now, so more of the ratio information in a spectrum can be used for classification and marker discovery.",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex",
+      "reviewed": true,
+      "tier": "notable",
+      "pick_date": "2026-11-09"
     },
     {
       "id": "10-1016-j-swevo-2026-102602-4ebcca",
@@ -510,34 +595,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acsami-6c10956-4e397b",
-      "date": "2026-11-12",
-      "title": "Dielectric Mie-Resonant Metasurface Integrated ATR Chip for Spectrally Tunable Surface-Enhanced Infrared Spectroscopy in Aqueous Media",
-      "authors": "Aneesh Vincent Veluthandath, Waseem Ahmed, Eleanor L. Osborne, Jonathan Butement, James S. Wilkinson, Ganapathy Senthil Murugan",
-      "institutions": [
-        "University of Southampton"
-      ],
-      "journal": "ACS Applied Materials &amp; Interfaces",
-      "doi": "10.1021/acsami.6c10956",
-      "url": "https://doi.org/10.1021/acsami.6c10956",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "Food & Agriculture",
-        "Materials",
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "Fourier transform infrared (FTIR) spectroscopy provides label-free molecular fingerprints but often lacks sensitivity for trace analysis in aqueous media. Surface-enhanced infrared absorption (SEIRA) spectroscopy amplifies vibrational signals near nanostructured surfaces, yet conventional SEIRA platforms typically require sample drying, preconcentration, or noble metal substrates. Here, we introduce a monolithic all-silicon chip that integrates dielectric Mie-resonant micropillar arrays onto a microattenuated total reflection (µ-ATR) element using a complementary metal–oxide–semiconductor (CMOS)-compatible fabrication process. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1515-rams-2025-0297-ed153d",
@@ -624,7 +684,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1002-jrs-70216-df9ddb",
@@ -649,7 +710,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1364-ol-619270-4a304e",
@@ -672,31 +735,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1063-5-0348773-ce395c",
-      "date": "2026-11-11",
-      "title": "Cadmium doping-induced dual photonic stopbands in sol-gel SiO2/TiO2 Bragg reflectors: Structural, Raman, and optical investigations",
-      "authors": "Sedrati Hichem",
-      "institutions": [
-        "Ecole Nationale Polytechnique de Constantine"
-      ],
-      "journal": "Journal of Applied Physics",
-      "doi": "10.1063/5.0348773",
-      "url": "https://doi.org/10.1063/5.0348773",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "The effect of 2 at. % Cd incorporation on sol-gel-derived SiO2/TiO2 Bragg reflectors was investigated by structural, vibrational, and optical characterization. Cd incorporation preserved the anatase TiO2 phase, reduced the crystallite size from 11.38 to 9.92 nm, increased the unit-cell volume by 0.49%, and shifted the Eg Raman mode from 145.20 to 144.65 cm−1. The undoped multilayer exhibited one reflection-dominated stopband at 406 nm, with a width of 154 nm and a derived reflectance of 97.21%. The Cd-doped multilayer exhibited two reflection-dominated stopbands at 384 and 725 nm, with widths of 70 and 320 nm and derived reflectance values of 97.33% and 97.27%, respectively. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1364-boe-614508-dc7bf7",
@@ -718,7 +758,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acsmeasuresciau-6c00331-47895b",
@@ -745,7 +787,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-3390-ijms272210111-5d37e4",
@@ -774,7 +817,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1063-5-0350485-7ddf12",
@@ -801,34 +845,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-cbe-6c00175-bb61eb",
-      "date": "2026-11-11",
-      "title": "Enhanced Propane Dehydroaromatization over CeZn/ZSM-5 Nanosheets",
-      "authors": "Shijie Zhao, Chengtao Wang, Yanbin Yuan, Yiyuan Lu, Hangjie Li, Hao Xu, Qingyue Wang, Liang Wang, Feng-Shou Xiao",
-      "institutions": [
-        "Zhejiang University",
-        "Zhejiang Baima Lake Laboratory Co",
-        "Zhejiang Shuren University"
-      ],
-      "journal": "Chem &amp; Bio Engineering",
-      "doi": "10.1021/cbe.6c00175",
-      "url": "https://doi.org/10.1021/cbe.6c00175",
-      "oa": true,
-      "license": "CC BY-NC-ND 4.0",
-      "categories": [
-        "Food & Agriculture",
-        "Materials"
-      ],
-      "glyph": "raman",
-      "summary": "Propane dehydroaromatization (PDA) provides an efficient nonpetroleum route for upgrading light alkanes into high-value aromatics, yet conventional Zn-modified ZSM-5 (Zn/n-HZSM-5) catalysts suffer from rapid deactivation owing to diffusion limitations and subsequent carbon deposition. Herein, we developed a catalyst with a shortened b-axis (Zn/s-HZSM-5) via a urea-assisted hydrothermal method to optimize mass transfer within the zeolite channels. Compared with the Zn/n-HZSM-5 possessing a prolonged b-axis thickness of 250–270 nm, the Zn/s-HZSM-5 catalyst exhibited a significantly thinner b-axis of 100–130 nm, leading to a dramatic enhancement in propane conversion from 39.5% to 89.1%. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-5194-amt-19-7183-2026-e34214",
@@ -858,7 +877,8 @@
         "kind": "cover",
         "credit": "Journal cover · Atmospheric measurement techniques"
       },
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1364-oe-615342-62ff57",
@@ -881,36 +901,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1021-acsnano-6c09613-cd52c3",
-      "date": "2026-11-11",
-      "title": "Ferroelectric-Empowered van der Waals Spectrometer with Record-High Sensitivity and Ultralow Noise",
-      "authors": "Jiaqi Zhu, Yi Hong, Qingfeng Hu, Yusong Sheng, Zhongyang Yu, Xiuteng Chen, Weifeng Zhao, Zhaohong Meng, Qiang Wu, Feng Qiu, Zongyin Yang, He Zhu, Ning Dai",
-      "institutions": [
-        "University of Chinese Academy of Sciences",
-        "Zhejiang University School of Medicine",
-        "Juhe Electrooptic (Hangzhou) Tech. Co. Ltd"
-      ],
-      "journal": "ACS Nano",
-      "doi": "10.1021/acsnano.6c09613",
-      "url": "https://doi.org/10.1021/acsnano.6c09613",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Materials",
-        "Spectrometer Design",
-        "General Technology"
-      ],
-      "glyph": "spec",
-      "summary": "Miniaturized spectrometers are essential for portable and consumer-oriented applications, yet their reduced physical footprint inherently limits the detector’s active area, leading to compromised sensitivity. Conventional strategies to enhance sensitivity, such as cryogenic cooling or photomultiplier tubes, are incompatible with miniaturization due to their bulk, cost, and power demands. Here, we present a miniaturized spectrometer based on a van der Waals heterojunction integrated on a ferroelectric thin film. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1021-acs-jpca-6c06690-508210",
@@ -1282,7 +1274,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1088-1402-4896-aec051-0ae9b2",
@@ -1307,56 +1301,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-1073-pnas-2625794123-f63b38",
-      "date": "2026-11-10",
-      "title": "Stereodynamical control of a four-atom reaction: HD + OH → D + H 2 O",
-      "authors": "Tian-yu Du, Shu Liu, Zhuoyuan Huang, Yu Zhang, Yufeng Wang, Zhaojun Zhang, Chunlei Xiao, Dong Hui Zhang, Xueming Yang",
-      "institutions": [
-        "Dalian Institute of Chemical Physics",
-        "Chinese Academy of Sciences",
-        "University of Chinese Academy of Sciences"
-      ],
-      "journal": "Proceedings of the National Academy of Sciences",
-      "doi": "10.1073/pnas.2625794123",
-      "url": "https://doi.org/10.1073/pnas.2625794123",
-      "oa": true,
-      "license": "CC BY-NC-ND",
-      "categories": [
-        "SRS / CARS"
-      ],
-      "glyph": "srs",
-      "summary": "To date, studies of differential steric effect in reactive collisions have been limited to atom + molecule systems. How stereodynamics is affected when the other reactant is also a molecule remains an open question. Here, we present a combined high-resolution crossed-beam scattering and full-dimensional quantum dynamical study of the HD ( v = 1, j = 2) + OH → D + H 2 O reaction, in which the HD molecular axis was initially prepared either parallel or perpendicular to the relative velocity using the stimulated Raman pumping scheme. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-1002-nap2-70346-d86855",
-      "date": "2026-11-10",
-      "title": "Enhanced Third‐Harmonic Generation in a Bound State in the Continuum Assisted Multiband All‐Dielectric Metasurface",
-      "authors": "Partha Mondal, Hadeel Alamoudi, Rodrigo P. Sanchez, Redha H. Al Ibrahim, Boon S. Ooi, Iman Roqan, Hakan Bagci",
-      "institutions": [],
-      "journal": "Nanophotonics",
-      "doi": "10.1002/nap2.70346",
-      "url": "https://doi.org/10.1002/nap2.70346",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Multiband Fano resonances are demonstrated in the near‐infrared (near‐IR) using an all‐dielectric metasurface whose unit cell consists of four silicon nanoblocks on a glass substrate. An in‐plane asymmetry triggers symmetry‐protected quasi‐bound states in the continuum (QBICs), producing multiple high‐ resonances. Their origin is identified through multipolar decomposition of the scattering cross section and field distributions at the resonances. The strong field localization at these resonances enables efficient multiband third‐harmonic (TH) generation in the ultraviolet (UV), with a maximum simulated conversion efficiency of at a peak pump intensity of . …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1103-bygx-49p4-dee0a9",
@@ -1378,7 +1324,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-cphc-70623-7f33c1",
@@ -1404,51 +1352,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-48550-arxiv-2611-14360-f7df53",
-      "date": "2026-11-10",
-      "title": "Direction-Selective Anomalous Quantum Transport from Saddle-like Topological Surface States Coupled to an Electronic Instability in YbSb2",
-      "authors": "Rudra Dhara, Pritesh Srivastava, Jack Tregidga, Rahul Sharma, Shivani, Shankhadip Bhattacharjee, Danilo Ratkovski, Shikhar Gupta, Kartick Biswas, Shivesh Yadav, Nilesh Kulkarni, Sarthak S. Gandhi, Pavan Nukala, Surajit Saha, John W. Harter, Bahadur Singh, Shouvik Chatterjee",
-      "institutions": [],
-      "journal": "arXiv (preprint)",
-      "doi": "10.48550/arxiv.2611.14360",
-      "url": "https://arxiv.org/abs/2611.14360",
-      "oa": true,
-      "license": "",
-      "categories": [
-        "Materials"
-      ],
-      "glyph": "raman",
-      "summary": "We report direction-selective anomalous quantum transport in epitaxial YbSb2 thin films associated with an interplay between anisotropic topological surface states and an electronic instability. Quantum oscillations reveal a quasi-two-dimensional orbit with a non-trivial Berry phase and Dirac-like dispersion, observable for current along the a-axis but absent along the orthogonal in-plane c-axis. Together with first-principles calculations, these observations support its assignment to a saddle-like topological surface state. Its oscillation amplitude exhibits a field-dependent, non-monotonic temperature evolution that departs from conventional Lifshitz-Kosevich behavior. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "arxiv"
-    },
-    {
-      "id": "10-48550-arxiv-2611-14119-280d63",
-      "date": "2026-11-10",
-      "title": "Physics-informed Bayesian optimization of high-order harmonic generation in gases",
-      "authors": "Dominika Maslarova, Mattys Pouyez, Patrik Jansson, Jan Vabek, Robin Weissenbilder, Linus Hagedorn, Anne L'Huillier, Tünde Fülöp",
-      "institutions": [],
-      "journal": "arXiv (preprint)",
-      "doi": "10.48550/arxiv.2611.14119",
-      "url": "https://arxiv.org/abs/2611.14119",
-      "oa": true,
-      "license": "",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "Optimization of high-order harmonic generation in gases is essential for attosecond science. Improving conversion efficiency from the infrared driving laser to the extreme-ultraviolet high-order harmonic radiation requires balancing microscopic single-atom dipole responses with macroscopic phase matching. The resulting conversion-efficiency landscape exhibits complex structures, such as the hyperbolic ridge in the pressure-length space, which can be difficult to accurately reconstruct using conventional Bayesian optimization. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "arxiv"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-48550-arxiv-2611-13663-6f04f2",
@@ -1471,29 +1376,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "arxiv"
-    },
-    {
-      "id": "10-48550-arxiv-2611-13483-f45a4a",
-      "date": "2026-11-10",
-      "title": "Coupled Cluster Simulations of Vibrational Circular Dichroism Spectra",
-      "authors": "T. Daniel Crawford, Aparna Krishnan, Brendan M. Shumberger",
-      "institutions": [],
-      "journal": "arXiv (preprint)",
-      "doi": "10.48550/arxiv.2611.13483",
-      "url": "https://arxiv.org/abs/2611.13483",
-      "oa": true,
-      "license": "",
-      "categories": [
-        "Chiral (ROA / VCD)"
-      ],
-      "glyph": "chiral",
-      "summary": "We report the first simulations of vibrational circular dichroism (VCD) spectra at the coupled-cluster level of theory. Using a generalization of Stephens's pioneering magnetic-field perturbation theory framework for the magnetic-dipole vibrational transition moment to biorthonormal wave functions, we have derived generalized expressions for the corresponding atomic axial tensors (AATs) and velocity-gauge atomic polar tensors that collapse to Stephens's expressions for real, Hermitian states. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "arxiv"
+      "source": "arxiv",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1021-acssensors-6c03929-b1988f",
@@ -2210,29 +2095,6 @@
       "reviewed": true
     },
     {
-      "id": "10-26434-chemrxiv-15011888-v1-7472a5",
-      "date": "2026-11-09",
-      "title": "Assessment of honey samples from Nigerian markets using FTIR spectroscopy and machine learning",
-      "authors": "Godwill Charles",
-      "institutions": [],
-      "journal": "ChemRxiv",
-      "doi": "10.26434/chemrxiv.15011888/v1",
-      "url": "https://doi.org/10.26434/chemrxiv.15011888/v1",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "IR / NIR",
-        "Data Analysis & AI"
-      ],
-      "glyph": "ir",
-      "summary": "Honey adulteration with cheaper sugars is a concern in Nigerian markets, where conventional tests are slow, costly, and not widely accessible. This study assessed whether Fourier-transform infrared (FTIR) spectroscopy combined with machine learning can screen honey for added sugar, and whether such a model can be applied to honey sold in Nigerian markets. A Random Forest classifier was trained on a public FTIR dataset of 16 honeys, each measured pure and with 10, 20, and 40% added sugar. It was compared with PLS-DA, logistic regression, and a support vector machine. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
-    },
-    {
       "id": "10-1364-opticaopen-34930467-39829b",
       "date": "2026-11-09",
       "title": "Thermal Heterogeneity Couples Hidden Modes in Photothermal Tomography",
@@ -2253,7 +2115,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1380-vss-69-625-878c51",
@@ -2280,7 +2143,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-cemconres-2026-108453-343360",
@@ -2306,7 +2170,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-22144-ctujoisd-2026-053-eff6f8",
@@ -2335,7 +2200,8 @@
         "kind": "cover",
         "credit": "Journal cover · CTU Journal of Innovation and Sustainable Development"
       },
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1021-acsanm-6c03095-7d2b81",
@@ -2362,33 +2228,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-3171-case26545-fef60c",
-      "date": "2026-11-09",
-      "title": "Near-infrared autofluorescence to differentiate pituitary gland from tumor in endoscopic endonasal resection of pituitary adenomas: illustrative cases",
-      "authors": "John E. Phay, Rodrigo Gehrke, Kara A. Parikh, Joshua H. Weinberg, Daniel M. Prevedello",
-      "institutions": [
-        "The Ohio State University Wexner Medical Center"
-      ],
-      "journal": "Journal of Neurosurgery: Case Lessons",
-      "doi": "10.3171/case26545",
-      "url": "https://doi.org/10.3171/case26545",
-      "oa": true,
-      "license": "CC BY-NC-ND 4.0",
-      "categories": [
-        "Oncology",
-        "IR / NIR"
-      ],
-      "glyph": "ir",
-      "summary": "BACKGROUND Differentiating pituitary adenoma from normal pituitary gland during endoscopic transsphenoidal surgery can be challenging, yet this distinction is critical for maximizing tumor resection while preserving endocrine function. Near-infrared autofluorescence (NIRAF) is an established intraoperative adjunct in endocrine surgery and may be applicable to pituitary surgery. OBSERVATIONS The authors present the cases of 3 patients undergoing endoscopic endonasal transsphenoidal pituitary surgery in which a probe-based NIRAF device was used intraoperatively to differentiate adenomatous tissue from normal gland. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-48550-arxiv-2611-13319-2b30bb",
@@ -2411,7 +2253,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "arxiv"
+      "source": "arxiv",
+      "reviewed": true
     },
     {
       "id": "10-1002-lpor-72177-614c03",
@@ -2513,7 +2356,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1002-ansa-70116-50ec66",
@@ -2644,53 +2488,6 @@
       "reviewed": true
     },
     {
-      "id": "10-48550-arxiv-2611-10470-ca7449",
-      "date": "2026-11-07",
-      "title": "Wideband AR-HCF Transmission Under Variable Network Traffic: A System-Level Analysis",
-      "authors": "Md Ghulam Saber, Zhiping Jiang",
-      "institutions": [],
-      "journal": "arXiv (Cornell University)",
-      "doi": "10.48550/arxiv.2611.10470",
-      "url": "https://doi.org/10.48550/arxiv.2611.10470",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "SRS / CARS",
-        "THz & Low-Frequency"
-      ],
-      "glyph": "srs",
-      "summary": "Dynamic traffic changes spectral occupancy in wideband optical links, perturbing surviving channels in single-mode fiber (SMF) through nonlinear interference (NLI), inter-channel stimulated Raman scattering, and amplifier loading. This motivates amplified-spontaneous-emission (ASE) idlers to maintain full occupancy. We test whether spectral filling remains necessary in antiresonant hollow-core fiber (AR-HCF) using a span-by-span model of a 96-channel, 9.6-THz extended-C+L link over 960 km. The model jointly tracks signal, ASE, and NLI, including amplifier pigtails, line-resolved CO2 absorption, intermodal interference, amplifier control, and load transients. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-48550-arxiv-2611-10970-0aa62e",
-      "date": "2026-11-07",
-      "title": "A versatile beamline for attosecond photoelectron and photon spectroscopy",
-      "authors": "Ronak Shah, Jahanzeb Muhammad, Ianina Kosse, Marvin Schmoll, Samuel Bengtsson, R. Mori, Dominik Hoff, G. G. Paulus, Fabio Frassetto, Luca Poletto, G. Sansone",
-      "institutions": [],
-      "journal": "arXiv (Cornell University)",
-      "doi": "10.48550/arxiv.2611.10970",
-      "url": "https://doi.org/10.48550/arxiv.2611.10970",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Spectral Imaging",
-        "General Technology"
-      ],
-      "glyph": "hsi",
-      "summary": "We report on the development of a versatile attosecond beamline for ultrafast spectroscopy of atoms and molecules, as well as for the metrology of infrared laser pulses. Using a few-cycle pulse (approximately 5 fs) for driving the high-order harmonic generation process, we show that the modulation of the harmonic flux in the cut-off spectral region, induced by a weak perturbing field, enables complete electric-field characterization of the perturbing pulse. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
-    },
-    {
       "id": "10-48550-arxiv-2611-10413-e824dd",
       "date": "2026-11-07",
       "title": "Frequency-Structure Complementary Modeling for Hyperspectral Image Fusion",
@@ -2710,7 +2507,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1088-1402-4896-aebf11-e41b42",
@@ -3465,7 +3263,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1002-agt2-70475-910500",
@@ -3496,7 +3296,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-cej-2026-184043-7937f4",
@@ -3520,35 +3321,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
-    },
-    {
-      "id": "10-1051-0004-6361-202659312-31a893",
-      "date": "2026-11-01",
-      "title": "Euclid",
-      "authors": "F Cogato, Bogna Kubik, R. Barbier, R. Barbier, Eduardo Medinaceli, Y. Copin, Enrico Franceschi, Luca Valenziano, L. Valenziano, N. Aghanim, B. Altieri, N. Auricchio, C. Baccigalupi, C. Baccigalupi, A. Balestra, S. Bardelli, Paola Maria Battaglia, A. Biviano, E. Branchini, M. Brescia et al.",
-      "institutions": [
-        "Osservatorio di Astrofisica e Scienza dello Spazio",
-        "National Institute for Astrophysics",
-        "University of Bologna"
-      ],
-      "journal": "Astronomy and Astrophysics",
-      "doi": "10.1051/0004-6361/202659312",
-      "url": "https://doi.org/10.1051/0004-6361/202659312",
-      "oa": true,
-      "license": "CC BY",
-      "categories": [
-        "IR / NIR",
-        "General Technology"
-      ],
-      "glyph": "ir",
-      "summary": "The Euclid spacecraft, located at the second Lagrangian point of the Sun-Earth system, hosts the Near-Infrared Spectrometer and Photometer (NISP) instrument. NISP is equipped with a mosaic of 16 HgCdTe-based detectors (Teledyne’s H2RG) to acquire near-infrared photometric and spectroscopic data. To meet the spacecraft’s constraints on computational resources and telemetry bandwidth, the near-infrared signal is processed on board via a dedicated hardware-software architecture designed to fulfil Euclid ’s stringent data quality requirements. …",
-      "why": "",
-      "tier": "notable",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-molstruc-2026-148067-a49cc9",
@@ -3570,33 +3344,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1088-1742-6596-3348-1-012065-261c01",
-      "date": "2026-11-01",
-      "title": "Glucose Detection Using 4-mercaptophenyl boronic acid (4-MPBA)-Functionalized-Surface-Exposed Nanoparticle Sheets (SENS) as a Surface-Enhanced Raman Spectroscopy (SERS) substrate",
-      "authors": "Aldo Novaznursyah Costrada, Nina Siti Aminah, Dessy Natalia, Mitra Djamal, Steven E. J. Bell",
-      "institutions": [
-        "Bandung Institute of Technology",
-        "Universitas Andalas",
-        "Research Group of Biochemistry Bandung Institute of Technology"
-      ],
-      "journal": "Journal of Physics: Conference Series",
-      "doi": "10.1088/1742-6596/3348/1/012065",
-      "url": "https://doi.org/10.1088/1742-6596/3348/1/012065",
-      "oa": true,
-      "license": "CC BY 4.0",
-      "categories": [
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "Glucose detection using Surface-Enhanced Raman Spectroscopy (SERS) is currently attracting significant attention and posing challenges due to small glucose Raman scattering cross-section. In this work, SERS substrates were fabricated using a self-assembly technique involving gold nanoparticles synthesized in an oil-water phase with the aid of a promoter known as Metal Liquid-Like Films (MeLLFs). This technique produces SERS substrates known as Surface-Exposed Nanoparticle Sheets (SENS). Characterization of SENS was performed using Crystal Violet (CV) with a detection limit of up to ∼10 −6 M. …",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-saa-2026-129105-157670",
@@ -3619,7 +3368,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-microc-2026-120257-cf2b60",
@@ -3641,52 +3391,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1016-j-oregeorev-2026-107627-eedaa2",
-      "date": "2026-11-01",
-      "title": "Short-wave infrared spectra of white mica and geochemical characteristics of pyrite for exploration of the Qiucun low-sulfidation epithermal gold deposit, Dehua County, Fujian Province, China",
-      "authors": "Fei-Peng Fan, Pei Ni, Yan Zhou, Fan Xiao, Guang-Fu Xing, Zi-Hao Zhao, Zhi-Qiang Yu, Kai Yang, Nan Wang, Tie Zhang",
-      "institutions": [],
-      "journal": "Ore Geology Reviews",
-      "doi": "10.1016/j.oregeorev.2026.107627",
-      "url": "https://doi.org/10.1016/j.oregeorev.2026.107627",
-      "oa": true,
-      "license": "CC BY-NC 4.0",
-      "categories": [
-        "General Technology"
-      ],
-      "glyph": "raman",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
-    },
-    {
-      "id": "10-1016-j-microc-2026-120258-e15d29",
-      "date": "2026-11-01",
-      "title": "A SERS-active bimetallic nanozyme of Sedum lineare-shaped AgNS@Pt for colorimetric and SERS dual-mode detection of bacteria",
-      "authors": "Huixia Di, Peize Xu, Tinghui Wen, Yadi Wang, Xiaochun Li",
-      "institutions": [],
-      "journal": "Microchemical Journal",
-      "doi": "10.1016/j.microc.2026.120258",
-      "url": "https://doi.org/10.1016/j.microc.2026.120258",
-      "oa": false,
-      "license": "",
-      "categories": [
-        "Bacteriology",
-        "SERS / TERS"
-      ],
-      "glyph": "sers",
-      "summary": "",
-      "why": "",
-      "pick": false,
-      "feature": false,
-      "fig": null,
-      "source": "crossref"
+      "source": "crossref",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-trac-2026-119240-3ad452",
@@ -3713,7 +3420,8 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true
     },
     {
       "id": "10-1016-j-pacs-2026-100901-e7970a",
@@ -3739,7 +3447,9 @@
       "pick": false,
       "feature": false,
       "fig": null,
-      "source": "openalex"
+      "source": "openalex",
+      "reviewed": true,
+      "tier": "notable"
     },
     {
       "id": "10-1016-j-diagmicrobio-2026-117718-38f260",
@@ -3932,6 +3642,7 @@
   ],
   "removed": [
     "10-1002-anie-4127398-c38a71",
+    "10-1002-nap2-70346-d86855",
     "10-1002-nap2-70350-e39ad9",
     "10-1002-xrs-70141-30ed75",
     "10-1007-s11095-026-04207-z-8c70dd",
@@ -3940,19 +3651,28 @@
     "10-1016-j-bios-2026-119407-da0d32",
     "10-1016-j-foodchem-2026-151803-359750",
     "10-1016-j-microc-2026-120237-34ac35",
+    "10-1016-j-microc-2026-120258-e15d29",
+    "10-1016-j-oregeorev-2026-107627-eedaa2",
     "10-1016-j-saa-2026-129113-0ba0a3",
     "10-1016-j-saa-2026-129115-264df1",
     "10-1016-j-saa-2026-129128-a19016",
     "10-1021-acs-chemmater-6c02356-148d26",
     "10-1021-acs-langmuir-6c04516-37d038",
     "10-1021-acsnano-6c15845-a4118a",
+    "10-1021-cbe-6c00175-bb61eb",
     "10-1029-2025jd045292-1081d0",
+    "10-1051-0004-6361-202659312-31a893",
     "10-1063-5-0338590-42fd84",
+    "10-1063-5-0348773-ce395c",
+    "10-1073-pnas-2625794123-f63b38",
     "10-1080-15481603-2026-2756037-0ab3d1",
     "10-1088-1742-6596-3345-1-012020-f6b353",
+    "10-1088-1742-6596-3348-1-012065-261c01",
     "10-1145-3842507-433619",
     "10-1177-14658011261504488-572b46",
     "10-2514-1-a36620-15b88a",
+    "10-26434-chemrxiv-15011888-v1-7472a5",
+    "10-3171-case26545-fef60c",
     "10-3389-fchbi-2026-2003261-639cc7",
     "10-3390-beverages12110133-3a5daa",
     "10-3390-f17111337-5abaa9",
@@ -3962,9 +3682,13 @@
     "10-3847-1538-3881-aea614-2c589b",
     "10-48550-arxiv-2611-09581-278cf2",
     "10-48550-arxiv-2611-09855-15b3c3",
+    "10-48550-arxiv-2611-10470-ca7449",
+    "10-48550-arxiv-2611-10970-0aa62e",
+    "10-48550-arxiv-2611-14119-280d63",
+    "10-48550-arxiv-2611-14360-f7df53",
     "10-5414-te500179-1153f7",
     "10-64898-2026-11-07-765052-7a942b"
   ],
   "updated": "2026-11-12",
-  "curated": "2026-11-11"
+  "curated": "2026-11-12"
 }
