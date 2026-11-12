@@ -383,5 +383,15 @@
     "src": "covers/ctu-journal-of-innovation-and-sustainable-development.jpg",
     "kind": "cover",
     "credit": "Journal cover · CTU Journal of Innovation and Sustainable Development"
+  },
+  "science forum (journal of pure and applied sciences)": {
+    "src": "covers/science-forum-journal-of-pure-and-applied-sciences.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Science Forum (Journal of Pure and Applied Sciences)"
+  },
+  "geoscientific model development": {
+    "src": "covers/geoscientific-model-development.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Geoscientific model development"
   }
 }
