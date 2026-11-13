@@ -4,7 +4,7 @@
   "date": "2026-11-09",
   "window": [
     "2026-11-09",
-    "2026-11-13"
+    "2026-11-14"
   ],
   "articles": [
     {
@@ -561,6 +561,420 @@
       "source": "crossref",
       "reviewed": true,
       "tier": "notable"
+    },
+    {
+      "id": "10-1016-j-softx-2026-103230-68c917",
+      "date": "2026-12-01",
+      "title": "pypasi: A python library for band-resolved classifier auditing and acquisition quality control in biomedical Raman spectroscopy",
+      "authors": "Nikolaos Kourkoumelis",
+      "institutions": [],
+      "journal": "SoftwareX",
+      "doi": "10.1016/j.softx.2026.103230",
+      "url": "https://doi.org/10.1016/j.softx.2026.103230",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-dental-2026-11-002-112a41",
+      "date": "2026-11-13",
+      "title": "Spatio-temporal optical and thermal monitoring reveals light-source- and photoinitiator-dependent cure heterogeneity in experimental resin-based composites",
+      "authors": "Hadis MA, Shortall AC, Palin WM",
+      "institutions": [
+        "University of Birmingham"
+      ],
+      "journal": "Dental materials : official publication of the Academy of Dental Materials",
+      "doi": "10.1016/j.dental.2026.11.002",
+      "url": "https://doi.org/10.1016/j.dental.2026.11.002",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "IR / NIR",
+        "General Technology"
+      ],
+      "glyph": "ir",
+      "summary": "To assess the influence of beam profile and photoinitiator (PI) chemistry (type and concentration) on dynamic beam transmission and temperature change, and degree of conversion (DC) in experimental resin-based composites (RBC). Filled RBCs were formulated with 3:2 bisGMA:TEGDMA. Materials contained equimolar concentrations of CQ-only, TPO-only and CQ+TPO. An additional group contained half the concentration of CQ only + TPO only materials. Calibrated spectrometer-based devices were used to determine spectral power, irradiance, curing time and energy transmitted by light curing units (LCUs). …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1021-acsnano-6c14157-f5cf40",
+      "date": "2026-11-13",
+      "title": "Plasmonic Hot Carrier-Driven Chemistry Revealed by Dual Raman Thermometry",
+      "authors": "Shengxiang Wu, Sa Suo, Nandan Ghorai, Isaac Tangen, Jinhui Meng, Tianquan Lian",
+      "institutions": [
+        "Emory University"
+      ],
+      "journal": "ACS Nano",
+      "doi": "10.1021/acsnano.6c14157",
+      "url": "https://doi.org/10.1021/acsnano.6c14157",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Materials",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Plasmonic nanoparticles (NPs) have been employed as nanocatalysts in a myriad of photochemical reactions with the underlying mechanisms divided into two categories: thermal and nonthermal pathways. Differentiating these two pathways is the key to optimizing plasmon-mediated chemistry; however, the challenge of measuring temperature down to the nanoscale hinders the advancement and causes the ongoing debate in the field. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1093-neuonc-noag189-1178-df5a85",
+      "date": "2026-11-13",
+      "title": "TMET-06 PRISM: Parallel Raman Imaging with Spatial transcriptome and Multi-modal optical imaging of glioma tissue",
+      "authors": "Mioara Larion, Adrian Lita",
+      "institutions": [
+        "National Cancer Institute"
+      ],
+      "journal": "Neuro-Oncology",
+      "doi": "10.1093/neuonc/noag189.1178",
+      "url": "https://doi.org/10.1093/neuonc/noag189.1178",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Cell Biology",
+        "Environmental",
+        "SRS / CARS"
+      ],
+      "glyph": "srs",
+      "summary": "Background Recent advances in spatial genomics and transcriptomics, including 10x Genomics and RNAscope technologies, have enabled high-resolution investigation of single-cell biology within intact tissues. However, equivalent approaches for in situ metabolomics remain limited because conventional mass spectrometry methods often require tissue destruction and lack sufficient sensitivity for single-cell metabolic analysis. To address this gap, we developed, PRISM, an multimodal imaging platform that integrates Raman-based metabolic imaging with spatial transcriptomics and complementary optical imaging modalities. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1093-neuonc-noag189-077-6b36a4",
+      "date": "2026-11-13",
+      "title": "BIOM-18 Raman-Based Molecular Fingerprinting of Live Cells Using Machine Learning",
+      "authors": "Adrian Lita, Joel Sjoberg, Helena Muley, Sophia Spinu, Ion Petre, Mioara Larion",
+      "institutions": [
+        "National Institutes of Health",
+        "University of Turku"
+      ],
+      "journal": "Neuro-Oncology",
+      "doi": "10.1093/neuonc/noag189.077",
+      "url": "https://doi.org/10.1093/neuonc/noag189.077",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Cell Biology",
+        "Neurology",
+        "SRS / CARS",
+        "Data Analysis & AI"
+      ],
+      "glyph": "srs",
+      "summary": "Background Coherent Raman spectroscopy enables label-free biochemical fingerprinting of live cells with subcellular resolution. We previously developed a machine learning framework capable of classifying glioma FFPE tissues using Raman spectral signatures. We hypothesized that intrinsic biochemical composition alone is sufficient to distinguish cellular identity and tumor subtype. To test this, we generated metabolic maps of diverse brain brain-derived cell types—including astrocytoma, oligodendroglioma, and glioblastoma cells—using coherent Raman spectroscopy at single-cell resolution. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acs-nanolett-6c05098-22d63d",
+      "date": "2026-11-13",
+      "title": "Raman-Inactive Metal–Organic Framework Nanoribbons as Plasmonic-Nanocavity Spacers and Molecular Trappers for SERS Detection",
+      "authors": "Yi Liu, Ruiqian Zhang, Shengyan Wang, Guoliang Zhou, Shuyu Zhu, Runfang Fu, Xiaolu Zhuo, Jianfang Wang",
+      "institutions": [
+        "The Chinese University of Hong Kong",
+        "Sichuan University"
+      ],
+      "journal": "Nano Letters",
+      "doi": "10.1021/acs.nanolett.6c05098",
+      "url": "https://doi.org/10.1021/acs.nanolett.6c05098",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "The integration of plasmonic nanostructures with metal–organic frameworks (MOFs) has emerged as a powerful strategy to enhance the sensitivity and selectivity of surface-enhanced Raman spectroscopy (SERS). While the resultant hybrid systems exploit localized surface plasmon resonance for electric-field enhancement and MOF porosity for molecular enrichment, their practical applications are hindered by challenges, including intrinsic Raman interference from MOFs, precise control over MOF dimensions, and restricted plasmon coupling configurations. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-3390-s26227166-baade2",
+      "date": "2026-11-13",
+      "title": "Smoking-Status Determination from Human Nails Based on Attenuated Total Reflection Fourier Transform Infrared Spectroscopy and Machine Learning",
+      "authors": "Bilkis Mitu, Lenka Halámková",
+      "institutions": [
+        "Texas Tech University"
+      ],
+      "journal": "Sensors",
+      "doi": "10.3390/s26227166",
+      "url": "https://doi.org/10.3390/s26227166",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Forensics",
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "Human nails are a durable, non-invasively collected keratin matrix that records exposure over months. We assessed whether attenuated total reflection Fourier transform infrared (ATR FT-IR) spectroscopy of intact fingernail clippings, combined with machine learning, can discriminate self-reported smokers from non-smokers. Spectra (n = 3681) from 87 donors (42 smokers, 45 non-smokers) were second-derivative transformed, truncated to the informative regions and L2-normalized. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1093-neuonc-noag189-776-921bcc",
+      "date": "2026-11-13",
+      "title": "IMG-08 Deciphering the FLAIR Signal: Stimulated Raman Histology Reveals the Limited Ability of Radiographic Characteristics to Comprehensively Define Tumor Infiltration in Glioblastoma",
+      "authors": "Gabrielle Malte, Soonmee Cha, Thomas Nelson, Shawn Hervey-Jumper, Katie Scotford-Broemmer, Todd Hollon, Melike Pekmezci, Sanjeev Herr, Akhil Kondepudi, Mitchel Berger, Jacob Young",
+      "institutions": [
+        "University of California",
+        "University of Michigan Health"
+      ],
+      "journal": "Neuro-Oncology",
+      "doi": "10.1093/neuonc/noag189.776",
+      "url": "https://doi.org/10.1093/neuonc/noag189.776",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Neurology",
+        "Oncology",
+        "SRS / CARS"
+      ],
+      "glyph": "srs",
+      "summary": "FLAIR signal hyperintensity guides supratotal resection of glioblastoma (GBM) and is included in the RANO resect classification schema; however, the degree of tumor infiltration within FLAIR abnormality remains uncertain. We evaluated whether commonly used radiographic assessments of FLAIR correspond to underlying tumor infiltration measured by Stimulated Raman Histology (SRH). Adult patients undergoing surgery for contrast-enhancing GBM underwent intraoperative analysis of margin specimens using the GliomaReveal model. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-3390-molecules31224108-5fa77a",
+      "date": "2026-11-13",
+      "title": "Rapid and Non-Destructive Prediction of Major Milk Fatty Acid Classes Using Handheld Near-Infrared Reflectance Spectroscopy Coupled with Chemometric Analysis",
+      "authors": "Xiaolong Zhang, Xin Huang, Lihua Zhang, Yongqi Wu, Fuzhen Zhou, Kaizhi Zheng, Huilin Liu, Sangang He",
+      "institutions": [
+        "College of Animal Science",
+        "Institute of Animal Husbandry and Veterinary Science",
+        "Zhejiang Academy of Agricultural Sciences"
+      ],
+      "journal": "Molecules",
+      "doi": "10.3390/molecules31224108",
+      "url": "https://doi.org/10.3390/molecules31224108",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Food & Agriculture",
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "This study developed a non-destructive analytical approach based on handheld near-infrared (NIR) reflectance spectroscopy coupled with chemometric modeling for predicting major fatty acid classes in bovine milk. A total of 560 individual-cow milk samples from Holstein cows were collected from a single commercial dairy farm during one sampling period and analyzed using gas chromatography–mass spectrometry (GC–MS) as reference measurements. The concentrations of saturated fatty acids (SFA), monounsaturated fatty acids (MUFA), and polyunsaturated fatty acids (PUFA) determined by GC–MS were used as reference values for NIR prediction model development. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acs-jpca-6c06301-5969dd",
+      "date": "2026-11-13",
+      "title": "Conformational Analysis of ϵ-Caprolactam, N -Acetyl-ϵ-caprolactam and N -Vinyl-ϵ-caprolactam Using Rotational Spectroscopy",
+      "authors": "Chisom A. Tiu, Madison R. Smith, Agnes Pek, Yi Hsin, Daniel Farb, Kyle N. Crabtree",
+      "institutions": [
+        "University of California"
+      ],
+      "journal": "The Journal of Physical\nChemistry A",
+      "doi": "10.1021/acs.jpca.6c06301",
+      "url": "https://doi.org/10.1021/acs.jpca.6c06301",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "The rotational spectra of ε-caprolactam, N-vinyl-ε-caprolactam, and N-acetyl-ε-caprolactam were measured in the 26.5–40 GHz region using a chirped-pulse Fourier transform microwave spectrometer, providing the first rotational spectroscopic characterization of two N-substituted seven-membered lactams and extending a previous study of the parent compound. Supported by geometry optimizations and frequency calculations at the ωB97X-D/def2-TZVP level, the chair conformer was assigned for all three molecules, and the boat conformer was additionally observed for vinylcaprolactam. Rotational, centrifugal distortion, and 14N nuclear quadrupole coupling constants were determined for each species. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1093-neuonc-noag189-670-3764a7",
+      "date": "2026-11-13",
+      "title": "PATH-10 SIGNAL: A Scalable, Real-World Model for Rapid Intraoperative Molecular Classification of Gliomas Using Stimulated Raman Histology",
+      "authors": "Nicolas Goff, John Markert, David Reinecke, Alexandra Springer, Anna Chen, Minjun Park, Gabrielle Malte, Katie Scotford-Broemmer, Sophia Hoonsbeen, Karen Eddy, Asadur Chowdury, Cheng Jiang, Akhil Kondepudi, Anna-Katharina Meissner, Gina Fürtjes, Nina Müller, Volker Neuschmelting, Melike Pekmezci, Jacob Young, Christian Freudinger et al.",
+      "institutions": [
+        "University of Texas at Austin Dell Medical School",
+        "University of Alabama at Birmingham Heersink School of Medicine",
+        "Faculty of Medicine and University Hospital Cologne"
+      ],
+      "journal": "Neuro-Oncology",
+      "doi": "10.1093/neuonc/noag189.670",
+      "url": "https://doi.org/10.1093/neuonc/noag189.670",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Neurology",
+        "Oncology",
+        "SRS / CARS",
+        "Data Analysis & AI"
+      ],
+      "glyph": "srs",
+      "summary": "Previous machine learning models to intraoperatively predict the molecular status of gliomas using stimulated Raman histology (SRH), such as DeepGlioma, have achieved high performance (91.5% accuracy) on curated datasets. However, when used intraoperatively, DeepGlioma (162M parameters) runs slowly on current SRH hardware and underperforms due to its lack of an image rejection mechanism and its validation on curated images. Here, we introduce SRH-Informed Glioma classificatioN with Attention Learning (SIGNAL) (27M parameters), a lighter model with a built-in attention-based rejection mechanism that outperforms DeepGlioma on uncurated clinical datasets. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1038-s41467-026-78668-6-9a23e6",
+      "date": "2026-11-13",
+      "title": "Depth-enhanced molecular imaging with two-photon oblique plane microscopy",
+      "authors": "Kevin Keomanee-Dizon, Yaakov Clenman, Alejandra Duran, Sergey Ryabichko, Pauline Hansen, Tohn Borjigin, Richard H. Thornton, Jared E. Toettcher, Harold M. McNamara",
+      "institutions": [],
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-026-78668-6",
+      "url": "https://doi.org/10.1038/s41467-026-78668-6",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Food & Agriculture",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "High-numerical-aperture (NA) oblique plane microscopy enables noninvasive fluorescence imaging of subcellular dynamics without radical sample modification. However, performance degrades at depth in multicellular specimens as scattering and refractive-index heterogeneity raise out-of-focus background. We report a two-photon oblique plane microscope that improves resolution at depth by combining high-NA single-objective detection with multiphoton plane illumination. The microscope achieves ~ 300 nm lateral and ~ 650 nm axial resolution, with single-molecule sensitivity and 5 × faster volumetric acquisition (up to 3.25 × 10 6 voxels s −1 ). …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1364-ao-618644-8d38a0",
+      "date": "2026-11-13",
+      "title": "Molecular Fingerprint-Coupled Terahertz Metasurfaces for Label-Free Amino Acid Detection",
+      "authors": "qiaodi zhen, Yonggang Zhang, Lanju Liang, Xin Yan, Haiyun Yao, Zhenhua Li, Ziqun Wang, xiaofei hu, xianghu hu, Xuelong Yu, Peng Liu",
+      "institutions": [],
+      "journal": "Applied Optics",
+      "doi": "10.1364/ao.618644",
+      "url": "https://doi.org/10.1364/ao.618644",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1002-nap2-70360-90d46a",
+      "date": "2026-11-13",
+      "title": "Scaling Limits of Multichannel Spectral Routers for Snapshot Imaging",
+      "authors": "Junseo Han, Seunghyun Lee, Donghyun Kim, Haejun Chung",
+      "institutions": [
+        "Department of Electronic Engineering Hanyang University Seoul South Korea"
+      ],
+      "journal": "Nanophotonics",
+      "doi": "10.1002/nap2.70360",
+      "url": "https://doi.org/10.1002/nap2.70360",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Spectral Imaging",
+        "General Technology"
+      ],
+      "glyph": "hsi",
+      "summary": "Inverse‐designed spectral routers can enable compact snapshot spectral imaging by directing different wavelengths to designated detector sub‐pixels without mechanical scanning or absorptive filters. This study examines how routing performance scales as the number of spectral channels increases over a fixed visible bandwidth. The routing condition is first formulated as a channel‐count‐dependent minimum separation between output states, then evaluated against Tucker‐ and Miller‐type delay‐bandwidth capacities to estimate the finite thickness required for a prescribed worst‐channel efficiency. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acssensors-6c04410-2d43ce",
+      "date": "2026-11-13",
+      "title": "Ionic Hydrogel-Based Solid-State Electrolyte for Versatile High-Resolution Light-Addressable Electrochemical Imaging and Sensing",
+      "authors": "Qiaoyu Yang, Qian He, Luyao Feng, Sen Wang, Jiaming Liao, Yazhong Bu, Jian Wang, Jian Zhuang, De-Wen Zhang",
+      "institutions": [
+        "Xi’an Jiaotong University",
+        "Xi'an Jiaotong University"
+      ],
+      "journal": "ACS Sensors",
+      "doi": "10.1021/acssensors.6c04410",
+      "url": "https://doi.org/10.1021/acssensors.6c04410",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Food & Agriculture",
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "Conventional light-addressable electrochemical (LAE) imaging relies on liquid electrolytes, which suffer from fluid leakage and poor immobilization of nonadherent analytes. Here, we introduce a robust, solid-state LAE platform utilizing ionic hydrogels that serve concurrently as ion-conducting electrolytes and stable encapsulation matrices. Photocurrent measurements reveal that the proposed α-Fe2O3/hydrogel electrolyte interface shows photoelectrochemical behavior comparable to liquid controls, achieving a lateral spatial resolution of ∼2.5 μm. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acssensors-6c03362-fa5150",
+      "date": "2026-11-13",
+      "title": "Intelligent Modular Dual-Readout Architecture Driven by CRISPR/Cas13a-CHA Cascade and Machine Learning for Portable Multiplex MicroRNA Liquid Biopsy in Early Lung Cancer",
+      "authors": "Min Fan, Xiangrui Ji, Jingbo Chen, Yun Ding, Shangyuan Feng, Jinlan Lin, Tianxing Guo",
+      "institutions": [
+        "Quanzhou Normal University",
+        "Shengli Clinical Medical College of Fujian Medical University",
+        "Shengli Clinical Medical College"
+      ],
+      "journal": "ACS Sensors",
+      "doi": "10.1021/acssensors.6c03362",
+      "url": "https://doi.org/10.1021/acssensors.6c03362",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "SERS / TERS",
+        "Data Analysis & AI"
+      ],
+      "glyph": "sers",
+      "summary": "Precise detection of trace miRNAs in liquid biopsies is critical for early lung cancer screening, yet current methods are frequently limited by complex reverse transcription procedures and potential enzymatic amplification biases. Herein, we developed a sequencing-free and highly portable dual-mode biosensing platform for decentralized clinical diagnostics by synergizing highly specific CRISPR/Cas13a recognition with exponential non-enzymatic catalytic hairpin assembly amplification (CHA). Trace target miRNAs activate Cas13a to trans-cleave the RNA trigger strand, while intact RNA triggers can precisely initiate downstream assembly networks. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
     },
     {
       "id": "10-1038-s42004-026-02277-z-82e398",
@@ -1150,6 +1564,587 @@
       "feature": false,
       "fig": null,
       "source": "crossref"
+    },
+    {
+      "id": "10-1039-d6cp02818g-2a3dbe",
+      "date": "2026-11-12",
+      "title": "How laser wavelength and polarization shape the molecular Raman response enhanced by capped Ag nanoparticle chains",
+      "authors": "Vázquez ELS, Bayle M, Pailloux F, Babonneau D, Humbert B, Camelio S",
+      "institutions": [
+        "Nantes Université",
+        "Université de Poitiers"
+      ],
+      "journal": "Physical chemistry chemical physics : PCCP",
+      "doi": "10.1039/d6cp02818g",
+      "url": "https://doi.org/10.1039/d6cp02818g",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Surface-enhanced Raman spectroscopy (SERS) sensors using capped Ag nanoparticle (NP) chains provide long-term stability and reusability. However this configuration distances the molecules from the plasmonic hot spots, thus decreasing the signal enhancement. This paper systematically investigates the SERS response of 2,2'-bipyridine (Bpy) molecules deposited on self-organized Ag NP chains capped with 5 nm-thick Al2O3 or SiOx films, fabricated via ion-beam sputtering. The substrates exhibit optical dichroism with two polarization-dependent localized surface plasmon resonances (LSPRs). …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/physical-chemistry-chemical-physics-pccp.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Physical chemistry chemical physics : PCCP"
+      },
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1021-acssensors-6c03789-c9d38d",
+      "date": "2026-11-12",
+      "title": "Highly Reliable One-Pot SERS Aptasensor for Rapid Cardiac Troponin I Detection in Acute Myocardial Infarction",
+      "authors": "Zhang J, Wang L, Peng Q, Li Y, He X, Liu J, Sun W, Wang L, Song C",
+      "institutions": [
+        "Jiangsu Key Laboratory of Smart Biomaterials and Theranostic Technology",
+        "School of Science",
+        "Geriatric Hospital of Nanjing Medical University"
+      ],
+      "journal": "ACS sensors",
+      "doi": "10.1021/acssensors.6c03789",
+      "url": "https://doi.org/10.1021/acssensors.6c03789",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS",
+        "General Technology"
+      ],
+      "glyph": "sers",
+      "summary": "Rapid clinical decision-making for acute myocardial infarction (AMI) relies on the timely and precise assessment of cardiac biomarkers. However, detecting cardiac troponin I (cTnI), as the gold-standard biomarker for AMI, with both laboratory-grade sensitivity and rapid clinical turnaround remains a formidable challenge in point-of-care (POC) settings. To address this, we develop a one-pot surface-enhanced Raman scattering (SERS) aptasensor that integrates aptamer-mediated cTnI recognition, catalytic hairpin assembly (CHA) amplification, and plasmonic hotspot assembly. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1039-d6cp03502g-8c7e47",
+      "date": "2026-11-12",
+      "title": "Dimerization of decanoic acid in mixtures of cyclohexane and dioxane: FTIR and density studies",
+      "authors": "Faraji S, Slavchov RI, Madden DC, de Cazenove T, Sonke J, Clarke SM",
+      "institutions": [
+        "School of Engineering and Materials Science",
+        "University of Cambridge"
+      ],
+      "journal": "Physical chemistry chemical physics : PCCP",
+      "doi": "10.1039/d6cp03502g",
+      "url": "https://doi.org/10.1039/d6cp03502g",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "The effect of different solvents on the dimerization of decanoic acid was investigated using Fourier-transform infrared (FTIR) spectroscopy and high-precision density measurements. The solvents studied were pure cyclohexane, pure 1,4-dioxane, and mixtures of the two. Association of decanoic acid via hydrogen bonding was followed as a function of the acid concentration (0-50 mM). The equilibrium dimer dissociation constant was extracted. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/physical-chemistry-chemical-physics-pccp.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Physical chemistry chemical physics : PCCP"
+      },
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1039-d6nr02664h-72fc3f",
+      "date": "2026-11-12",
+      "title": "Temperature-dependent phonon anharmonicity and photosensing properties of a nanoscale-thick quasi-2D TlInS<sub>2</sub> flake",
+      "authors": "Bhattacharya S, Basak D",
+      "institutions": [
+        "School of Physical Sciences"
+      ],
+      "journal": "Nanoscale",
+      "doi": "10.1039/d6nr02664h",
+      "url": "https://doi.org/10.1039/d6nr02664h",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "Layered post-transition-metal dichalcogenides (PTMDCs), including TlInS 2 , have predominantly, though sparsely, been investigated in bulk crystals, whereas their vibrational and photoresponse characteristics in nanoscale-thick crystal flakes remain unexplored. Here, we report a first comprehensive investigation on the temperature-dependent phonon modes and photosensing properties of a mechanically exfoliated nanoscale-thick TlInS 2 flake. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-26434-chemrxiv-15012076-v1-d3507e",
+      "date": "2026-11-12",
+      "title": "Raman spectra track neoplasia but not malignancy in mouse colon",
+      "authors": "Seyedeh Rahemeh Amiri",
+      "institutions": [
+        "University at Albany, State University of New York"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15012076/v1",
+      "url": "https://doi.org/10.26434/chemrxiv.15012076/v1",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Raman spectroscopy is often reported to stage colorectal neoplasia, but validation is usually done at the level of spectra rather than subjects. We reanalysed public spectra from a p53 deletion mouse model (47 mice; 485 spectra of normal mucosa, hyperplasia, adenoma and carcinoma) with leave-one-mouse-out validation, covariate tests and within-scan paired contrasts. Lesions were separated from normal mucosa with a balanced accuracy of 0.79 (95% CI 0.74–0.84). Adenoma and carcinoma were not separated (0.48), although spectrumlevel validation suggested 0.75. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-nantod-2026-103232-7c65e6",
+      "date": "2026-11-12",
+      "title": "Operator-aware Raman metrology for two-dimensional interfaces",
+      "authors": "Mohd Musaib Haidari, Dae Joon Kang",
+      "institutions": [],
+      "journal": "Nano Today",
+      "doi": "10.1016/j.nantod.2026.103232",
+      "url": "https://doi.org/10.1016/j.nantod.2026.103232",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1088-2515-7647-aec1ac-4e02c5",
+      "date": "2026-11-12",
+      "title": "Raman-based detection of lipid accumulation in 3D steatosis-induced liver cultures",
+      "authors": "Margot Vandermotten, Pierre‐Yves Sacré, Kurt Barbé, Wilfried Cools, Wendy Meulebroeck, Hugo Thienpont A, Leo A. van Grunsven, Heidi Ottevaere",
+      "institutions": [
+        "Vrije Universiteit Brussel",
+        "University of Liège"
+      ],
+      "journal": "Journal of Physics Photonics",
+      "doi": "10.1088/2515-7647/aec1ac",
+      "url": "https://doi.org/10.1088/2515-7647/aec1ac",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Environmental",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Liver diseases represent a major global health threat due to their high prevalence and potential to progress into severe, irreversible stages. Steatosis, characterised by the excessive accumulation of lipids within the hepatocytes, is one of the most common early manifestations and potentially reversible. Consequently, there is a growing need for physiologically relevant in vitro models and analytical techniques that enable accurate assessment of the disease-associated cellular changes. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-3390-bios16110648-dd6a18",
+      "date": "2026-11-12",
+      "title": "Multifunctional Ag-Decorated MoS2 Nanosheets for Highly Sensitive SERS-Based Monitoring of Ibrutinib",
+      "authors": "Xiuting Li, Huan Liu",
+      "institutions": [
+        "West Anhui University",
+        "Nanjing University",
+        "University of Electronic Science and Technology of China"
+      ],
+      "journal": "Biosensors",
+      "doi": "10.3390/bios16110648",
+      "url": "https://doi.org/10.3390/bios16110648",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Materials",
+        "Pharmaceutics",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "Semiconductor–noble metal hybrids have emerged as attractive surface-enhanced Raman scattering (SERS) platforms for pharmaceutical analysis because they integrate interfacial chemical interactions with plasmon-mediated electromagnetic enhancement. Herein, a semiconductor–noble metal hybrid SERS substrate was constructed by sputtering Ag nanoparticles (NPs) onto exfoliated MoS2 nanosheets (NSs) and was applied to the quantitative detection of ibrutinib. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1088-2632-959x-aec184-55a9cd",
+      "date": "2026-11-12",
+      "title": "Bimetallic Core@Shell Au@Ag nanoparticles as SERS substrates for dexamethasone detection",
+      "authors": "Mary Carmen Amador Meléndez, Enrique Sánchez Mora, Azury Nava Guzmán",
+      "institutions": [
+        "Benemérita Universidad Autónoma de Puebla"
+      ],
+      "journal": "Nano Express",
+      "doi": "10.1088/2632-959x/aec184",
+      "url": "https://doi.org/10.1088/2632-959x/aec184",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "The detection of dexamethasone (DEX) at low concentrations requires sensitive analytical methods. In this study, CTAC-functionalized Au, Ag, and bimetallic Core@Shell Au@Ag nanoparticles were evaluated as substrates for surface-enhanced Raman spectroscopy (SERS), allowing a comparative assessment of their performance in DEX detection. Au-NPs and Ag-NPs exhibited quasi-spherical morphologies, with average diameters of 26.3 ± 3.3 nm and 39.7 ± 10.2 nm, respectively, whereas Au@Ag-NPs exhibited a Core@Shell structure consisting of a quasi-spherical Au core and a cubic Ag shell with an average edge length of 58.5 ± 4.8 nm. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1364-prj-608344-e68a50",
+      "date": "2026-11-12",
+      "title": "Phase-resolved wide-field CARS microscopy with speckle illumination",
+      "authors": "Federico Vernuccio, Pascal Berto, Baptiste Marthy, Guillaume Baffou, Sandro Heuke, Randy A. Bartels, Pierre Bon, Hervé Rigneault",
+      "institutions": [],
+      "journal": "Photonics Research",
+      "doi": "10.1364/prj.608344",
+      "url": "https://doi.org/10.1364/prj.608344",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Environmental",
+        "Food & Agriculture",
+        "SRS / CARS",
+        "Spectral Imaging"
+      ],
+      "glyph": "srs",
+      "summary": "Coherent anti-Stokes Raman scattering (CARS) microscopy enables label-free chemical imaging of biological samples and materials. Conventionally, CARS is implemented using a point-scanning approach that probes a single vibrational mode at a time. Hyperspectral CARS enhances chemical specificity by sequentially addressing multiple Raman modes. However, the measured CARS intensity is distorted by an undesired non-resonant background, which broadens and shifts the Raman peaks, thereby hindering the interpretability of hyperspectral images. Here, we introduce a phase-sensitive, wide-field hyperspectral CARS microscopy scheme that suppresses the non-resonant background. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-3390-heritage9110474-eb89f1",
+      "date": "2026-11-12",
+      "title": "A Non-Destructive Multi-Analytical Approach for the Compositional and Structural Characterization of a Renaissance Crucifix",
+      "authors": "Sveva Longo, Vincenzo Savica, Carmelo Corsaro, F. Neri, Marcello Longo, Enza Fazio, Vincenza Crupi",
+      "institutions": [
+        "University of Messina",
+        "Marconi University"
+      ],
+      "journal": "Heritage",
+      "doi": "10.3390/heritage9110474",
+      "url": "https://doi.org/10.3390/heritage9110474",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "This work focuses on the characterization of a Renaissance crucifix from a private collection in Messina (Sicily), utilizing an integrated non-invasive protocol to examine its composition, structure, and internal assembly. The analytical sequence combines high-resolution digital optical microscopy with three-dimensional surface reconstruction, clinical computed tomography (CT) for internal structural imaging, and Fourier-transform infrared spectroscopy in attenuated total reflectance (FTIR-ATR) mode for material identification. This combined approach enabled a direct correlation between external surface morphology and hidden internal construction. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-26434-chemrxiv-15012061-v1-af8e24",
+      "date": "2026-11-12",
+      "title": "Phase-Resolved Spectra of Charged Aqueous Solution Interfaces from High-Resolution Broadband Sum Frequency Generation Vibrational Spectroscopy (HR-BB-SFG-VS)",
+      "authors": "Jin-Hua Jiang, Li Zhang, Zeng Guo-chao, Bo-Jun Zhao, Yuan Guo, Hongfei Wang",
+      "institutions": [
+        "Fudan University",
+        "Westlake University",
+        "Zhejiang University"
+      ],
+      "journal": "ChemRxiv",
+      "doi": "10.26434/chemrxiv.15012061/v1",
+      "url": "https://doi.org/10.26434/chemrxiv.15012061/v1",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Ultrafast & SFG"
+      ],
+      "glyph": "sfg",
+      "summary": "Phase-resolved sum frequency generation (SFG) spectra provide direct access to the complex nonlinear optical response of interfaces, which can be obtained either through direct phaseresolved measurement or by analyzing intensity spectrum. Recently, we demonstrated that phase-resolved SFG spectra of the neutral air/neat water interface can be obtained from highresolution broadband SFG intensity spectra using multi-peak Lorentzian function fitting (MLFF) with physical constrain with the knowledge of the absolute phase for the ‘free’ O-H peak. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1038-s41598-026-80208-7-dd78b8",
+      "date": "2026-11-12",
+      "title": "Diagnostic hyperspectral signatures of boron minerals for the identification of jadarite-type (LiNaSiB3O7(OH)) volcano-sedimentary lithium mineralization",
+      "authors": "Francesca Corrado, Francesco Putzolu, Sam Thiele, Robin Armstrong, Richard Gloaguen, Anna Sorrentino, Nicola Mondillo, Richard Jeremy Herrington",
+      "institutions": [],
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-026-80208-7",
+      "url": "https://doi.org/10.1038/s41598-026-80208-7",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "Volcano-sedimentary (VS) deposits host Li resources associated with clays and boron minerals (i.e., borates and borosilicates). Jadarite-type (LiNaSiB 3 O 7 (OH)) mineralization exhibits high Li grades; however, the textural and chemical overlaps between boron minerals hinder the field recognition and the differentiation of jadarite from unmineralized species. This study presents a systematic appraisal of the Visible and Near-Short-Wave Infrared (VSWIR; 380–2500 nm), Mid-Wave Infrared (MWIR; 2700–5300 nm), and Long-wave Infrared (LWIR; 7700–12300 nm) hyperspectral features of jadarite and associated boron minerals, to facilitate rapid identification of Li-rich species in VS deposits. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-2174-0113892010511762261023050620-e11212",
+      "date": "2026-11-12",
+      "title": "Raman Spectroscopy for Forensic Pathology Applications: A Case Series and Narrative Literature Review",
+      "authors": "Donato Morena, Gabriele Piro, Pierluigi Crusco, Matteo Scopetti, Alessandro Santurro, Emanuela Turillazzi, Vittorio Fineschi",
+      "institutions": [
+        "Sapienza University of Rome",
+        "University of Salerno",
+        "University of Pisa"
+      ],
+      "journal": "Current Pharmaceutical Biotechnology",
+      "doi": "10.2174/0113892010511762261023050620",
+      "url": "https://doi.org/10.2174/0113892010511762261023050620",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Forensics",
+        "Neurology",
+        "Spontaneous Raman",
+        "Data Analysis & AI",
+        "Reviews"
+      ],
+      "glyph": "raman",
+      "summary": "Introduction: Forensic pathology benefits from analytical methods that can add molecular information while preserving tissue morphology and evidentiary material. Confocal Raman microspectroscopy provides non-destructive, spatially resolved chemical information with limited sample preparation. This study evaluated its complementary value in three representative forensic scenarios and contextualized the findings through a structured narrative review of Raman applications in forensic science. materials and methods: The aim of our study was to validate this technique on three specific sample types—fat embolism, gunshot residue, and cocaine abuse. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1088-1361-6455-aec1aa-862691",
+      "date": "2026-11-12",
+      "title": "Photoelectron interferometry with spectrally shaped polychromatic infrared pulses",
+      "authors": "Edoardo Alberto Boati, Gustav Arvidsson, Mattias Ammitzböll, Praveen Kumar Maroju, Camille Lévêque, Robin Weissenbilder, Viktoriia Shiriaeva, Hugo Laurell, Mingxuan Li, Huiyong Wang, Christoph Dittel, Miguel Canhota, Chen Guo, Richard Taïeb, Jeremie Caillat, Richard J. Squibb, Raimund Feifel, Mathieu Gisselbrecht, Cord L. Arnold, Sizuo Luo et al.",
+      "institutions": [
+        "Lund University",
+        "Sorbonne Université",
+        "Institute of Atomic and Molecular Physics"
+      ],
+      "journal": "Journal of Physics B: Atomic, Molecular and Optical Physics",
+      "doi": "10.1088/1361-6455/aec1aa",
+      "url": "https://doi.org/10.1088/1361-6455/aec1aa",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "Laser-assisted photoelectron interferometry is a cornerstone of attosecond science, first used to characterize attosecond pulse trains and later to study photoionization dynamics. Extending this method to spectrally shaped polychromatic infrared probe fields enables encoding of information across multiple interferometric pathways within the photoelectron spectrum. Here, we experimentally demonstrate laser-assisted photoelectron interferometry using a spectrally shaped polychromatic infrared probe field composed of five distinct spectral components forming a Golomb ruler in the frequency domain. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/journal-of-physics-b-atomic-molecular-and-optical-physics.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Journal of Physics B: Atomic, Molecular and Optical Physics"
+      },
+      "source": "crossref"
+    },
+    {
+      "id": "10-48550-arxiv-2611-17187-226823",
+      "date": "2026-11-12",
+      "title": "The Gator low-background spectrometer: readout upgrade and photomultiplier tube radioassay for XLZD",
+      "authors": "Laura Baudis, Sofia Calgaro, Jose Javier Cuenca-Garcia, Florian Joerg, Margherita Noia, Francesco Piastra, Aravind Remesan Sreekala",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.17187",
+      "url": "https://arxiv.org/abs/2611.17187",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "We report on a readout upgrade of Gator, a low-background high-purity germanium spectrometer operated at the Laboratori Nazionali del Gran Sasso for material radioassay. The upgraded data acquisition records digitised waveforms, enabling noise rejection on an event-level basis, and offline energy reconstruction. Measurements before and after the upgrade show an improved energy resolution of 17% at the 2614.5 keV line of 208-Tl, with (2.14 +- 0.22) keV at FWHM, and suppression of electronic noise in the low-energy region. We assess the resulting sensitivity for a specified sample geometry, and present a new background measurement. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-17037-13b4c8",
+      "date": "2026-11-12",
+      "title": "UV and deep-UV ultrafast harmonic generation enhanced by resonant gold nano-pillar metasurface",
+      "authors": "Shroddha Mukhopadhyay, Yuxuan Chen, Hooman Barati Sedeh, Natalia M. Litchinister, Michael Scalora, Jose Trull, Maria Antonietta Vincenti, Crina Cojocaru",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.17037",
+      "url": "https://arxiv.org/abs/2611.17037",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "We report experimental observations and full-vector numerical simulations of second and third-harmonic generation from a two-dimensional periodic gold nano-pillar metasurface, for efficient ultrafast light conversion from near-infrared to the UV and deep-UV spectral ranges. The metasurface is designed to support an angle-tunable plasmonic resonance in the near-infrared spectral range, with its resonance wavelength shifting as a function of the pump angle of incidence. Under resonant conditions, strong electromagnetic-field confinement near the nano-pillar corners enhances the nonlinear light-matter interactions. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-16859-f3438c",
+      "date": "2026-11-12",
+      "title": "Transmission-Mode Multispectral Imaging for Estimation of Microcystis spp. Cell Concentration and ELISA-Equivalent Microcystin Concentration in Water",
+      "authors": "J. A. S. T. Jayakody, G. Thilakarathne, G. A. S. L. Ranasinghe, M. C. L. De Silva, K. A. D. S. A. Perera, G. M. R. I. Godaliyadda, H. M. V. R. Herath, M. P. B. Ekanayake, A. D. S. N. P. Athukorala, H. A. D. R. P. Sirimanna",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.16859",
+      "url": "https://arxiv.org/abs/2611.16859",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Bacteriology",
+        "IR / NIR",
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "Harmful algal blooms dominated by Microcystis spp. threaten freshwater systems through proliferation and microcystin (MC) production. Conventional measurements of cyanobacterial abundance and MC concentration commonly require laboratory processing, specialized instrumentation, or assay reagents. Because MC concentration cannot always be reliably inferred from cell abundance, complementary optical approaches for estimating both quantities are of interest. This study proposes and evaluates a transmission mode multispectral imaging (MSI) framework for estimating Microcystis spp. cell concentration and ELISA-equivalent MC concentration from culture derived dilution samples. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-16491-1fc3f2",
+      "date": "2026-11-12",
+      "title": "Probing the Dirac Quantum Geometry in Quantum Magnets from Polarized Raman Spectroscopy",
+      "authors": "Yuki Yamazaki, Doh Young Kim, Takahiro Morimoto, Bohm-Jung Yang",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.16491",
+      "url": "https://arxiv.org/abs/2611.16491",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Magnetic Raman spectroscopy is sensitive to quasiparticle quantum geometry, yet microscopic Raman vertices generally prevent a direct geometric interpretation. Here we establish a symmetry-based extraction principle for two-dimensional quantum magnets with two-band quasiparticle excitations. Opposite circular-polarization spectra separate vertex-weighted quantum-metric and Berry-curvature contractions. Near a C3-symmetric massive Dirac valley, symmetry fixes the leading Raman and velocity doublets up to a common scale, allowing the unknown Raman strength and intensity normalization to cancel from their spectral ratio. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-16342-6dc9d8",
+      "date": "2026-11-12",
+      "title": "HARMONY: an efficient and accurate deep learning framework for prediction of experimental vibrational spectra",
+      "authors": "Xinyu Lu, Bowen Li, Yi Rong, Qingling Zhou, Xingbo Tang, Menghan Li, Yuqiang Li, Guokun Liu, Tong Zhu, Bin Ren, Hao Ma",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.16342",
+      "url": "https://arxiv.org/abs/2611.16342",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Neurology",
+        "Spontaneous Raman",
+        "Data Analysis & AI"
+      ],
+      "glyph": "raman",
+      "summary": "Predicting experimental vibrational spectra requires both efficient molecular calculations and a reliable mapping from theoretical vibrations to measured signals. Here we introduce \\textbfHARMONY, a two-stage deep-learning framework that bridges this gap using harmonic spectra as physical anchors. Equivariant neural networks directly predict atomic forces and spectroscopic tensors for rapid harmonic-spectrum construction, while HarmoNet combines these spectra with molecular topology and measurement metadata to predict experimental infrared and Raman spectra. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-16266-ffcbc4",
+      "date": "2026-11-12",
+      "title": "Studying temperature-induced decrease of spontaneous polarization in PbTiO3 from vibrational amplitude",
+      "authors": "Zhikai Gao, Yuanji Xu, Fuyang Tian",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.16266",
+      "url": "https://arxiv.org/abs/2611.16266",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "PbTiO3 is a typical ferroelectric polarization induced negative thermal expansion (NTE) material at a wide range of temperature. The elegant TiO6 octahedron is used to study the polarization and NTE, whereas lacking its quantitative characterization. In this work, we propose a concise projection of vibrational amplitude to describe anisotropic distortion of atoms with temperature based on ab initio molecular dynamics simulations. We find that the huge negative mode Grüneisen coefficient is mainly from the different vibrational modes of the TiO6 octahedral rotation at two boundary symmetry points in tetragonal phase along c direction. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-16132-9e6896",
+      "date": "2026-11-12",
+      "title": "Direct imaging of plasmonic coupling between gold nanoparticles and one-dimensional van der Waals materials",
+      "authors": "Ibrahim Tanriover, Arindom Nag, Jong-Ho Lee, Huy Hoang, Haihua Liu, Thang Pham",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.16132",
+      "url": "https://arxiv.org/abs/2611.16132",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Materials"
+      ],
+      "glyph": "raman",
+      "summary": "Hybrids of plasmonic metals and van der Waals (vdW) materials combine electromagnetic field enhancement with the electronic properties of the vdW component, but the studies reported so far concern two-dimensional layers, and the near field at the metal/vdW interface is generally inferred from far-field measurements. Here we report the plasmonic coupling between Au nanoparticles and a one-dimensional (1D) vdW material, NbS3, and measure the near field at the Au-NbS3 contact directly. NbS3 nanowires and nanoribbons were grown by salt-assisted vapor-liquid-solid growth on graphene-covered TEM grids, and atomic-resolution electron microscopy shows atomically sharp Au/NbS3 interfaces. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-16118-1a6968",
+      "date": "2026-11-12",
+      "title": "Uncertainty Aware AFM-IR Hyperspectral Cube Reconstruction via Convolutional-Attentive Conditional Neural Processes",
+      "authors": "William F. Kent, Roberto does Reis, Gajendra Shekhawat, Emma Alexander, Vinayak P. Dravid",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.16118",
+      "url": "https://arxiv.org/abs/2611.16118",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Neurology",
+        "IR / NIR",
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "Atomic force microscopy-infrared spectroscopy (AFM-IR) maps chemical composition at nanoscale spatial resolution, but the time required to acquire individual spectra limits hyperspectral imaging. Here, we introduce a convolutional-attentive conditional neural process (CACNP), a neural process architecture for reconstructing AFM-IR hyperspectral cubes from sparsely sampled spectra and a small set of structure images, each acquired at a selected wavenumber. The model is trained entirely on synthetic cubes generated from experimental infrared spectra and predicts both spectral intensities and their associated uncertainty. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
     },
     {
       "id": "10-1515-rams-2025-0297-ed153d",
@@ -1817,6 +2812,101 @@
       "feature": false,
       "fig": null,
       "source": "crossref"
+    },
+    {
+      "id": "10-1039-d6ra06302k-d56d65",
+      "date": "2026-11-11",
+      "title": "Metabolic signature combined with changes in proteome and transcriptome shape respiratory syncytial virus infection and response to vaccination in a bovine model",
+      "authors": "Kothadiya S, Mathew AP, Schoofs AD, Nandu RK, Niolo-Velesaca CA, McGill J, Bardhan R",
+      "institutions": [
+        "Iowa State University Ames IA 50011 USA",
+        "Nanovaccine Institute"
+      ],
+      "journal": "RSC advances",
+      "doi": "10.1039/d6ra06302k",
+      "url": "https://doi.org/10.1039/d6ra06302k",
+      "oa": true,
+      "license": "CC BY-NC",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Respiratory syncytial virus (RSV) is a major respiratory disease in infants leading to long-term morbidity. Bovine RSV (bRSV) serves as a clinically translatable large animal model to understand host responses in neonates to vaccination and re-infection enabling straightforward and accessible sample collection not often possible in human infants. This study probes clinically relevant bovine biointerfaces by combining Raman spectroscopy-based metabolic profiling with proteomics and gene expression in nasal fluid, serum, and lung tissues collected from 11 vaccinated (V) and 11 non-vaccinated (NV) neonatal calves following bRSV rechallenge. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-48550-arxiv-2611-15567-5f0a75",
+      "date": "2026-11-11",
+      "title": "Filling and Sealing Carbon Nanotubes by Local Anodic Oxidation",
+      "authors": "Ruiqing Zang, Jianan Xiao, Jacob Bair, Ian Wang, Chuyue Peng, Matthias Kuehne",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.15567",
+      "url": "https://arxiv.org/abs/2611.15567",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Environmental",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Carbon nanotubes (CNTs) are prime nanofluidic conduits and nanopores for studying matter under extreme confinement. Since most synthesis routes yield CNTs with closed ends, opening and filling strategies are required to access their interior for fluid and ion transport, whereas studies of the encapsulated species themselves may additionally require sealing to prevent their escape in dry or vacuum environments. Capacitively coupled local anodic oxidation (LAO) in an atomic force microscope (AFM) has been shown to cut individual CNTs at predefined positions, but whether cutting induces opening, filling, or sealing has remained unclear. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-15535-68a45b",
+      "date": "2026-11-11",
+      "title": "Ultrahigh-speed digital holography reveals blood flow beneath the skin",
+      "authors": "Yann Fischer, Zacharie Auray, Maxime Boy-Arnould, Michael Atlan",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.15535",
+      "url": "https://arxiv.org/abs/2611.15535",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "Dermatology",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Laser Doppler holography (LDH) leverages ultrahigh-speed digital holography to reveal blood-flow signals in vessels beneath the skin of the closed eyelid and around the eye. We demonstrate this in one volunteer using recordings acquired at approximately 16,000 frames/s under 10~mW of diffuse near-infrared illumination. Numerical Fresnel reconstruction and principal-component filtering reveal branching vascular patterns. These results extend an ocular imaging system to blood-flow visualization beneath the skin without requiring elaborate immobilization procedures.",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
+    },
+    {
+      "id": "10-48550-arxiv-2611-14939-6f145b",
+      "date": "2026-11-11",
+      "title": "Effect of Gas Pressure and Molecular Structure in the Spatial-Mode Conversion of Terahertz Radiation from a Plasma Filament",
+      "authors": "Y. E. Geints, L. V. Seleznev, G. E. Rizaev, T. A. Dick, M. V. Levus",
+      "institutions": [],
+      "journal": "arXiv (preprint)",
+      "doi": "10.48550/arxiv.2611.14939",
+      "url": "https://arxiv.org/abs/2611.14939",
+      "oa": true,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "In this work, the generation of terahertz (THz) radiation under single color filamentation of a femtosecond laser pulse in an optical cell with compressed gases (argon, nitrogen, CO2) in broad pressure range from 0.001 to 25 atm is experimentally studied for the first time. A nonmonotonic dependence of the integral energy of the THz signal on the gas pressure is revealed, which can be attributed to the competition between an increase in the plasma density and the development of plasma selfabsorption processes, multiple filamentation of the femtosecond pump, and collision induced absorption in the neutral medium. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "arxiv"
     },
     {
       "id": "10-1021-acsami-6c16716-33415d",
@@ -2536,6 +3626,87 @@
       "feature": false,
       "fig": null,
       "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-jcis-2026-141966-e544d8",
+      "date": "2026-11-10",
+      "title": "Hollow AuAgPt@Ag nanoframes with independent modular functional regions for in situ SERS monitoring of 4-NTP catalytic reactions",
+      "authors": "Gu Q, Weng GJ, Li JJ, Zhao JW, Zhu J",
+      "institutions": [
+        "The Key Laboratory of Biomedical Information Engineering of Ministry of Education"
+      ],
+      "journal": "Journal of colloid and interface science",
+      "doi": "10.1016/j.jcis.2026.141966",
+      "url": "https://doi.org/10.1016/j.jcis.2026.141966",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "In situ and real-time monitoring based on surface-enhanced Raman scattering (SERS) can reveal the specific pathways and intermediate processes of catalytic reactions at the molecular level. The key to achieving effective in situ SERS monitoring lies in the preparation of bifunctional nanomaterials that possess both high SERS response and catalytic activity. However, most bifunctional nanomaterials currently used for in situ SERS monitoring are solid nanostructures, suffering from drawbacks such as ill-defined functional domains and low utilization of active sites. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1051-epjconf-202639201003-pdf-67fc57",
+      "date": "2026-11-10",
+      "title": "Mapping fortification-activated absorbance bands in fruit juices using near-infrared spectroscopy and aquaphotomics",
+      "authors": "Flóra Vitális, Mátyás Lukács, Krzysztof Bernard Beć, Justyna Grabska, Gabriella Szurovecz, Mercy Mukite Barasa, John‐Lewis Zinia Zaukuu, Christian Wolfgang Huck, Zoltán Kovács",
+      "institutions": [
+        "Magyar Agrár- és Élettudományi Egyetem",
+        "Universität Innsbruck",
+        "Kwame Nkrumah University of Science and Technology"
+      ],
+      "journal": "Springer Link (Chiba Institute of Technology)",
+      "doi": "10.1051/epjconf/202639201003/pdf",
+      "url": "https://doi.org/10.1051/epjconf/202639201003/pdf",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Food & Agriculture",
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "Fortifying fruit juices with plant-derived extracts is an effective strategy to improve their nutritional profile and value. Even low concentrations of added extracts can induce measurable changes in the physicochemical characteristics of the juice. Modern quality control increasingly relies on non-targeted, non-destructive analytical techniques. Among them, near infrared (NIR) spectroscopy has become one of the most widely applied methods. For fruit juices, aquaphotomics provides a suitable analytical frame, as it characterises physicochemical changes through variations in water spectral patterns. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1051-epjconf-202639202004-pdf-99d7b5",
+      "date": "2026-11-10",
+      "title": "Beef meat quality evaluation by application of hyperspectral images, NIRS, and computed tomography",
+      "authors": "T. Stoyanchev, A. Daskalova, Stefka Atanassova",
+      "institutions": [
+        "Trakia University"
+      ],
+      "journal": "Springer Link (Chiba Institute of Technology)",
+      "doi": "10.1051/epjconf/202639202004/pdf",
+      "url": "https://doi.org/10.1051/epjconf/202639202004/pdf",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Food & Agriculture",
+        "IR / NIR",
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "Meat quality assessment is traditionally based on destructive laboratory analyses, which require significant time for sample processing and high costs. The present study aimed to evaluate and compare the accuracy of three rapid and non-destructive methods, such as hyperspectral camera (HSI), near-infrared spectroscopy (NIRS), and computed tomography (CT), for prediction of the physicochemical composition and classification of high-quality Black Angus beef cuts (Denver, Top Sirloin, and Flat Iron steaks). The percentage of dry matter (DM), total fat, and ash was estimated using the classical ISO methods. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
     },
     {
       "id": "10-1021-acssensors-6c03929-b1988f",
@@ -3576,6 +4747,33 @@
         "credit": "Journal cover · Dalton transactions (Cambridge, England : 2003)"
       },
       "source": "europepmc"
+    },
+    {
+      "id": "10-1063-5-0347346-adc770",
+      "date": "2026-11-09",
+      "title": "Magnons in α -Fe2O3 microdisks: From thermal to coherent excitation",
+      "authors": "Jinlong Wang, Katharina Müller, Haishen Peng, Janine Gückelhorn, Wenjie Song, Lutong Sheng, Jilei Chen, Song Liu, Dapeng Yu, Stephan Geprägs, Matthias Althammer, Haiming Yu",
+      "institutions": [
+        "Shenzhen International Quantum Academy",
+        "Bavarian Academy of Sciences and Humanities",
+        "Technical University of Munich"
+      ],
+      "journal": "Applied Physics Letters",
+      "doi": "10.1063/5.0347346",
+      "url": "https://doi.org/10.1063/5.0347346",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "Brillouin"
+      ],
+      "glyph": "brillouin",
+      "summary": "Hematite is a prototypical antiferromagnetic insulator for spintronic and magnonic applications, yet controlled studies of coherent magnons in thin films remain challenging due to strain sensitivity and spatial inhomogeneity. Here, we investigate magnon excitations in lithographically patterned hematite microdisks and obtain reproducible magnon spectra from multiple individual microdisks. Brillouin light scattering reveals bulk-like field-dependent thermal magnon resonances with an ultralow effective damping parameter on the order of ∼10−5. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
     },
     {
       "id": "10-1002-lpor-72177-614c03",
@@ -5203,6 +6401,330 @@
       "source": "crossref"
     },
     {
+      "id": "10-1063-5-0354641-49c518",
+      "date": "2026-11-01",
+      "title": "Molecular vibrations of doublet states obtained using Koopmans' theorem",
+      "authors": "Kronenberger ML, Schmidt D, Höfener S",
+      "institutions": [
+        "Institute of Physical Chemistry"
+      ],
+      "journal": "The Journal of chemical physics",
+      "doi": "10.1063/5.0354641",
+      "url": "https://doi.org/10.1063/5.0354641",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "We report the Lagrangian-based Koopmans ionization potential (IP)/electron affinity (EA) method, denoted Koopmans-IP/EA, for the gradients and Hessians of singly ionized and electron-attached states starting from a closed-shell restricted Hartree-Fock (RHF) reference. By exploiting Koopmans' theorem, the method avoids spin contamination inherent to unrestricted approaches and provides a description of pure doublet states without the need for an explicit open-shell treatment. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1021-acs-jpclett-6c03321-3c1d6d",
+      "date": "2026-11-01",
+      "title": "Spectroscopic and Computational Insights into Different Binding with Bovine Serum Albumin and Esterase-Like Activity Tuning: Echinatin versus Licochalcone B",
+      "authors": "Li D, Guo Y, Tian H, Bai Y, Luo H, Li R, Zhang J",
+      "institutions": [
+        "School of Pharmaceutical Sciences",
+        "Shenzhen People's Hospital",
+        "International Joint Research Laboratory of Nano-Micro Architecture Chemistry"
+      ],
+      "journal": "The journal of physical chemistry letters",
+      "doi": "10.1021/acs.jpclett.6c03321",
+      "url": "https://doi.org/10.1021/acs.jpclett.6c03321",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Pharmaceutics"
+      ],
+      "glyph": "raman",
+      "summary": "The interactions of two chalcones, echinatin (ECN) and licochalcone B (LCB), differing by a single B ring phenolic-OH, with bovine serum albumin (BSA) and their modulation of BSA esterase-like activity were investigated spectroscopically and via molecular docking under physiological conditions. UV-vis absorption, fluorescence, and competitive displacement assays revealed both ligands form ground-state complexes with BSA at Sudlow Site I. Thermodynamics showed spontaneous, exothermic binding driven by hydrogen bonds and van der Waals forces. Raman and docking indicated ECN binds via its A ring and carbonyl, whereas LCB binds via its B ring and carbonyl. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1021-acs-jpclett-6c03116-5eb303",
+      "date": "2026-11-01",
+      "title": "Electroless Deposition of Single Silver and Silver Oxide Particles and Electrochemical Reconstruction at a Nanopipette Electrode",
+      "authors": "Rai S, Wornyo E, Pan S",
+      "institutions": [
+        "The University of Alabama"
+      ],
+      "journal": "The journal of physical chemistry letters",
+      "doi": "10.1021/acs.jpclett.6c03116",
+      "url": "https://doi.org/10.1021/acs.jpclett.6c03116",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "We present a method for fabricating single silver oxide and silver particles at the tip of a nanopipette. The silver oxide particle is formed directly at a pipet tip when Tollens' reagent silver diammine complex-filled pipet is immersed in a strongly alkaline solution. The particle size, shape, and reaction rates are found to be sensitive to the migration of ions driven by electrochemical potential. To form a single particle at the tip, the pipet interior and its tip can be coated with silver via classical silver mirror reaction with dextrose. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1016-j-molliq-2026-130028-8db6dc",
+      "date": "2026-11-01",
+      "title": "Molecular insights into the water-induced disruption of acetic acid dimers using Raman spectroscopy, DFT, NBO, QTAIM, and NCI analyses",
+      "authors": "Shivam Kumar Singh, Ranjan Kumar Azad, Monalisha Nayak, Chandan Bhai Patel, Anamika Chaturvedi, Lakshman Sharan Singh, Narendra Kumar, Ranjana Singh, Ranjan Kumar Singh",
+      "institutions": [],
+      "journal": "Journal of Molecular Liquids",
+      "doi": "10.1016/j.molliq.2026.130028",
+      "url": "https://doi.org/10.1016/j.molliq.2026.130028",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-saa-2026-129168-668fc9",
+      "date": "2026-11-01",
+      "title": "Electrostatic-driven self-assembly of poly(diallyldimethylammonium chloride)-functionalized silver nanomembrane at the oil-water Interface for sensitive SERS detection of perchlorate in environmental samples",
+      "authors": "Yufen He, Jingyun Su, Liqiong Chen",
+      "institutions": [],
+      "journal": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "doi": "10.1016/j.saa.2026.129168",
+      "url": "https://doi.org/10.1016/j.saa.2026.129168",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Environmental",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-talanta-2026-130956-aa2000",
+      "date": "2026-11-01",
+      "title": "Portable Raman-Differential Phase Contrast Microscopy for Integrated Morpho-Chemical Profiling of Oxidatively Damaged Red Blood Cells",
+      "authors": "Jianfeng Chen, Runze Liu, Xiaoxiao Chen, Shengdong Zhang, Xianli Wang, Shuo Guo, Xilong Shi, Suwen Bai, Yichuan Dai",
+      "institutions": [],
+      "journal": "Talanta",
+      "doi": "10.1016/j.talanta.2026.130956",
+      "url": "https://doi.org/10.1016/j.talanta.2026.130956",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-chemolab-2026-105942-dfd2b9",
+      "date": "2026-11-01",
+      "title": "A spectral-property consistency framework for chemometric calibration of near-infrared spectra",
+      "authors": "Xinyue Wang, Xiangdong Chen, Zhiwei Liu, Biao Wang",
+      "institutions": [],
+      "journal": "Chemometrics and Intelligent Laboratory Systems",
+      "doi": "10.1016/j.chemolab.2026.105942",
+      "url": "https://doi.org/10.1016/j.chemolab.2026.105942",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-tca-2026-180557-efbfff",
+      "date": "2026-11-01",
+      "title": "Machine Learning-Enabled Hierarchical Multi-Material Metasurface Perfect Absorber for Ultra-Broadband Solar Thermal Energy Harvesting and Photothermal Conversion",
+      "authors": "Nagabushanam P, Anand Karuppannan, Hashim Elshafie, Guna G, Azath Mubarakali",
+      "institutions": [],
+      "journal": "Thermochimica Acta",
+      "doi": "10.1016/j.tca.2026.180557",
+      "url": "https://doi.org/10.1016/j.tca.2026.180557",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Photothermal IR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "mip",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-physb-2026-419667-fb2984",
+      "date": "2026-11-01",
+      "title": "Hierarchical Graphene–MXene–Au–Black Phosphorus Plasmonic Metasurface Biosensor with Gradient Boosting Regression-Assisted Performance Prediction for Label-Free Terahertz Peptide Detection",
+      "authors": "Hashim Elshafie, V. Parthasarathy, R. Dhivya, Suresh Babu Changalasetty, Azath Mubarakali, P. Parthasarathy",
+      "institutions": [],
+      "journal": "Physica B: Condensed Matter",
+      "doi": "10.1016/j.physb.2026.419667",
+      "url": "https://doi.org/10.1016/j.physb.2026.419667",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Materials",
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-chempr-2026-103331-b90eee",
+      "date": "2026-11-01",
+      "title": "2DIR hyperspectral imaging of polariton propagation reveals fewer dark modes per polariton",
+      "authors": "Harsh H. Bhakta, Wei Xiong",
+      "institutions": [],
+      "journal": "Chem",
+      "doi": "10.1016/j.chempr.2026.103331",
+      "url": "https://doi.org/10.1016/j.chempr.2026.103331",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-cej-2026-184233-ddea3d",
+      "date": "2026-11-01",
+      "title": "Facet-controlled growth of Ni-doped MIL-101(Fe) shuttles for SERS detection of bisphenol A",
+      "authors": "Chaoqin He, Xiuwen Zheng, Ruo Yuan, Ying Zhuo, Xia Yang",
+      "institutions": [],
+      "journal": "Chemical Engineering Journal",
+      "doi": "10.1016/j.cej.2026.184233",
+      "url": "https://doi.org/10.1016/j.cej.2026.184233",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-snb-2026-141251-786cde",
+      "date": "2026-11-01",
+      "title": "Interfacial Ti–O–Mo Bond Enables Electronic Reconstruction for Highly Sensitive SERS Detection of Chloramphenicol",
+      "authors": "Yingnan Quan, Huan Liu, Jiaxu Zhao, Qiaoya Zhang, Junfeng Gao, Jingchang Sun",
+      "institutions": [],
+      "journal": "Sensors and Actuators B: Chemical",
+      "doi": "10.1016/j.snb.2026.141251",
+      "url": "https://doi.org/10.1016/j.snb.2026.141251",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-cej-2026-184234-914448",
+      "date": "2026-11-01",
+      "title": "Interstitial hot-volume plasmonics for machine learning-assisted urinary SERS diagnosis of pancreatic cancer",
+      "authors": "Jeong-Sik Jo, Jinhyeok Jeon, ChaeWon Mun, Seungki Lee, Rowoon Park, Hyo Jeong Seo, Hyesu Kim, Ho Sang Jung, Min-Young Lee, SeongHoon Jo, Joonchul Shin, Sung-Gyu Park",
+      "institutions": [],
+      "journal": "Chemical Engineering Journal",
+      "doi": "10.1016/j.cej.2026.184234",
+      "url": "https://doi.org/10.1016/j.cej.2026.184234",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "SERS / TERS",
+        "Data Analysis & AI"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-pdpdt-2026-105711-3bcdee",
+      "date": "2026-11-01",
+      "title": "Specimen-Wise Evaluation of Acute Leukemia Subtyping Using Microscopic Hyperspectral Imaging",
+      "authors": "Yilin Xiang, Jikuo Wang, An Guo Liu, Dejian Wei, Dawei Qiu, Xiaoqing Yang, Mengqiu Zhang",
+      "institutions": [],
+      "journal": "Photodiagnosis and Photodynamic Therapy",
+      "doi": "10.1016/j.pdpdt.2026.105711",
+      "url": "https://doi.org/10.1016/j.pdpdt.2026.105711",
+      "oa": true,
+      "license": "CC BY-NC-ND 4.0",
+      "categories": [
+        "Spectral Imaging"
+      ],
+      "glyph": "hsi",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
       "id": "10-1016-j-trac-2026-119240-3ad452",
       "date": "2026-10-31",
       "title": "The impact of micro- and nanoplastic exposure on pregnancy and fetal health: a review of analytical and biological studies",
@@ -5229,6 +6751,29 @@
       "fig": null,
       "source": "openalex",
       "reviewed": true
+    },
+    {
+      "id": "10-46770-as-2026-0056s-17629e",
+      "date": "2026-10-31",
+      "title": "Multi-Element 2D and 3D Picosecond LIBS Imaging of Steel Segregation Using a Sagittal-Focused Multiband Spectrometer",
+      "authors": "Yoshihiro Deguchi",
+      "institutions": [],
+      "journal": "Atomic Spectroscopy",
+      "doi": "10.46770/as.2026.0056s",
+      "url": "https://doi.org/10.46770/as.2026.0056s",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
     },
     {
       "id": "10-1016-j-pacs-2026-100901-e7970a",
@@ -5556,6 +7101,32 @@
       "source": "europepmc"
     },
     {
+      "id": "10-1038-s41598-026-68015-6-308a9a",
+      "date": "2026-09-01",
+      "title": "Oncogene-mechanics axis: KRAS G12C confers agility enabling malignant mechano-responses to peristalsis in colorectal cancer",
+      "authors": "Lamichhane A, Cheburkanov V, Kizilov M, Shenoy A, Head AG, Yakovlev V, Raghavan SA",
+      "institutions": [
+        "Texas A&M University"
+      ],
+      "journal": "Scientific reports",
+      "doi": "10.1038/s41598-026-68015-6",
+      "url": "https://doi.org/10.1038/s41598-026-68015-6",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "Biomechanics",
+        "Oncology",
+        "Brillouin"
+      ],
+      "glyph": "brillouin",
+      "summary": "Oncogene activity and mechanical forces individually and collectively drive colorectal cancer, yet the integration of these signals is unknown. We used a patented peristalsis bioreactor to determine how oncogenic KRAS G12C mutations alter the cellular response to colonic peristalsis. Although both healthy intestinal cells (HIEC-6) and KRAS G12C cancer cells (SW837) sensed peristalsis via ERK phosphorylation (1.7-4.7X increase), their mechano-responses diverged significantly. Peristalsis triggered a 9-fold enrichment of LGR5+ cancer stem cells in KRAS G12C cancer cells, an effect absent in healthy HIEC-6 controls. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
       "id": "10-1186-s40478-026-02392-x-fa3e0b",
       "date": "2026-08-14",
       "title": "Raman spectroscopic identification of biochemical alterations in Alzheimer's disease brain tissue",
@@ -5680,6 +7251,6 @@
     "10-5414-te500179-1153f7",
     "10-64898-2026-11-07-765052-7a942b"
   ],
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "curated": "2026-11-12"
 }
