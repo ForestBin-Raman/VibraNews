@@ -398,5 +398,20 @@
     "src": "covers/journal-of-physics-b-atomic-molecular-and-optical-physics.jpg",
     "kind": "cover",
     "credit": "Journal cover · Journal of Physics B: Atomic, Molecular and Optical Physics"
+  },
+  "cellulose": {
+    "src": "covers/cellulose.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Cellulose"
+  },
+  "bulletin of materials science": {
+    "src": "covers/bulletin-of-materials-science.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Bulletin of Materials Science"
+  },
+  "pattern analysis and applications": {
+    "src": "covers/pattern-analysis-and-applications.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Pattern Analysis and Applications"
   }
 }
