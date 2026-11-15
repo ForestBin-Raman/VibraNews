@@ -1,0 +1,545 @@
+{
+  "id": "2026-11-16",
+  "number": 3,
+  "date": "2026-11-16",
+  "window": [
+    "2026-11-16",
+    "2026-11-16"
+  ],
+  "articles": [
+    {
+      "id": "10-1038-s41598-026-80786-6-370182",
+      "date": "2026-11-15",
+      "title": "Application of Raman spectroscopy to the first actual fuel debris retrieved from the Fukushima Daiichi Nuclear Power Station Unit 2",
+      "authors": "Katsuhiro Ueno, Takumi Yomogida, Yuta Kumagai, Toru Kitagaki, Hirotomo Ikeuchi, Masato Mizokami, Shinya Mizokami",
+      "institutions": [],
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-026-80786-6",
+      "url": "https://doi.org/10.1038/s41598-026-80786-6",
+      "oa": true,
+      "license": "CC BY 4.0",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Following the successful first trial retrieval of fuel debris from Unit 2 of the Fukushima Daiichi Nuclear Power Station (FDNPS), a Raman spectroscopic assessment was conducted to investigate the chemical states of the debris. The powdered fuel debris sample, prepared via a vibratory mill, was analyzed using micro-Raman spectroscopy and was compared with simulated debris synthesized under controlled conditions. The average Raman spectrum revealed characteristic bands corresponding to tetragonal ZrO₂, spinel-type oxides originating from stainless-steel structural components, and a cubic (U, Zr)O₂ solid solution. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1134-s1068337226700763-2855ee",
+      "date": "2026-11-15",
+      "title": "Propagation of Single-Mode Terahertz Pulse and Phase Matching in a Parallel-Plate Waveguide Partially Filled with a GaSe Nonlinear Crystal",
+      "authors": "A. S. Nikoghosyan, V. R. Tadevosyan",
+      "institutions": [],
+      "journal": "Journal of Contemporary Physics (Armenian Academy of Sciences)",
+      "doi": "10.1134/s1068337226700763",
+      "url": "https://doi.org/10.1134/s1068337226700763",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency",
+        "General Technology"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/journal-of-contemporary-physics-armenian-academy-of-sciences.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Journal of Contemporary Physics (Armenian Academy of Sciences)"
+      },
+      "source": "crossref"
+    },
+    {
+      "id": "10-1038-s41598-026-78845-z-b87bfb",
+      "date": "2026-11-15",
+      "title": "Quantitative investigation of hybridized plasmonic resonances in graphene-coated nanocylinder chains for multiplexed dual-mode SERS/ SEIRA applications",
+      "authors": "Shiva Hayati Raad",
+      "institutions": [],
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-026-78845-z",
+      "url": "https://doi.org/10.1038/s41598-026-78845-z",
+      "oa": true,
+      "license": "CC BY-NC-ND 4.0",
+      "categories": [
+        "Materials",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acssensors-6c03967-3a1bea",
+      "date": "2026-11-14",
+      "title": "Machine Learning-Driven ZnO NRs@Ag SERS Platform for Rheumatoid Arthritis Liquid Biopsy in a Multicenter-Recruited Cohort",
+      "authors": "Han S, Chen C, Zhou X, Wu L, Lv X, Jia Z, Zhao X, Wu X, Li M, Chen C",
+      "institutions": [
+        "College of Software",
+        "College of Information Science and Engineering",
+        "People's Hospital of Xinjiang Uyghur Autonomous Region"
+      ],
+      "journal": "ACS sensors",
+      "doi": "10.1021/acssensors.6c03967",
+      "url": "https://doi.org/10.1021/acssensors.6c03967",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Dermatology",
+        "Environmental",
+        "SERS / TERS",
+        "Data Analysis & AI"
+      ],
+      "glyph": "sers",
+      "summary": "The analytical chemistry diagnosis of rheumatoid arthritis (RA) faces challenges such as the time lag of conventional serological assays and matrix masking in complex biofluid analysis. This study proposes a label-free liquid biopsy framework integrating band-regulated surface-enhanced Raman scattering (SERS) sensing with machine learning algorithms. Experimental characterizations (XPS and TRPL) and density functional theory (DFT) calculations confirm that the ZnO NRs@Ag heterojunction drives efficient spatial separation of charge carriers via stepped band alignment. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1016-j-legalmed-2026-103041-e28ec6",
+      "date": "2026-11-14",
+      "title": "Fatal pulmonary embolism following perineal hyaluronic acid injection for vaginoplasty: a case report",
+      "authors": "Jiang Y, Yun H, Du R, Qiu H, Liang M",
+      "institutions": [
+        "Tongji Medical College",
+        "Institute of Forensic Science of Tianjin Public Security",
+        "Fada Institute of Forensic Medicine&Science"
+      ],
+      "journal": "Legal medicine (Tokyo, Japan)",
+      "doi": "10.1016/j.legalmed.2026.103041",
+      "url": "https://doi.org/10.1016/j.legalmed.2026.103041",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Environmental",
+        "Forensics",
+        "IR / NIR",
+        "General Technology"
+      ],
+      "glyph": "ir",
+      "summary": "A 34-year-old woman collapsed one hour after an unlicensed vaginal tightening procedure involving hyaluronic acid (HA) injection performed in a non-medical setting. Clinical manifestations emerged with sudden syncope and transient loss of consciousness, followed by rapid hemodynamic deterioration upon hospital admission. The patient succumbed approximately three hours after admission. Postmortem histological examination identified extensive basophilic foreign material occluding local vaginal veins and pulmonary arteries. Histochemical analyses (Alcian blue pH 2.5, with and without hyaluronidase digestion) identified the material as HA. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1039-d6ra07988a-69deb4",
+      "date": "2026-11-13",
+      "title": "Machine learning-driven SERS platform for rapid detection and multi-analyte discrimination",
+      "authors": "Kshetrimayum BD, Vanlalnunpuia C, Das A, Mayanglambam SD, Moirangthem RS",
+      "institutions": [
+        "Manipur University Canchipur Imphal-795003 Manipur India",
+        "Mizoram University Aizawl Mizoram India",
+        "Institute of Water Chemistry"
+      ],
+      "journal": "RSC advances",
+      "doi": "10.1039/d6ra07988a",
+      "url": "https://doi.org/10.1039/d6ra07988a",
+      "oa": true,
+      "license": "CC BY-NC",
+      "categories": [
+        "Environmental",
+        "Food & Agriculture",
+        "SERS / TERS",
+        "Data Analysis & AI"
+      ],
+      "glyph": "sers",
+      "summary": "Surface-enhanced Raman Scattering (SERS) has attracted considerable research attention owing to its outstanding capability for molecular identification, even at the single-molecule level. However, the selective identification of analyte molecules in real-world environments, such as in food and water sources, remains a significant challenge. In this study, we report the fabrication of a flexible, plasmonic nanopyramid array on a laminating polymer film using an inverted nanopyramid array on a silicon master mold. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1039-d6ta05260f-5f7cd3",
+      "date": "2026-11-13",
+      "title": "Stable liquid-phase thiophosphate enables rapid reaction time for Li 6 PS 5 Cl sulfide electrolytes",
+      "authors": "Warren Z, Jalem R, Rahimisheikh S, Hadermann J, Rosero-Navarro NC",
+      "institutions": [
+        "Instituto de Cerámica y Vidrio - CSIC 28049 Madrid Spain",
+        "Ciudad Universitaria de Cantoblanco 28049 Madrid Spain",
+        "Research Center for Energy Materials (GREEN)"
+      ],
+      "journal": "Journal of materials chemistry. A",
+      "doi": "10.1039/d6ta05260f",
+      "url": "https://doi.org/10.1039/d6ta05260f",
+      "oa": true,
+      "license": "CC BY-NC",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "The liquid-phase synthesis of sulfide solid electrolytes has been hindered by an incomplete understanding of thiophosphate reaction pathways and the transient nature of reactive intermediates. Here, we report a stable liquid thiophosphate intermediate formed from Li2S and P4S10 in acetonitrile, enabling the rapid reaction to form Li6PS5Cl (LPSC) from a complete liquid phase. Combining in situ Raman spectroscopy, multinuclear NMR, and quantum chemical calculations, we identify a spectroscopically stable soluble thiophosphate intermediate and evaluate candidate structures consistent with its long-time solution behavior. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1364-oe-618445-3c1359",
+      "date": "2026-11-13",
+      "title": "Controllable Formation of Multiple Friedrich–Wintgen Quasi-Bound States in the Continuum through Symmetry-Activated Modal Hybridization in Terahertz Metasurfaces",
+      "authors": "Pouria Zamzam, Alex Dinovitser, Pouria Aryan, Azhar Iqbal, Md.Saiful Islam, Said Al-Sarawi, Nelson Tansu, BRIAN W.-H. NG, Derek Abbott",
+      "institutions": [],
+      "journal": "Optics Express",
+      "doi": "10.1364/oe.618445",
+      "url": "https://doi.org/10.1364/oe.618445",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-3390-ma19224803-a2fb33",
+      "date": "2026-11-12",
+      "title": "Laser-Induced Crystal Structure Stabilization and Europium (III) Doping of Hydroxyapatite Nanoparticles via Pulsed Liquid Fragmentation",
+      "authors": "Sergey A. Shumeyko, Ilya V. Baimler, Mark O. Paskhin, Vasiliy S. Novikov, Alexander V. Simakin, О. В. Уваров, Sergey V. Gudkov, Denis V. Yanykin",
+      "institutions": [
+        "Prokhorov General Physics Institute",
+        "Bauman Moscow State Technical University",
+        "Institute of Basic Biological Problems"
+      ],
+      "journal": "Materials",
+      "doi": "10.3390/ma19224803",
+      "url": "https://doi.org/10.3390/ma19224803",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Food & Agriculture",
+        "Spontaneous Raman",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "This study aims to develop a method for the heterovalent doping of hydroxyapatite (HA) with europium (III) ions using laser fragmentation of a micropowder in a liquid medium. The samples examined after laser fragmentation of the hydroxyapatite micropowder in liquid exhibited ultrathin nanosheets (with an approximate thickness of 2–5 nm) while retaining the hydroxyapatite crystal structure; furthermore, when the process is carried out in a europium nitrate solution, it leads to the preferential incorporation of europium (III) ions into Ca(I) sites. The phase homogeneity and structural evolution of the fragmentation-derived samples were investigated by Raman and FTIR spectroscopy. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-scib-2026-10-051-5f2d79",
+      "date": "2026-11-04",
+      "title": "Discriminating gap symmetries of superconducting La 3 Ni 2 O 7 ",
+      "authors": "Wang Z, Wang Y, Jiang K, Hu J, Zhang FC",
+      "institutions": [
+        "Beijing National Laboratory for Condensed Matter Physics and Institute of Physics",
+        "Kavli Institute for Theoretical Sciences"
+      ],
+      "journal": "Science bulletin",
+      "doi": "10.1016/j.scib.2026.10.051",
+      "url": "https://doi.org/10.1016/j.scib.2026.10.051",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "The discovery of high-Tc superconductivity in Ruddlesden-Popper nickelate materials represented by La3Ni2O7 has opened new directions in the quest for unconventional superconductivity. A central unresolved issue concerns the pairing symmetry of the superconducting order. In this paper, we establish an experimentally accessible framework for discriminating between the two leading candidate gap symmetries in La3Ni2O7: a sign-changing s± state and a d-wave state. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1016-j-elecom-2026-108277-948187",
+      "date": "2026-11-01",
+      "title": "Exploring the potential of metal-free carbon electrodes: Acid-engineered anodes for enhanced lignin electrooxidation",
+      "authors": "Shuqin Geng, Francisco Javier López-Tenllado, Jing Sun, Lorena Pérez-Carcelén, V. Blanco-Gutiérrez, Philippe Vernoux, Alberto Marinas, Antonio J. Dos santos‐García, Jesús González‐Cobos, A. Caravaca",
+      "institutions": [
+        "Universidad Politécnica de Madrid",
+        "University of Córdoba",
+        "Lyon 1 Université"
+      ],
+      "journal": "Electrochemistry Communications",
+      "doi": "10.1016/j.elecom.2026.108277",
+      "url": "https://doi.org/10.1016/j.elecom.2026.108277",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Materials",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Lignin electro-oxidation at the anode offers a promising route to couple biomass valorization with low-voltage H 2 production, yet most reported systems rely on transition-metal catalysts. Here we show that simple acid engineering transforms commercial Vulcan carbon into an efficient metal-free anode for lignin electro-oxidation in alkaline media below 100 °C. Nitric acid treatment reveals an optimum surface state, with the 48 h-treated sample ( C-N(48) ) outperforming pristine carbon and other treatment times. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-ijpx-2026-100710-11dd23",
+      "date": "2026-11-01",
+      "title": "Microscale deposition and interfacial contact as key drivers for enhanced dermal delivery of nanocrystals",
+      "authors": "Eliska Kurfirtova, Stanislav Chvíla, Petra Pullmannová, Nikola Strnádková, Anna Tvrda, František Štĕpánek, Jarmila Zbytovská",
+      "institutions": [
+        "University of Chemistry and Technology, Prague",
+        "Charles University"
+      ],
+      "journal": "International Journal of Pharmaceutics X",
+      "doi": "10.1016/j.ijpx.2026.100710",
+      "url": "https://doi.org/10.1016/j.ijpx.2026.100710",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "Dermatology",
+        "Food & Agriculture",
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Nanocrystals are increasingly recognized as a promising strategy to enhance dermal and transdermal drug delivery. They can improve solubility, permeability, and targeting of poorly soluble drugs. However, many studies provide limited insight into the mechanisms governing drug release from nanocrystal-based formulations. To address this gap, our study aims to delve deeper into nanocrystal-enhancing mechanism, broadening understanding in this critical area. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-cpc-2026-110520-d41f52",
+      "date": "2026-11-01",
+      "title": "acherus: an open-source Python-based finite-differences (2+1)D spatiotemporal solver for laser filamentation using the nonlinear envelope equation",
+      "authors": "Ismael Torres García, Eduardo Oliva",
+      "institutions": [],
+      "journal": "Computer Physics Communications",
+      "doi": "10.1016/j.cpc.2026.110520",
+      "url": "https://doi.org/10.1016/j.cpc.2026.110520",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "SRS / CARS"
+      ],
+      "glyph": "srs",
+      "summary": "The numerical simulation of laser filamentation involves large systems of nonlinear equations that govern the spatiotemporal dynamics of beam diffraction, dispersion, self-focusing, photoionization, plasma absorption and defocusing, and stimulated Raman scattering. Due to its intrinsic complexity and the diversity of parameters and models developed over decades, filamentation remains a challenging problem to model. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-saa-2026-129132-fc9454",
+      "date": "2026-11-01",
+      "title": "Machine learning driven ATR-FTIR spectroscopy correlated with metabolic profiling of lipids – changes in phospholipid-lipid balance in heart and liver caused by diabetes",
+      "authors": "Magdalena Sawic, Adrianna Kryska, Joanna Depciuch, Piotr Sosnowski, Wiesław Paja, Paweł Jakubczyk, Barbara Gieroba, Leopold Luna Ilag, Agnieszka Krata, Piotr Paneth, Anna Sroka-Bartnicka",
+      "institutions": [],
+      "journal": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "doi": "10.1016/j.saa.2026.129132",
+      "url": "https://doi.org/10.1016/j.saa.2026.129132",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-cej-2026-184303-ae4216",
+      "date": "2026-11-01",
+      "title": "Highly Intrinsic Raman-active COF nanoflower as versatile SERS reporter for improving the sensitivity of lateral flow immunoassays",
+      "authors": "You Long, Gan Zhang, Yuting Wang, Weihua Lai, Yi Chen",
+      "institutions": [],
+      "journal": "Chemical Engineering Journal",
+      "doi": "10.1016/j.cej.2026.184303",
+      "url": "https://doi.org/10.1016/j.cej.2026.184303",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-molstruc-2026-148120-3af12e",
+      "date": "2026-11-01",
+      "title": "Terahertz spectroscopic investigation of structurally similar pharmaceutical artemisinin and dihydroartemisinin",
+      "authors": "Hui Yan, Wenhui Fan, Wei Gao",
+      "institutions": [],
+      "journal": "Journal of Molecular Structure",
+      "doi": "10.1016/j.molstruc.2026.148120",
+      "url": "https://doi.org/10.1016/j.molstruc.2026.148120",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Pharmaceutics",
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-precisioneng-2026-11-007-b9d993",
+      "date": "2026-11-01",
+      "title": "Design and Fabrication Technology of Assembly Positioning Structure for Terahertz Folded Waveguide Slow-Wave Structures",
+      "authors": "Xiuqing Hao, Hangquan Yang, Shangshang Li, Zhiwen Hu, Shengqiang Zhao, Jianping Wang",
+      "institutions": [],
+      "journal": "Precision Engineering",
+      "doi": "10.1016/j.precisioneng.2026.11.007",
+      "url": "https://doi.org/10.1016/j.precisioneng.2026.11.007",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "THz & Low-Frequency"
+      ],
+      "glyph": "thz",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1364-ol-614123-2db0d5",
+      "date": "2026-10-30",
+      "title": "Waveguide-based Spectrometer in the UVA band",
+      "authors": "Shijie Ke, Zhangqi Dang, Xinrui Li, Jian Ge, Ziyang Zhang",
+      "institutions": [],
+      "journal": "Optics Letters",
+      "doi": "10.1364/ol.614123",
+      "url": "https://doi.org/10.1364/ol.614123",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Environmental",
+        "Spectrometer Design",
+        "General Technology"
+      ],
+      "glyph": "spec",
+      "summary": "Spectroscopy in the UVA band (315 nm-400 nm) is crucial for environmental monitoring and astronomical studies. Conventional UVA spectrometers are built using lenses and diffraction gratings. These bulky free-space optics may raise cost and maintenance issues for satellite observation systems. A compact spectrometer containing only fiber, chip, and camera is an attractive solution for robust and lightweight operation. Though waveguide-based spectrometers exist for the visible and infrared regions, migration toward the UV remains challenging due to material absorption and fabrication difficulties. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-3390-foods15213855-76b48e",
+      "date": "2026-10-28",
+      "title": "An AI-Assisted Workflow for Tea Product Discrimination and Moisture Prediction Using Portable NIR Spectroscopy",
+      "authors": "Luo Z, Zhao B, Meng Q, Qiao D, Liu Y, Zhao G, Chen J",
+      "institutions": [
+        "Chinese-Hungarian Cooperative Research Centre for Food Science",
+        "Chongqing Institute for Food and Drug Control",
+        "Integrative Science Center of Germplasm Creation in Western China (Chongqing) Science City"
+      ],
+      "journal": "Foods (Basel, Switzerland)",
+      "doi": "10.3390/foods15213855",
+      "url": "https://doi.org/10.3390/foods15213855",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "IR / NIR",
+        "Data Analysis & AI"
+      ],
+      "glyph": "ir",
+      "summary": "Portable near-infrared (NIR) spectrometers enable rapid tea analysis, but the heterogeneity of tea leaves can reduce spectral representativeness and modelling reliability. This study evaluated the influence of sampling configurations on tea product discrimination and moisture prediction using two portable NIR spectrometers and developed a domain-specific NIR-analysis skill to support the analytical workflow. Ten tea products were analysed in ground and unground states using the NIR-R210 and NeoSpectra Scanner. Sixteen preprocessing methods were evaluated with partial least squares and support vector machine models. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-3390-s26216793-b80f7b",
+      "date": "2026-10-27",
+      "title": "Coupled Multi-Parameter Optimization of a Differential Resonant Photoacoustic Cell with Impedance-Matched Pickup for Trace Acetylene Detection",
+      "authors": "Gao C, Song J, Zhang Q, Wu Z",
+      "institutions": [
+        "School of Electrical Engineering",
+        "Electric Power Research Institute"
+      ],
+      "journal": "Sensors (Basel, Switzerland)",
+      "doi": "10.3390/s26216793",
+      "url": "https://doi.org/10.3390/s26216793",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Food & Agriculture",
+        "Photoacoustic"
+      ],
+      "glyph": "pas",
+      "summary": "The performance of a resonant photoacoustic (PA) cell depends on coupled geometric and acoustic parameters acting through the acoustic field, thermoviscous boundary losses, and the microphone load. Building on established analytical, numerical, and equivalent-circuit rules for PA-cell design, this work develops a system-specific co-optimization of a dual-tube longitudinal resonator for trace acetylene (C 2 H 2 ) detection. Three aspects are integrated. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1088-2053-1583-aeb610-ef961a",
+      "date": "2026-10-19",
+      "title": "Multiwavelength Raman investigation of mono- and few-layer MoS 2 grown by pulsed laser deposition on SiO 2",
+      "authors": "Alice Cartoceti, Paolo D’Agosta, Francesco Tumino, Valeria Russo, Carlo S. Casari, Andrea Li Bassi",
+      "institutions": [
+        "Politecnico di Milano"
+      ],
+      "journal": "2D Materials",
+      "doi": "10.1088/2053-1583/aeb610",
+      "url": "https://doi.org/10.1088/2053-1583/aeb610",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Spontaneous Raman"
+      ],
+      "glyph": "raman",
+      "summary": "Molybdenum disulphide (MoS 2 ) is a semiconducting material whose vibrational and excitonic properties are highly sensitive to layer number and structural disorder. In this work, we demonstrate the possibility of producing MoS 2 monolayers on inert, electronics-compatible SiO 2 substrates via a room-temperature pulsed laser deposition (PLD) approach followed by post-annealing treatment. The fine controllability of the process parameters allows tuning the number of deposited layers from mono- to multilayer, and these systems have been systematically investigated using multiwavelength Raman spectroscopy. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    }
+  ],
+  "removed": [],
+  "updated": "2026-11-16"
+}
