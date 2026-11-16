@@ -418,5 +418,15 @@
     "src": "covers/journal-of-contemporary-physics-armenian-academy-of-sciences.jpg",
     "kind": "cover",
     "credit": "Journal cover · Journal of Contemporary Physics (Armenian Academy of Sciences)"
+  },
+  "polymer bulletin": {
+    "src": "covers/polymer-bulletin.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Polymer Bulletin"
+  },
+  "jetp letters": {
+    "src": "covers/jetp-letters.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · JETP Letters"
   }
 }
