@@ -428,5 +428,15 @@
     "src": "covers/jetp-letters.jpg",
     "kind": "cover",
     "credit": "Journal cover · JETP Letters"
+  },
+  "glass physics and chemistry": {
+    "src": "covers/glass-physics-and-chemistry.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Glass Physics and Chemistry"
+  },
+  "atmospheric chemistry and physics": {
+    "src": "covers/atmospheric-chemistry-and-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Atmospheric Chemistry and Physics"
   }
 }
