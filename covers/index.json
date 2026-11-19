@@ -438,5 +438,15 @@
     "src": "covers/atmospheric-chemistry-and-physics.jpg",
     "kind": "cover",
     "credit": "Journal cover · Atmospheric Chemistry and Physics"
+  },
+  "journal of nanoparticle research": {
+    "src": "covers/journal-of-nanoparticle-research.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Nanoparticle Research"
+  },
+  "earth system science data": {
+    "src": "covers/earth-system-science-data.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Earth System Science Data"
   }
 }
