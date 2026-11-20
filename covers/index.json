@@ -448,5 +448,25 @@
     "src": "covers/earth-system-science-data.jpg",
     "kind": "cover",
     "credit": "Journal cover · Earth System Science Data"
+  },
+  "nanoscale advances": {
+    "src": "covers/nanoscale-advances.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Nanoscale advances"
+  },
+  "geotechnical and geological engineering": {
+    "src": "covers/geotechnical-and-geological-engineering.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Geotechnical and Geological Engineering"
+  },
+  "physics in medicine and biology": {
+    "src": "covers/physics-in-medicine-and-biology.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Physics in Medicine and Biology"
+  },
+  "american journal of physics": {
+    "src": "covers/american-journal-of-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · American Journal of Physics"
   }
 }
