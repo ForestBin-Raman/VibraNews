@@ -468,5 +468,15 @@
     "src": "covers/american-journal-of-physics.jpg",
     "kind": "cover",
     "credit": "Journal cover · American Journal of Physics"
+  },
+  "environmental geochemistry and health": {
+    "src": "covers/environmental-geochemistry-and-health.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Environmental geochemistry and health"
+  },
+  "journal of thermal analysis and calorimetry": {
+    "src": "covers/journal-of-thermal-analysis-and-calorimetry.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Thermal Analysis and Calorimetry"
   }
 }
