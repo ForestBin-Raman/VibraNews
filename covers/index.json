@@ -478,5 +478,10 @@
     "src": "covers/journal-of-thermal-analysis-and-calorimetry.jpg",
     "kind": "cover",
     "credit": "Journal cover · Journal of Thermal Analysis and Calorimetry"
+  },
+  "anais do congresso brasileiro de iniciação científica": {
+    "src": "covers/anais-do-congresso-brasileiro-de-inicia-o-cient-fica.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Anais do Congresso Brasileiro de Iniciação Científica"
   }
 }

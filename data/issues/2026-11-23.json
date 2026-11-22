@@ -1,0 +1,475 @@
+{
+  "id": "2026-11-23",
+  "number": 4,
+  "date": "2026-11-23",
+  "window": [
+    "2026-11-23",
+    "2026-11-23"
+  ],
+  "articles": [
+    {
+      "id": "10-1021-acsami-6c19237-02d8b5",
+      "date": "2026-11-23",
+      "title": "Revealing Decomposition Pathways of an Ethylene Carbonate-Based Electrolyte with Fiber-Optic FTIR in NCM811 Li-Ion Cells",
+      "authors": "Yuntian Guo, Tianye Zheng, Feng Shi, Junbo Li, Yuan Wang, Guoming Ma, Hao Feng Zhao",
+      "institutions": [
+        "North China Electric Power University",
+        "Peking University"
+      ],
+      "journal": "ACS Applied Materials & Interfaces",
+      "doi": "10.1021/acsami.6c19237",
+      "url": "https://doi.org/10.1021/acsami.6c19237",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Environmental",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Ni-rich NCM811 cathode is critical for achieving high-energy-density lithium-ion batteries (LIBs) but its instability issue at high potentials vs Li/Li+ remains unresolved. Mechanical degradation and lattice oxygen release of NCM811 could trigger nonequilibrium interfacial side reactions, including electrolyte oxidation, interphase evolution, and impedance growth. Understanding these processes is essential for the rational design of stable high-voltage electrolytes compatible with NCM811 cathodes. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "https-europepmc-org-article-pmc-pmc13786374-359f9d",
+      "date": "2026-11-22",
+      "title": "FTIR-Based Quantification of a Corrosion Inhibitor in Solution: Experimental Investigation and Quantum-Chemical Modeling",
+      "authors": "Zimmer H, Andreeva N, Chaban V, Bernard F, da Costa E",
+      "institutions": [
+        "Pontifícia Universidade Católica do Rio Grande do Sul",
+        "Peter the Great St. Petersburg Polytechnic University",
+        "Yerevan State University"
+      ],
+      "journal": "ACS omega",
+      "doi": null,
+      "url": "https://europepmc.org/article/PMC/PMC13786374",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Environmental",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Residual corrosion inhibitor (RCI) monitoring is essential for ensuring the effectiveness of corrosion mitigation programs in oil and gas production systems. Among the available analytical techniques, Fourier transform infrared spectroscopy (FTIR) offers advantages such as rapid analysis, minimal sample preparation, and the absence of chemical reagents. In this study, an FTIR-based method was developed for the quantification of 2-phenyl-2-imidazoline (IMDZ), a corrosion inhibitor, and the influence of typical produced-water constituents on its spectroscopic response was investigated. Calibration curves were constructed using IMDZ concentrations ranging from 100 to 1000 ppm in Milli-Q water. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "europepmc"
+    },
+    {
+      "id": "10-1021-acsmaterialsau-6c00163-70afc1",
+      "date": "2026-11-22",
+      "title": "Mapping Site-Specific Water Uptake and Transport in Covalent Organic Frameworks through Molecular Dynamics and In Situ Vibrational Spectroscopy",
+      "authors": "Tsukasa Irie, Sairathna Choppella, Yasukaze Nishimura, Tokuhisa Kawawaki, Hitoshi Washizu, Yuka Ikemoto, Mahesh Kumar Ravva, Saikat Chandra Das, Yuichi Negishi",
+      "institutions": [
+        "Tohoku University",
+        "University of Hyogo",
+        "Japan Synchrotron Radiation Research Institute"
+      ],
+      "journal": "ACS Materials Au",
+      "doi": "10.1021/acsmaterialsau.6c00163",
+      "url": "https://doi.org/10.1021/acsmaterialsau.6c00163",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Water transport in covalent organic frameworks (COFs) is governed by pore chemistry and confinement, yet the molecular origins of uptake and mobility remain incompletely understood. Here, we investigate site-specific water adsorption and transport in two structurally related COFs, TUS-46 and TUS-44, by combining molecular dynamics simulations with humidity-controlled in situ FT-IR spectroscopy. TUS-46 exhibits accelerated pore filling and enhanced hydration through cooperative hydrogen-bond formation, whereas stronger water−framework interactions constrain translational mobility, revealing an affinity−mobility decoupling. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-66221-b0rayt83-76d3c1",
+      "date": "2026-11-22",
+      "title": "<b>USO DA ESPECTROSCOPIA RAMAN COMO METODOLOGIA ALTERNATIVA PARA DOSAGEM DE COLESTEROL SÉRICO</b>",
+      "authors": "Júlia Baraldi, Giovana Leite, Landulfo Júnior, Walber Toma, Carlos Campos, Luciana Guimarães",
+      "institutions": [],
+      "journal": "Anais do Congresso Brasileiro de Iniciação Científica",
+      "doi": "10.66221/b0rayt83",
+      "url": "https://doi.org/10.66221/b0rayt83",
+      "oa": true,
+      "license": "CC BY-NC-ND 4.0",
+      "categories": [
+        "Cell Biology",
+        "Spontaneous Raman",
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "Dyslipidemias are abnormalities in lipid metabolism associated with cardiovascular and cerebrovascular diseases. This study evaluated Raman spectroscopy as an alternative to spectrophotometry for the analysis of total cholesterol. Serum samples from volunteers and a control serum sample were analyzed. The samples were analyzed by spectrophotometry and subjected to spectroscopic analysis using a dispersive Raman spectrometer (830 nm, 350 mW, 30 s). The spectra obtained were compared to the Raman spectra of an authentic total cholesterol standard. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": {
+        "src": "covers/anais-do-congresso-brasileiro-de-inicia-o-cient-fica.jpg",
+        "kind": "cover",
+        "credit": "Journal cover · Anais do Congresso Brasileiro de Iniciação Científica"
+      },
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acs-analchem-6c05427-bf4b6a",
+      "date": "2026-11-22",
+      "title": "Synergistic CHA and CRISPR/Cas12a Amplification−Enhanced SERS Biosensor for Sensitive ctDNA Detection in Lung Cancer",
+      "authors": "Yongshi Shen, Luyun Xu, Yuanmei Chen, Chaobin Huang, Zhizhong Lin, Shangyuan Feng, Jinyong Lin, Yuanji Xu",
+      "institutions": [
+        "Clinical Oncology School of Fujian Medical University",
+        "Minnan Normal University",
+        "Fujian Normal University"
+      ],
+      "journal": "Analytical Chemistry",
+      "doi": "10.1021/acs.analchem.6c05427",
+      "url": "https://doi.org/10.1021/acs.analchem.6c05427",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Oncology",
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "A surface-enhanced Raman scattering (SERS) biochip integrating CRISPR/Cas12a with catalytic hairpin assembly (CHA) was developed for the ultrasensitive and precise quantification of circulating tumour DNA (ctDNA) harbouring non-small-cell lung cancer (NSCLC) associated mutations. Upon hybridization with target ctDNA, the CHA circuit generates abundant H1−H2 duplexes, which efficiently activate the trans-cleavage activity of Cas12a. The activated Cas12a indiscriminately cleaves linker single-stranded DNA (ssDNA), thereby disrupting the programmed self-assembly of SERS nanoprobes (Au@MBN@Ag NPs) on a two-dimensional Ag-coated silicon substrate. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1021-acs-jpca-6c04870-b380e4",
+      "date": "2026-11-21",
+      "title": "Electrostatic Control of l -Phenylalanine-Lipid Interactions at the Air–Aqueous Interface: A Morphology-Dependent Study",
+      "authors": "Sagar S. Yaar, Sitara T. Khan, Harsharan Kaur, Kailash Chandra Jena",
+      "institutions": [
+        "Indian Institute of Technology Ropar",
+        "Helmholtz-Zentrum Dresden-Rossendorf",
+        "Technische Universität Dresden"
+      ],
+      "journal": "The Journal of Physical Chemistry A",
+      "doi": "10.1021/acs.jpca.6c04870",
+      "url": "https://doi.org/10.1021/acs.jpca.6c04870",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Ultrafast & SFG"
+      ],
+      "glyph": "sfg",
+      "summary": "Phenylketonuria is associated with elevated levels of l-phenylalanine (l-Phe), which can self-assemble into amyloid-like fibrillar aggregates at pathological concentrations. Upon lowering the solution pH to 1.5, protonation of l-Phe induces a morphology transition from fibrillar assemblies to flake-like aggregates, as confirmed by optical microscopy and scanning electron microscopy (SEM), owing to enhanced electrostatic repulsion among the molecules. However, the influence of such morphology-dependent self-assembled structures on membrane organization remains poorly understood. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1103-rcqx-wt82-586d3c",
+      "date": "2026-11-21",
+      "title": "Surface accumulation layers govern ultrafast carrier dynamics in indium arsenide microparticles",
+      "authors": "Hyunmin Jang, Jun Woo Kim, Dong‐Won Jeong, Gi Rim Han, Dasol Kim, Tai Hyun Yoon, Minhaeng Cho",
+      "institutions": [],
+      "journal": "Physical Review Research",
+      "doi": "10.1103/rcqx-wt82",
+      "url": "https://doi.org/10.1103/rcqx-wt82",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Dermatology",
+        "Food & Agriculture",
+        "Reviews"
+      ],
+      "glyph": "raman",
+      "summary": "Controlling the fate of photoexcited carriers at semiconductor surfaces is a central problem connecting ultrafast materials science with infrared detection, high-speed optoelectronics, and quantum-device engineering. Yet carrier lifetimes are commonly reported as intrinsic material constants. In narrow-gap InAs, surface Fermi-level pinning creates an electron accumulation layer with quantized subbands, so the measured lifetime may depend on how carriers are prepared and observed. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-microc-2026-120393-bb0ea3",
+      "date": "2026-11-01",
+      "title": "Label-free high-throughput screening of three adenine-type cytokinins based on hydrogel SERS chip",
+      "authors": "Ping Cheng, Y K.M. Peng, Yingxiao Xiao, Jia Lin, Wencan Zeng, Jiadan Zhang, FengFu Fu, Zhenyu Lin, Yongqiang Dong",
+      "institutions": [
+        "Fuzhou University",
+        "Ministry of Public Security of the People's Republic of China"
+      ],
+      "journal": "Microchemical Journal",
+      "doi": "10.1016/j.microc.2026.120393",
+      "url": "https://doi.org/10.1016/j.microc.2026.120393",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-jmmm-2026-174785-45caac",
+      "date": "2026-11-01",
+      "title": "Dzyaloshinskii-Moriya interaction-induced spin-wave hysteresis in ultrathin epitaxial Pt/Re/Co/Pt layers",
+      "authors": "B. Sharma, J. Kisielewski, R. Gieniusz, U. Guzowska, Z. Kurant, I. Sveklo, A. Pietruczik, P. Aleshkevych, A. Lynnyk, A. Wawro, A. Maziewski",
+      "institutions": [
+        "University of Białystok",
+        "Institute of Physics",
+        "Polish Academy of Sciences"
+      ],
+      "journal": "Journal of Magnetism and Magnetic Materials",
+      "doi": "10.1016/j.jmmm.2026.174785",
+      "url": "https://doi.org/10.1016/j.jmmm.2026.174785",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Brillouin"
+      ],
+      "glyph": "brillouin",
+      "summary": "The spin-wave frequency hysteresis loop induced by the Dzyaloshinskii-Moriya interaction in an epitaxial ultrathin Pt/Re/Co/Pt layer studied by Brillouin light scattering spectroscopy (BLS) is presented. The Co thickness of 2 nm is below the exchange length, ensuring in-depth homogeneous magnetization. Static characterization confirms the system resides in the easy-plane magnetic anisotropy regime with quality factor Q < 1. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-chphma-2026-11-003-358738",
+      "date": "2026-11-01",
+      "title": "Thermal deformation of gold nanoplates for programmable LSPR tuning across NIR-I and NIR-II windows toward wavelength-matched photothermal enhancement",
+      "authors": "Zhaoqi Yi, Xueying Yang, Qing Han, Xiaohu Wu, Yi Wang, Yiqun Zheng",
+      "institutions": [
+        "University of Jinan",
+        "Chongqing Normal University",
+        "Hubei University"
+      ],
+      "journal": "ChemPhysMater",
+      "doi": "10.1016/j.chphma.2026.11.003",
+      "url": "https://doi.org/10.1016/j.chphma.2026.11.003",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "IR / NIR",
+        "Photothermal IR"
+      ],
+      "glyph": "mip",
+      "summary": "Gold nanoplates (Au NPs) exhibit strong localized surface plasmon resonance (LSPR) in the near-infrared region, yet precisely aligning their principal absorption band with laser wavelengths in the NIR-I (e.g., 808 nm) or NIR-II (e.g., 1064 nm) biological window remains a critical challenge for effective photothermal therapy. Herein, we demonstrate a facile thermal annealing strategy that enables programmable LSPR tuning of Au nanoplates across both NIR-I and NIR-II regions through thermally induced morphological deformation. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-asi-2026-100055-f40826",
+      "date": "2026-11-01",
+      "title": "Electron Energy-Loss Spectroscopy in Electron Microscopy with Ultrahigh Energy Resolution: Instrumentation and Methodology",
+      "authors": "Linxuan Li, Chunwen Wang, Mingquan Xu, Wu Zhou",
+      "institutions": [
+        "Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences",
+        "Hunan University"
+      ],
+      "journal": "Advanced Scientific Instruments",
+      "doi": "10.1016/j.asi.2026.100055",
+      "url": "https://doi.org/10.1016/j.asi.2026.100055",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "General Technology",
+        "Reviews"
+      ],
+      "glyph": "raman",
+      "summary": "Electron energy-loss spectroscopy (EELS) in aberration-corrected scanning transmission electron microscopy (STEM) is an unparalleled technique for probing local structural and spectroscopic information at the atomic scale. However, the spectral resolution of conventional STEM-EELS is primarily limited by the intrinsic energy spread of electron sources, making it difficult to capture ultra-low energy-loss signatures, particularly lattice vibrations in the energy-loss range of milli-electron-volt (meV). …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-apmate-2026-100486-7d0332",
+      "date": "2026-11-01",
+      "title": "Advanced Functional Powder by Chemical Design: Coordination-Driven Symmetry Breaking Enables Intrinsic Piezoelectricity in Centrosymmetric 2D Hybrids",
+      "authors": "Sairan Eom, Sanoj N. Rejinold, Seung‐Jae Shin, Xiaoyan Jin, Ji-Ho Eom, Hyungjun Kim, Seong-Ju Hwang, Soon-Gil Yoon, Goeun Choi, Jin‐Ho Choy",
+      "institutions": [
+        "Korea Institute of Radiological and Medical Sciences",
+        "Dankook University",
+        "Ulsan National Institute of Science and Technology"
+      ],
+      "journal": "Advanced Powder Materials",
+      "doi": "10.1016/j.apmate.2026.100486",
+      "url": "https://doi.org/10.1016/j.apmate.2026.100486",
+      "oa": true,
+      "license": "CC BY-NC-ND",
+      "categories": [
+        "Environmental",
+        "Spontaneous Raman",
+        "IR / NIR"
+      ],
+      "glyph": "ir",
+      "summary": "Layered double hydroxides, as a class of 2D van der Waals hybrids, are generally regarded as non-polar due to their centrosymmetric crystal structures, despite their highly tunable compositions and interlayer chemistries. Their functional modulation has largely relied on surface modification, defect engineering, or composite formation. Here, we report a coordination-driven route to intrinsic piezoelectricity in a carbonate-intercalated 2D van der Waals hybrid enabled by controlled yttrium (Y 3+ ) substitution within metal hydroxide layers. …",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-mex-2026-104271-e17216",
+      "date": "2026-11-01",
+      "title": "Development of a Low-Cost Smartphone Imaging Method Based on the Staring-Array Hyperspectral Principle for Pesticide Residue Detection on Filter Paper",
+      "authors": "Zulfa Hana Maulida, Wahyu Nurkholis Hadi Syahputra, Braja Manggala, Chatchawan Chaichana, Suwimon Wicharuck, Muhammad Allam Daffa Alhaqi, Bernadetha Grace Wisdayanti, Parichat Theanjumpol, Yaowaluk Chanbang",
+      "institutions": [
+        "Chiang Mai University",
+        "Chungnam National University"
+      ],
+      "journal": "MethodsX",
+      "doi": "10.1016/j.mex.2026.104271",
+      "url": "https://doi.org/10.1016/j.mex.2026.104271",
+      "oa": true,
+      "license": "CC BY",
+      "categories": [
+        "Food & Agriculture",
+        "Neurology",
+        "Spectral Imaging",
+        "Data Analysis & AI"
+      ],
+      "glyph": "hsi",
+      "summary": "Laboratory methods for detecting pesticide residues on agricultural products are costly and slow. This study developed a low-cost smartphone imaging method for detecting profenofos residues, based on the staring-array hyperspectral principle. As a preliminary step, filter paper samples were treated with a commercial profenofos formulation at seven concentrations (0 to 10,000 mg/L) and photographed inside a lighting box under visible light with three smartphone camera resolutions (13, 32 and 64 MP). • Digital filters (580–780 nm), selected from spectrometer measurements, were applied to each image, and RGB values of the sample region were extracted from each filtered image. …",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "openalex"
+    },
+    {
+      "id": "10-1016-j-saa-2026-129209-2b28d9",
+      "date": "2026-11-01",
+      "title": "Raman spectroscopy combined with principal component analysis and machine learning for evaluation of the crystallinity degree, composition, and stereoregularity in polylactide-based materials",
+      "authors": "D.D. Vasimov, G.Yu. Nikolaeva, S.O. Liubimovskii, L.Yu. Kozlova, A.N. Bortsova, S.M. Kuznetsov, K.T. Kalinin, E.V. Anokhin, A.A. Puchkov, A.V. Bakirov, N.G. Sedush, S.N. Chvalun, M.N. Moskovskiy, S.V. Gudkov, V.V. Kuzmin, V.S. Novikov",
+      "institutions": [],
+      "journal": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "doi": "10.1016/j.saa.2026.129209",
+      "url": "https://doi.org/10.1016/j.saa.2026.129209",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Spontaneous Raman",
+        "Data Analysis & AI"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-saa-2026-129205-c6b094",
+      "date": "2026-11-01",
+      "title": "Proton-regulated TMB transformation toward a proposed diazotized species with Ag-enhanced SERS for dual-mode detection",
+      "authors": "Bing Yang, Yandong Che, Jiacheng Ding, Xu Wang, Tõnu Pullerits, Wenjie Li, Peng Song, Yanqiu Yang",
+      "institutions": [],
+      "journal": "Spectrochimica Acta Part A: Molecular and Biomolecular Spectroscopy",
+      "doi": "10.1016/j.saa.2026.129205",
+      "url": "https://doi.org/10.1016/j.saa.2026.129205",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "SERS / TERS"
+      ],
+      "glyph": "sers",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-snb-2026-141299-f43bc0",
+      "date": "2026-11-01",
+      "title": "Open Multi-Gas Photoacoustic Sensing Using a Dual-Resonant Fiber-Optic Cantilever Sensor",
+      "authors": "Guojie Wu, Linsong Zhang, Yuchen Guan, Jingtong Na, Tianli Gao, Jiawei Xing, Ming Zhang, Wei Peng, Zhenfeng Gong",
+      "institutions": [],
+      "journal": "Sensors and Actuators B: Chemical",
+      "doi": "10.1016/j.snb.2026.141299",
+      "url": "https://doi.org/10.1016/j.snb.2026.141299",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "Photoacoustic"
+      ],
+      "glyph": "pas",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-plaphy-2026-111997-9131e1",
+      "date": "2026-11-01",
+      "title": "Coupling between Optimal Fractional-Order Derivative Order and Preprocessing Methods with ECA-Net Fusion for Hyperspectral Relative Chlorophyll Content Estimation of Arundo donax under Saline-Alkali Stress",
+      "authors": "Tiancai Chen, Yu Sen, Yongqiang Chen, Yingzi Jiao, Rui Zhang, Yongheng Shan, Liangfa Wu, Ruijun Shi",
+      "institutions": [],
+      "journal": "Plant Physiology and Biochemistry",
+      "doi": "10.1016/j.plaphy.2026.111997",
+      "url": "https://doi.org/10.1016/j.plaphy.2026.111997",
+      "oa": true,
+      "license": "CC BY-NC-ND 4.0",
+      "categories": [
+        "Spectral Imaging",
+        "Data Analysis & AI"
+      ],
+      "glyph": "hsi",
+      "summary": "",
+      "why": "",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    },
+    {
+      "id": "10-1016-j-nima-2026-172254-e66bfb",
+      "date": "2026-11-01",
+      "title": "A large-area modular 3He position-sensitive detector array for the High Energy Direct Geometry Spectrometer at CSNS",
+      "authors": "Wenqin Yang, Jianrong Zhou, YuanGuang Xia, Yanfeng Wang, Xingfen Jiang, Qicai Li, Hongbin Liu, Haiyun Teng, Peixun Shen, Zhaoyuan Peng, Qinlei Xiu, Mengqi Jiang, Xiaojuan Zhou, Hong Xu, Jiajie Li, Xiaozhuang Wang, Zecong Qin, Zhentao Huang, Ruyi Huang, Wei Luo et al.",
+      "institutions": [],
+      "journal": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+      "doi": "10.1016/j.nima.2026.172254",
+      "url": "https://doi.org/10.1016/j.nima.2026.172254",
+      "oa": false,
+      "license": "",
+      "categories": [
+        "General Technology"
+      ],
+      "glyph": "raman",
+      "summary": "",
+      "why": "",
+      "tier": "notable",
+      "pick": false,
+      "feature": false,
+      "fig": null,
+      "source": "crossref"
+    }
+  ],
+  "removed": [],
+  "updated": "2026-11-23"
+}
