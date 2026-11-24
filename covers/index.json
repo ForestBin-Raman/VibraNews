@@ -488,5 +488,15 @@
     "src": "covers/plasmonics.jpg",
     "kind": "cover",
     "credit": "Journal cover · Plasmonics"
+  },
+  "journal of physics condensed matter": {
+    "src": "covers/journal-of-physics-condensed-matter.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Physics Condensed Matter"
+  },
+  "analytical sciences": {
+    "src": "covers/analytical-sciences.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Analytical Sciences"
   }
 }
