@@ -498,5 +498,15 @@
     "src": "covers/analytical-sciences.jpg",
     "kind": "cover",
     "credit": "Journal cover · Analytical Sciences"
+  },
+  "analytical methods": {
+    "src": "covers/analytical-methods.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Analytical Methods"
+  },
+  "physical chemistry chemical physics": {
+    "src": "covers/physical-chemistry-chemical-physics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Physical Chemistry Chemical Physics"
   }
 }
