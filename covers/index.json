@@ -508,5 +508,20 @@
     "src": "covers/physical-chemistry-chemical-physics.jpg",
     "kind": "cover",
     "credit": "Journal cover · Physical Chemistry Chemical Physics"
+  },
+  "environmental science and pollution research international": {
+    "src": "covers/environmental-science-and-pollution-research-international.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Environmental science and pollution research international"
+  },
+  "environmental monitoring and assessment": {
+    "src": "covers/environmental-monitoring-and-assessment.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Environmental monitoring and assessment"
+  },
+  "journal of structural chemistry": {
+    "src": "covers/journal-of-structural-chemistry.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Journal of Structural Chemistry"
   }
 }
