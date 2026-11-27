@@ -523,5 +523,20 @@
     "src": "covers/journal-of-structural-chemistry.jpg",
     "kind": "cover",
     "credit": "Journal cover · Journal of Structural Chemistry"
+  },
+  "natural product reports": {
+    "src": "covers/natural-product-reports.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Natural product reports"
+  },
+  "food biophysics": {
+    "src": "covers/food-biophysics.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · Food Biophysics"
+  },
+  "the european physical journal d": {
+    "src": "covers/the-european-physical-journal-d.jpg",
+    "kind": "cover",
+    "credit": "Journal cover · The European Physical Journal D"
   }
 }
